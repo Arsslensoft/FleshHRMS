@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHRMS", "Flesh\FHRMS.csproj", "{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpress.DevAV.Data", "DevExpress.DevAV.Data\DevExpress.DevAV.Data.csproj", "{AC076B58-635E-458A-AB2D-725B408ABE7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		RemoteDebug|Any CPU = RemoteDebug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}.RemoteDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}.RemoteDebug|Any CPU.Build.0 = Debug|Any CPU
+		{AC076B58-635E-458A-AB2D-725B408ABE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC076B58-635E-458A-AB2D-725B408ABE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC076B58-635E-458A-AB2D-725B408ABE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC076B58-635E-458A-AB2D-725B408ABE7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC076B58-635E-458A-AB2D-725B408ABE7F}.RemoteDebug|Any CPU.ActiveCfg = RemoteDebug|Any CPU
+		{AC076B58-635E-458A-AB2D-725B408ABE7F}.RemoteDebug|Any CPU.Build.0 = RemoteDebug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
