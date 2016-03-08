@@ -31,13 +31,15 @@ namespace DevExpress.DevAV {
         }
 
         void ShowSplashScreen() {
-            DevExpress.XtraSplashScreen.SplashScreenManager.ShowDefaultSplashScreen(this, true, true, "DevExpress WinForms Controls", "When Only the Best Will Do");
+           // DevExpress.XtraSplashScreen.SplashScreenManager.ShowDefaultSplashScreen(this, true, true, "DevExpress WinForms Controls", "When Only the Best Will Do");
+          DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this,typeof( FleshSplashScreen),true,true,false);
         }
         void MainForm_Load(object sender, EventArgs e) {
             InitTileBar();
             mainTileBar.SelectedItem = employeesTileBarItem;
             viewModel.SelectModule(ModuleType.Employees);
-            DevExpress.XtraSplashScreen.SplashScreenManager.CloseDefaultSplashScreen();
+           // DevExpress.XtraSplashScreen.SplashScreenManager.CloseDefaultSplashScreen();
+
         }
         void InitViewModel() {
             viewModel = ViewModelSource.Create(() => new MainViewModel(this));
