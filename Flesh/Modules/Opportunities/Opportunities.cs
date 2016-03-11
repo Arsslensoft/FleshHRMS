@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using DevExpress.DevAV.ViewModels;
-using DevExpress.DevAV.Helpers;
+using FHRMS.ViewModels;
+using FHRMS.Helpers;
 using DevExpress.XtraEditors;
 using DevExpress.XtraLayout.Utils;
-using DevExpress.DevAV.Common.Utils;
+using FHRMS.Common.Utils;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class Opportunities : BaseModuleControl {
         public Opportunities()
             : base(CreateViewModel<QuoteCollectionViewModel>) {
@@ -66,29 +66,29 @@ namespace DevExpress.DevAV.Modules {
             pivotGridControl.Visible = false;
             opportunitiesMapView1.Visible = true;
 
-            ///pivotGridLCI.Visibility = XtraLayout.Utils.LayoutVisibility.Never;
+            ///pivotGridLCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
         }
         public void MakeGridVisible() {
             pivotGridControl.Visible = true;
             opportunitiesMapView1.Visible = false;
         }
-        private void pivotGridControl1_CustomCellValue(object sender, XtraPivotGrid.PivotCellValueEventArgs e) {
+        private void pivotGridControl1_CustomCellValue(object sender, DevExpress.XtraPivotGrid.PivotCellValueEventArgs e) {
             if (e.DataField == fieldPercentage) {
                 e.Value = Convert.ToDouble(e.Value) * 100;
             }
         }
         private void buttonHide_Click(object sender, EventArgs e) {
-            if (chartControlLCI.Visibility == XtraLayout.Utils.LayoutVisibility.Always) {
+            if (chartControlLCI.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always) {
                 ItemsHideHelper.HideCore(new object[] { chartControlLCI }, buttonHide, true);
                 return;
             }
-            if (chartControlLCI.Visibility == XtraLayout.Utils.LayoutVisibility.Never) {
+            if (chartControlLCI.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Never) {
                 ItemsHideHelper.ExpandCore(new object[] { chartControlLCI }, buttonHide, true);
                 return;
             }
         }
 
-        private void chartControl_CustomDrawSeriesPoint(object sender, XtraCharts.CustomDrawSeriesPointEventArgs e) {
+        private void chartControl_CustomDrawSeriesPoint(object sender, DevExpress.XtraCharts.CustomDrawSeriesPointEventArgs e) {
             ChartControlLegendCustomPainter.Paint(e);
         }
 

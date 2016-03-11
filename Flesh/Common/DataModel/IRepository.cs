@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace DevExpress.DevAV.Common.DataModel {
+namespace FHRMS.Common.DataModel {
     /// <summary>
     /// The IRepository interface represents the read and write implementation of the Repository pattern 
     /// such that it can be used to query entities of a given type. 

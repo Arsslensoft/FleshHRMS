@@ -1,6 +1,6 @@
-﻿namespace DevExpress.DevAV {
+﻿namespace FHRMS {
     using DevExpress.Mvvm;
-    using DevExpress.DevAV.Modules;
+    using FHRMS.Modules;
 
     public static class ViewModelHelper {
         public static TViewModel GetParentViewModel<TViewModel>(object viewModel) {

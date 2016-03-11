@@ -5,13 +5,13 @@ using System.Linq.Expressions;
 using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
 using DevExpress.Mvvm.DataAnnotations;
-using DevExpress.DevAV.Common.Utils;
-using DevExpress.DevAV.Common.DataModel;
+using FHRMS.Common.Utils;
+using FHRMS.Common.DataModel;
 using MessageBoxButton = System.Windows.MessageBoxButton;
 using MessageBoxImage = System.Windows.MessageBoxImage;
 using MessageBoxResult = System.Windows.MessageBoxResult;
 
-namespace DevExpress.DevAV.Common.ViewModel {
+namespace FHRMS.Common.ViewModel {
     /// <summary>
     /// The base interface for objects passed as a parameter to a single object view model and used to initialize its entity.
     /// </summary>

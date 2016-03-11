@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Services {
+﻿namespace FHRMS.Services {
     public interface IModuleTypesResolver {
         string GetName(ModuleType moduleType);
         string GetTypeName(ModuleType moduleType);

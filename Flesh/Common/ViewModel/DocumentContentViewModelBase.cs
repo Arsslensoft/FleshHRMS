@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
-namespace DevExpress.DevAV {
+namespace FHRMS {
     public abstract class DocumentContentViewModelBase : IDocumentContent {
         protected DocumentContentViewModelBase() { }
 

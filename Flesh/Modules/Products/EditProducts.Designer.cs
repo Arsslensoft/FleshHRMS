@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class ProductsEditableView {
         /// <summary> 
         /// Required designer variable.
@@ -104,7 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcPdfViewer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
-            this.productBindingSource.DataSource = typeof(DevExpress.DevAV.Product);
+            this.productBindingSource.DataSource = typeof( FHRMS.Data.Product);
             this.layoutControl1.AllowCustomization = false;
             this.layoutControl1.Controls.Add(this.labelControl2);
             this.layoutControl1.Controls.Add(this.labelControl1);
@@ -227,7 +227,7 @@
             this.dateEdit1.Location = new System.Drawing.Point(286, 47);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::DevExpress.DevAV.Properties.Resources.DateEditIcon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::FHRMS.Properties.Resources.DateEditIcon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -579,44 +579,44 @@
 
         #endregion
 
-        private XtraLayout.LayoutControl layoutControl1;
-        private XtraLayout.LayoutControlGroup lcgRoot;
-        private XtraLayout.LayoutControlItem lcEditProductName;
-        private XtraEditors.DateEdit dateEdit1;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraLayout.LayoutControlItem layoutControlItem3;
-        private XtraLayout.LayoutControlItem layoutControlItem4;
-        private XtraEditors.TextEdit teRetailPrice;
-        private XtraEditors.TextEdit teSalePrice;
-        private XtraEditors.TextEdit teCost;
-        private XtraLayout.LayoutControlItem layoutControlItem5;
-        private XtraLayout.LayoutControlItem layoutControlItem6;
-        private XtraLayout.LayoutControlItem layoutControlItem7;
-        private XtraLayout.LayoutControlItem layoutControlItem8;
-        private XtraLayout.LayoutControlItem layoutControlItem9;
-        private XtraLayout.LayoutControlItem lciBack;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgRoot;
+        private DevExpress.XtraLayout.LayoutControlItem lcEditProductName;
+        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraEditors.TextEdit teRetailPrice;
+        private DevExpress.XtraEditors.TextEdit teSalePrice;
+        private DevExpress.XtraEditors.TextEdit teCost;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem lciBack;
         private System.Windows.Forms.PictureBox lciBackPicture;
         private System.Windows.Forms.BindingSource productBindingSource;
-        private XtraEditors.CheckEdit cbAvailable;
-        private XtraEditors.LookUpEdit cbSupport;
-        private XtraEditors.LookUpEdit cbProductEngineer;
-        private XtraEditors.SpinEdit teInventory;
-        private XtraEditors.SpinEdit teBackorders;
-        private XtraPdfViewer.PdfViewer pdfViewer;
-        private XtraEditors.MemoEdit meDescription;
-        private XtraLayout.LayoutControlGroup lcgDetails;
-        private XtraLayout.LayoutControlItem layoutControlItem10;
-        private XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private XtraEditors.TextEdit teProductName;
-        private XtraEditors.ImageComboBoxEdit cbCategory;
-        private XtraLayout.LayoutControlItem layoutControlItem12;
-        private XtraEditors.LabelControl labelControl1;
-        private XtraLayout.LayoutControlItem lcLabelProductName2;
-        private XtraEditors.LabelControl labelControl2;
-        private XtraLayout.LayoutControlItem lcLabelProductName1;
-        private XtraLayout.LayoutControlItem lcPdfViewer;
-        private XtraEditors.DXErrorProvider.DXErrorProvider errorProvider;
+        private DevExpress.XtraEditors.CheckEdit cbAvailable;
+        private DevExpress.XtraEditors.LookUpEdit cbSupport;
+        private DevExpress.XtraEditors.LookUpEdit cbProductEngineer;
+        private DevExpress.XtraEditors.SpinEdit teInventory;
+        private DevExpress.XtraEditors.SpinEdit teBackorders;
+        private  DevExpress.XtraPdfViewer.PdfViewer pdfViewer;
+        private DevExpress.XtraEditors.MemoEdit meDescription;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgDetails;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraEditors.TextEdit teProductName;
+        private DevExpress.XtraEditors.ImageComboBoxEdit cbCategory;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraLayout.LayoutControlItem lcLabelProductName2;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraLayout.LayoutControlItem lcLabelProductName1;
+        private DevExpress.XtraLayout.LayoutControlItem lcPdfViewer;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider errorProvider;
     }
 }

@@ -4,13 +4,13 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq.Expressions;
 using System.Collections.Generic;
-using DevExpress.DevAV.Common.Utils;
-using DevExpress.DevAV.Common.DataModel;
-using DevExpress.DevAV.Common.DataModel.EntityFramework;
-using DevExpress.DevAV;
-using DevExpress.DevAV.ViewModels;
+using FHRMS.Common.Utils;
+using FHRMS.Common.DataModel;
+using FHRMS.Common.DataModel.EntityFramework;
+using FHRMS.ViewModels;
+using FHRMS.Data;
 
-namespace DevExpress.DevAV.DevAVDbDataModel {
+namespace FHRMS.DevAVDbDataModel {
     /// <summary>
     /// A DevAVDbUnitOfWork instance that represents the run-time implementation of the IDevAVDbUnitOfWork interface.
     /// </summary>

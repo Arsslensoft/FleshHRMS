@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DevExpress.DevAV.ViewModels {
+namespace FHRMS.ViewModels {
     public enum EmployeeMailTemplate {
         [Display(Name = "Employee of The Month")]
         EmployeeOfTheMonth,

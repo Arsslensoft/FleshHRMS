@@ -4,10 +4,10 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
-using DevExpress.DevAV.ViewModels;
-using DevExpress.DevAV.Helpers;
+using FHRMS.ViewModels;
+using FHRMS.Helpers;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class OrderView : BaseModuleControl, ISupportNavigation {
         public OrderView()
             : base(CreateViewModel<OrderViewModel>) {
@@ -69,7 +69,7 @@ namespace DevExpress.DevAV.Modules {
         }
         private void LoadTemplate() {
             var template = "Order.snx";
-            using (var stream = DevExpress.DevAV.ViewModels.MailMergeTemplatesHelper.GetTemplateStream(template)) {
+            using (var stream = FHRMS.ViewModels.MailMergeTemplatesHelper.GetTemplateStream(template)) {
                 if (stream != null) {
                     snapControl.LoadDocumentTemplate(stream, DevExpress.Snap.Core.API.SnapDocumentFormat.Snap);
                 }

@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq.Expressions;
 
-namespace DevExpress.DevAV.Common.DataModel {
+namespace FHRMS.Common.DataModel {
     /// <summary>
     /// The IReadOnlyRepository interface represents the read-only implementation of the Repository pattern 
     /// such that it can be used to query entities of a given type. 

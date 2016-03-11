@@ -1,10 +1,10 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     using System.Collections.Generic;
     using System.Drawing;
     using System.Linq;
     using System.Reflection;
-    using DevExpress.DevAV;
-    using DevExpress.DevAV.ViewModels;
+    using FHRMS.Data;
+    using FHRMS.ViewModels;
     using DevExpress.Map;
     using DevExpress.XtraEditors;
     using DevExpress.XtraMap;
@@ -49,8 +49,8 @@
             if(DesignMode || Assembly.GetEntryAssembly() == null) {
                 return;
             }
-            var mapStreamDbf = Assembly.GetEntryAssembly().GetManifestResourceStream("DevExpress.DevAV.Resources.Map.NorthAmerica.dbf");
-            var mapStream = Assembly.GetEntryAssembly().GetManifestResourceStream("DevExpress.DevAV.Resources.Map.NorthAmerica.shp");
+            var mapStreamDbf = Assembly.GetEntryAssembly().GetManifestResourceStream("FHRMS.Resources.Map.NorthAmerica.dbf");
+            var mapStream = Assembly.GetEntryAssembly().GetManifestResourceStream("FHRMS.Resources.Map.NorthAmerica.shp");
             adapter.LoadFromStream(mapStream, mapStreamDbf);
         }
         CustomerViewModel viewModelCore = null;
@@ -118,7 +118,7 @@
             return home;
         }
 
-        void toolTipController1_BeforeShow(object sender, Utils.ToolTipControllerShowEventArgs e) {
+        void toolTipController1_BeforeShow(object sender,  DevExpress.Utils.ToolTipControllerShowEventArgs e) {
         }
 
         void mapControl_MapItemClick(object sender, MapItemClickEventArgs e) {

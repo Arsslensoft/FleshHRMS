@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection;
 
-namespace DevExpress.DevAV.Helpers {
+namespace FHRMS.Helpers {
     public static class ItemsHideHelper {
         public static void Hide(ICollection baseItemCollection, SimpleLabelItem button) {
             HideCore(baseItemCollection, button, false);
@@ -17,9 +17,9 @@ namespace DevExpress.DevAV.Helpers {
                 bli.Visibility = LayoutVisibility.Never;
             }
             if (conversely) {
-                button.Image = Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("DevExpress.DevAV.Resources.ArrowLeft.png"));
+                button.Image = Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("FHRMS.Resources.ArrowLeft.png"));
             } else {
-                button.Image = Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("DevExpress.DevAV.Resources.ArrowRight.png"));
+                button.Image = Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("FHRMS.Resources.ArrowRight.png"));
             }
         }
 
@@ -31,9 +31,9 @@ namespace DevExpress.DevAV.Helpers {
                 bli.Visibility = LayoutVisibility.Always;
             }
             if (conversely) {
-                button.Image = Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("DevExpress.DevAV.Resources.ArrowRight.png"));
+                button.Image = Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("FHRMS.Resources.ArrowRight.png"));
             } else {
-                button.Image = Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("DevExpress.DevAV.Resources.ArrowLeft.png"));
+                button.Image = Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("FHRMS.Resources.ArrowLeft.png"));
             }
         }
     }

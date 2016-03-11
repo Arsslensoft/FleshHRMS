@@ -1,8 +1,8 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     using System;
     using System.Linq.Expressions;
-    using DevExpress.DevAV.Common.ViewModel;
-    using DevExpress.DevAV.ViewModels;
+    using FHRMS.Common.ViewModel;
+    using FHRMS.ViewModels;
     using DevExpress.XtraBars.Navigation;
     using DevExpress.XtraEditors;
 
@@ -126,7 +126,7 @@
             var serviceContainer = GetServiceContainer();
             return (serviceContainer != null) ? serviceContainer.GetService<TService>() : null;
         }
-        Mvvm.IServiceContainer GetServiceContainer() {
+        DevExpress.Mvvm.IServiceContainer GetServiceContainer() {
             if(!(viewModelCore is DevExpress.Mvvm.ISupportServices))
                 return null;
             return ((DevExpress.Mvvm.ISupportServices)viewModelCore).ServiceContainer;
@@ -205,7 +205,7 @@
         protected internal virtual void OnTransitionCompleted() { }
     }
 }
-namespace DevExpress.DevAV.ViewModels {
+namespace FHRMS.ViewModels {
     public interface IBaseViewModel {
         bool Save();
         bool CanSave();

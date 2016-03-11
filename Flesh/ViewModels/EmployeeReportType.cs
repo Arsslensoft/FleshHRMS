@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DevExpress.DevAV.ViewModels {
+namespace FHRMS.ViewModels {
     public enum EmployeeReportType {
         None,
         [Display(Name = "Profile Report")]

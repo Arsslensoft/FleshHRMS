@@ -13,7 +13,7 @@ using System.Reflection;
 using System.IO;
 using DevExpress.XtraEditors.Controls;
 
-namespace DevExpress.DevAV {
+namespace FHRMS {
     internal static class Program {
         /// <summary>
         /// The main entry point for the application.
@@ -28,21 +28,21 @@ namespace DevExpress.DevAV {
                 DevExpress.Mvvm.CommandBase.DefaultUseCommandManager = false;
                 WindowsFormsSettings.SetDPIAware();
                 SkinManager.EnableFormSkins();
-                UserSkins.BonusSkins.Register();
+                DevExpress.UserSkins.BonusSkins.Register();
                 ((DevExpress.LookAndFeel.Design.UserLookAndFeelDefault)DevExpress.LookAndFeel.Design.UserLookAndFeelDefault.Default).LoadSettings(() => {
                     var skinCreator = new SkinBlobXmlCreator("HybridApp",
-                        "DevExpress.DevAV.SkinData.", typeof(Program).Assembly, null);
+                        "FHRMS.SkinData.", typeof(Program).Assembly, null);
                     SkinManager.Default.RegisterSkin(skinCreator);
                 });
                 AsyncAdornerBootStrapper.RegisterLookAndFeel(
                     "MetroBlack", "DevExpress.RealtorWorld.Win.SkinData.", typeof(Program).Assembly);
-                LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("HybridApp");
+                DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("HybridApp");
                 Application.CurrentCulture = CultureInfo.GetCultureInfo("en-us");
 
-                DevExpress.XtraEditors.WindowsFormsSettings.AllowPixelScrolling = Utils.DefaultBoolean.True;
-                DevExpress.XtraEditors.WindowsFormsSettings.ScrollUIMode = XtraEditors.ScrollUIMode.Touch;
+                DevExpress.XtraEditors.WindowsFormsSettings.AllowPixelScrolling = DevExpress.Utils.DefaultBoolean.True;
+                DevExpress.XtraEditors.WindowsFormsSettings.ScrollUIMode = DevExpress.XtraEditors.ScrollUIMode.Touch;
                 float touchScaleFactor, fontSize;
-                DevExpress.DevAV.Common.Utils.DeviceDetector.SuggestHybridDemoParameters(out touchScaleFactor, out fontSize);
+                FHRMS.Common.Utils.DeviceDetector.SuggestHybridDemoParameters(out touchScaleFactor, out fontSize);
                 WindowsFormsSettings.DefaultFont = new Font("Segoe UI", fontSize);
                 WindowsFormsSettings.DefaultMenuFont = new Font("Segoe UI", fontSize);
                 WindowsFormsSettings.TouchScaleFactor = touchScaleFactor;
@@ -52,14 +52,14 @@ namespace DevExpress.DevAV {
             }
         }
         public static Icon AppIcon {
-            get { return DevExpress.Utils.ResourceImageHelper.CreateIconFromResourcesEx("DevExpress.DevAV.Resources.AppIcon.ico", typeof(MainForm).Assembly); }
+            get { return DevExpress.Utils.ResourceImageHelper.CreateIconFromResourcesEx("FHRMS.Resources.AppIcon.ico", typeof(MainForm).Assembly); }
         }
         public static MainForm MainForm { get; set; }
         private static bool? isTablet = null;
         public static bool IsTablet {
             get {
                 if (isTablet == null) {
-                    isTablet = DevExpress.DevAV.Common.Utils.DeviceDetector.IsTablet;
+                    isTablet = FHRMS.Common.Utils.DeviceDetector.IsTablet;
                 }
                 return isTablet.Value;
             }

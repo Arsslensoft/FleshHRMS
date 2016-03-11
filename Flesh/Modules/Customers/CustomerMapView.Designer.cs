@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class CustomerMapView {
         /// <summary> 
         /// Required designer variable.
@@ -44,7 +44,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
-            this.bindingSource.DataSource = typeof(DevExpress.DevAV.Customer);
+            this.bindingSource.DataSource = typeof(FHRMS.Data.Customer);
             this.dataLayoutControl1.Controls.Add(this.mapControl);
             this.dataLayoutControl1.DataSource = this.bindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -136,12 +136,12 @@
 
         #endregion
 
-        private XtraDataLayout.DataLayoutControl dataLayoutControl1;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private  DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private System.Windows.Forms.BindingSource bindingSource;
-        private XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraMap.MapControl mapControl;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        private Utils.ToolTipController toolTipController1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private  DevExpress.Utils.ToolTipController toolTipController1;
     }
 }

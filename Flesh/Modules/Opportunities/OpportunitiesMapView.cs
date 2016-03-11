@@ -1,9 +1,9 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     using System.Collections.Generic;
     using System.Drawing;
     using System.Linq;
     using System.Reflection;
-    using DevExpress.DevAV.ViewModels;
+    using FHRMS.ViewModels;
     using DevExpress.Map;
     using DevExpress.XtraEditors;
     using DevExpress.XtraMap;
@@ -46,8 +46,8 @@
             if (DesignMode || Assembly.GetEntryAssembly() == null) {
                 return;
             }
-            var mapStreamDbf = Assembly.GetEntryAssembly().GetManifestResourceStream("DevExpress.DevAV.Resources.Map.NorthAmerica.dbf");
-            var mapStream = Assembly.GetEntryAssembly().GetManifestResourceStream("DevExpress.DevAV.Resources.Map.NorthAmerica.shp");
+            var mapStreamDbf = Assembly.GetEntryAssembly().GetManifestResourceStream("FHRMS.Resources.Map.NorthAmerica.dbf");
+            var mapStream = Assembly.GetEntryAssembly().GetManifestResourceStream("FHRMS.Resources.Map.NorthAmerica.shp");
             adapter.LoadFromStream(mapStream, mapStreamDbf);
         }
         private QuoteCollectionViewModel quoteCore = null;
@@ -107,7 +107,7 @@
             return home;
         }
 
-        private void toolTipController1_BeforeShow(object sender, Utils.ToolTipControllerShowEventArgs e) {
+        private void toolTipController1_BeforeShow(object sender,  DevExpress.Utils.ToolTipControllerShowEventArgs e) {
         }
         void mapControl_MapItemClick(object sender, MapItemClickEventArgs e) {
             MapBubble bubble = e.Item as MapBubble;
@@ -119,7 +119,7 @@
                     HomeData.Items.Add(last.MapItem);
             }
         }
-        object XtraPrinting.IBasePrintableProvider.GetIPrintableImplementer() {
+        object DevExpress.XtraPrinting.IBasePrintableProvider.GetIPrintableImplementer() {
             return mapControl;
         }
     }

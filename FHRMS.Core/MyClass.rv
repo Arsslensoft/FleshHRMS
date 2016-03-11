@@ -1,0 +1,21 @@
+﻿/*
+ * Created by SharpDevelop.
+ * User: Arsslen Idadi
+ * Date: 09/03/2016
+ * Time: 12:40
+ * Rava Programming Language
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+include System;
+include System.Collections.Generic;
+
+program FHRMS.Core
+{
+	/// <summary>
+	/// Description of MyClass.
+	/// </summary>
+	public class MyClass
+	{
+		
+	}
+}

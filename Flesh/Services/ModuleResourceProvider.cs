@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Services {
+﻿namespace FHRMS.Services {
     public interface IModuleResourceProvider {
         string GetCaption(ModuleType moduleType);
         object GetModuleImage(ModuleType moduleType);
@@ -15,8 +15,8 @@
         }
     }
 }
-namespace DevExpress.DevAV.Services.Win {
-    public class ModuleResourceProvider : DevExpress.DevAV.Services.ModuleResourceProvider {
+namespace FHRMS.Services.Win {
+    public class ModuleResourceProvider : FHRMS.Services.ModuleResourceProvider {
         public override object GetModuleImage(ModuleType moduleType) {
             if (moduleType == ModuleType.Unknown) {
                 return null;
@@ -25,7 +25,7 @@ namespace DevExpress.DevAV.Services.Win {
                 case ModuleType.Employees:
                 case ModuleType.CustomersModule:
                 case ModuleType.CustomersFilterPane:
-                    return Images.ImageResourceCache.Default.GetImage(@"images/people/usergroup_32x32.png");
+                    return DevExpress.Images.ImageResourceCache.Default.GetImage(@"images/people/usergroup_32x32.png");
                 default:
                     return null;
             }

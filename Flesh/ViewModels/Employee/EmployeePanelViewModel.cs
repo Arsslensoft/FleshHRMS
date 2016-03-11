@@ -1,3 +1,3 @@
-﻿namespace DevExpress.DevAV.ViewModels {
+﻿namespace FHRMS.ViewModels {
     using System;
 }

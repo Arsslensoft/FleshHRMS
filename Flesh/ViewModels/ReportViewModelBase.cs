@@ -1,7 +1,7 @@
-﻿namespace DevExpress.DevAV.ViewModel {
+﻿namespace FHRMS.ViewModel {
     using System;
-    using DevExpress.DevAV.Common.DataModel;
-    using DevExpress.DevAV.Common.ViewModel;
+    using FHRMS.Common.DataModel;
+    using FHRMS.Common.ViewModel;
     using DevExpress.Mvvm;
 
     public abstract class ReportViewModelBase<TReportType> : ISupportParameter

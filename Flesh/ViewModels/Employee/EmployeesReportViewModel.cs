@@ -1,12 +1,12 @@
-﻿namespace DevExpress.DevAV.ViewModel {
+﻿namespace FHRMS.ViewModel {
     using System;
     using System.Collections.Generic;
-    using DevExpress.DevAV;
-    using DevExpress.DevAV.DevAVDbDataModel;
-    using DevExpress.DevAV.ViewModels;
+    using FHRMS.Data;
+    using FHRMS.DevAVDbDataModel;
+    using FHRMS.ViewModels;
     using DevExpress.Mvvm.POCO;
-    using DevExpress.DevAV.Helpers;
-    using DevExpress.DevAV.Common.ViewModel;
+    using FHRMS.Helpers;
+    using FHRMS.Common.ViewModel;
 
     public class EmployeesReportViewModel :
     ReportViewModelBase<EmployeeReportType, Employee, long, IDevAVDbUnitOfWork> {

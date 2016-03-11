@@ -11,7 +11,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace DevExpress.DevAV.Helpers {
+namespace FHRMS.Helpers {
     public static class ItemsSourceExtensions {
         public static void SetItemsSource<T>(this GridControl grid, IList<T> itemsSource) where T : class {
             grid.DataSource = itemsSource.ToBindingList();

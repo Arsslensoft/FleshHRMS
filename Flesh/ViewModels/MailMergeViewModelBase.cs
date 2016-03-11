@@ -1,6 +1,6 @@
-﻿namespace DevExpress.DevAV.ViewModels {
+﻿namespace FHRMS.ViewModels {
     using System;
-    using DevExpress.DevAV;
+    using FHRMS.Data;
     using DevExpress.Mvvm;
 
     public abstract class MailMergeViewModelBase<TMailTemplate> : DocumentContentViewModelBase, ISupportParameter

@@ -1,0 +1,22 @@
+include System;
+include System.Collections.Generic;
+include System.ComponentModel.DataAnnotations;
+include System.ComponentModel.DataAnnotations.Schema;
+include System.Linq;
+include System.Runtime.Serialization;
+
+program FHRMS.Data {
+    public class QuoteItem : DatabaseObject {
+        public virt Quote Quote { get; set; }
+        public long? QuoteId { get; set; }
+        public virt Product Product { get; set; }
+        public long? ProductId { get; set; }
+        public int ProductUnits { get; set; }
+        [DataType(DataType.Currency)]
+        public decimal ProductPrice { get; set; }
+        [DataType(DataType.Currency)]
+        public decimal Discount { get; set; }
+        [DataType(DataType.Currency)]
+        public decimal Total { get; set; }
+    }
+}

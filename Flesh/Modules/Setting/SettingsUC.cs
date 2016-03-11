@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class SettingsUC : XtraUserControl {
         public SettingsUC(bool allowTransition) {
             InitializeComponent();

@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using DevExpress.DevAV.ViewModels;
-using DevExpress.DevAV.Helpers;
+using FHRMS.ViewModels;
+using FHRMS.Helpers;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.UI;
-using DevExpress.DevAV.Common.ViewModel;
+using FHRMS.Common.ViewModel;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class TaskPrint : BaseModuleControl {
         public TaskPrint()
             : base(CreateViewModel<TaskPrintView>) {
@@ -71,7 +71,7 @@ namespace DevExpress.DevAV.Modules {
         internal object GetParameter() {
             return Parameter;
         }
-        public override DevAV.EmployeeTask SelectedEntity {
+        public override FHRMS.Data.EmployeeTask SelectedEntity {
             get {return null;}
         }
     }

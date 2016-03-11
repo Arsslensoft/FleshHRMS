@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FHRMS", "Flesh\FHRMS.csproj", "{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpress.DevAV.Data", "DevExpress.DevAV.Data\DevExpress.DevAV.Data.csproj", "{AC076B58-635E-458A-AB2D-725B408ABE7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00F0CF79EFBC}") = "FHRMS.Core", "FHRMS.Core\FHRMS.Core.rvproj", "{49DAAEE9-5BED-4073-B2FB-8BA8A26FC1E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00F0CF79EFBC}") = "FHRMS.Data", "FHRMS.Data\FHRMS.Data.rvproj", "{2A1FF2DF-0ECF-4D2F-9028-7E23D4709463}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,12 +20,18 @@ Global
 		{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}.RemoteDebug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}.RemoteDebug|Any CPU.Build.0 = Debug|Any CPU
-		{AC076B58-635E-458A-AB2D-725B408ABE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC076B58-635E-458A-AB2D-725B408ABE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC076B58-635E-458A-AB2D-725B408ABE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC076B58-635E-458A-AB2D-725B408ABE7F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC076B58-635E-458A-AB2D-725B408ABE7F}.RemoteDebug|Any CPU.ActiveCfg = RemoteDebug|Any CPU
-		{AC076B58-635E-458A-AB2D-725B408ABE7F}.RemoteDebug|Any CPU.Build.0 = RemoteDebug|Any CPU
+		{49DAAEE9-5BED-4073-B2FB-8BA8A26FC1E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49DAAEE9-5BED-4073-B2FB-8BA8A26FC1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49DAAEE9-5BED-4073-B2FB-8BA8A26FC1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49DAAEE9-5BED-4073-B2FB-8BA8A26FC1E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49DAAEE9-5BED-4073-B2FB-8BA8A26FC1E6}.RemoteDebug|Any CPU.ActiveCfg = RemoteDebug|Any CPU
+		{49DAAEE9-5BED-4073-B2FB-8BA8A26FC1E6}.RemoteDebug|Any CPU.Build.0 = RemoteDebug|Any CPU
+		{2A1FF2DF-0ECF-4D2F-9028-7E23D4709463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A1FF2DF-0ECF-4D2F-9028-7E23D4709463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A1FF2DF-0ECF-4D2F-9028-7E23D4709463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A1FF2DF-0ECF-4D2F-9028-7E23D4709463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A1FF2DF-0ECF-4D2F-9028-7E23D4709463}.RemoteDebug|Any CPU.ActiveCfg = RemoteDebug|Any CPU
+		{2A1FF2DF-0ECF-4D2F-9028-7E23D4709463}.RemoteDebug|Any CPU.Build.0 = RemoteDebug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

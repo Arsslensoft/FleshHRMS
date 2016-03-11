@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class OrderView {
         /// <summary> 
         /// Required designer variable.
@@ -274,7 +274,7 @@
             this.teGrandTotal.Size = new System.Drawing.Size(110, 26);
             this.teGrandTotal.StyleController = this.layoutControl1;
             this.teGrandTotal.TabIndex = 12;
-            this.order.DataSource = typeof(DevExpress.DevAV.Order);
+            this.order.DataSource = typeof( FHRMS.Data.Order);
             this.teShipping.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.order, "ShippingAmount", true));
             this.teShipping.EditValue = new decimal(new int[] {
             123,
@@ -1209,52 +1209,52 @@
 
         #endregion
 
-        private XtraLayout.LayoutControl layoutControl1;
-        private XtraEditors.TextEdit teGrandTotal;
-        private XtraEditors.TextEdit teShipping;
-        private XtraGrid.GridControl gridItems;
-        private XtraGrid.Views.Grid.GridView viewItems;
-        private XtraEditors.TextEdit tePONumber;
-        private XtraEditors.TextEdit teStore;
-        private XtraEditors.TextEdit teCompany;
-        private XtraEditors.DateEdit teOrderDate;
-        private XtraEditors.LabelControl lbInvoice;
-        private XtraEditors.LabelControl labelControl1;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraLayout.LayoutControlItem layoutControlItem3;
-        private XtraLayout.LayoutControlItem layoutControlItem4;
-        private XtraLayout.LayoutControlItem layoutControlItem5;
-        private XtraLayout.LayoutControlItem layoutControlItem6;
-        private XtraLayout.LayoutControlItem layoutControlItem7;
-        private XtraLayout.LayoutControlItem layoutControlItem8;
-        private XtraLayout.LayoutControlItem layoutControlItem9;
-        private XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraEditors.TextEdit teGrandTotal;
+        private DevExpress.XtraEditors.TextEdit teShipping;
+        private DevExpress.XtraGrid.GridControl gridItems;
+        private DevExpress.XtraGrid.Views.Grid.GridView viewItems;
+        private DevExpress.XtraEditors.TextEdit tePONumber;
+        private DevExpress.XtraEditors.TextEdit teStore;
+        private DevExpress.XtraEditors.TextEdit teCompany;
+        private DevExpress.XtraEditors.DateEdit teOrderDate;
+        private DevExpress.XtraEditors.LabelControl lbInvoice;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private System.Windows.Forms.PictureBox lciBackPicture;
-        private XtraLayout.LayoutControlItem lciBack;
+        private DevExpress.XtraLayout.LayoutControlItem lciBack;
         private System.Windows.Forms.BindingSource orderItems;
-        private XtraGrid.Columns.GridColumn colId;
-        private XtraGrid.Columns.GridColumn colOrder;
-        private XtraGrid.Columns.GridColumn colProduct;
-        private XtraGrid.Columns.GridColumn colProductUnits;
-        private XtraGrid.Columns.GridColumn colProductPrice;
-        private XtraGrid.Columns.GridColumn colDiscount;
-        private XtraGrid.Columns.GridColumn colTotal;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrder;
+        private DevExpress.XtraGrid.Columns.GridColumn colProduct;
+        private DevExpress.XtraGrid.Columns.GridColumn colProductUnits;
+        private DevExpress.XtraGrid.Columns.GridColumn colProductPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colDiscount;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotal;
         private System.Windows.Forms.BindingSource order;
-        private Snap.SnapControl snapControl;
-        private XtraLayout.LayoutControlItem layoutControlItem11;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown1;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown2;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown3;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown4;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown5;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown6;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown7;
-        private XtraLayout.EmptySpaceItem emptySpaceItem4;
-        private XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.Snap.SnapControl snapControl;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown1;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown2;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown3;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown4;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown5;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown6;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown7;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
 
 
     }

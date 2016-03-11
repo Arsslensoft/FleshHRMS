@@ -1,7 +1,7 @@
-﻿using DevExpress.DevAV.DevAVDbDataModel;
-using DevExpress.DevAV.ViewModels;
+﻿using FHRMS.DevAVDbDataModel;
+using FHRMS.ViewModels;
 
-namespace DevExpress.DevAV.ViewModels {
+namespace FHRMS.ViewModels {
     partial class EvaluationCollectionViewModel {
     }
 }

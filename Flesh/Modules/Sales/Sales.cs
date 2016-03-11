@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using DevExpress.DevAV.ViewModels;
-using DevExpress.DevAV.Helpers;
+using FHRMS.ViewModels;
+using FHRMS.Helpers;
 using DevExpress.XtraEditors;
 using DevExpress.XtraLayout.Utils;
-using DevExpress.DevAV;
+using FHRMS.Data;
 using DevExpress.XtraGrid;
-using DevExpress.DevAV.Common.Utils;
+using FHRMS.Common.Utils;
 using DevExpress.XtraBars.Ribbon;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class Sales : BaseModuleControl {
-        List<DevExpress.DevAV.ViewModels.SalesInfo> listSales;
+        List<FHRMS.ViewModels.SalesInfo> listSales;
         SearchControl searchControl;
         public Sales()
             : base(CreateViewModel<OrderCollectionViewModel>) {
@@ -98,11 +98,11 @@ namespace DevExpress.DevAV.Modules {
         }
 
         void collapseButton_Click(object sender, EventArgs e) {
-            if(lcgChart.Visibility == XtraLayout.Utils.LayoutVisibility.Always) {
+            if(lcgChart.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always) {
                 ItemsHideHelper.HideCore(new object[] { lcgChart }, buttonHide, true);
                 return;
             }
-            if(lcgChart.Visibility == XtraLayout.Utils.LayoutVisibility.Never) {
+            if(lcgChart.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Never) {
                 ItemsHideHelper.ExpandCore(new object[] { lcgChart }, buttonHide, true);
                 return;
             }
@@ -123,7 +123,7 @@ namespace DevExpress.DevAV.Modules {
         void OnEditClick(object sender, EventArgs e) {
             ShowSale(salesGridView.GetFocusedRow());
         }
-        void salesGridView_RowClick(object sender, XtraGrid.Views.Grid.RowClickEventArgs e) {
+        void salesGridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e) {
             if(e.Clicks > 1 && e.RowHandle >= 0) {
                 ShowSale(salesGridView.GetFocusedRow());
             }
@@ -141,11 +141,11 @@ namespace DevExpress.DevAV.Modules {
             });
         }
 
-        void chartControl_CustomDrawSeriesPoint(object sender, XtraCharts.CustomDrawSeriesPointEventArgs e) {
+        void chartControl_CustomDrawSeriesPoint(object sender, DevExpress.XtraCharts.CustomDrawSeriesPointEventArgs e) {
             ChartControlLegendCustomPainter.Paint(e);
         }
 
-        void salesGridView_FocusedRowObjectChanged(object sender, XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e) {
+        void salesGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e) {
             ViewModel.SelectedEntity = e.Row as Order;
         }
 

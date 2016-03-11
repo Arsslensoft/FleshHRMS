@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace DevExpress.DevAV.Common.DataModel {
+namespace FHRMS.Common.DataModel {
     /// <summary>
     /// The database-independent exception used in Data Layer and View Model Layer to handle database errors.
     /// </summary>

@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class Dashboard {
         /// <summary> 
         /// Required designer variable.
@@ -246,7 +246,7 @@
             this.salesGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.salesGridView,
             this.orderItemsGridView});
-            this.salesBindingSource.DataSource = typeof(DevExpress.DevAV.Order);
+            this.salesBindingSource.DataSource = typeof(FHRMS.Data.Order);
             this.salesGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colInvoiceNumber,
             this.colCustomer,
@@ -306,10 +306,10 @@
             this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Low, 0),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Normal, 2),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.High, 1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Urgent, 1)});
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Low, 0),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Normal, 2),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.High, 1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Urgent, 1)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             this.repositoryItemComboBox1.PopupSizeable = true;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1042,73 +1042,73 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private XtraDataLayout.DataLayoutControl dataLayoutControl1;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private  DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private System.Windows.Forms.BindingSource salesBindingSource;
-        private XtraGrid.GridControl salesGridControl;
-        private XtraGrid.Views.Grid.GridView orderItemsGridView;
-        private XtraGrid.Columns.GridColumn ProductGC;
-        private XtraGrid.Columns.GridColumn unitsGridColumn;
-        private XtraGrid.Columns.GridColumn unitPriceGridColumn;
-        private XtraGrid.Columns.GridColumn totalGridColumn;
-        private XtraGrid.Columns.GridColumn discountGridColumn;
-        private XtraGrid.Views.Grid.GridView salesGridView;
-        private XtraGrid.Columns.GridColumn colInvoiceNumber;
-        private XtraGrid.Columns.GridColumn colCustomer;
-        private XtraGrid.Columns.GridColumn colStore;
-        private XtraGrid.Columns.GridColumn colOrderDate;
-        private XtraGrid.Columns.GridColumn colTotalAmount;
-        private XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar1;
-        private XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemComboBox1;
-        public XtraEditors.SearchControl searchControl;
-        private XtraLayout.LayoutControl salesLayoutControl;
-        private XtraLayout.LayoutControlGroup Root;
-        private XtraLayout.LayoutControlItem searchControlLCI;
-        private XtraLayout.LayoutControl costLayoutControl;
-        private XtraEditors.CheckButton yearCostSimpleButton;
-        private XtraEditors.CheckButton monthCostSimpleButton;
-        private XtraEditors.LabelControl costLabelControl;
-        private XtraLayout.LayoutControlGroup layoutControlGroup3;
-        private XtraLayout.LayoutControlItem costLabelControlLCI;
-        private XtraLayout.LayoutControlItem monthCostSimpleButtonLCI;
-        private XtraLayout.LayoutControlItem yearCostSimpleButtonLCI;
-        private XtraLayout.LayoutControl revenuesLayoutControl;
-        private XtraEditors.CheckButton yearRevenuesSimpleButton;
-        private XtraEditors.CheckButton monthRevenuesSimpleButton;
-        private XtraEditors.CheckButton todayRevenuesSimpleButton;
-        private XtraEditors.LabelControl revenuesLabelControl;
-        private XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private XtraLayout.LayoutControlItem revenuesLabelLCI;
-        private XtraLayout.LayoutControlItem todayRevenuesSimpleButtonLCI;
-        private XtraLayout.LayoutControlItem monthRevenuesSimpleButtonLCI;
-        private XtraLayout.LayoutControlItem yearRevenuesSimpleButtonLCI;
-        private XtraCharts.ChartControl costChartControl;
-        private XtraLayout.LayoutControlItem costChartLCI;
-        private XtraLayout.LayoutControlItem revenuesLayoutLCI;
-        private XtraLayout.LayoutControlItem costLayoutLCI;
-        private XtraEditors.CheckButton todayCostSimpleButton;
-        private XtraLayout.LayoutControlItem todayCostSimpleButtonLCI;
-        private XtraLayout.LayoutControlGroup salesTodayGroup;
-        private XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private XtraLayout.LayoutControlGroup revenuesGroup;
-        private XtraLayout.LayoutControlGroup costSoldGroup;
-        private XtraLayout.LayoutControlItem salesTodayLayoutLCI;
-        private XtraCharts.ChartControl revenuesChartControl;
-        private XtraLayout.LayoutControlItem revenuesChartLCI;
-        private XtraLayout.LayoutControl opportunitiesLayoutControl;
-        private XtraEditors.LabelControl opportunitiesLabelControl;
-        private XtraLayout.LayoutControlGroup layoutControlGroup4;
-        private XtraLayout.LayoutControlItem opportunitiesLabelLCI;
-        private XtraLayout.LayoutControlGroup opportunitiesGroup;
-        private XtraLayout.LayoutControlItem opportunitiesLayoutLCI;
-        private XtraCharts.ChartControl opportunitiesChartControl;
-        private XtraLayout.LayoutControlItem opportunitiesChartLCI;
-        private XtraEditors.LabelControl labelControl1;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraLayout.LayoutControlGroup lgSalesGroup;
+        private DevExpress.XtraGrid.GridControl salesGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView orderItemsGridView;
+        private DevExpress.XtraGrid.Columns.GridColumn ProductGC;
+        private DevExpress.XtraGrid.Columns.GridColumn unitsGridColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn unitPriceGridColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn totalGridColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn discountGridColumn;
+        private DevExpress.XtraGrid.Views.Grid.GridView salesGridView;
+        private DevExpress.XtraGrid.Columns.GridColumn colInvoiceNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer;
+        private DevExpress.XtraGrid.Columns.GridColumn colStore;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrderDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotalAmount;
+        private DevExpress.XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemComboBox1;
+        public DevExpress.XtraEditors.SearchControl searchControl;
+        private DevExpress.XtraLayout.LayoutControl salesLayoutControl;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlItem searchControlLCI;
+        private DevExpress.XtraLayout.LayoutControl costLayoutControl;
+        private DevExpress.XtraEditors.CheckButton yearCostSimpleButton;
+        private DevExpress.XtraEditors.CheckButton monthCostSimpleButton;
+        private DevExpress.XtraEditors.LabelControl costLabelControl;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
+        private DevExpress.XtraLayout.LayoutControlItem costLabelControlLCI;
+        private DevExpress.XtraLayout.LayoutControlItem monthCostSimpleButtonLCI;
+        private DevExpress.XtraLayout.LayoutControlItem yearCostSimpleButtonLCI;
+        private DevExpress.XtraLayout.LayoutControl revenuesLayoutControl;
+        private DevExpress.XtraEditors.CheckButton yearRevenuesSimpleButton;
+        private DevExpress.XtraEditors.CheckButton monthRevenuesSimpleButton;
+        private DevExpress.XtraEditors.CheckButton todayRevenuesSimpleButton;
+        private DevExpress.XtraEditors.LabelControl revenuesLabelControl;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlItem revenuesLabelLCI;
+        private DevExpress.XtraLayout.LayoutControlItem todayRevenuesSimpleButtonLCI;
+        private DevExpress.XtraLayout.LayoutControlItem monthRevenuesSimpleButtonLCI;
+        private DevExpress.XtraLayout.LayoutControlItem yearRevenuesSimpleButtonLCI;
+        private DevExpress.XtraCharts.ChartControl costChartControl;
+        private DevExpress.XtraLayout.LayoutControlItem costChartLCI;
+        private DevExpress.XtraLayout.LayoutControlItem revenuesLayoutLCI;
+        private DevExpress.XtraLayout.LayoutControlItem costLayoutLCI;
+        private DevExpress.XtraEditors.CheckButton todayCostSimpleButton;
+        private DevExpress.XtraLayout.LayoutControlItem todayCostSimpleButtonLCI;
+        private DevExpress.XtraLayout.LayoutControlGroup salesTodayGroup;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraLayout.LayoutControlGroup revenuesGroup;
+        private DevExpress.XtraLayout.LayoutControlGroup costSoldGroup;
+        private DevExpress.XtraLayout.LayoutControlItem salesTodayLayoutLCI;
+        private DevExpress.XtraCharts.ChartControl revenuesChartControl;
+        private DevExpress.XtraLayout.LayoutControlItem revenuesChartLCI;
+        private DevExpress.XtraLayout.LayoutControl opportunitiesLayoutControl;
+        private DevExpress.XtraEditors.LabelControl opportunitiesLabelControl;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
+        private DevExpress.XtraLayout.LayoutControlItem opportunitiesLabelLCI;
+        private DevExpress.XtraLayout.LayoutControlGroup opportunitiesGroup;
+        private DevExpress.XtraLayout.LayoutControlItem opportunitiesLayoutLCI;
+        private DevExpress.XtraCharts.ChartControl opportunitiesChartControl;
+        private DevExpress.XtraLayout.LayoutControlItem opportunitiesChartLCI;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlGroup lgSalesGroup;
 
     }
 }

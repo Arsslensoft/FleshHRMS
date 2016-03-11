@@ -3,9 +3,9 @@ using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
-using DevExpress.DevAV.Common;
+using FHRMS.Common;
 
-namespace DevExpress.DevAV.Common.DataModel.EntityFramework {
+namespace FHRMS.Common.DataModel.EntityFramework {
     /// <summary>
     /// Provides methods to convert Entity Framework exceptions to database-independent exceptions used in Data Layer and View Model Layer.
     /// </summary>

@@ -6,14 +6,14 @@ using System.Linq.Expressions;
 using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
 using DevExpress.Mvvm.DataAnnotations;
-using DevExpress.DevAV.Common.Utils;
-using DevExpress.DevAV.Common.DataModel;
+using FHRMS.Common.Utils;
+using FHRMS.Common.DataModel;
 using MessageBoxButton = System.Windows.MessageBoxButton;
 using MessageBoxImage = System.Windows.MessageBoxImage;
 using MessageBoxResult = System.Windows.MessageBoxResult;
-using DevExpress.DevAV.Common;
+using FHRMS.Common;
 
-namespace DevExpress.DevAV.Common.ViewModel {
+namespace FHRMS.Common.ViewModel {
     /// <summary>
     /// The base class for a POCO view models exposing a collection of entities of a given type and CRUD operations against these entities. 
     /// This is a partial class that provides extension point to add custom properties, commands and override methods without modifying the auto-generated code.

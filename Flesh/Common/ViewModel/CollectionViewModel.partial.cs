@@ -7,13 +7,13 @@ using System.Linq.Expressions;
 using DevExpress.Mvvm;
 using DevExpress.Mvvm.DataAnnotations;
 using DevExpress.Mvvm.POCO;
-using DevExpress.DevAV.Common.DataModel;
-using DevExpress.DevAV.Common.Utils;
+using FHRMS.Common.DataModel;
+using FHRMS.Common.Utils;
 using MessageBoxButton = System.Windows.MessageBoxButton;
 using MessageBoxImage = System.Windows.MessageBoxImage;
 using MessageBoxResult = System.Windows.MessageBoxResult;
 
-namespace DevExpress.DevAV.Common.ViewModel {
+namespace FHRMS.Common.ViewModel {
     partial class CollectionViewModel<TEntity, TPrimaryKey, TUnitOfWork> : ISupportParameter, IDocumentContent
         where TEntity : class
         where TUnitOfWork : IUnitOfWork {
@@ -101,9 +101,9 @@ namespace DevExpress.DevAV.Common.ViewModel {
         public IQueryable<TEntity> GetEntities(Expression<Func<TEntity, bool>> filter = null) {
             return getRepositoryFunc(unitOfWorkFactory.CreateUnitOfWork()).GetFilteredEntities(filter);
         }
-        public Data.Filtering.CriteriaOperator GetInOperator(IEnumerable<TEntity> entities) {
+        public DevExpress.Data.Filtering.CriteriaOperator GetInOperator(IEnumerable<TEntity> entities) {
             string keyName = ((MemberExpression)Repository.GetPrimaryKeyExpression.Body).Member.Name;
-            return new Data.Filtering.InOperator(keyName, entities.Select(e => GetPrimaryKey(e)));
+            return new DevExpress.Data.Filtering.InOperator(keyName, entities.Select(e => GetPrimaryKey(e)));
         }
         [Command]
         public void Close() {

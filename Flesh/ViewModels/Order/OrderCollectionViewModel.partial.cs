@@ -1,12 +1,12 @@
-﻿using DevExpress.DevAV.ViewModels;
+﻿using FHRMS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using DevExpress.DevAV.DevAVDbDataModel;
-using DevExpress.DevAV;
+using FHRMS.DevAVDbDataModel;
+using FHRMS.Data;
 using DevExpress.Mvvm;
 
-namespace DevExpress.DevAV.ViewModels {
+namespace FHRMS.ViewModels {
     partial class OrderCollectionViewModel {
         public List<SalesInfo> GetSales() {
             var salesInfoList = new List<SalesInfo>();
@@ -18,12 +18,12 @@ namespace DevExpress.DevAV.ViewModels {
             }
             return salesInfoList;
         }
-        private List<DevExpress.DevAV.OrderItem> GetSortedOrders() {
+        private List<FHRMS.Data.OrderItem> GetSortedOrders() {
             var orderItems = GetOrders();
             return orderItems.OrderBy(e => e.Order.OrderDate).ToList();
         }
 
-        private IQueryable<DevAV.OrderItem> GetOrders() {
+        private IQueryable<FHRMS.Data.OrderItem> GetOrders() {
             var unit = ((IDevAVDbUnitOfWork)Repository.UnitOfWork);
             var orderItems = unit.OrderItems.GetEntities();
             return orderItems;

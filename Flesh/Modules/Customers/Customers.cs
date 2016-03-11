@@ -1,22 +1,22 @@
-﻿using DevExpress.DevAV.Helpers;
-using DevExpress.DevAV.ViewModels;
+﻿using FHRMS.Helpers;
+using FHRMS.ViewModels;
 using DevExpress.XtraEditors;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid;
-using DevExpress.DevAV;
+using FHRMS.Data;
 using System.Drawing;
 using System.Linq;
 using System;
-using DevExpress.DevAV.Common.ViewModel;
+using FHRMS.Common.ViewModel;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.Data.Filtering;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraBars.Docking2010.Customization;
-using DevExpress.DevAV.Common.Utils;
+using FHRMS.Common.Utils;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public enum CustomersFilter {
         AllStores,
         MyAccount,
@@ -92,7 +92,7 @@ namespace DevExpress.DevAV.Modules {
             customerBindingSource.DataSource = ViewModel.Entities.Where(e => e.Employees.Count > 0);
         }
 
-        void gridView1_CustomUnboundColumnData(object sender, XtraGrid.Views.Base.CustomColumnDataEventArgs e) {
+        void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e) {
             if(e.Column.ColumnEdit is RepositoryItemSparklineEdit) {
                 e.Value = ViewModel.GetMonthlySalesByCustomer((Customer)e.Row);
             }
@@ -163,13 +163,13 @@ namespace DevExpress.DevAV.Modules {
                     ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, GetParentViewModel<MainViewModel>(), customer.Id);
                 }
                 else {
-                    ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, GetParentViewModel<MainViewModel>(), new DefaultEntityInitializer<Customer, DevAV.DevAVDbDataModel.IDevAVDbUnitOfWork>());
+                    ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, GetParentViewModel<MainViewModel>(), new DefaultEntityInitializer<Customer, DevAVDbDataModel.IDevAVDbUnitOfWork>());
                 }
                 ((BaseModuleControl)main.SelectedModule).Refresh();
             });
         }
 
-        private void viewCustomers_FocusedRowObjectChanged(object sender, XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e) {
+        private void viewCustomers_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e) {
             var customer = e.Row as Customer;
             if(customer == null) return;
             customerEmployeeBindingSource.DataSource = customer.Employees;
@@ -178,25 +178,25 @@ namespace DevExpress.DevAV.Modules {
             ViewModel.SelectedEntity = customer;
         }
         protected bool IsStorsViewVisible() {
-            return storesGridLCI.Visibility == XtraLayout.Utils.LayoutVisibility.Always;
+            return storesGridLCI.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
         }
-        void barButtonItemStores_ItemClick(object sender, XtraBars.ItemClickEventArgs e) {
-            storesGridLCI.Visibility = XtraLayout.Utils.LayoutVisibility.Always;
-            employeeGridLCI.Visibility = XtraLayout.Utils.LayoutVisibility.Never;
+        void barButtonItemStores_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
+            storesGridLCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            employeeGridLCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             dropDownButton1.Text = "Stores";
         }
 
-        void barButtonItemContacts_ItemClick(object sender, XtraBars.ItemClickEventArgs e) {
-            storesGridLCI.Visibility = XtraLayout.Utils.LayoutVisibility.Never;
-            employeeGridLCI.Visibility = XtraLayout.Utils.LayoutVisibility.Always;
+        void barButtonItemContacts_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
+            storesGridLCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            employeeGridLCI.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             dropDownButton1.Text = "Contacts";
         }
 
-        void gridView1_CustomDrawFooterCell(object sender, XtraGrid.Views.Grid.FooterCellCustomDrawEventArgs e) {
+        void gridView1_CustomDrawFooterCell(object sender, DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventArgs e) {
             e.Info.AllowDrawBackground = false;
         }
 
-        void gridView1_CustomSummaryCalculate(object sender, Data.CustomSummaryEventArgs e) {
+        void gridView1_CustomSummaryCalculate(object sender, DevExpress.Data.CustomSummaryEventArgs e) {
             var gs = (GridSummaryItem)e.Item;
             if(object.Equals(gs.Tag, "FY2013")) {
                 e.TotalValue = ViewModel.GetTotalSales(viewCustomers.DataController.GetAllFilteredAndSortedRows());
@@ -212,7 +212,7 @@ namespace DevExpress.DevAV.Modules {
             dropDownButton1.ShowDropDown();
         }
 
-        private void viewCustomers_RowClick(object sender, XtraGrid.Views.Grid.RowClickEventArgs e) {
+        private void viewCustomers_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e) {
             if(e.Clicks > 1 && e.RowHandle >= 0) ShowCustomerEditForFocused();
         }
 

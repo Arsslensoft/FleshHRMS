@@ -1,15 +1,15 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     using System;
-    using DevExpress.DevAV.ViewModels;
-    using DevExpress.DevAV.Reports;
+    using FHRMS.ViewModels;
+    using FHRMS.Reports;
     using DevExpress.XtraPrinting;
     using DevExpress.XtraReports.UI;
     using System.Collections.Generic;
-    using DevExpress.DevAV.Helpers;
+    using FHRMS.Helpers;
     using DevExpress.XtraEditors;
-    using DevExpress.DevAV;
+    using FHRMS.Data;
     using DevExpress.LookAndFeel;
-    using DevExpress.DevAV.ViewModel;
+    using FHRMS.ViewModel;
 
     public partial class EmployeesPrint : BaseModuleControl {
         private XtraReport report;

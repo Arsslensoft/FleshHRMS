@@ -1,13 +1,13 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     using System;
-    using DevExpress.DevAV;
-    using DevExpress.DevAV.ViewModels;
+    using FHRMS.Data;
+    using FHRMS.ViewModels;
     using DevExpress.XtraGrid.Views.Base;
     using DevExpress.XtraLayout.Utils;
-    using DevExpress.DevAV.Helpers;
+    using FHRMS.Helpers;
     using System.Collections.Generic;
     using DevExpress.XtraEditors;
-    using DevExpress.DevAV.Common.Utils;
+    using FHRMS.Common.Utils;
 
     public partial class EmployeeMailMerge : BaseModuleControl {
         public EmployeeMailMerge()

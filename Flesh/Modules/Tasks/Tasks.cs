@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using DevExpress.DevAV;
-using DevExpress.DevAV.Helpers;
-using DevExpress.DevAV.ViewModels;
+using FHRMS.Data;
+using FHRMS.Helpers;
+using FHRMS.ViewModels;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.DevAV.Common.Utils;
+using FHRMS.Common.Utils;
 using DevExpress.Mvvm;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class Tasks : BaseModuleControl {
         public Tasks()
             : base(CreateViewModel<EmployeeTaskCollectionViewModel>) {
@@ -19,7 +19,7 @@ namespace DevExpress.DevAV.Modules {
             ((ITileControl)tileControl1).Properties.LargeItemWidth = 200;
             tileControl1.UseParentAutoScaleFactor = false;
         }
-        protected override void OnInitServices(Mvvm.IServiceContainer serviceContainer) {
+        protected override void OnInitServices( DevExpress.Mvvm.IServiceContainer serviceContainer) {
             base.OnInitServices(serviceContainer);
             serviceContainer.RegisterService(new FlyoutDetailFormDocumentManagerService(ModuleType.EditTask));
         }
@@ -77,11 +77,11 @@ namespace DevExpress.DevAV.Modules {
                 ViewModel.Edit(task);
         }
         void collapseButton_Click(object sender, EventArgs e) {
-            if(tileControlLCI.Visibility == XtraLayout.Utils.LayoutVisibility.Always) {
+            if(tileControlLCI.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always) {
                 ItemsHideHelper.Hide(new object[] { tileControlLCI }, buttonHide);
                 return;
             }
-            if(tileControlLCI.Visibility == XtraLayout.Utils.LayoutVisibility.Never) {
+            if(tileControlLCI.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Never) {
                 ItemsHideHelper.Expand(new object[] { tileControlLCI }, buttonHide);
                 return;
             }

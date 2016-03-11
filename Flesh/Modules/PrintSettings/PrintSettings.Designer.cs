@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class PrintSettings {
         /// <summary> 
         /// Required designer variable.
@@ -58,7 +58,7 @@
 
         #endregion
 
-        private XtraLayout.LayoutControl layoutControl1;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
     }
 }

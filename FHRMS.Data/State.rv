@@ -1,0 +1,15 @@
+include System;
+include System.Collections.Generic;
+include System.ComponentModel.DataAnnotations;
+include System.ComponentModel.DataAnnotations.Schema;
+include System.Linq;
+
+program FHRMS.Data {
+    public class State {
+        [Key]
+        public StateEnum ShortName { get; set; }
+        public string LongName { get; set; }
+        public byte[] Flag48px { get; set; }
+        public byte[] Flag24px { get; set; }
+    }
+}

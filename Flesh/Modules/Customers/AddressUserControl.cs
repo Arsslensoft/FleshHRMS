@@ -4,7 +4,7 @@ using System.Linq;
 using DevExpress.XtraEditors;
 using DevExpress.Utils.Controls;
 
-namespace DevExpress.DevAV.Modules.Customers {
+namespace FHRMS.Modules.Customers {
     public partial class AddressUserControl : XtraUserControl, IXtraResizableControl {
         public AddressUserControl() {
             InitializeComponent();

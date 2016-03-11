@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using DevExpress.DevAV.ViewModels;
+using FHRMS.ViewModels;
 using DevExpress.XtraEditors;
 using DevExpress.XtraCharts;
-using DevExpress.DevAV.Common.Utils;
-using DevExpress.DevAV.Helpers;
+using FHRMS.Common.Utils;
+using FHRMS.Helpers;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public enum Periods : int {
         Month = 1,
         Today = 2,
         Year = 0
     }
     public partial class Dashboard : BaseModuleControl {
-        private List<DevExpress.DevAV.ViewModels.SalesInfo> listSales;
+        private List<FHRMS.ViewModels.SalesInfo> listSales;
         private List<CostInfo> listCost;
         public Dashboard()
             : base(CreateViewModel<OrderCollectionViewModel>) {

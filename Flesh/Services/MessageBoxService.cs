@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Services {
+﻿namespace FHRMS.Services {
     using System.ComponentModel;
     using System.Windows.Forms;
     using DevExpress.Mvvm;

@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class BottomPanelBase {
         /// <summary> 
         /// Required designer variable.
@@ -62,7 +62,7 @@
             this.searchControl.Properties.AutoHeight = false;
             this.searchControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.searchControl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Repository.ClearButton(40, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::DevExpress.DevAV.Properties.Resources.Clear1, true, true),
+            new DevExpress.XtraEditors.Repository.ClearButton(40, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::FHRMS.Properties.Resources.Clear1, true, true),
             new DevExpress.XtraEditors.Repository.SearchButton(40, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("searchControl.Properties.Buttons"))), true, true)});
             this.searchControl.Size = new System.Drawing.Size(100, 38);
             this.searchControl.StyleController = this.layoutControl1;
@@ -158,13 +158,13 @@
 
         #endregion
 
-        private XtraLayout.LayoutControl layoutControl1;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel1;
         private System.Windows.Forms.ImageList imageList1;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        public XtraEditors.SearchControl searchControl;
-        private XtraLayout.LayoutControlItem searchLayoutControlItem;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        public DevExpress.XtraEditors.SearchControl searchControl;
+        private DevExpress.XtraLayout.LayoutControlItem searchLayoutControlItem;
 
     }
 }

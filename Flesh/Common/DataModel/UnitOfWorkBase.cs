@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace DevExpress.DevAV.Common.DataModel {
+namespace FHRMS.Common.DataModel {
     /// <summary>
     /// The base class for unit of works that provides the storage for repositories. 
     /// </summary>

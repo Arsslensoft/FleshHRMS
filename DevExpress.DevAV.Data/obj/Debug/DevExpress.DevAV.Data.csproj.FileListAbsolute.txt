@@ -1,4 +1,0 @@
-D:\Research\FHRMS\Bin\Framework4\DevExpress.DevAV.v15.1.Data.dll
-D:\Research\FHRMS\Bin\Framework4\DevExpress.DevAV.v15.1.Data.pdb
-D:\Research\FHRMS\DevExpress.HybridApp.Win\CS\DevExpress.DevAV.Data\obj\Debug\DevExpress.DevAV.v15.1.Data.dll
-D:\Research\FHRMS\DevExpress.HybridApp.Win\CS\DevExpress.DevAV.Data\obj\Debug\DevExpress.DevAV.v15.1.Data.pdb

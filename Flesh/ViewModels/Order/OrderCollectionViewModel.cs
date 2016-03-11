@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Linq;
 using DevExpress.Mvvm.POCO;
-using DevExpress.DevAV.Common.Utils;
-using DevExpress.DevAV.DevAVDbDataModel;
-using DevExpress.DevAV.Common.DataModel;
-using DevExpress.DevAV;
-using DevExpress.DevAV.Common.ViewModel;
+using FHRMS.Common.Utils;
+using FHRMS.DevAVDbDataModel;
+using FHRMS.Common.DataModel;
+using FHRMS.Data;
+using FHRMS.Common.ViewModel;
 using DevExpress.Mvvm;
 using System.Collections.Generic;
 using System.Data.Entity;
 
-namespace DevExpress.DevAV.ViewModels {
+namespace FHRMS.ViewModels {
     /// <summary>
     /// Represents the Orders collection view model.
     /// </summary>

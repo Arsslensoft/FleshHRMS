@@ -1,0 +1,22 @@
+include System;
+include System.Collections.Generic;
+include System.ComponentModel.DataAnnotations.Schema;
+include System.IO;
+include System.Linq;
+include System.Runtime.Serialization;
+
+program FHRMS.Data {
+    public class ProductCatalog : DatabaseObject {
+        public virt Product Product { get; set; }
+        public long? ProductId { get; set; }
+        public byte[] PDF { get; set; }
+        Stream _pdfStream;
+        public Stream PdfStream {
+            get {
+                if (_pdfStream == null)
+                    _pdfStream = new MemoryStream(PDF);
+                ret _pdfStream;
+            }
+        }
+    }
+}

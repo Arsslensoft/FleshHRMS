@@ -2,49 +2,49 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DevExpress.DevAV.Reports {
+namespace FHRMS.Reports {
     internal class EmployeeDirectory : DevExpress.XtraReports.UI.XtraReport {
-        private XtraReports.UI.TopMarginBand topMarginBand1;
-        private XtraReports.UI.DetailBand detailBand1;
+        private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
+        private DevExpress.XtraReports.UI.DetailBand detailBand1;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.ComponentModel.IContainer components;
-        private XtraReports.UI.XRPictureBox xrPictureBox1;
-        private XtraReports.UI.BottomMarginBand bottomMarginBand1;
-        private XtraReports.UI.XRPageInfo xrPageInfo1;
-        private XtraReports.UI.PageHeaderBand PageHeader;
-        private XtraReports.UI.XRPageInfo xrPageInfo2;
-        private XtraReports.UI.XRTable xrTable1;
-        private XtraReports.UI.XRTableRow xrTableRow1;
-        private XtraReports.UI.XRTableCell xrTableCell1;
-        private XtraReports.UI.XRTableCell xrTableCell2;
-        private XtraReports.UI.XRTable xrTable2;
-        private XtraReports.UI.XRTableRow xrTableRow2;
-        private XtraReports.UI.XRTableCell xrTableCell4;
-        private XtraReports.UI.XRTableRow xrTableRow3;
-        private XtraReports.UI.XRTableCell xrTableCell5;
-        private XtraReports.UI.XRTableRow xrTableRow4;
-        private XtraReports.UI.XRTableCell xrTableCell6;
-        private XtraReports.UI.XRLine xrLine1;
-        private XtraReports.UI.XRTableRow xrTableRow5;
-        private XtraReports.UI.XRTableCell xrTableCell7;
-        private XtraReports.UI.XRTableCell xrTableCell8;
-        private XtraReports.UI.XRTableRow xrTableRow6;
-        private XtraReports.UI.XRTableCell xrTableCell9;
-        private XtraReports.UI.XRTableCell xrTableCell10;
-        private XtraReports.UI.XRTableRow xrTableRow7;
-        private XtraReports.UI.XRTableCell xrTableCell11;
-        private XtraReports.UI.XRTableCell xrTableCell12;
-        private XtraReports.UI.XRTableRow xrTableRow8;
-        private XtraReports.UI.XRTableCell xrTableCell13;
-        private XtraReports.UI.XRTableRow xrTableRow9;
-        private XtraReports.UI.XRTableCell xrTableCell14;
-        private XtraReports.UI.XRTableCell xrTableCell15;
-        private XtraReports.UI.XRTableRow xrTableRow10;
-        private XtraReports.UI.XRTableCell xrTableCell16;
-        private XtraReports.UI.XRTableCell xrTableCell17;
-        private XtraReports.UI.XRLabel xrLabel1;
-        private XtraReports.UI.CalculatedField FirstLetter;
-        private XtraReports.UI.XRTableCell xrTableCell3;
+        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
+        private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
+        private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo2;
+        private DevExpress.XtraReports.UI.XRTable xrTable1;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
+        private DevExpress.XtraReports.UI.XRTable xrTable2;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow3;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell5;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow4;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
+        private DevExpress.XtraReports.UI.XRLine xrLine1;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow5;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow6;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow7;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow8;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell13;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow9;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell14;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell15;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow10;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell16;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell17;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.UI.CalculatedField FirstLetter;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell3;
 
         public EmployeeDirectory() {
             InitializeComponent();
@@ -330,7 +330,7 @@ namespace DevExpress.DevAV.Reports {
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(150F, 22.08F);
             this.xrPageInfo1.StylePriority.UseForeColor = false;
-            this.bindingSource1.DataSource = typeof(DevExpress.DevAV.Employee);
+            this.bindingSource1.DataSource = typeof(FHRMS.Data.Employee);
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable1 });
             this.PageHeader.Dpi = 96F;

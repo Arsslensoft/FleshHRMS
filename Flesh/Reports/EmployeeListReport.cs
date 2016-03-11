@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DevExpress.DevAV.Reports {
+namespace FHRMS.Reports {
     internal class EmployeeList : DevExpress.XtraReports.UI.XtraReport {
-        private XtraReports.UI.TopMarginBand topMarginBand1;
-        private XtraReports.UI.DetailBand detailBand1;
-        private XtraReports.UI.XRLabel xrLabel1;
-        private XtraReports.UI.BottomMarginBand bottomMarginBand1;
+        private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
+        private DevExpress.XtraReports.UI.DetailBand detailBand1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
         public EmployeeList() {
         }
 

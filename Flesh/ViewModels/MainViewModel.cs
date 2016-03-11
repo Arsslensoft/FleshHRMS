@@ -1,6 +1,6 @@
-﻿namespace DevExpress.DevAV.ViewModels {
+﻿namespace FHRMS.ViewModels {
     using System;
-    using DevExpress.DevAV.Services;
+    using FHRMS.Services;
     using DevExpress.Mvvm;
 
     public delegate void ModuleInitializeMethod(object module);
@@ -19,7 +19,7 @@
             ServiceContainer.RegisterService(new Services.ModuleActivator(
                 mainModuleType.Assembly, mainModuleType.Namespace + ".Modules"));
             ServiceContainer.RegisterService(new Services.ReportActivator(
-                mainModuleType.Assembly, "DevExpress.DevAV.Reports"));
+                mainModuleType.Assembly, "FHRMS.Reports"));
             ServiceContainer.RegisterService(new Services.ModuleLocator(ServiceContainer));
             ServiceContainer.RegisterService(new Services.ReportLocator(ServiceContainer));
             ServiceContainer.RegisterService(new Services.TransitionService(mainModule));

@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class EditNotes{
         /// <summary> 
         /// Required designer variable.
@@ -74,8 +74,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
-            this.employeeBindingSource.DataSource = typeof(DevExpress.DevAV.Employee);
-            this.noteBindingSource.DataSource = typeof(DevExpress.DevAV.Evaluation);
+            this.employeeBindingSource.DataSource = typeof(FHRMS.Data.Employee);
+            this.noteBindingSource.DataSource = typeof( FHRMS.Data.Evaluation);
             this.layout.AllowCustomization = false;
             this.layout.BackColor = System.Drawing.Color.White;
             this.layout.Controls.Add(this.fullNameLabelControl);
@@ -365,31 +365,31 @@
 
         #endregion
 
-        private XtraDataLayout.DataLayoutControl layout;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private XtraEditors.LabelControl fullNameLabelControl;
-        private XtraEditors.LabelControl labelControl1;
-        private XtraEditors.SimpleButton cancelSimpleButton;
-        private XtraEditors.SimpleButton saveSimpleButton;
-        private XtraEditors.DateEdit dateEdit1;
-        private XtraLayout.LayoutControlItem layoutControlItem5;
-        private XtraLayout.LayoutControlItem layoutControlItem10;
-        private XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private XtraLayout.LayoutControlItem layoutControlItem15;
-        private XtraLayout.LayoutControlItem layoutControlItem16;
-        private XtraLayout.LayoutControlItem layoutControlItem17;
-        private XtraLayout.LayoutControlItem layoutControlItem18;
-        private XtraEditors.MemoEdit memoEdit1;
-        private XtraEditors.LookUpEdit assignedToLookUpEdit;
-        private XtraLayout.LayoutControlItem layoutControlItem9;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private XtraLayout.LayoutControlItem layoutControlItem3;
-        private XtraLayout.EmptySpaceItem emptySpaceItem4;
-        private XtraLayout.EmptySpaceItem emptySpaceItem6;
+        private  DevExpress.XtraDataLayout.DataLayoutControl layout;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraEditors.LabelControl fullNameLabelControl;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton cancelSimpleButton;
+        private DevExpress.XtraEditors.SimpleButton saveSimpleButton;
+        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
+        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraEditors.LookUpEdit assignedToLookUpEdit;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
         private System.Windows.Forms.BindingSource noteBindingSource;
         private System.Windows.Forms.BindingSource employeeBindingSource;
-        private XtraLayout.EmptySpaceItem emptySpaceItem7;
-        private XtraEditors.TextEdit memoEdit2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
+        private DevExpress.XtraEditors.TextEdit memoEdit2;
     }
 }

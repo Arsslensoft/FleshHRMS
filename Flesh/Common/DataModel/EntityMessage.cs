@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace DevExpress.DevAV.Common.DataModel {
+namespace FHRMS.Common.DataModel {
     /// <summary>
     /// Represents the state of the entity relative to the unit of work.
     /// </summary>

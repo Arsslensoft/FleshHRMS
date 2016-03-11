@@ -1,8 +1,8 @@
-﻿namespace DevExpress.DevAV.ViewModels {
+﻿namespace FHRMS.ViewModels {
     using System;
-    using DevExpress.DevAV.ViewModels;
-    using DevExpress.DevAV;
-    using DevExpress.DevAV.DevAVDbDataModel;
+    using FHRMS.ViewModels;
+    using FHRMS.Data;
+    using FHRMS.DevAVDbDataModel;
     using System.Linq;
     using DevExpress.Mvvm;
 

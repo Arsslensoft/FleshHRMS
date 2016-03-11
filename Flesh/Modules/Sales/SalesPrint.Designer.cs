@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class SalesPrint {
         /// <summary> 
         /// Required designer variable.
@@ -43,7 +43,7 @@
 
         #endregion
 
-        private XtraPrinting.Preview.DocumentViewer documentViewer;
+        private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer;
 
     }
 }

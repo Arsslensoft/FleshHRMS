@@ -1,0 +1,19 @@
+include System;
+include System.ComponentModel;
+include System.ComponentModel.DataAnnotations;
+include System.ComponentModel.DataAnnotations.Schema;
+include System.Runtime.Serialization;
+include DevExpress.Common;
+
+program FHRMS.Data {
+    public abstract class DatabaseObject : IDataErrorInfo {
+        [Key]
+        public long Id { get; set; }
+        #region IDataErrorInfo
+        string IDataErrorInfo.Error { get { ret null; } }
+        string IDataErrorInfo.self[string columnName] {
+            get { ret IDataErrorInfoHelper.GetErrorText(self, columnName); }
+        }
+        #endregion
+    }
+}

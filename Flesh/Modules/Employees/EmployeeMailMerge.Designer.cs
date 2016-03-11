@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class EmployeeMailMerge {
         /// <summary> 
         /// Required designer variable.
@@ -74,7 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lcSnap)).BeginInit();
             this.SuspendLayout();
-            this.bindingSource.DataSource = typeof(DevExpress.DevAV.Employee);
+            this.bindingSource.DataSource = typeof(FHRMS.Data.Employee);
             this.snapControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             dataSourceInfo1.DataSource = this.bindingSource;
             dataSourceInfo1.DataSourceName = "Employee";
@@ -119,7 +119,7 @@
             this.searchControl.MinimumSize = new System.Drawing.Size(100, 38);
             this.searchControl.Name = "searchControl";
             this.searchControl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Repository.ClearButton(40, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::DevExpress.DevAV.Properties.Resources.Clear1, true, true),
+            new DevExpress.XtraEditors.Repository.ClearButton(40, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::FHRMS.Properties.Resources.Clear1, true, true),
             new DevExpress.XtraEditors.Repository.SearchButton(40, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("searchControl.Properties.Buttons"))), true, true)});
             this.searchControl.Size = new System.Drawing.Size(300, 38);
             this.searchControl.StyleController = this.dataLayout;
@@ -379,32 +379,32 @@
 
         #endregion
 
-        private XtraDataLayout.DataLayoutControl dataLayout;
-        private XtraLayout.LayoutControlGroup lcgRoot;
+        private  DevExpress.XtraDataLayout.DataLayoutControl dataLayout;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgRoot;
         private System.Windows.Forms.BindingSource bindingSource;
-        private XtraEditors.LabelControl FullNameLabel;
-        private XtraEditors.LabelControl TitleLabel;
-        private XtraEditors.PictureEdit PhotoPictureEdit;
-        private XtraLayout.LayoutControlGroup lcgSplit;
-        private XtraLayout.LayoutControlItem ItemForFullName;
-        private XtraLayout.LayoutControlItem ItemForTitle;
-        private XtraLayout.LayoutControlItem ItemForPhoto;
+        private DevExpress.XtraEditors.LabelControl FullNameLabel;
+        private DevExpress.XtraEditors.LabelControl TitleLabel;
+        private DevExpress.XtraEditors.PictureEdit PhotoPictureEdit;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgSplit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForFullName;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForTitle;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForPhoto;
         private DevExpress.Snap.SnapControl snapControl;
-        private XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private XtraLayout.LayoutControlGroup lcgMailMergeSetting;
-        private XtraEditors.ImageComboBoxEdit cbMailTemplate;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraGrid.GridControl employeesList;
-        private XtraLayout.LayoutControlItem layoutControlItem3;
-        private XtraGrid.Views.BandedGrid.AdvBandedGridView gridView;
-        private XtraGrid.Views.BandedGrid.GridBand gridBand1;
-        private XtraGrid.Views.BandedGrid.BandedGridColumn colFullName;
-        private XtraGrid.Views.BandedGrid.BandedGridColumn colPhoto;
-        private XtraGrid.Views.BandedGrid.BandedGridColumn colTitle;
-        private XtraGrid.Views.BandedGrid.GridBand gridBand2;
-        private XtraLayout.SimpleSeparator simpleSeparator1;
-        private XtraLayout.LayoutControlItem lcSnap;
-        public XtraEditors.SearchControl searchControl;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgMailMergeSetting;
+        private DevExpress.XtraEditors.ImageComboBoxEdit cbMailTemplate;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraGrid.GridControl employeesList;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView gridView;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colFullName;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colPhoto;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colTitle;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
+        private DevExpress.XtraLayout.LayoutControlItem lcSnap;
+        public DevExpress.XtraEditors.SearchControl searchControl;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

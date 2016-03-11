@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace DevExpress.DevAV.Common.DataModel {
+namespace FHRMS.Common.DataModel {
     /// <summary>
     /// The IUnitOfWork interface represents the Unit Of Work pattern 
     /// such that it can be used to query from a database and group together changes that will then be written back to the store as a unit. 

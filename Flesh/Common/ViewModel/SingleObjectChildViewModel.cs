@@ -3,7 +3,7 @@ using DevExpress.Mvvm;
 using DevExpress.Mvvm.DataAnnotations;
 using DevExpress.Mvvm.POCO;
 
-namespace DevExpress.DevAV.Common.ViewModel {
+namespace FHRMS.Common.ViewModel {
     public class SingleObjectChildViewModel<TEntity> : ISupportParameter where TEntity : class {
         public static SingleObjectChildViewModel<TEntity> Create() {
             return ViewModelSource.Create(() => new SingleObjectChildViewModel<TEntity>());

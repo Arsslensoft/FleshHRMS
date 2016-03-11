@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace DevExpress.DevAV
+namespace FHRMS
 {
     public partial class FleshSplashScreen : DevExpress.XtraSplashForm.SplashFormBase
     {

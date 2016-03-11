@@ -3,7 +3,7 @@ using System.Drawing;
 using DevExpress.XtraEditors;
 using DevExpress.XtraPrinting.Preview;
 
-namespace DevExpress.DevAV {
+namespace FHRMS {
     public partial class ReportPreviewControl : XtraUserControl {
         public ReportPreviewControl() {
             InitializeComponent();

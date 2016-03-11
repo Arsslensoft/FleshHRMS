@@ -1,5 +1,5 @@
 ﻿using DevExpress.XtraEditors;
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     partial class CustomerEditableView {
         /// <summary> 
         /// Required designer variable.
@@ -35,9 +35,9 @@ namespace DevExpress.DevAV.Modules {
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lciBackPicture = new System.Windows.Forms.PictureBox();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.customerMapView1 = new DevExpress.DevAV.Modules.CustomerMapView();
-            this.addressUserControl2 = new DevExpress.DevAV.Modules.Customers.AddressUserControl();
-            this.addressUserControl1 = new DevExpress.DevAV.Modules.Customers.AddressUserControl();
+            this.customerMapView1 = new FHRMS.Modules.CustomerMapView();
+            this.addressUserControl2 = new FHRMS.Modules.Customers.AddressUserControl();
+            this.addressUserControl1 = new FHRMS.Modules.Customers.AddressUserControl();
             this.ordersGridControl = new DevExpress.XtraGrid.GridControl();
             this.ordersView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colInvoiceNumber = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -125,7 +125,7 @@ namespace DevExpress.DevAV.Modules {
             this.dateTimeChartRangeControlClient1.GridOptions.GridAlignment = DevExpress.XtraEditors.RangeControlDateTimeGridAlignment.Month;
             this.dateTimeChartRangeControlClient1.GridOptions.SnapAlignment = DevExpress.XtraEditors.RangeControlDateTimeGridAlignment.Month;
             this.dateTimeChartRangeControlClient1.PaletteName = "NatureColors";
-            this.orderBindingSource.DataSource = typeof(DevExpress.DevAV.Order);
+            this.orderBindingSource.DataSource = typeof(FHRMS.Data.Order);
             this.layoutControl1.AllowCustomization = false;
             this.layoutControl1.Controls.Add(this.textEdit1);
             this.layoutControl1.Controls.Add(this.lciBackPicture);
@@ -155,7 +155,7 @@ namespace DevExpress.DevAV.Modules {
             this.textEdit1.Size = new System.Drawing.Size(504, 26);
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 54;
-            this.customerBindingSource.DataSource = typeof(DevExpress.DevAV.Customer);
+            this.customerBindingSource.DataSource = typeof(FHRMS.Data.Customer);
             this.lciBackPicture.Image = ((System.Drawing.Image)(resources.GetObject("lciBackPicture.Image")));
             this.lciBackPicture.Location = new System.Drawing.Point(20, 20);
             this.lciBackPicture.Name = "lciBackPicture";
@@ -524,48 +524,48 @@ namespace DevExpress.DevAV.Modules {
         #endregion
 
         private DevExpress.XtraDataLayout.DataLayoutControl layoutControl1;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private XtraEditors.LabelControl labelControl2;
-        private XtraEditors.LabelControl labelControl1;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraEditors.RangeControl rangeControl;
-        private XtraGrid.GridControl ordersGridControl;
-        private XtraGrid.Views.Grid.GridView ordersView;
-        private XtraEditors.DateTimeChartRangeControlClient dateTimeChartRangeControlClient1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.RangeControl rangeControl;
+        private DevExpress.XtraGrid.GridControl ordersGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView ordersView;
+        private DevExpress.XtraEditors.DateTimeChartRangeControlClient dateTimeChartRangeControlClient1;
         private TextEdit PhoneTextEdit;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private TextEdit FaxTextEdit;
-        private XtraLayout.LayoutControlItem ItemForPhone;
-        private XtraLayout.LayoutControlItem ItemForFax;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForPhone;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForFax;
         private Customers.AddressUserControl addressUserControl1;
-        private XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private Customers.AddressUserControl addressUserControl2;
-        private XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private System.Windows.Forms.BindingSource orderBindingSource;
-        private XtraGrid.Columns.GridColumn colInvoiceNumber;
-        private XtraGrid.Columns.GridColumn colPONumber;
-        private XtraGrid.Columns.GridColumn colOrderDate;
-        private XtraGrid.Columns.GridColumn colSaleAmount;
-        private XtraGrid.Columns.GridColumn colShippingAmount;
-        private XtraGrid.Columns.GridColumn colTotalAmount;
-        private XtraGrid.Columns.GridColumn storeColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn colInvoiceNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colPONumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrderDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colSaleAmount;
+        private DevExpress.XtraGrid.Columns.GridColumn colShippingAmount;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotalAmount;
+        private DevExpress.XtraGrid.Columns.GridColumn storeColumn;
         private CustomerMapView customerMapView1;
         private MemoEdit memoEdit1;
-        private XtraLayout.LayoutControlItem layoutControlItem6;
-        private XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private XtraLayout.LayoutControlItem rangeControlLayoutItem;
-        private XtraLayout.LayoutControlGroup customerDetailsTab;
-        private XtraLayout.LayoutControlItem layoutControlItem14;
-        private XtraLayout.LayoutControlGroup mapTab;
-        private XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.LayoutControlItem rangeControlLayoutItem;
+        private DevExpress.XtraLayout.LayoutControlGroup customerDetailsTab;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
+        private DevExpress.XtraLayout.LayoutControlGroup mapTab;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private System.Windows.Forms.PictureBox lciBackPicture;
-        private XtraLayout.LayoutControlItem lciBack;
+        private DevExpress.XtraLayout.LayoutControlItem lciBack;
         private TextEdit textEdit1;
-        private XtraLayout.LayoutControlItem layoutControlItem7;
-        private XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private XtraLayout.EmptySpaceItem emptySpaceItem4;
-        private XtraEditors.DXErrorProvider.DXErrorProvider errorProvider;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider errorProvider;
     }
 }

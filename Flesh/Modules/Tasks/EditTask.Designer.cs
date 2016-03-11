@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class EditTask {
         /// <summary> 
         /// Required designer variable.
@@ -167,7 +167,7 @@
             this.tbComplete.StyleController = this.layout;
             this.tbComplete.TabIndex = 21;
             this.tbComplete.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.tbComplete_EditValueChanging);
-            this.taskBindingSource.DataSource = typeof(DevExpress.DevAV.EmployeeTask);
+            this.taskBindingSource.DataSource = typeof(FHRMS.Data.EmployeeTask);
             this.fullNameLabelControl.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.taskBindingSource, "Subject", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.fullNameLabelControl.AllowHtmlString = true;
             this.fullNameLabelControl.Appearance.FontSizeDelta = 3;
@@ -206,7 +206,7 @@
             this.cbReminderDate.Location = new System.Drawing.Point(558, 330);
             this.cbReminderDate.Name = "cbReminderDate";
             this.cbReminderDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::DevExpress.DevAV.Properties.Resources.DateEditIcon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::FHRMS.Properties.Resources.DateEditIcon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.cbReminderDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbReminderDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -248,7 +248,7 @@
             this.dueDateEdit.Location = new System.Drawing.Point(117, 267);
             this.dueDateEdit.Name = "dueDateEdit";
             this.dueDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::DevExpress.DevAV.Properties.Resources.DateEditIcon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::FHRMS.Properties.Resources.DateEditIcon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.dueDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dueDateEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -351,13 +351,13 @@
             this.priorityImageComboBoxEdit.TabIndex = 10;
             this.priorityImageList.ImageSize = new System.Drawing.Size(24, 24);
             this.priorityImageList.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("priorityImageList.ImageStream")));
-            this.priorityImageList.InsertImage(global::DevExpress.DevAV.Properties.Resources.LowPriority, "LowPriority", typeof(global::DevExpress.DevAV.Properties.Resources), 0);
+            this.priorityImageList.InsertImage(global::FHRMS.Properties.Resources.LowPriority, "LowPriority", typeof(global::FHRMS.Properties.Resources), 0);
             this.priorityImageList.Images.SetKeyName(0, "LowPriority");
-            this.priorityImageList.InsertImage(global::DevExpress.DevAV.Properties.Resources.NormalPriority, "NormalPriority", typeof(global::DevExpress.DevAV.Properties.Resources), 1);
+            this.priorityImageList.InsertImage(global::FHRMS.Properties.Resources.NormalPriority, "NormalPriority", typeof(global::FHRMS.Properties.Resources), 1);
             this.priorityImageList.Images.SetKeyName(1, "NormalPriority");
-            this.priorityImageList.InsertImage(global::DevExpress.DevAV.Properties.Resources.MediumPriority, "MediumPriority", typeof(global::DevExpress.DevAV.Properties.Resources), 2);
+            this.priorityImageList.InsertImage(global::FHRMS.Properties.Resources.MediumPriority, "MediumPriority", typeof(global::FHRMS.Properties.Resources), 2);
             this.priorityImageList.Images.SetKeyName(2, "MediumPriority");
-            this.priorityImageList.InsertImage(global::DevExpress.DevAV.Properties.Resources.HighPriority, "HighPriority", typeof(global::DevExpress.DevAV.Properties.Resources), 3);
+            this.priorityImageList.InsertImage(global::FHRMS.Properties.Resources.HighPriority, "HighPriority", typeof(global::FHRMS.Properties.Resources), 3);
             this.priorityImageList.Images.SetKeyName(3, "HighPriority");
             this.cbReminderTime.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.taskBindingSource, "ReminderDateTime", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cbReminderTime.EditValue = null;
@@ -705,54 +705,54 @@
 
         #endregion
 
-        private XtraDataLayout.DataLayoutControl layout;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private XtraEditors.LabelControl fullNameLabelControl;
-        private XtraEditors.LabelControl labelControl1;
-        private XtraEditors.SimpleButton cancelSimpleButton;
-        private XtraEditors.SimpleButton saveSimpleButton;
-        private XtraEditors.DateEdit cbReminderDate;
-        private XtraEditors.CheckEdit cbReminder;
-        private XtraEditors.MemoEdit descriptionMemoEdit;
-        private XtraEditors.MemoEdit subjectMemoEdit;
-        private XtraEditors.DateEdit dueDateEdit;
-        private XtraEditors.DateEdit startDateEdit;
-        private XtraEditors.LookUpEdit linkedToLookUpEdit;
-        private XtraEditors.LookUpEdit assignedToLookUpEdit;
-        private XtraEditors.LookUpEdit ownerLookUpEdit;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraLayout.LayoutControlItem layoutControlItem4;
-        private XtraLayout.LayoutControlItem layoutControlItem5;
-        private XtraLayout.LayoutControlItem layoutControlItem6;
-        private XtraLayout.LayoutControlItem layoutControlItem7;
-        private XtraLayout.LayoutControlItem layoutControlItem8;
-        private XtraLayout.LayoutControlItem layoutControlItem9;
-        private XtraLayout.LayoutControlItem layoutControlItem10;
-        private XtraLayout.LayoutControlItem layoutControlItem11;
-        private XtraLayout.LayoutControlItem layoutControlItem12;
-        private XtraLayout.LayoutControlItem layoutControlItem13;
-        private XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private XtraLayout.LayoutControlItem layoutControlItem15;
-        private XtraLayout.LayoutControlItem layoutControlItem16;
-        private XtraLayout.LayoutControlItem layoutControlItem17;
-        private XtraLayout.LayoutControlItem layoutControlItem18;
-        private XtraLayout.LayoutControlItem layoutControlItem3;
-        private XtraLayout.EmptySpaceItem emptySpaceItem4;
-        private XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private XtraLayout.EmptySpaceItem emptySpaceItem5;
-        private XtraLayout.EmptySpaceItem emptySpaceItem6;
-        private XtraLayout.EmptySpaceItem emptySpaceItem7;
+        private  DevExpress.XtraDataLayout.DataLayoutControl layout;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraEditors.LabelControl fullNameLabelControl;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton cancelSimpleButton;
+        private DevExpress.XtraEditors.SimpleButton saveSimpleButton;
+        private DevExpress.XtraEditors.DateEdit cbReminderDate;
+        private DevExpress.XtraEditors.CheckEdit cbReminder;
+        private DevExpress.XtraEditors.MemoEdit descriptionMemoEdit;
+        private DevExpress.XtraEditors.MemoEdit subjectMemoEdit;
+        private DevExpress.XtraEditors.DateEdit dueDateEdit;
+        private DevExpress.XtraEditors.DateEdit startDateEdit;
+        private DevExpress.XtraEditors.LookUpEdit linkedToLookUpEdit;
+        private DevExpress.XtraEditors.LookUpEdit assignedToLookUpEdit;
+        private DevExpress.XtraEditors.LookUpEdit ownerLookUpEdit;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
         private System.Windows.Forms.BindingSource taskBindingSource;
-        private XtraEditors.TrackBarControl tbComplete;
-        private XtraLayout.LayoutControlItem layoutControlItem19;
-        private Utils.ImageCollection priorityImageList;
-        private Utils.ImageCollection statusImageList;
-        private XtraEditors.ImageComboBoxEdit statusImageComboBoxEdit;
-        private XtraEditors.ImageComboBoxEdit priorityImageComboBoxEdit;
-        private XtraEditors.TimeEdit cbReminderTime;
-        private XtraLayout.EmptySpaceItem emptySpaceItem8;
-        private XtraLayout.EmptySpaceItem emptySpaceItem9;
+        private DevExpress.XtraEditors.TrackBarControl tbComplete;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+        private  DevExpress.Utils.ImageCollection priorityImageList;
+        private  DevExpress.Utils.ImageCollection statusImageList;
+        private DevExpress.XtraEditors.ImageComboBoxEdit statusImageComboBoxEdit;
+        private DevExpress.XtraEditors.ImageComboBoxEdit priorityImageComboBoxEdit;
+        private DevExpress.XtraEditors.TimeEdit cbReminderTime;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
     }
 }

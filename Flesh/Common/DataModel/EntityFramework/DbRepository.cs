@@ -4,12 +4,12 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq.Expressions;
 using System.Collections.Generic;
-using DevExpress.DevAV.Common.Utils;
-using DevExpress.DevAV.Common.DataModel;
+using FHRMS.Common.Utils;
+using FHRMS.Common.DataModel;
 using System.Data.Entity.Validation;
 using System.Data.Entity.Infrastructure;
 
-namespace DevExpress.DevAV.Common.DataModel.EntityFramework {
+namespace FHRMS.Common.DataModel.EntityFramework {
     /// <summary>
     /// A DbRepository is a IRepository interface implementation representing the collection of all entities in the unit of work, or that can be queried from the database, of a given type. 
     /// DbRepository objects are created from a DbUnitOfWork using the GetRepository method. 

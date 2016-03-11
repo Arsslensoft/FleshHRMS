@@ -7,7 +7,7 @@ using DevExpress.XtraLayout.Utils;
 using DevExpress.Printing;
 using DevExpress.Printing.Native.PrintEditor;
 
-namespace DevExpress.DevAV {
+namespace FHRMS {
     public partial class ReportPrintSettingsControl : XtraUserControl {
         PrinterImagesContainer imagesContainer;
         PrinterItemContainer printerItemContainer;

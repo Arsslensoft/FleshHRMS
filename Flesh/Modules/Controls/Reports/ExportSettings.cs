@@ -4,7 +4,7 @@ using DevExpress.Utils.Menu;
 using DevExpress.XtraLayout.Utils;
 using DevExpress.XtraPrinting;
 
-namespace DevExpress.DevAV.Preview {
+namespace FHRMS.Preview {
     public partial class ReportExportSettingsControl : UserControl {
         private DXPopupMenu menuExport;
         public ReportExportSettingsControl() {

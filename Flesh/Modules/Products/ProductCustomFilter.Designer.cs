@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class ProductCustomFilterModule {
         /// <summary> 
         /// Required designer variable.
@@ -285,25 +285,25 @@
 
         #endregion
 
-        private XtraLayout.LayoutControl layoutControl;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        public XtraEditors.TextEdit textEdit;
-        public XtraEditors.CheckEdit checkEdit;
-        private XtraLayout.SimpleLabelItem productsLabelItem;
-        private XtraLayout.SimpleLabelItem customFilterLabelItem;
-        private XtraLayout.LayoutControlItem checkBoxLCI;
-        private XtraLayout.LayoutControlItem textEditLCI;
-        private XtraEditors.SimpleButton cancelButton;
-        private XtraEditors.SimpleButton okButton;
-        private XtraLayout.LayoutControlItem okButtonLCI;
-        private XtraLayout.LayoutControlItem cancelButtonLCI;
-        private XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private XtraLayout.EmptySpaceItem emptySpaceItem4;
-        private XtraLayout.EmptySpaceItem emptySpaceItem5;
-        public XtraEditors.FilterControl filterControl;
-        private XtraLayout.LayoutControlItem filterControlLCI;
+        private DevExpress.XtraLayout.LayoutControl layoutControl;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        public DevExpress.XtraEditors.TextEdit textEdit;
+        public DevExpress.XtraEditors.CheckEdit checkEdit;
+        private DevExpress.XtraLayout.SimpleLabelItem productsLabelItem;
+        private DevExpress.XtraLayout.SimpleLabelItem customFilterLabelItem;
+        private DevExpress.XtraLayout.LayoutControlItem checkBoxLCI;
+        private DevExpress.XtraLayout.LayoutControlItem textEditLCI;
+        private DevExpress.XtraEditors.SimpleButton cancelButton;
+        private DevExpress.XtraEditors.SimpleButton okButton;
+        private DevExpress.XtraLayout.LayoutControlItem okButtonLCI;
+        private DevExpress.XtraLayout.LayoutControlItem cancelButtonLCI;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+        public DevExpress.XtraEditors.FilterControl filterControl;
+        private DevExpress.XtraLayout.LayoutControlItem filterControlLCI;
 
     }
 }

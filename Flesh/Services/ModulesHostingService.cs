@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Services {
+﻿namespace FHRMS.Services {
     public interface IPeekModulesHostingService {
         bool IsDocked(ModuleType moduleType);
         void DockModule(ModuleType moduleType);

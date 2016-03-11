@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class EmployeeEdit {
         /// <summary> 
         /// Required designer variable.
@@ -39,7 +39,7 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.lbNotes = new DevExpress.XtraEditors.LabelControl();
             this.lbTasks = new DevExpress.XtraEditors.LabelControl();
-            this.stateUC1 = new DevExpress.DevAV.Modules.Customers.StateUC();
+            this.stateUC1 = new FHRMS.Modules.Customers.StateUC();
             this.notesGridControl = new DevExpress.XtraGrid.GridControl();
             this.notesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.notesGridView = new DevExpress.XtraGrid.Views.Grid.GridViewWithButtons();
@@ -280,7 +280,7 @@
             this.notesGridControl.TabIndex = 25;
             this.notesGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.notesGridView});
-            this.notesBindingSource.DataSource = typeof(DevExpress.DevAV.Evaluation);
+            this.notesBindingSource.DataSource = typeof(FHRMS.Data.Evaluation);
             this.notesGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.noteColDate,
             this.noteColCreatedBy,
@@ -343,7 +343,7 @@
             this.tasksGridControl.TabIndex = 24;
             this.tasksGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tasksGridView});
-            this.tasksBindingSource.DataSource = typeof(DevExpress.DevAV.EmployeeTask);
+            this.tasksBindingSource.DataSource = typeof(FHRMS.Data.EmployeeTask);
             this.tasksGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colAssignedTo,
             this.colOwnedBy,
@@ -394,23 +394,23 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.repositoryItemComboBox1.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Low, 0),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Normal, 1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.High, 2),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Urgent, 3)});
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Low, 0),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Normal, 1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.High, 2),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Urgent, 3)});
             this.repositoryItemComboBox1.LargeImages = this.priorityImageList;
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             this.repositoryItemComboBox1.PopupSizeable = true;
             this.repositoryItemComboBox1.SmallImages = this.priorityImageList;
             this.priorityImageList.ImageSize = new System.Drawing.Size(24, 24);
             this.priorityImageList.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("priorityImageList.ImageStream")));
-            this.priorityImageList.InsertImage(global::DevExpress.DevAV.Properties.Resources.LowPriority, "LowPriority", typeof(global::DevExpress.DevAV.Properties.Resources), 0);
+            this.priorityImageList.InsertImage(global::FHRMS.Properties.Resources.LowPriority, "LowPriority", typeof(global::FHRMS.Properties.Resources), 0);
             this.priorityImageList.Images.SetKeyName(0, "LowPriority");
-            this.priorityImageList.InsertImage(global::DevExpress.DevAV.Properties.Resources.NormalPriority, "NormalPriority", typeof(global::DevExpress.DevAV.Properties.Resources), 1);
+            this.priorityImageList.InsertImage(global::FHRMS.Properties.Resources.NormalPriority, "NormalPriority", typeof(global::FHRMS.Properties.Resources), 1);
             this.priorityImageList.Images.SetKeyName(1, "NormalPriority");
-            this.priorityImageList.InsertImage(global::DevExpress.DevAV.Properties.Resources.MediumPriority, "MediumPriority", typeof(global::DevExpress.DevAV.Properties.Resources), 2);
+            this.priorityImageList.InsertImage(global::FHRMS.Properties.Resources.MediumPriority, "MediumPriority", typeof(global::FHRMS.Properties.Resources), 2);
             this.priorityImageList.Images.SetKeyName(2, "MediumPriority");
-            this.priorityImageList.InsertImage(global::DevExpress.DevAV.Properties.Resources.HighPriority, "HighPriority", typeof(global::DevExpress.DevAV.Properties.Resources), 3);
+            this.priorityImageList.InsertImage(global::FHRMS.Properties.Resources.HighPriority, "HighPriority", typeof(global::FHRMS.Properties.Resources), 3);
             this.priorityImageList.Images.SetKeyName(3, "HighPriority");
             this.colDueDate.Caption = "Due Date";
             this.colDueDate.FieldName = "DueDate";
@@ -442,7 +442,7 @@
             this.zipCodeTextEdit.TabIndex = 14;
             this.addressBindingSource.DataMember = "Address";
             this.addressBindingSource.DataSource = this.employeeBindingSource;
-            this.employeeBindingSource.DataSource = typeof(DevExpress.DevAV.Employee);
+            this.employeeBindingSource.DataSource = typeof(FHRMS.Data.Employee);
             this.cityTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.addressBindingSource, "City", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cityTextEdit.Location = new System.Drawing.Point(458, 207);
             this.cityTextEdit.Name = "cityTextEdit";
@@ -481,7 +481,7 @@
             this.hireDateDateEdit.Location = new System.Drawing.Point(721, 237);
             this.hireDateDateEdit.Name = "hireDateDateEdit";
             this.hireDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::DevExpress.DevAV.Properties.Resources.DateEditIcon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::FHRMS.Properties.Resources.DateEditIcon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.hireDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.hireDateDateEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -509,12 +509,12 @@
             this.prefixLookUpEdit.Name = "prefixLookUpEdit";
             this.prefixLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.prefixLookUpEdit.Properties.DataSource = new DevExpress.DevAV.PersonPrefix[] {
-        DevExpress.DevAV.PersonPrefix.Dr,
-        DevExpress.DevAV.PersonPrefix.Mr,
-        DevExpress.DevAV.PersonPrefix.Ms,
-        DevExpress.DevAV.PersonPrefix.Miss,
-        DevExpress.DevAV.PersonPrefix.Mrs};
+            this.prefixLookUpEdit.Properties.DataSource = new  FHRMS.Data.PersonPrefix[] {
+        FHRMS.Data.PersonPrefix.Dr,
+         FHRMS.Data.PersonPrefix.Mr,
+         FHRMS.Data.PersonPrefix.Ms,
+         FHRMS.Data.PersonPrefix.Miss,
+         FHRMS.Data.PersonPrefix.Mrs};
             this.prefixLookUpEdit.Properties.ShowHeader = false;
             this.prefixLookUpEdit.Size = new System.Drawing.Size(120, 26);
             this.prefixLookUpEdit.TabIndex = 39;
@@ -579,7 +579,7 @@
             this.IDTextEdit.Location = new System.Drawing.Point(721, 268);
             this.IDTextEdit.Name = "IDTextEdit";
             this.IDTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::DevExpress.DevAV.Properties.Resources.DateEditIcon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::FHRMS.Properties.Resources.DateEditIcon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
             this.IDTextEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.IDTextEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
@@ -591,14 +591,14 @@
             this.departmentLookUpEdit.Name = "departmentLookUpEdit";
             this.departmentLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.departmentLookUpEdit.Properties.DataSource = new DevExpress.DevAV.EmployeeDepartment[] {
-        DevExpress.DevAV.EmployeeDepartment.Sales,
-        DevExpress.DevAV.EmployeeDepartment.Support,
-        DevExpress.DevAV.EmployeeDepartment.Shipping,
-        DevExpress.DevAV.EmployeeDepartment.Engineering,
-        DevExpress.DevAV.EmployeeDepartment.HumanResources,
-        DevExpress.DevAV.EmployeeDepartment.Management,
-        DevExpress.DevAV.EmployeeDepartment.IT};
+            this.departmentLookUpEdit.Properties.DataSource = new FHRMS.Data.EmployeeDepartment[] {
+        FHRMS.Data.EmployeeDepartment.Sales,
+        FHRMS.Data.EmployeeDepartment.Support,
+        FHRMS.Data.EmployeeDepartment.Shipping,
+        FHRMS.Data.EmployeeDepartment.Engineering,
+        FHRMS.Data.EmployeeDepartment.HumanResources,
+        FHRMS.Data.EmployeeDepartment.Management,
+        FHRMS.Data.EmployeeDepartment.IT};
             this.departmentLookUpEdit.Properties.NullText = "";
             this.departmentLookUpEdit.Size = new System.Drawing.Size(116, 26);
             this.departmentLookUpEdit.TabIndex = 28;
@@ -607,12 +607,12 @@
             this.statusLookUpEdit.Name = "statusLookUpEdit";
             this.statusLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.statusLookUpEdit.Properties.DataSource = new DevExpress.DevAV.EmployeeStatus[] {
-        DevExpress.DevAV.EmployeeStatus.Salaried,
-        DevExpress.DevAV.EmployeeStatus.Commission,
-        DevExpress.DevAV.EmployeeStatus.Contract,
-        DevExpress.DevAV.EmployeeStatus.Terminated,
-        DevExpress.DevAV.EmployeeStatus.OnLeave};
+            this.statusLookUpEdit.Properties.DataSource = new FHRMS.Data.EmployeeStatus[] {
+        FHRMS.Data.EmployeeStatus.Salaried,
+        FHRMS.Data.EmployeeStatus.Commission,
+        FHRMS.Data.EmployeeStatus.Contract,
+        FHRMS.Data.EmployeeStatus.Terminated,
+        FHRMS.Data.EmployeeStatus.OnLeave};
             this.statusLookUpEdit.Properties.NullText = "";
             this.statusLookUpEdit.Size = new System.Drawing.Size(116, 26);
             this.statusLookUpEdit.TabIndex = 30;
@@ -1093,94 +1093,94 @@
         #endregion
 
         private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl;
-        private XtraEditors.LabelControl lbName;
-        private XtraEditors.LabelControl employeeLabelControl;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraEditors.TextEdit zipCodeTextEdit;
-        private XtraEditors.TextEdit cityTextEdit;
-        private XtraEditors.TextEdit addressTextEdit;
-        private XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private XtraLayout.LayoutControlItem layoutControlItem8;
-        private XtraLayout.LayoutControlItem layoutControlItem9;
-        private XtraLayout.LayoutControlItem layoutControlItem11;
-        private XtraLayout.LayoutControlGroup layoutControlGroup3;
-        private XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private XtraLayout.LayoutControlItem layoutControlItem19;
-        private XtraGrid.GridControl tasksGridControl;
-        private XtraGrid.Views.Grid.GridViewWithButtons tasksGridView;
-        private XtraGrid.GridControl notesGridControl;
-        private XtraGrid.Views.Grid.GridViewWithButtons notesGridView;
-        private XtraLayout.LayoutControlItem lciTasks;
-        private XtraLayout.LayoutControlItem lciNotes;
-        private XtraGrid.Columns.GridColumn colAssignedTo;
-        private XtraGrid.Columns.GridColumn colOwnedBy;
-        private XtraGrid.Columns.GridColumn colSubject;
-        private XtraGrid.Columns.GridColumn colPriority;
-        private XtraGrid.Columns.GridColumn colDueDate;
-        private XtraGrid.Columns.GridColumn colComplete;
-        private XtraGrid.Columns.GridColumn noteColDate;
-        private XtraGrid.Columns.GridColumn noteColCreatedBy;
-        private XtraEditors.Repository.RepositoryItemProgressBar completeProgressBar;
-        private XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemComboBox1;
+        private DevExpress.XtraEditors.LabelControl lbName;
+        private DevExpress.XtraEditors.LabelControl employeeLabelControl;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.TextEdit zipCodeTextEdit;
+        private DevExpress.XtraEditors.TextEdit cityTextEdit;
+        private DevExpress.XtraEditors.TextEdit addressTextEdit;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+        private DevExpress.XtraGrid.GridControl tasksGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridViewWithButtons tasksGridView;
+        private DevExpress.XtraGrid.GridControl notesGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridViewWithButtons notesGridView;
+        private DevExpress.XtraLayout.LayoutControlItem lciTasks;
+        private DevExpress.XtraLayout.LayoutControlItem lciNotes;
+        private DevExpress.XtraGrid.Columns.GridColumn colAssignedTo;
+        private DevExpress.XtraGrid.Columns.GridColumn colOwnedBy;
+        private DevExpress.XtraGrid.Columns.GridColumn colSubject;
+        private DevExpress.XtraGrid.Columns.GridColumn colPriority;
+        private DevExpress.XtraGrid.Columns.GridColumn colDueDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colComplete;
+        private DevExpress.XtraGrid.Columns.GridColumn noteColDate;
+        private DevExpress.XtraGrid.Columns.GridColumn noteColCreatedBy;
+        private DevExpress.XtraEditors.Repository.RepositoryItemProgressBar completeProgressBar;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemComboBox1;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.BindingSource tasksBindingSource;
         private System.Windows.Forms.BindingSource notesBindingSource;
-        private XtraEditors.TextEdit titleTextEdit;
-        private XtraEditors.DateEdit hireDateDateEdit;
-        private XtraEditors.TextEdit firstNameTextEdit;
-        private XtraEditors.TextEdit lastNameTextEdit;
-        private XtraEditors.LookUpEdit prefixLookUpEdit;
-        private XtraEditors.PictureEdit PhotoPictureEdit;
-        private XtraEditors.MemoEdit personalProfileTextEdit;
-        private XtraLayout.LayoutControlItem ItemForTitle;
-        private XtraLayout.LayoutControlItem ItemForFirstName;
-        private XtraLayout.LayoutControlItem ItemForLastName;
-        private XtraLayout.LayoutControlItem ItemForPrefix;
-        private XtraLayout.LayoutControlItem ItemForDepartment;
-        private XtraLayout.LayoutControlItem ItemForStatus;
-        private XtraLayout.LayoutControlItem ItemForHireDate;
-        private XtraLayout.LayoutControlItem ItemForHomePhone;
-        private XtraLayout.LayoutControlItem ItemForMobilePhone;
-        private XtraLayout.LayoutControlItem ItemForEmail;
-        private XtraLayout.LayoutControlItem ItemForSkype;
-        private XtraLayout.LayoutControlItem ItemForPhoto;
+        private DevExpress.XtraEditors.TextEdit titleTextEdit;
+        private DevExpress.XtraEditors.DateEdit hireDateDateEdit;
+        private DevExpress.XtraEditors.TextEdit firstNameTextEdit;
+        private DevExpress.XtraEditors.TextEdit lastNameTextEdit;
+        private DevExpress.XtraEditors.LookUpEdit prefixLookUpEdit;
+        private DevExpress.XtraEditors.PictureEdit PhotoPictureEdit;
+        private DevExpress.XtraEditors.MemoEdit personalProfileTextEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForTitle;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForFirstName;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForLastName;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForPrefix;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForDepartment;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForStatus;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForHireDate;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForHomePhone;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForMobilePhone;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForEmail;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForSkype;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForPhoto;
         private System.Windows.Forms.BindingSource addressBindingSource;
         private Customers.StateUC stateUC1;
-        private XtraLayout.LayoutControlItem layoutControlItem3;
-        private XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        private XtraEditors.Repository.RepositoryItemButtonEdit printRepositoryItemButtonEdit;
-        private XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private XtraLayout.EmptySpaceItem emptySpaceItem6;
-        private XtraLayout.EmptySpaceItem emptySpaceItem7;
-        private XtraEditors.ButtonEdit homePhoneTextEdit;
-        private XtraEditors.ButtonEdit mobilePhoneTextEdit;
-        private XtraEditors.ButtonEdit emailTextEdit;
-        private XtraEditors.ButtonEdit skypeTextEdit;
-        private XtraGrid.Columns.GridColumn noteColSubject;
-        private XtraEditors.LabelControl labelControl5;
-        private XtraEditors.LabelControl lbNotes;
-        private XtraEditors.LabelControl lbTasks;
-        private XtraLayout.LayoutControlItem layoutControlItem5;
-        private XtraLayout.LayoutControlItem layoutControlItem6;
-        private XtraLayout.LayoutControlItem layoutControlItem12;
-        private XtraLayout.LayoutControlItem layoutControlItem4;
-        private XtraLayout.LayoutControlItem layoutControlItem7;
-        private XtraLayout.EmptySpaceItem emptySpaceItem9;
-        private XtraLayout.EmptySpaceItem emptySpaceItem5;
-        private XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
-        private XtraEditors.DateEdit IDTextEdit;
-        private Utils.ImageCollection priorityImageList;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit printRepositoryItemButtonEdit;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
+        private DevExpress.XtraEditors.ButtonEdit homePhoneTextEdit;
+        private DevExpress.XtraEditors.ButtonEdit mobilePhoneTextEdit;
+        private DevExpress.XtraEditors.ButtonEdit emailTextEdit;
+        private DevExpress.XtraEditors.ButtonEdit skypeTextEdit;
+        private DevExpress.XtraGrid.Columns.GridColumn noteColSubject;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl lbNotes;
+        private DevExpress.XtraEditors.LabelControl lbTasks;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
+        private DevExpress.XtraEditors.DateEdit IDTextEdit;
+        private  DevExpress.Utils.ImageCollection priorityImageList;
         private System.Windows.Forms.PictureBox lciBackPicture;
-        private XtraLayout.LayoutControlItem lciBack;
-        private XtraEditors.DXErrorProvider.DXErrorProvider errorProvider;
-        private XtraEditors.LookUpEdit departmentLookUpEdit;
-        private XtraEditors.LookUpEdit statusLookUpEdit;
-        private XtraLayout.LayoutControlItem ItemForEvaluations;
-        private XtraLayout.LayoutControlGroup lgGrids;
-        private XtraLayout.LayoutControlGroup lgEmployee;
+        private DevExpress.XtraLayout.LayoutControlItem lciBack;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider errorProvider;
+        private DevExpress.XtraEditors.LookUpEdit departmentLookUpEdit;
+        private DevExpress.XtraEditors.LookUpEdit statusLookUpEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForEvaluations;
+        private DevExpress.XtraLayout.LayoutControlGroup lgGrids;
+        private DevExpress.XtraLayout.LayoutControlGroup lgEmployee;
 
 
     }

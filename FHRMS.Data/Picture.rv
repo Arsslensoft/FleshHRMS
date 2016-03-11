@@ -1,0 +1,29 @@
+include System.ComponentModel.DataAnnotations.Schema;
+include System.Drawing;
+include DevExpress.Utils;
+include DevExpress.XtraEditors.Controls;
+include System.Runtime.Serialization;
+
+program FHRMS.Data {
+    public class Picture : DatabaseObject {
+        public byte[] Data { get; set; }
+    }
+    static class PictureExtension {
+        public const string DefaultPic = DefaultUserPic;
+        public const string DefaultUserPic = "FHRMS.Data.Resources.Unknown-user.png";
+        friend static Image CreateImage(self Picture picture, string defaultImage = null) {
+            if(picture == null) {
+                if(string.IsNullOrEmpty(defaultImage))
+                    defaultImage = DefaultPic;
+                ret ResourceImageHelper.CreateImageFromResourcesEx(defaultImage, typeof(Picture).Assembly);
+            }
+            else ret ByteImageConverter.FromByteArray(picture.Data);
+        }
+        friend static Picture FromImage(Image image) {
+            ret (image == null) ? null : new Picture()
+            {
+                Data = ByteImageConverter.ToByteArray(image, image.RawFormat)
+            };
+        }
+    }
+}

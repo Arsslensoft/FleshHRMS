@@ -1,10 +1,10 @@
-﻿namespace DevExpress.DevAV.ViewModels {
+﻿namespace FHRMS.ViewModels {
     using System;
-    using DevExpress.DevAV;
-    using DevExpress.DevAV.ViewModels;
+    using FHRMS.Data;
+    using FHRMS.ViewModels;
     using System.Linq;
     using System.Collections.Generic;
-    using DevExpress.DevAV.DevAVDbDataModel;
+    using FHRMS.DevAVDbDataModel;
 
     partial class QuoteViewModel : IBaseViewModel {
         public event EventHandler EntityChanged;

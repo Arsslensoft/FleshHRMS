@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Services {
+﻿namespace FHRMS.Services {
     using System.Collections.Generic;
 
     public interface IWorkspaceService {

@@ -1,5 +1,5 @@
-﻿using DevExpress.DevAV.ViewModels;
-namespace DevExpress.DevAV.Modules {
+﻿using FHRMS.ViewModels;
+namespace FHRMS.Modules {
     partial class Employees {
         /// <summary> 
         /// Required designer variable.
@@ -141,7 +141,7 @@ namespace DevExpress.DevAV.Modules {
             this.colMobilePhone.Name = "colMobilePhone";
             this.colMobilePhone.Visible = true;
             this.colMobilePhone.VisibleIndex = 11;
-            this.employeeBindingSource.DataSource = typeof(DevExpress.DevAV.Employee);
+            this.employeeBindingSource.DataSource = typeof(FHRMS.Data.Employee);
             this.filterTileControl.AllowDrag = false;
             this.filterTileControl.AllowGlyphSkinning = true;
             this.filterTileControl.AllowSelectedItem = true;
@@ -703,53 +703,53 @@ namespace DevExpress.DevAV.Modules {
 
         #endregion
 
-        private XtraEditors.TileControl filterTileControl;
-        private XtraEditors.TileGroup tileGroup2;
-        private XtraEditors.TileItem tileItemAll;
-        private XtraEditors.TileItem tileItemSalaried;
-        private XtraEditors.TileItem tileItemCommission;
-        private XtraEditors.TileItem tileItemContract;
-        private XtraEditors.TileItem tileItemTerminated;
-        private XtraEditors.TileItem tileItemOnLeave;
-        private XtraLayout.LayoutControl layoutControl1;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private XtraLayout.LayoutControlItem tileControlLayoutItem;
-        private XtraLayout.SimpleLabelItem buttonHide;
-        private XtraLayout.SimpleLabelItem simpleLabelItem2;
+        private DevExpress.XtraEditors.TileControl filterTileControl;
+        private DevExpress.XtraEditors.TileGroup tileGroup2;
+        private DevExpress.XtraEditors.TileItem tileItemAll;
+        private DevExpress.XtraEditors.TileItem tileItemSalaried;
+        private DevExpress.XtraEditors.TileItem tileItemCommission;
+        private DevExpress.XtraEditors.TileItem tileItemContract;
+        private DevExpress.XtraEditors.TileItem tileItemTerminated;
+        private DevExpress.XtraEditors.TileItem tileItemOnLeave;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem tileControlLayoutItem;
+        private DevExpress.XtraLayout.SimpleLabelItem buttonHide;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private DevExpress.Utils.FlyoutPanel flyoutPanel1;
-        private XtraLayout.LayoutControl layoutControl2;
-        private XtraEditors.PictureEdit printEmployeeListButton;
-        private XtraEditors.PictureEdit printEmployeeDirectoryButton;
-        private XtraEditors.PictureEdit printEmployeeProfile;
-        private XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private XtraLayout.LayoutControlItem printEmployeeProfileItem;
-        private XtraLayout.LayoutControlItem printEmployeeDirectoryItem;
-        private XtraLayout.LayoutControlItem printEmployeeListItem;
-        private XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private XtraGrid.GridControl gridControl1;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        private XtraGrid.Views.Tile.TileView tileView1;
-        private XtraGrid.Columns.TileViewColumn colDepartment;
-        private XtraGrid.Columns.TileViewColumn colTitle;
-        private XtraGrid.Columns.TileViewColumn colStatus;
-        private XtraGrid.Columns.TileViewColumn colHireDate;
-        private XtraGrid.Columns.TileViewColumn colPersonalProfile;
-        private XtraGrid.Columns.TileViewColumn colProbationReason;
-        private XtraGrid.Columns.TileViewColumn colFirstName;
-        private XtraGrid.Columns.TileViewColumn colLastName;
-        private XtraGrid.Columns.TileViewColumn colFullName;
-        private XtraGrid.Columns.TileViewColumn colPrefix;
-        private XtraGrid.Columns.TileViewColumn colHomePhone;
-        private XtraGrid.Columns.TileViewColumn colMobilePhone;
-        private XtraGrid.Columns.TileViewColumn colEmail;
-        private XtraGrid.Columns.TileViewColumn colSkype;
-        private XtraGrid.Columns.TileViewColumn colBirthDate;
-        private XtraGrid.Columns.TileViewColumn colPicture;
-        private XtraGrid.Columns.TileViewColumn colPictureId;
-        private XtraGrid.Columns.TileViewColumn colAddress;
-        private XtraGrid.Columns.TileViewColumn colPhoto;
-        private XtraGrid.Columns.TileViewColumn colFullNameBindable;
-        private XtraGrid.Columns.TileViewColumn colId;
+        private DevExpress.XtraLayout.LayoutControl layoutControl2;
+        private DevExpress.XtraEditors.PictureEdit printEmployeeListButton;
+        private DevExpress.XtraEditors.PictureEdit printEmployeeDirectoryButton;
+        private DevExpress.XtraEditors.PictureEdit printEmployeeProfile;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlItem printEmployeeProfileItem;
+        private DevExpress.XtraLayout.LayoutControlItem printEmployeeDirectoryItem;
+        private DevExpress.XtraLayout.LayoutControlItem printEmployeeListItem;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraGrid.Views.Tile.TileView tileView1;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colDepartment;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colTitle;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colStatus;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colHireDate;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colPersonalProfile;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colProbationReason;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colFirstName;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colLastName;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colFullName;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colPrefix;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colHomePhone;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colMobilePhone;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colEmail;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colSkype;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colBirthDate;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colPicture;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colPictureId;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colAddress;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colPhoto;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colFullNameBindable;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colId;
     }
 }

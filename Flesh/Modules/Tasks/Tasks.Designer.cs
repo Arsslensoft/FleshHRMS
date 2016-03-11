@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class Tasks {
         /// <summary> 
         /// Required designer variable.
@@ -167,22 +167,22 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.repositoryItemComboBox1.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Low, 0),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Normal, 1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.High, 2),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Urgent, 3)});
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Low, 0),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Normal, 1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.High, 2),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Urgent, 3)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             this.repositoryItemComboBox1.PopupSizeable = true;
             this.repositoryItemComboBox1.SmallImages = this.priorityImageList;
             this.priorityImageList.ImageSize = new System.Drawing.Size(24, 24);
             this.priorityImageList.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("priorityImageList.ImageStream")));
-            this.priorityImageList.InsertImage(global::DevExpress.DevAV.Properties.Resources.LowPriority, "LowPriority", typeof(global::DevExpress.DevAV.Properties.Resources), 0);
+            this.priorityImageList.InsertImage(global::FHRMS.Properties.Resources.LowPriority, "LowPriority", typeof(global::FHRMS.Properties.Resources), 0);
             this.priorityImageList.Images.SetKeyName(0, "LowPriority");
-            this.priorityImageList.InsertImage(global::DevExpress.DevAV.Properties.Resources.NormalPriority, "NormalPriority", typeof(global::DevExpress.DevAV.Properties.Resources), 1);
+            this.priorityImageList.InsertImage(global::FHRMS.Properties.Resources.NormalPriority, "NormalPriority", typeof(global::FHRMS.Properties.Resources), 1);
             this.priorityImageList.Images.SetKeyName(1, "NormalPriority");
-            this.priorityImageList.InsertImage(global::DevExpress.DevAV.Properties.Resources.MediumPriority, "MediumPriority", typeof(global::DevExpress.DevAV.Properties.Resources), 2);
+            this.priorityImageList.InsertImage(global::FHRMS.Properties.Resources.MediumPriority, "MediumPriority", typeof(global::FHRMS.Properties.Resources), 2);
             this.priorityImageList.Images.SetKeyName(2, "MediumPriority");
-            this.priorityImageList.InsertImage(global::DevExpress.DevAV.Properties.Resources.HighPriority, "HighPriority", typeof(global::DevExpress.DevAV.Properties.Resources), 3);
+            this.priorityImageList.InsertImage(global::FHRMS.Properties.Resources.HighPriority, "HighPriority", typeof(global::FHRMS.Properties.Resources), 3);
             this.priorityImageList.Images.SetKeyName(3, "HighPriority");
             this.DueDate.Caption = "Due Date";
             this.DueDate.FieldName = "DueDate";
@@ -429,7 +429,7 @@
             this.tileItemUrgent.Name = "tileItemUrgent";
             this.tileItemUrgent.Tag = "Priority == \'Urgent\'";
             this.tileItemUrgent.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem_ItemClick);
-            this.taskBindingSource.DataSource = typeof(DevExpress.DevAV.EmployeeTask);
+            this.taskBindingSource.DataSource = typeof(FHRMS.Data.EmployeeTask);
             this.layoutControlGroup1.CustomizationFormText = "Root";
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
@@ -593,39 +593,39 @@
 
         #endregion
 
-        private XtraGrid.GridControl tasksGridControl;
-        private XtraGrid.Views.Grid.GridView tasksGridView;
-        private XtraGrid.Columns.GridColumn AssignedTo;
-        private XtraGrid.Columns.GridColumn OwnedBy;
-        private XtraGrid.Columns.GridColumn Subject;
-        private XtraGrid.Columns.GridColumn Priority;
-        private XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemComboBox1;
-        private XtraGrid.Columns.GridColumn DueDate;
-        private XtraGrid.Columns.GridColumn Complete;
-        private XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar1;
-        private XtraDataLayout.DataLayoutControl dataLayoutControl1;
+        private DevExpress.XtraGrid.GridControl tasksGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView tasksGridView;
+        private DevExpress.XtraGrid.Columns.GridColumn AssignedTo;
+        private DevExpress.XtraGrid.Columns.GridColumn OwnedBy;
+        private DevExpress.XtraGrid.Columns.GridColumn Subject;
+        private DevExpress.XtraGrid.Columns.GridColumn Priority;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemComboBox1;
+        private DevExpress.XtraGrid.Columns.GridColumn DueDate;
+        private DevExpress.XtraGrid.Columns.GridColumn Complete;
+        private DevExpress.XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar1;
+        private  DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
         private System.Windows.Forms.BindingSource taskBindingSource;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        private XtraEditors.TileControl tileControl1;
-        private XtraEditors.TileGroup tileGroup2;
-        private XtraEditors.TileItem tileItemAll;
-        private XtraEditors.TileItem tileItemInProgress;
-        private XtraEditors.TileItem tileItemDeferred;
-        private XtraEditors.TileItem tileItemNotStartedTask;
-        private XtraEditors.TileItem tileItemCompleted;
-        private XtraEditors.TileItem tileItemUrgent;
-        private XtraLayout.LayoutControlItem tileControlLCI;
-        private XtraLayout.SimpleLabelItem simpleLabelItem1;
-        private XtraLayout.SimpleLabelItem simpleLabelItem2;
-        private XtraLayout.SimpleLabelItem simpleLabelItem3;
-        private XtraLayout.SimpleLabelItem simpleLabelItem4;
-        private XtraLayout.SimpleLabelItem simpleLabelItem5;
-        private XtraLayout.SimpleLabelItem buttonHide;
-        private XtraLayout.SimpleLabelItem simpleLabelItem7;
-        private XtraLayout.SimpleLabelItem tasksSLI;
-        private XtraEditors.TileItem tileItemHighPriority;
-        private Utils.ImageCollection priorityImageList;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraEditors.TileControl tileControl1;
+        private DevExpress.XtraEditors.TileGroup tileGroup2;
+        private DevExpress.XtraEditors.TileItem tileItemAll;
+        private DevExpress.XtraEditors.TileItem tileItemInProgress;
+        private DevExpress.XtraEditors.TileItem tileItemDeferred;
+        private DevExpress.XtraEditors.TileItem tileItemNotStartedTask;
+        private DevExpress.XtraEditors.TileItem tileItemCompleted;
+        private DevExpress.XtraEditors.TileItem tileItemUrgent;
+        private DevExpress.XtraLayout.LayoutControlItem tileControlLCI;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem3;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem4;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem5;
+        private DevExpress.XtraLayout.SimpleLabelItem buttonHide;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem7;
+        private DevExpress.XtraLayout.SimpleLabelItem tasksSLI;
+        private DevExpress.XtraEditors.TileItem tileItemHighPriority;
+        private  DevExpress.Utils.ImageCollection priorityImageList;
 
 
 

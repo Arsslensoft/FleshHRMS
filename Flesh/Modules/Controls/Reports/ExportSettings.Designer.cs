@@ -1,5 +1,5 @@
-﻿using DevExpress.DevAV;
-namespace DevExpress.DevAV.Preview {
+﻿using FHRMS.Data;
+namespace FHRMS.Preview {
     partial class ReportExportSettingsControl {
         /// <summary> 
         /// Required designer variable.
@@ -149,14 +149,14 @@ namespace DevExpress.DevAV.Preview {
 
         #endregion
 
-        private XtraLayout.LayoutControl layoutControl;
+        private DevExpress.XtraLayout.LayoutControl layoutControl;
         private SettingPanel settingsPanel;
-        private XtraEditors.DropDownButton btnExport;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private XtraLayout.SimpleLabelItem simpleLabelItem1;
-        private XtraLayout.SimpleLabelItem simpleLabelItem2;
-        private XtraLayout.LayoutControlItem layoutControlItemSettings;
-        private XtraLayout.SimpleSeparator simpleSeparator1;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraEditors.DropDownButton btnExport;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItemSettings;
+        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

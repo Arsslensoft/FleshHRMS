@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DevExpress.DevAV.Common.ViewModel {
+namespace FHRMS.Common.ViewModel {
     public class SelectedItemSynchronizationMessage<TEntity> where TEntity : class {
         public SelectedItemSynchronizationMessage(TEntity entity) {
             Entity = entity;

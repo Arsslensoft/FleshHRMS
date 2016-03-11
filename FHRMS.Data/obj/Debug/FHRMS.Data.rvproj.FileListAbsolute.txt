@@ -1,0 +1,8 @@
+D:\Bin\Framework4\FHRMS.Data.dll
+D:\Bin\Framework4\FHRMS.Data.pdb
+D:\Research\FHRMS\DevExpress.DevAV.Data.ConvertedToRava\obj\Debug\FHRMS.Data.rvprojResolveAssemblyReference.cache
+D:\Research\FHRMS\DevExpress.DevAV.Data.ConvertedToRava\obj\Debug\FHRMS.Data.dll
+D:\Research\FHRMS\DevExpress.DevAV.Data.ConvertedToRava\obj\Debug\FHRMS.Data.pdb
+D:\Research\FHRMS\FHRMS.Data\obj\Debug\FHRMS.Data.rvprojResolveAssemblyReference.cache
+D:\Research\FHRMS\FHRMS.Data\obj\Debug\FHRMS.Data.dll
+D:\Research\FHRMS\FHRMS.Data\obj\Debug\FHRMS.Data.pdb

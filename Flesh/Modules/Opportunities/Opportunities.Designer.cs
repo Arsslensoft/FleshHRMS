@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class Opportunities {
         /// <summary> 
         /// Required designer variable.
@@ -43,7 +43,7 @@
             this.fieldOpportunities = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldCity = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldState = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.opportunitiesMapView1 = new DevExpress.DevAV.Modules.OpportunitiesMapView();
+            this.opportunitiesMapView1 = new FHRMS.Modules.OpportunitiesMapView();
             this.chartControl = new DevExpress.XtraCharts.ChartControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.chartControlLCI = new DevExpress.XtraLayout.LayoutControlItem();
@@ -347,25 +347,25 @@
 
         #endregion
 
-        private XtraDataLayout.DataLayoutControl dataLayoutControl1;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private  DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private System.Windows.Forms.BindingSource opportunitiesBindingSource;
-        private XtraCharts.ChartControl chartControl;
-        private XtraLayout.LayoutControlItem chartControlLCI;
-        private XtraPivotGrid.PivotGridControl pivotGridControl;
-        private XtraLayout.LayoutControlItem pivotGridLCI;
-        private XtraLayout.SimpleLabelItem buttonHide;
-        private XtraLayout.SimpleLabelItem opportunitiesSimpleLabel;
-        private XtraPivotGrid.PivotGridField fieldPercentage;
-        private XtraPivotGrid.PivotGridField fieldOpportunities;
-        private XtraPivotGrid.PivotGridField fieldCity;
-        private XtraPivotGrid.PivotGridField fieldState;
-        private XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar1;
+        private DevExpress.XtraCharts.ChartControl chartControl;
+        private DevExpress.XtraLayout.LayoutControlItem chartControlLCI;
+        private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControl;
+        private DevExpress.XtraLayout.LayoutControlItem pivotGridLCI;
+        private DevExpress.XtraLayout.SimpleLabelItem buttonHide;
+        private DevExpress.XtraLayout.SimpleLabelItem opportunitiesSimpleLabel;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldPercentage;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldOpportunities;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldCity;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldState;
+        private DevExpress.XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar1;
         private OpportunitiesMapView opportunitiesMapView1;
         private DevExpress.XtraEditors.PanelControl panelContainer;
-        private XtraEditors.RangeControl rangeControl;
-        private XtraEditors.DateTimeChartRangeControlClient dateTimeChartRangeControlClient1;
-        private XtraLayout.LayoutControlItem rangeControlLCI;
+        private DevExpress.XtraEditors.RangeControl rangeControl;
+        private DevExpress.XtraEditors.DateTimeChartRangeControlClient dateTimeChartRangeControlClient1;
+        private DevExpress.XtraLayout.LayoutControlItem rangeControlLCI;
 
 
 

@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class OpportunitiesMapView {
         /// <summary> 
         /// Required designer variable.
@@ -136,12 +136,12 @@
 
         #endregion
 
-        private XtraDataLayout.DataLayoutControl dataLayoutControl;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private  DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private System.Windows.Forms.BindingSource bindingSource;
-        private XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraMap.MapControl mapControl;
-        private XtraLayout.LayoutControlItem mapControlLCI;
-        private Utils.ToolTipController toolTipController1;
+        private DevExpress.XtraLayout.LayoutControlItem mapControlLCI;
+        private  DevExpress.Utils.ToolTipController toolTipController1;
     }
 }

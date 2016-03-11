@@ -1,0 +1,24 @@
+include System;
+include System.Collections.Generic;
+include System.ComponentModel.DataAnnotations.Schema;
+include System.Linq;
+include System.Runtime.Serialization;
+
+program FHRMS.Data {
+    public enum EvaluationRating {
+        Unset,
+        Good,
+        Average,
+        Poor
+    }
+    public shared class Evaluation : DatabaseObject {
+        public virt Employee CreatedBy { get; set; }
+        public long? CreatedById { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public virt Employee Employee { get; set; }
+        public long? EmployeeId { get; set; }
+        public string Subject { get; set; }
+        public string Details { get; set; }
+        public virt EvaluationRating Rating { get; set; }
+    }
+}

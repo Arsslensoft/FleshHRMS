@@ -1,0 +1,5 @@
+D:\Research\FHRMS\DevExpress.DevAV.Data.ConvertedToRava\obj\Debug\DevExpress.DevAV.Data.rvprojResolveAssemblyReference.cache
+D:\Bin\Framework4\DevExpress.DevAV.v15.1.Data.dll
+D:\Bin\Framework4\DevExpress.DevAV.v15.1.Data.pdb
+D:\Research\FHRMS\DevExpress.DevAV.Data.ConvertedToRava\obj\Debug\DevExpress.DevAV.v15.1.Data.dll
+D:\Research\FHRMS\DevExpress.DevAV.Data.ConvertedToRava\obj\Debug\DevExpress.DevAV.v15.1.Data.pdb

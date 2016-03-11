@@ -5,10 +5,10 @@ using System.Linq.Expressions;
 using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
 using DevExpress.Mvvm.DataAnnotations;
-using DevExpress.DevAV.Common.Utils;
-using DevExpress.DevAV.Common.DataModel;
+using FHRMS.Common.Utils;
+using FHRMS.Common.DataModel;
 
-namespace DevExpress.DevAV.Common.ViewModel {
+namespace FHRMS.Common.ViewModel {
     /// <summary>
     /// The base interface for view models representing a single entity.
     /// </summary>

@@ -1,0 +1,27 @@
+include System;
+include System.Collections.Generic;
+include System.ComponentModel.DataAnnotations;
+include System.ComponentModel.DataAnnotations.Schema;
+include System.Linq;
+include System.Runtime.Serialization;
+
+program FHRMS.Data {
+    public class Quote : DatabaseObject {
+        public string Number { get; set; }
+        public virt Customer Customer { get; set; }
+        public long? CustomerId { get; set; }
+        public virt CustomerStore CustomerStore { get; set; }
+        public long? CustomerStoreId { get; set; }
+        public virt Employee Employee { get; set; }
+        public long? EmployeeId { get; set; }
+        public virt DateTime Date { get; set; }
+        [DataType(DataType.Currency)]
+        public decimal SubTotal { get; set; }
+        [DataType(DataType.Currency)]
+        public decimal ShippingAmount { get; set; }
+        [DataType(DataType.Currency)]
+        public decimal Total { get; set; }
+        public double Opportunity { get; set; }
+        public virt List<QuoteItem> QuoteItems { get; set; }
+    }
+}

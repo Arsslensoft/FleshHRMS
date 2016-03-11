@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules.Customers {
+﻿namespace FHRMS.Modules.Customers {
     partial class AddressUserControl {
 
         /// <summary> 
@@ -18,7 +18,7 @@
             this.LineTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CityTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.StateImageComboBoxEdit = new DevExpress.DevAV.Modules.Customers.StateUC();
+            this.StateImageComboBoxEdit = new FHRMS.Modules.Customers.StateUC();
             this.ZipCodeTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -64,7 +64,7 @@
             this.LineTextEdit.Size = new System.Drawing.Size(536, 40);
             this.LineTextEdit.StyleController = this.dataLayoutControl1;
             this.LineTextEdit.TabIndex = 4;
-            this.addressBindingSource.DataSource = typeof(DevExpress.DevAV.Address);
+            this.addressBindingSource.DataSource = typeof(FHRMS.Data.Address);
             this.CityTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.addressBindingSource, "City", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.CityTextEdit.Location = new System.Drawing.Point(105, 46);
             this.CityTextEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -171,19 +171,19 @@
 
         #endregion
 
-        public XtraDataLayout.DataLayoutControl dataLayoutControl1;
-        public XtraEditors.TextEdit LineTextEdit;
+        public  DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
+        public DevExpress.XtraEditors.TextEdit LineTextEdit;
         public System.Windows.Forms.BindingSource addressBindingSource;
-        public XtraEditors.TextEdit CityTextEdit;
+        public DevExpress.XtraEditors.TextEdit CityTextEdit;
         public StateUC StateImageComboBoxEdit;
-        public XtraEditors.TextEdit ZipCodeTextEdit;
-        public XtraLayout.LayoutControlGroup layoutControlGroup1;
-        public XtraLayout.LayoutControlGroup layoutControlGroup2;
-        public XtraLayout.LayoutControlItem ItemForLine;
-        public XtraLayout.LayoutControlItem ItemForCity;
-        public XtraLayout.LayoutControlItem ItemForState;
-        public XtraLayout.LayoutControlItem ItemForZipCode;
+        public DevExpress.XtraEditors.TextEdit ZipCodeTextEdit;
+        public DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        public DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        public DevExpress.XtraLayout.LayoutControlItem ItemForLine;
+        public DevExpress.XtraLayout.LayoutControlItem ItemForCity;
+        public DevExpress.XtraLayout.LayoutControlItem ItemForState;
+        public DevExpress.XtraLayout.LayoutControlItem ItemForZipCode;
         private System.ComponentModel.IContainer components;
-        private XtraEditors.DXErrorProvider.DXErrorProvider errorProvider;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider errorProvider;
     }
 }

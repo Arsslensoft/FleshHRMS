@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
-using DevExpress.DevAV.ViewModels;
+using FHRMS.ViewModels;
 using System.IO;
-using DevExpress.DevAV.Helpers;
-using DevExpress.DevAV;
+using FHRMS.Helpers;
+using FHRMS.Data;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class ProductsEditableView : BaseModuleControl, ISupportNavigation {
         public ProductsEditableView()
             : base(CreateViewModel<ProductViewModel>) {
@@ -29,8 +29,8 @@ namespace DevExpress.DevAV.Modules {
         public override void Refresh() {
             if (ViewModel.Entity != null) {
                 if(ViewModel.IsNew()) {
-                    lcEditProductName.Visibility = XtraLayout.Utils.LayoutVisibility.Always;
-                    lcLabelProductName2.Visibility = lcLabelProductName1.Visibility = XtraLayout.Utils.LayoutVisibility.Never;
+                    lcEditProductName.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+                    lcLabelProductName2.Visibility = lcLabelProductName1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
                     ViewModel.Entity.ProductionStart = DateTime.Now;
                 }
                 productBindingSource.DataSource = ViewModel.Entity;

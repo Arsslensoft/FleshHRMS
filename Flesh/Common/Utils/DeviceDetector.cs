@@ -4,7 +4,7 @@ using System.Linq;
 using System.Management;
 using System.Windows.Forms;
 
-namespace DevExpress.DevAV.Common.Utils {
+namespace FHRMS.Common.Utils {
     public class DeviceDetector {
         public enum ChassisTypes {
             Other = 1,

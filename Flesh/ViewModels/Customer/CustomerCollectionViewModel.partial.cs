@@ -1,10 +1,10 @@
-﻿namespace DevExpress.DevAV.ViewModels {
+﻿namespace FHRMS.ViewModels {
     using System;
-    using DevExpress.DevAV.ViewModels;
-    using DevExpress.DevAV;
+    using FHRMS.ViewModels;
+    using FHRMS.Data;
     using System.Linq;
     using System.Collections.Generic;
-    using DevExpress.DevAV.DevAVDbDataModel;
+    using FHRMS.DevAVDbDataModel;
     using DevExpress.Mvvm;
 
     partial class CustomerCollectionViewModel {

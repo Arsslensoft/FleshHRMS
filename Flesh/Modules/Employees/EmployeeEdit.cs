@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using DevExpress.DevAV;
-using DevExpress.DevAV.ViewModels;
-using DevExpress.DevAV.Helpers;
+using FHRMS.Data;
+using FHRMS.ViewModels;
+using FHRMS.Helpers;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout.Utils;
-using DevExpress.DevAV.Common.Utils;
+using FHRMS.Common.Utils;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class EmployeeEdit : BaseModuleControl {
         BaseModuleControl openedSubModule;
         public EmployeeEdit()

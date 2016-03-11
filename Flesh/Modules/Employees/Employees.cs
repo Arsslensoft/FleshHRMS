@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using DevExpress.Data.Filtering;
-using DevExpress.DevAV;
-using DevExpress.DevAV.Common.ViewModel;
-using DevExpress.DevAV.ViewModels;
-using DevExpress.DevAV.Helpers;
+using FHRMS.Data;
+using FHRMS.Common.ViewModel;
+using FHRMS.ViewModels;
+using FHRMS.Helpers;
 using DevExpress.XtraBars.Docking2010.Customization;
 using DevExpress.XtraEditors;
 using DevExpress.XtraLayout.Utils;
-using DevExpress.DevAV.Common.Utils;
-using DevExpress.DevAV.DevAVDbDataModel;
+using FHRMS.Common.Utils;
+using FHRMS.DevAVDbDataModel;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class Employees : BaseModuleControl {
         BaseItemCollection hideItemCollection = new BaseItemCollection();
         BaseModuleControl openedSubModule;
@@ -40,18 +40,18 @@ namespace DevExpress.DevAV.Modules {
             }
         }
 
-        void tileView1_FocusedRowObjectChanged(object sender, XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e) {
+        void tileView1_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e) {
             UpdateSelectedEntity(e.FocusedRowHandle);
         }
 
-        void tileView1_ItemDoubleClick(object sender, XtraGrid.Views.Tile.TileViewItemClickEventArgs e) {
+        void tileView1_ItemDoubleClick(object sender, DevExpress.XtraGrid.Views.Tile.TileViewItemClickEventArgs e) {
             UpdateSelectedEntity(e.Item.RowHandle);
             ShowEditEmployee(ViewModel.SelectedEntity);
         }
 
         void InitializeData() {
             employeeBindingSource.DataSource = ViewModel.Entities.ToBindingList();
-            hideItemCollection.AddRange(new XtraLayout.BaseLayoutItem[] { tileControlLayoutItem });
+            hideItemCollection.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { tileControlLayoutItem });
             SortEmployees(true);
             gridControl1.DataSource = ViewModel.Entities;
             TileItemsUpdateElementText();
@@ -197,7 +197,7 @@ namespace DevExpress.DevAV.Modules {
             var lastName = tileView1.Columns["FullName"];
             if(lastName == null) return;
             tileView1.SortInfo.Clear();
-            tileView1.SortInfo.Add(new XtraGrid.Columns.GridColumnSortInfo(lastName, ascending ? Data.ColumnSortOrder.Ascending : Data.ColumnSortOrder.Descending));
+            tileView1.SortInfo.Add(new DevExpress.XtraGrid.Columns.GridColumnSortInfo(lastName, ascending ? DevExpress.Data.ColumnSortOrder.Ascending : DevExpress.Data.ColumnSortOrder.Descending));
         }
         void ShowEditEmployee(Employee employee) {
             var main = GetParentViewModel<MainViewModel>();
@@ -207,7 +207,7 @@ namespace DevExpress.DevAV.Modules {
                     ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, main, ViewModel.SelectedEntityKey);
                 }
                 else {
-                    ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, main, new DefaultEntityInitializer<Employee, DevAV.DevAVDbDataModel.IDevAVDbUnitOfWork>());
+                    ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, main, new DefaultEntityInitializer<Employee, DevAVDbDataModel.IDevAVDbUnitOfWork>());
                 }
                 ((EmployeeEdit)main.SelectedModule).Refresh();
             });
@@ -217,17 +217,17 @@ namespace DevExpress.DevAV.Modules {
             TileItemsUpdateElementText();
         }
         void simpleLabelItem1_MouseDown(object sender, MouseEventArgs e) {
-            if(tileControlLayoutItem.Visibility == XtraLayout.Utils.LayoutVisibility.Always) {
+            if(tileControlLayoutItem.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always) {
                 ItemsHideHelper.Hide(hideItemCollection, buttonHide);
                 return;
             }
-            if(tileControlLayoutItem.Visibility == XtraLayout.Utils.LayoutVisibility.Never) {
+            if(tileControlLayoutItem.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Never) {
                 ItemsHideHelper.Expand(hideItemCollection, buttonHide);
                 return;
             }
         }
         string currentFilter = null;
-        void filterTileControl_ItemClick(object sender, XtraEditors.TileItemEventArgs e) {
+        void filterTileControl_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e) {
             TileItem item = e.Item;
             var filter = e.Item.Tag as string;
             if(currentFilter == filter) return;

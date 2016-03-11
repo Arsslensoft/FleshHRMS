@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class TaskPrint {
         /// <summary> 
         /// Required designer variable.
@@ -53,9 +53,9 @@
 
         #endregion
 
-        private XtraPrinting.Preview.DocumentViewer documentViewer;
-        private XtraPrinting.PrintingSystem printingSystem;
-        private XtraPrinting.PrintableComponentLink printableComponentLink;
+        private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer;
+        private DevExpress.XtraPrinting.PrintingSystem printingSystem;
+        private DevExpress.XtraPrinting.PrintableComponentLink printableComponentLink;
 
     }
 }

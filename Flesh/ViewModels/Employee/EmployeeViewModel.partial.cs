@@ -1,9 +1,9 @@
-﻿namespace DevExpress.DevAV.ViewModels {
+﻿namespace FHRMS.ViewModels {
     using System;
-    using DevExpress.DevAV.ViewModels;
-    using DevExpress.DevAV;
+    using FHRMS.ViewModels;
+    using FHRMS.Data;
     using System.Linq;
-    using DevExpress.DevAV.DevAVDbDataModel;
+    using FHRMS.DevAVDbDataModel;
 
     partial class EmployeeViewModel : IBaseViewModel {
         protected override string GetTitle() {

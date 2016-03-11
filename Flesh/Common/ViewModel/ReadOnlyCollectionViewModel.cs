@@ -4,10 +4,10 @@ using System.Linq.Expressions;
 using System.Collections.Generic;
 using DevExpress.Mvvm.POCO;
 using DevExpress.Mvvm.DataAnnotations;
-using DevExpress.DevAV.Common.Utils;
-using DevExpress.DevAV.Common.DataModel;
+using FHRMS.Common.Utils;
+using FHRMS.Common.DataModel;
 
-namespace DevExpress.DevAV.Common.ViewModel {
+namespace FHRMS.Common.ViewModel {
     /// <summary>
     /// The base class for POCO view models exposing a read-only collection of entities of a given type. 
     /// This is a partial class that provides the extension point to add custom properties, commands and override methods without modifying the auto-generated code.

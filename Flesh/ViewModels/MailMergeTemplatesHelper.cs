@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace DevExpress.DevAV.ViewModels {
+namespace FHRMS.ViewModels {
     public class MailMergeTemplatesHelper {
         static string[] templateNames = new string[] {
             "Employee of the Month.rtf",

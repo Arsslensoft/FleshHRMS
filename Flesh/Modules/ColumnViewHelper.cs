@@ -1,8 +1,8 @@
-﻿namespace DevExpress.DevAV {
+﻿namespace FHRMS {
     using System.Drawing;
     using DevExpress.XtraGrid.Views.Base;
-    using DevExpress.DevAV.Common.ViewModel;
-    using DevExpress.DevAV.Common.DataModel;
+    using FHRMS.Common.ViewModel;
+    using FHRMS.Common.DataModel;
 
     internal class ColumnViewHelper<TEntity, TID, TUnitOfWork>
         where TEntity: class
@@ -32,17 +32,17 @@
                 }
                 return false;
             }
-            protected Utils.Menu.DXPopupMenu CreateEntityMenu(TEntity entity) {
-                var rowMenu = new Utils.Menu.DXPopupMenu();
-                var newItem = new Utils.Menu.DXMenuItem();
+            protected  DevExpress.Utils.Menu.DXPopupMenu CreateEntityMenu(TEntity entity) {
+                var rowMenu = new DevExpress.Utils.Menu.DXPopupMenu();
+                var newItem = new DevExpress.Utils.Menu.DXMenuItem();
                 newItem.Caption = "New";
                 newItem.BindCommand(() => viewModel.New(), viewModel);
 
-                var editItem = new Utils.Menu.DXMenuItem();
+                var editItem = new DevExpress.Utils.Menu.DXMenuItem();
                 editItem.Caption = "Edit...";
                 editItem.BindCommand((ee) => viewModel.Edit(ee), viewModel, () => entity);
 
-                var deleteItem = new Utils.Menu.DXMenuItem();
+                var deleteItem = new DevExpress.Utils.Menu.DXMenuItem();
                 deleteItem.Caption = "Delete";
                 deleteItem.BindCommand((ee) => viewModel.Delete(ee), viewModel, () => entity);
 

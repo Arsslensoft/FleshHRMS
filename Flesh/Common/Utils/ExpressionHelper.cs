@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace DevExpress.DevAV.Common.Utils {
+namespace FHRMS.Common.Utils {
     /// <summary>
     /// Provides methods to perform operations with lambda expression trees.
     /// </summary>

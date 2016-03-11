@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
-using DevExpress.DevAV.ViewModels;
+using FHRMS.ViewModels;
 using DevExpress.XtraMap;
-using DevExpress.DevAV.Helpers;
+using FHRMS.Helpers;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class CustomerEditableView : BaseModuleControl {
         public CustomerEditableView()
             : base(CreateViewModel<CustomerViewModel>) {
@@ -17,12 +17,12 @@ namespace DevExpress.DevAV.Modules {
             ViewModel.Maximum = (DateTime)rangeControl.SelectedRange.Maximum;
         }
         public void MakeMapVisible() {
-            customerDetailsTab.Visibility = XtraLayout.Utils.LayoutVisibility.Never;
-            mapTab.Visibility = XtraLayout.Utils.LayoutVisibility.Always;
+            customerDetailsTab.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            mapTab.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
         }
         public void MakeGridVisible() {
-            mapTab.Visibility = XtraLayout.Utils.LayoutVisibility.Never;
-            customerDetailsTab.Visibility = XtraLayout.Utils.LayoutVisibility.Always;
+            mapTab.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            customerDetailsTab.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
         }
 
         public override void Refresh() {

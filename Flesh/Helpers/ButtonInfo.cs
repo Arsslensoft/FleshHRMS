@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace DevExpress.DevAV.Helpers {
+namespace FHRMS.Helpers {
     public class ButtonInfo {
         public string Text { get; set; }
         public string Name { get; set; }
@@ -17,7 +17,7 @@ namespace DevExpress.DevAV.Helpers {
     }
     public static class ImageHelper {
         public static Image GetImageFromToolbarResource(string name) {
-            var imageStream = Assembly.GetEntryAssembly().GetManifestResourceStream("DevExpress.DevAV.Resources.Toolbar." + name + ".png");
+            var imageStream = Assembly.GetEntryAssembly().GetManifestResourceStream("FHRMS.Resources.Toolbar." + name + ".png");
             return Image.FromStream(imageStream);
         }
     }

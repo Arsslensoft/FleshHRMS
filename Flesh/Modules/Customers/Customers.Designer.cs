@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     public partial class CustomersModule {
         /// <summary> 
         /// Required designer variable.
@@ -188,7 +188,7 @@
             this.gridControlStores.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tileViewStores,
             this.gridView2});
-            this.customerStoreBindingSource.DataSource = typeof(DevExpress.DevAV.CustomerStore);
+            this.customerStoreBindingSource.DataSource = typeof(FHRMS.Data.CustomerStore);
             this.tileViewStores.Appearance.ItemNormal.BorderColor = System.Drawing.Color.Transparent;
             this.tileViewStores.Appearance.ItemNormal.FontSizeDelta = -1;
             this.tileViewStores.Appearance.ItemNormal.Options.UseBorderColor = true;
@@ -291,7 +291,7 @@
             this.gridControlEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tileViewEmployee,
             this.gridView1});
-            this.customerEmployeeBindingSource.DataSource = typeof(DevExpress.DevAV.CustomerEmployee);
+            this.customerEmployeeBindingSource.DataSource = typeof(FHRMS.Data.CustomerEmployee);
             this.tileViewEmployee.Appearance.ItemNormal.BorderColor = System.Drawing.Color.Transparent;
             this.tileViewEmployee.Appearance.ItemNormal.FontSizeDelta = -1;
             this.tileViewEmployee.Appearance.ItemNormal.Options.UseBorderColor = true;
@@ -392,7 +392,7 @@
             this.gridCustomers.TabIndex = 0;
             this.gridCustomers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewCustomers});
-            this.customerBindingSource.DataSource = typeof(DevExpress.DevAV.Customer);
+            this.customerBindingSource.DataSource = typeof(FHRMS.Data.Customer);
             this.viewCustomers.Appearance.FooterPanel.Options.UseTextOptions = true;
             this.viewCustomers.Appearance.FooterPanel.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.viewCustomers.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -646,60 +646,60 @@
 
         #endregion
 
-        private XtraLayout.LayoutControl layoutControl1;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private XtraEditors.LabelControl labelControl1;
-        private XtraGrid.GridControl gridCustomers;
-        private XtraGrid.Views.Grid.GridView viewCustomers;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraLayout.LayoutControlItem layoutControlItem3;
-        private XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private XtraLayout.SimpleLabelItem simpleLabelItem1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraGrid.GridControl gridCustomers;
+        private DevExpress.XtraGrid.Views.Grid.GridView viewCustomers;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
         private System.Windows.Forms.BindingSource customerBindingSource;
-        private XtraGrid.Columns.GridColumn colName;
-        private XtraGrid.Columns.GridColumn colPhone;
-        private XtraGrid.Columns.GridColumn colFax;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn colFax;
         private System.Windows.Forms.BindingSource customerEmployeeBindingSource;
-        private XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
-        private XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
-        private XtraGrid.Columns.GridColumn gridColumnAddress;
-        private XtraGrid.Columns.GridColumn gridColumnCity;
-        private XtraGrid.Columns.GridColumn gridColumnState;
-        private XtraGrid.Columns.GridColumn gridColumnZipCode;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnAddress;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnCity;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnState;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnZipCode;
         private System.Windows.Forms.BindingSource customerStoreBindingSource;
-        private XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit2;
-        private XtraGrid.Views.Layout.LayoutViewCard layoutViewCard2;
-        private XtraGrid.Columns.GridColumn colMonthlySales;
-        private XtraEditors.Repository.RepositoryItemSparklineEdit repositoryItemSparklineEdit1;
-        private XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
-        private XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
-        private XtraEditors.DropDownButton dropDownButton1;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        private XtraBars.PopupMenu popupMenu1;
-        private XtraBars.BarButtonItem barButtonItemContacts;
-        private XtraBars.BarButtonItem barButtonItemStores;
-        private XtraBars.BarManager barManager1;
-        private XtraBars.BarDockControl barDockControlTop;
-        private XtraBars.BarDockControl barDockControlBottom;
-        private XtraBars.BarDockControl barDockControlLeft;
-        private XtraBars.BarDockControl barDockControlRight;
-        private XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit3;
-        private XtraGrid.GridControl gridControlStores;
-        private XtraGrid.Views.Grid.GridView gridView2;
-        private XtraGrid.GridControl gridControlEmployee;
-        private XtraGrid.Views.Grid.GridView gridView1;
-        private XtraLayout.LayoutControlItem employeeGridLCI;
-        private XtraLayout.LayoutControlItem storesGridLCI;
-        private XtraGrid.Views.Tile.TileView tileViewStores;
-        private XtraGrid.Views.Tile.TileView tileViewEmployee;
-        private XtraGrid.Columns.TileViewColumn colFullName;
-        private XtraGrid.Columns.TileViewColumn colPosition;
-        private XtraGrid.Columns.TileViewColumn colAddress;
-        private XtraGrid.Columns.TileViewColumn colPhoto;
-        private XtraGrid.Columns.TileViewColumn colCrestImage;
-        private XtraGrid.Columns.TileViewColumn colCityName;
-        private XtraGrid.Columns.TileViewColumn colAddressLine;
-        private XtraGrid.Columns.TileViewColumn colAddressCityLine;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit2;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard2;
+        private DevExpress.XtraGrid.Columns.GridColumn colMonthlySales;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit repositoryItemSparklineEdit1;
+        private DevExpress.XtraGrid.Views.Layout.LayoutViewCard layoutViewCard1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
+        private DevExpress.XtraEditors.DropDownButton dropDownButton1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemContacts;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemStores;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit3;
+        private DevExpress.XtraGrid.GridControl gridControlStores;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.GridControl gridControlEmployee;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraLayout.LayoutControlItem employeeGridLCI;
+        private DevExpress.XtraLayout.LayoutControlItem storesGridLCI;
+        private DevExpress.XtraGrid.Views.Tile.TileView tileViewStores;
+        private DevExpress.XtraGrid.Views.Tile.TileView tileViewEmployee;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colFullName;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colPosition;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colAddress;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colPhoto;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colCrestImage;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colCityName;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colAddressLine;
+        private DevExpress.XtraGrid.Columns.TileViewColumn colAddressCityLine;
 
     }
 }

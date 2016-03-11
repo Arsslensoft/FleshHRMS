@@ -1,10 +1,10 @@
-﻿using DevExpress.DevAV.ViewModels;
+﻿using FHRMS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using DevExpress.DevAV.DevAVDbDataModel;
+using FHRMS.DevAVDbDataModel;
 
-namespace DevExpress.DevAV.ViewModels {
+namespace FHRMS.ViewModels {
     partial class OrderViewModel : IBaseViewModel {
     }
 }

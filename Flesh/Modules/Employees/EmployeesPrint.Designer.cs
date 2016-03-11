@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class EmployeesPrint {
         /// <summary> 
         /// Required designer variable.
@@ -29,8 +29,8 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.previewControl = new DevExpress.DevAV.ReportPreviewControl();
-            this.printSettingsControl = new DevExpress.DevAV.ReportPrintSettingsControl();
+            this.previewControl = new FHRMS.ReportPreviewControl();
+            this.printSettingsControl = new FHRMS.ReportPrintSettingsControl();
             ((System.ComponentModel.ISupportInitialize)(this.settingsLayout)).BeginInit();
             this.settingsLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -142,8 +142,8 @@
         private DevExpress.XtraEditors.CheckButton btnIncudeEvaluations;
         private DevExpress.XtraEditors.CheckButton btnExcludeEvaluations;
         private DevExpress.XtraLayout.LayoutControl settingsLayout;
-        private XtraLayout.LayoutControlGroup Root;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.DevAV.Helpers;
+using FHRMS.Helpers;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Docking2010;
 using System.Reflection;
 using DevExpress.Utils;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class BottomPanelBase : XtraUserControl {
         public BottomPanelBase() {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace DevExpress.DevAV.Modules {
         public static Image SplitterImage {
             get {
                 if (splitterImageCore == null) {
-                    splitterImageCore = ResourceImageHelper.CreateBitmapFromResources("DevExpress.DevAV.Resources.Separator.png", Assembly.GetExecutingAssembly());
+                    splitterImageCore = ResourceImageHelper.CreateBitmapFromResources("FHRMS.Resources.Separator.png", Assembly.GetExecutingAssembly());
                 }
                 return splitterImageCore;
             }
@@ -54,9 +54,9 @@ namespace DevExpress.DevAV.Modules {
                 windowsUIButtonPanel1.Buttons.Add(button);
             }
             if (searchControlVisible) {
-                searchLayoutControlItem.Visibility = XtraLayout.Utils.LayoutVisibility.Always;
+                searchLayoutControlItem.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             } else {
-                searchLayoutControlItem.Visibility = XtraLayout.Utils.LayoutVisibility.Never;
+                searchLayoutControlItem.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             }
         }
         public void InitializeButtons(List<ButtonInfo> listButtonInfo) {

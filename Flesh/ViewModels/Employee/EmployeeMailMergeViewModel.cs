@@ -1,5 +1,5 @@
-﻿namespace DevExpress.DevAV.ViewModels {
-    using DevExpress.DevAV.ViewModels;
+﻿namespace FHRMS.ViewModels {
+    using FHRMS.ViewModels;
 
     public class EmployeeMailMergeViewModel :
     MailMergeViewModelBase<EmployeeMailTemplate> {

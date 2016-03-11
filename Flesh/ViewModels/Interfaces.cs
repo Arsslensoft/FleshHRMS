@@ -1,6 +1,6 @@
 ﻿using DevExpress.Utils.Menu;
 
-namespace DevExpress.DevAV {
+namespace FHRMS {
     public enum ModuleType {
         Unknown,
 

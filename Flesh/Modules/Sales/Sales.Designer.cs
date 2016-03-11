@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     partial class Sales {
         /// <summary> 
         /// Required designer variable.
@@ -168,7 +168,7 @@
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
-            this.popupMenu1 = new XtraBars.Ribbon.GalleryDropDown(this.components);
+            this.popupMenu1 = new DevExpress.XtraBars.Ribbon.GalleryDropDown(this.components);
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -319,7 +319,7 @@
             this.salesGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.salesGridView,
             this.orderItemsGridView});
-            this.salesBindingSource.DataSource = typeof(DevExpress.DevAV.Order);
+            this.salesBindingSource.DataSource = typeof(FHRMS.Data.Order);
             this.salesGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colInvoiceNumber,
             this.colCustomer,
@@ -382,10 +382,10 @@
             this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Low, 0),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Normal, 2),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.High, 1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Urgent, 1)});
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Low, 0),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Normal, 2),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.High, 1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Urgent, 1)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             this.repositoryItemComboBox1.PopupSizeable = true;
             this.rangeControl.AnimateOnDataChange = true;
@@ -446,7 +446,7 @@
             this.popupMenu1.Gallery.StretchItems = true;
             this.popupMenu1.Gallery.ColumnCount = 1;
             this.popupMenu1.Gallery.ShowGroupCaption = false;
-            this.popupMenu1.Gallery.ItemImageLocation = Utils.Locations.Left;
+            this.popupMenu1.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.popupMenu1.Gallery.Groups.Add(new DevExpress.XtraBars.Ribbon.GalleryItemGroup());
             this.popupMenu1.Gallery.ItemClick += Gallery_ItemClick;
             this.popupMenu1.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Both;
@@ -455,7 +455,7 @@
             this.popupMenu1.Gallery.Appearance.ItemCaptionAppearance.Hovered.Options.UseFont = true;
             this.popupMenu1.Gallery.Appearance.ItemCaptionAppearance.Pressed.Options.UseFont = true;
             this.popupMenu1.Gallery.Appearance.ItemCaptionAppearance.Disabled.Options.UseFont = true;
-            this.popupMenu1.Gallery.ShowScrollBar = XtraBars.Ribbon.Gallery.ShowScrollBar.Hide;
+            this.popupMenu1.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Hide;
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
             this.barManager1.DockControls.Add(this.barDockControlLeft);
@@ -500,7 +500,7 @@
             this.chartControl.Legend.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chartControl.Location = new System.Drawing.Point(673, 93);
             this.chartControl.Name = "chartControl";
-            this.chartControl.OptionsPrint.SizeMode = XtraCharts.Printing.PrintSizeMode.Zoom;
+            this.chartControl.OptionsPrint.SizeMode = DevExpress.XtraCharts.Printing.PrintSizeMode.Zoom;
             this.chartControl.PaletteName = "Palette 1";
             this.chartControl.PaletteRepository.Add("Palette 1", new DevExpress.XtraCharts.Palette("Palette 1", DevExpress.XtraCharts.PaletteScaleMode.Repeat, new DevExpress.XtraCharts.PaletteEntry[] {
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(156))))), System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(156)))))),
@@ -1490,65 +1490,65 @@
 
         #endregion
 
-        private XtraLayout.SimpleLabelItem simpleLabelItem7;
-        private XtraLayout.SimpleLabelItem simpleLabelItem4;
-        private XtraLayout.SimpleLabelItem simpleLabelItem3;
-        private XtraLayout.SimpleLabelItem simpleLabelItem2;
-        private XtraLayout.SimpleLabelItem simpleLabelItem1;
-        private XtraLayout.SimpleLabelItem  salesSLI;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        private XtraGrid.GridControl salesGridControl;
-        private XtraGrid.Views.Grid.GridView salesGridView;
-        private XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemComboBox1;
-        private XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar1;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem7;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem4;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem3;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
+        private DevExpress.XtraLayout.SimpleLabelItem  salesSLI;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraGrid.GridControl salesGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView salesGridView;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemComboBox1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private System.Windows.Forms.BindingSource salesBindingSource;
-        private XtraLayout.SimpleLabelItem simpleLabelItem5;
-        private XtraDataLayout.DataLayoutControl dataLayoutControl1;
-        private XtraLayout.SimpleLabelItem buttonHide;
-        private XtraEditors.TileItem tileItemHighPriority;
-        private XtraEditors.TileItem tileItemUrgent;
-        private XtraEditors.TileItem tileItemCompleted;
-        private XtraEditors.TileItem tileItemDeferred;
-        private XtraEditors.TileItem tileItemNotStartedTask;
-        private XtraEditors.TileItem tileItemInProgress;
-        private XtraEditors.TileItem tileItemAll;
-        private XtraGrid.Columns.GridColumn colInvoiceNumber;
-        private XtraGrid.Columns.GridColumn colCustomer;
-        private XtraGrid.Columns.GridColumn colStore;
-        private XtraGrid.Columns.GridColumn colOrderDate;
-        private XtraGrid.Columns.GridColumn colTotalAmount;
-        private XtraLayout.LayoutControlItem chartControlLCI;
-        private XtraCharts.ChartControl chartControl;
-        private XtraLayout.EmptySpaceItem emptySpaceItem;
-        private XtraGrid.Views.Grid.GridView orderItemsGridView;
-        private XtraGrid.Columns.GridColumn ProductGC;
-        private XtraGrid.Columns.GridColumn unitsGridColumn;
-        private XtraGrid.Columns.GridColumn totalGridColumn;
-        private XtraGrid.Columns.GridColumn unitPriceGridColumn;
-        private XtraGrid.Columns.GridColumn discountGridColumn;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown1;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown2;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown3;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown4;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown5;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown6;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown7;
-        private XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown8;
-        private XtraEditors.RangeControl rangeControl;
-        private XtraEditors.DateTimeChartRangeControlClient dateTimeChartRangeControlClient1;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraEditors.DropDownButton dropDownButton1;
-        private XtraLayout.LayoutControlItem lcSales;
-        private XtraBars.Ribbon.GalleryDropDown popupMenu1;
-        private XtraBars.BarManager barManager1;
-        private XtraBars.BarDockControl barDockControlTop;
-        private XtraBars.BarDockControl barDockControlBottom;
-        private XtraBars.BarDockControl barDockControlLeft;
-        private XtraBars.BarDockControl barDockControlRight;
-        private XtraBars.BarButtonItem barButtonItemContacts;
-        private XtraBars.BarButtonItem barButtonItemStores;
-        private XtraLayout.LayoutControlGroup lcgChart;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem5;
+        private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
+        private DevExpress.XtraLayout.SimpleLabelItem buttonHide;
+        private DevExpress.XtraEditors.TileItem tileItemHighPriority;
+        private DevExpress.XtraEditors.TileItem tileItemUrgent;
+        private DevExpress.XtraEditors.TileItem tileItemCompleted;
+        private DevExpress.XtraEditors.TileItem tileItemDeferred;
+        private DevExpress.XtraEditors.TileItem tileItemNotStartedTask;
+        private DevExpress.XtraEditors.TileItem tileItemInProgress;
+        private DevExpress.XtraEditors.TileItem tileItemAll;
+        private DevExpress.XtraGrid.Columns.GridColumn colInvoiceNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colCustomer;
+        private DevExpress.XtraGrid.Columns.GridColumn colStore;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrderDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotalAmount;
+        private DevExpress.XtraLayout.LayoutControlItem chartControlLCI;
+        private DevExpress.XtraCharts.ChartControl chartControl;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem;
+        private DevExpress.XtraGrid.Views.Grid.GridView orderItemsGridView;
+        private DevExpress.XtraGrid.Columns.GridColumn ProductGC;
+        private DevExpress.XtraGrid.Columns.GridColumn unitsGridColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn totalGridColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn unitPriceGridColumn;
+        private DevExpress.XtraGrid.Columns.GridColumn discountGridColumn;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown1;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown2;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown3;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown4;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown5;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown6;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown7;
+        private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown8;
+        private DevExpress.XtraEditors.RangeControl rangeControl;
+        private DevExpress.XtraEditors.DateTimeChartRangeControlClient dateTimeChartRangeControlClient1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.DropDownButton dropDownButton1;
+        private DevExpress.XtraLayout.LayoutControlItem lcSales;
+        private DevExpress.XtraBars.Ribbon.GalleryDropDown popupMenu1;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemContacts;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemStores;
+        private DevExpress.XtraLayout.LayoutControlGroup lcgChart;
 
     }
 }

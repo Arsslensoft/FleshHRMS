@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV {
+﻿namespace FHRMS {
     partial class ReportPreviewControl {
         /// <summary> 
         /// Required designer variable.
@@ -207,24 +207,24 @@
 
         #endregion
 
-        private XtraPrinting.Preview.DocumentViewer documentViewer;
-        private XtraPrinting.Preview.DocumentViewerBarManager documentViewerBarManager1;
-        private XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItem18;
-        private XtraPrinting.Preview.PrintPreviewStaticItem printPreviewStaticItem1;
-        private XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItem19;
-        private XtraPrinting.Preview.ProgressBarEditItem progressBarEditItem1;
-        private XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar1;
-        private XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItem1;
-        private XtraPrinting.Preview.PrintPreviewStaticItem printPreviewStaticItem2;
-        private XtraPrinting.Preview.ZoomTrackBarEditItem zoomTrackBarEditItem1;
-        private XtraEditors.Repository.RepositoryItemZoomTrackBar repositoryItemZoomTrackBar1;
-        private XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItemWholePage;
-        private XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItemScale;
-        private XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItemMultiplePages;
-        private XtraBars.BarDockControl barDockControlTop;
-        private XtraBars.BarDockControl barDockControlBottom;
-        private XtraBars.BarDockControl barDockControlLeft;
-        private XtraBars.BarDockControl barDockControlRight;
-        private XtraPrinting.Preview.PrintPreviewRepositoryItemComboBox printPreviewRepositoryItemComboBox1;
+        private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer;
+        private DevExpress.XtraPrinting.Preview.DocumentViewerBarManager documentViewerBarManager1;
+        private DevExpress.XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItem18;
+        private DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem printPreviewStaticItem1;
+        private DevExpress.XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItem19;
+        private DevExpress.XtraPrinting.Preview.ProgressBarEditItem progressBarEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar1;
+        private DevExpress.XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItem1;
+        private DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem printPreviewStaticItem2;
+        private DevExpress.XtraPrinting.Preview.ZoomTrackBarEditItem zoomTrackBarEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemZoomTrackBar repositoryItemZoomTrackBar1;
+        private DevExpress.XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItemWholePage;
+        private DevExpress.XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItemScale;
+        private DevExpress.XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItemMultiplePages;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraPrinting.Preview.PrintPreviewRepositoryItemComboBox printPreviewRepositoryItemComboBox1;
     }
 }

@@ -6,7 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace DevExpress.DevAV.Common.DataModel.EntityFramework {
+namespace FHRMS.Common.DataModel.EntityFramework {
     /// <summary>
     /// A DbUnitOfWork instance represents the implementation of the Unit Of Work pattern 
     /// such that it can be used to query from a database and group together changes that will then be written back to the store as a unit. 

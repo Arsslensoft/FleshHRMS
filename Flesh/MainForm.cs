@@ -2,7 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 using DevExpress.Mvvm.POCO;
-using DevExpress.DevAV.ViewModels;
+using FHRMS.ViewModels;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Navigation;
 using System.Drawing;
@@ -14,7 +14,7 @@ using DevExpress.Utils.Menu;
 using DevExpress.Utils.Taskbar.Core;
 using DevExpress.Utils.Taskbar;
 
-namespace DevExpress.DevAV {
+namespace FHRMS {
     public partial class MainForm : XtraForm, IMainModule, ISwipeGestureClient {
         MainViewModel viewModel;
         bool allowFlyoutPanel = true;
@@ -76,7 +76,7 @@ namespace DevExpress.DevAV {
             if(!IsHandleCreated) return;
             var method = new MethodInvoker(() => {
                 bottomPanelBase1.Enabled = true;
-                var moduleControl = viewModel.SelectedModule as DevExpress.DevAV.Modules.BaseModuleControl;
+                var moduleControl = viewModel.SelectedModule as FHRMS.Modules.BaseModuleControl;
                 if(moduleControl != null) moduleControl.OnTransitionCompleted();
             });
             if(InvokeRequired) BeginInvoke(method);
@@ -120,7 +120,7 @@ namespace DevExpress.DevAV {
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             DisableBottomPanelSwipe();
-            WindowsFormsSettings.PopupMenuStyle = XtraEditors.Controls.PopupMenuStyle.RadialMenu;
+            WindowsFormsSettings.PopupMenuStyle = DevExpress.XtraEditors.Controls.PopupMenuStyle.RadialMenu;
         }
         void InitTileBar() {
             employeesTileBarItem.Tag = ModuleType.Employees;

@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules.Customers {
+﻿namespace FHRMS.Modules.Customers {
     partial class  StateUC{
 
         /// <summary> 
@@ -34,7 +34,7 @@
         }
 
         #endregion
-        public XtraEditors.LookUpEdit stateLookUpEdit;
+        public DevExpress.XtraEditors.LookUpEdit stateLookUpEdit;
 
     }
 }

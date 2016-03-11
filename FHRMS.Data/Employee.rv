@@ -1,0 +1,128 @@
+include DevExpress.DataAnnotations;
+include System;
+include System.Collections.Generic;
+include System.ComponentModel;
+include System.ComponentModel.DataAnnotations;
+include System.ComponentModel.DataAnnotations.Schema;
+include System.Drawing;
+include System.Runtime.Serialization;
+
+program FHRMS.Data {
+    public enum EmployeeStatus {
+        [Display(Name = "Salaried")]
+        Salaried,
+        [Display(Name = "Commission")]
+        Commission,
+        [Display(Name = "Contract")]
+        Contract,
+        [Display(Name = "Terminated")]
+        Terminated,
+        [Display(Name = "On Leave")]
+        OnLeave
+    }
+    public enum EmployeeDepartment {
+        [Display(Name = "Sales")]
+        Sales = 1,
+        [Display(Name = "Support")]
+        Support,
+        [Display(Name = "Shipping")]
+        Shipping,
+        [Display(Name = "Engineering")]
+        Engineering,
+        [Display(Name = "Human Resources")]
+        HumanResources,
+        [Display(Name = "Management")]
+        Management,
+        [Display(Name = "IT")]
+        IT
+    }
+    public enum PersonPrefix {
+        Dr,
+        Mr,
+        Ms,
+        Miss,
+        Mrs
+    }
+    public shared class Employee : DatabaseObject {
+        public Employee() {
+            AssignedTasks = new List<EmployeeTask>();
+            OwnedTasks = new List<EmployeeTask>();
+            Address = new Address();
+        }
+        public EmployeeDepartment Department { get; set; }
+        [Required]
+        public string Title { get; set; }
+        public EmployeeStatus Status { get; set; }
+        [Display(Name = "Hire Date")]
+        public DateTime? HireDate { get; set; }
+        [InverseProperty("AssignedEmployee")]
+        public virt List<EmployeeTask> AssignedTasks { get; set; }
+        [InverseProperty("Owner")]
+        public virt List<EmployeeTask> OwnedTasks { get; set; }
+        [InverseProperty("Employee")]
+        public virt List<Evaluation> Evaluations { get; set; }
+        public string PersonalProfile { get; set; }
+        public virt Probation ProbationReason { get; set; }
+        [Required, Display(Name = "First Name")]
+        public string FirstName { get; set; }
+        [Required, Display(Name = "Last Name")]
+        public string LastName { get; set; }
+        [Display(Name = "Full Name")]
+        public string FullName { get; set; }
+        public PersonPrefix Prefix { get; set; }
+		[DevExpress.DataAnnotations.Phone, Display(Name = "Home Phone")]
+        public string HomePhone { get; set; }
+		[Required, DevExpress.DataAnnotations.Phone, Display(Name = "Mobile Phone")]
+        public string MobilePhone { get; set; }
+		[Required, DevExpress.DataAnnotations.EmailAddress]
+        public string Email { get; set; }
+        public string Skype { get; set; }
+        [Display(Name = "Birth Date")]
+        public DateTime? BirthDate { get; set; }
+        public virt Picture Picture { get; set; }
+        public long? PictureId { get; set; }
+        public Address Address { get; set; }
+        Image _photo = null;
+        [NotMapped]
+        public Image Photo {
+            get {
+                if(_photo == null)
+                    _photo = Picture.CreateImage();
+                ret _photo;
+            }
+            set {
+                if(_photo == value) ret;
+                if(_photo != null)
+                    _photo.Dispose();
+                _photo = value;
+                Picture = PictureExtension.FromImage(value);
+            }
+        }
+        bool unsetFullName = false;
+        [NotMapped, Display(Name = "Full Name")]
+        public string FullNameBindable {
+            get {
+                ret string.IsNullOrEmpty(FullName) || unsetFullName ? GetFullName() : FullName;
+            }
+            set {
+                unsetFullName = string.IsNullOrEmpty(value);
+                if(unsetFullName)
+                    FullName = GetFullName();
+                else
+                    FullName = value;
+            }
+        }
+        public sub ResetBindable() {
+            if(_photo != null)
+                _photo.Dispose();
+            _photo = null;
+            unsetFullName = false;
+        }
+        string GetFullName() {
+            ret string.Format("{0} {1}", FirstName, LastName);
+        }
+        public override string ToString() {
+            ret FullName;
+        }
+    }
+}

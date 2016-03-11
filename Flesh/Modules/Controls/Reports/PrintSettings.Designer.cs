@@ -1,5 +1,5 @@
-﻿using DevExpress.DevAV;
-namespace DevExpress.DevAV {
+﻿using FHRMS.Data;
+namespace FHRMS {
     partial class ReportPrintSettingsControl {
         /// <summary> 
         /// Required designer variable.
@@ -34,7 +34,7 @@ namespace DevExpress.DevAV {
         /// </summary>
         private void InitializeComponent() {
             this.layoutControl = new DevExpress.XtraLayout.LayoutControl();
-            this.settingsPanel = new DevExpress.DevAV.SettingPanel();
+            this.settingsPanel = new FHRMS.SettingPanel();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnOptions = new DevExpress.XtraEditors.SimpleButton();
             this.cbPrinters = new DevExpress.XtraEditors.ImageComboBoxEdit();
@@ -237,19 +237,19 @@ namespace DevExpress.DevAV {
         #endregion
 
         private DevExpress.XtraEditors.SimpleButton btnPrint;
-        private XtraEditors.ImageComboBoxEdit cbPrinters;
+        private DevExpress.XtraEditors.ImageComboBoxEdit cbPrinters;
         private DevExpress.XtraEditors.SimpleButton btnOptions;
         private DevExpress.XtraLayout.LayoutControl layoutControl;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private XtraLayout.LayoutControlItem layoutControlItem1;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
-        private XtraLayout.LayoutControlItem layoutControlItem3;
-        private XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private XtraLayout.SimpleLabelItem simpleLabelItem1;
-        private XtraLayout.LayoutControlItem Printer;
-        private XtraLayout.SimpleLabelItem simpleLabelItem2;
-        private XtraLayout.LayoutControlItem layoutControlItemSettings;
-        private XtraLayout.SimpleSeparator simpleSeparator1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
+        private DevExpress.XtraLayout.LayoutControlItem Printer;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItemSettings;
+        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
         private SettingPanel settingsPanel;
     }
 }

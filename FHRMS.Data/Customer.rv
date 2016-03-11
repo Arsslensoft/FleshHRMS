@@ -1,0 +1,64 @@
+include System;
+include System.Collections.Generic;
+include System.ComponentModel.DataAnnotations;
+include System.ComponentModel.DataAnnotations.Schema;
+include System.Drawing;
+include System.Runtime.Serialization;
+include DevExpress.DataAnnotations;
+include DevExpress.Utils;
+include DevExpress.XtraEditors.Controls;
+
+program FHRMS.Data {
+    public enum CustomerStatus {
+        Active,
+        Suspended
+    }
+    public shared class Customer : DatabaseObject {
+        public Customer() {
+            Employees = new List<CustomerEmployee>();
+            Orders = new List<Order>();
+            HomeOffice = new Address();
+            BillingAddress = new Address();
+        }
+        [Required]
+        public string Name { get; set; }
+        public Address HomeOffice { get; set; }
+        public Address BillingAddress { get; set; }
+        public virt List<CustomerEmployee> Employees { get; set; }
+		[DevExpress.DataAnnotations.Phone]
+        public string Phone { get; set; }
+		[DevExpress.DataAnnotations.Phone]
+        public string Fax { get; set; }
+		[DevExpress.DataAnnotations.Url]
+        public string Website { get; set; }
+        [DataType(DataType.Currency)]
+        public decimal AnnualRevenue { get; set; }
+        [Display(Name = "Total Stores")]
+        public int TotalStores { get; set; }
+        [Display(Name = "Total Employees")]
+        public int TotalEmployees { get; set; }
+        public CustomerStatus Status { get; set; }
+        [InverseProperty("Customer")]
+        public virt List<Order> Orders { get; set; }
+        [InverseProperty("Customer")]
+        public virt List<Quote> Quotes { get; set; }
+        [InverseProperty("Customer")]
+        public virt List<CustomerStore> CustomerStores { get; set; }
+        public virt string Profile { get; set; }
+        public byte[] Logo { get; set; }
+        Image img = null;
+        public Image Image {
+            get {
+                if(img == null)
+                    img = CreateImage(Logo);
+                ret img;
+            }
+        }
+        friend static Image CreateImage(byte[] data) {
+            if(data == null)
+                ret ResourceImageHelper.CreateImageFromResourcesEx("FHRMS.Data.Resources.Unknown-user.png", typeof(Employee).Assembly);
+            else
+                ret ByteImageConverter.FromByteArray(data);
+        }
+    }
+}

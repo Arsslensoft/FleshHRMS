@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
-using DevExpress.DevAV;
-using DevExpress.DevAV.ViewModels;
+using FHRMS.Data;
+using FHRMS.ViewModels;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.DXErrorProvider;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class EditTask : BaseModuleControl {
         public EditTask()
             : base(CreateViewModel<EmployeeTaskViewModel>) {
@@ -79,7 +79,7 @@ namespace DevExpress.DevAV.Modules {
             taskBindingSource.DataSource = task;
             cbReminderDate.Enabled = cbReminderTime.Enabled = cbReminder.Checked;
         }
-        void tbComplete_EditValueChanging(object sender, XtraEditors.Controls.ChangingEventArgs e) {
+        void tbComplete_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e) {
             tbComplete.Refresh();
         }
         void cbReminder_CheckedChanged(object sender, EventArgs e) {

@@ -1,12 +1,12 @@
-﻿namespace DevExpress.DevAV.ViewModels {
+﻿namespace FHRMS.ViewModels {
     using System;
     using System.Collections.Generic;
     using DevExpress.Mvvm.DataAnnotations;
     using DevExpress.Mvvm.POCO;
-    using DevExpress.DevAV.ViewModels;
-    using DevExpress.DevAV;
+    using FHRMS.ViewModels;
+    using FHRMS.Data;
     using System.Linq;
-    using DevExpress.DevAV.DevAVDbDataModel;
+    using FHRMS.DevAVDbDataModel;
 
     partial class EmployeeCollectionViewModel {
         protected override void OnInitializeInRuntime() {

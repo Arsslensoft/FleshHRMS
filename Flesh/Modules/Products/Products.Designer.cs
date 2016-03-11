@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     public partial class Products {
         /// <summary> 
         /// Required designer variable.
@@ -283,7 +283,7 @@
             this.gridProducts.TabIndex = 1;
             this.gridProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewProducts});
-            this.productsSource.DataSource = typeof(DevExpress.DevAV.Product);
+            this.productsSource.DataSource = typeof(FHRMS.Data.Product);
             this.viewProducts.Appearance.FooterPanel.Options.UseTextOptions = true;
             this.viewProducts.Appearance.FooterPanel.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.viewProducts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -479,33 +479,33 @@
 
         #endregion
 
-        private XtraLayout.LayoutControl layoutControl1;
-        private XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private XtraGrid.GridControl gridProducts;
-        private XtraGrid.Views.Grid.GridView viewProducts;
-        private XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraGrid.GridControl gridProducts;
+        private DevExpress.XtraGrid.Views.Grid.GridView viewProducts;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private System.Windows.Forms.BindingSource productsSource;
-        private XtraGrid.Columns.GridColumn colName;
-        private XtraGrid.Columns.GridColumn colCost;
-        private XtraGrid.Columns.GridColumn colSalePrice;
-        private XtraGrid.Columns.GridColumn colRetailPrice;
-        private XtraGrid.Columns.GridColumn colInventory;
-        private XtraGrid.Columns.GridColumn colBackOrder;
-        private XtraEditors.TileControl tileControl;
-        private XtraEditors.TileGroup tileGroup;
-        private XtraEditors.TileItem tileItemTelevisions;
-        private XtraEditors.TileItem tileItemMonitors;
-        private XtraEditors.TileItem tileItemVideoPlayers;
-        private XtraEditors.TileItem tileItemProjectors;
-        private XtraEditors.TileItem tileItemAutomation;
-        private XtraLayout.LayoutControlItem tileControlLCI;
-        private XtraLayout.SimpleLabelItem collapseButton;
-        private XtraLayout.SimpleLabelItem hideButton;
-        private XtraLayout.SimpleLabelItem productsSLI;
-        private XtraLayout.SimpleLabelItem simpleLabelItem2;
-        private XtraEditors.TileItem tileItemAll;
-        private XtraGrid.Columns.GridColumn colMonthlySales;
-        private XtraEditors.Repository.RepositoryItemSparklineEdit repositoryItemSparklineEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
+        private DevExpress.XtraGrid.Columns.GridColumn colCost;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalePrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colRetailPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colInventory;
+        private DevExpress.XtraGrid.Columns.GridColumn colBackOrder;
+        private DevExpress.XtraEditors.TileControl tileControl;
+        private DevExpress.XtraEditors.TileGroup tileGroup;
+        private DevExpress.XtraEditors.TileItem tileItemTelevisions;
+        private DevExpress.XtraEditors.TileItem tileItemMonitors;
+        private DevExpress.XtraEditors.TileItem tileItemVideoPlayers;
+        private DevExpress.XtraEditors.TileItem tileItemProjectors;
+        private DevExpress.XtraEditors.TileItem tileItemAutomation;
+        private DevExpress.XtraLayout.LayoutControlItem tileControlLCI;
+        private DevExpress.XtraLayout.SimpleLabelItem collapseButton;
+        private DevExpress.XtraLayout.SimpleLabelItem hideButton;
+        private DevExpress.XtraLayout.SimpleLabelItem productsSLI;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;
+        private DevExpress.XtraEditors.TileItem tileItemAll;
+        private DevExpress.XtraGrid.Columns.GridColumn colMonthlySales;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit repositoryItemSparklineEdit1;
 
     }
 }

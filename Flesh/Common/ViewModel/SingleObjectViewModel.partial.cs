@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-using DevExpress.DevAV.Common.DataModel;
+using FHRMS.Common.DataModel;
 using DevExpress.Mvvm;
 using DevExpress.Mvvm.DataAnnotations;
 using DevExpress.Mvvm.POCO;
 
-namespace DevExpress.DevAV.Common.ViewModel {
+namespace FHRMS.Common.ViewModel {
     partial class SingleObjectViewModel<TEntity, TPrimaryKey, TUnitOfWork>
         where TEntity : class
         where TUnitOfWork : IUnitOfWork {

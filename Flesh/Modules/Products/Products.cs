@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
-using DevExpress.DevAV.Helpers;
-using DevExpress.DevAV.ViewModels;
+using FHRMS.Helpers;
+using FHRMS.ViewModels;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Repository;
-using DevExpress.DevAV;
+using FHRMS.Data;
 using DevExpress.XtraLayout.Utils;
 using DevExpress.XtraGrid.Columns;
 using System.Collections;
-using DevExpress.DevAV.Common.ViewModel;
+using FHRMS.Common.ViewModel;
 using DevExpress.XtraGrid;
 using DevExpress.Data.Filtering;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraBars.Docking2010.Customization;
 using System.Windows.Forms;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public enum ProductCustomFilter {
         HDVideoPlayer,
         Plasma,
@@ -61,7 +61,7 @@ namespace DevExpress.DevAV.Modules {
             tileItemTelevisions.Text = ViewModel.TelevisionsCount.ToString();
             tileItemVideoPlayers.Text = ViewModel.VideoPlayersCount.ToString();
             hideItemCollection.Clear();
-            hideItemCollection.AddRange(new XtraLayout.BaseLayoutItem[] { tileControlLCI });
+            hideItemCollection.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { tileControlLCI });
 
         }
         protected override void OnParentChanged(System.EventArgs e) {
@@ -146,7 +146,7 @@ namespace DevExpress.DevAV.Modules {
             return collection;
         }
 
-        void gridView1_CustomUnboundColumnData(object sender, XtraGrid.Views.Base.CustomColumnDataEventArgs e) {
+        void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e) {
             if(e.Column.ColumnEdit is RepositoryItemSparklineEdit) {
                 var product = (Product)e.Row;
                 var cached = cachedSales[product];
@@ -205,7 +205,7 @@ namespace DevExpress.DevAV.Modules {
             if(product == null) return;
             ShowEditModule(product);
         }
-        void viewProducts_RowClick(object sender, XtraGrid.Views.Grid.RowClickEventArgs e) {
+        void viewProducts_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e) {
             if(e.Clicks > 1 && e.RowHandle >= 0) {
                 ShowEditModuleForFocusedRow();
             }
@@ -218,7 +218,7 @@ namespace DevExpress.DevAV.Modules {
                     ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, GetParentViewModel<MainViewModel>(), productToEdit.Id);
                 }
                 else {
-                    ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, GetParentViewModel<MainViewModel>(), new DefaultEntityInitializer<Product, DevAV.DevAVDbDataModel.IDevAVDbUnitOfWork>());
+                    ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, GetParentViewModel<MainViewModel>(), new DefaultEntityInitializer<Product, DevAVDbDataModel.IDevAVDbUnitOfWork>());
                 }
                 ((BaseModuleControl)main.SelectedModule).Refresh();
             });
@@ -243,20 +243,20 @@ namespace DevExpress.DevAV.Modules {
 
 
         void hideButton_Click(object sender, EventArgs e) {
-            if(tileControlLCI.Visibility == XtraLayout.Utils.LayoutVisibility.Always) {
+            if(tileControlLCI.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always) {
                 ItemsHideHelper.Hide(hideItemCollection, hideButton);
-                productsSLI.Padding = new XtraLayout.Utils.Padding(25, 2, 10, 10);
+                productsSLI.Padding = new DevExpress.XtraLayout.Utils.Padding(25, 2, 10, 10);
 
                 return;
             }
-            if(tileControlLCI.Visibility == XtraLayout.Utils.LayoutVisibility.Never) {
+            if(tileControlLCI.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Never) {
                 ItemsHideHelper.Expand(hideItemCollection, hideButton);
-                productsSLI.Padding = new XtraLayout.Utils.Padding(2, 2, 10, 10);
+                productsSLI.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 10, 10);
                 return;
             }
         }
 
-        private void viewProducts_FocusedRowObjectChanged(object sender, XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e) {
+        private void viewProducts_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e) {
             ViewModel.SelectedEntity = e.Row as Product;
         }
 

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Linq;
 
-namespace DevExpress.DevAV.Common.Utils {
+namespace FHRMS.Common.Utils {
     /// <summary>
     /// Provides the extension method for implementations of the IQueryable interface.
     /// </summary>

@@ -1,4 +1,5 @@
-﻿namespace DevExpress.DevAV
+﻿using DevExpress;
+namespace FHRMS
 {
     partial class FleshSplashScreen
     {
@@ -39,7 +40,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(49, 142);
+            this.labelControl1.Location = new System.Drawing.Point(81, 139);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(298, 20);
             this.labelControl1.TabIndex = 0;
@@ -90,9 +91,9 @@
 
         #endregion
 
-        private XtraEditors.LabelControl labelControl1;
-        private XtraEditors.LabelControl labelControl2;
-        private XtraEditors.MarqueeProgressBarControl marqueeProgressBarControl1;
-        private XtraEditors.StyleController styleController1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.MarqueeProgressBarControl marqueeProgressBarControl1;
+        private DevExpress.XtraEditors.StyleController styleController1;
     }
 }

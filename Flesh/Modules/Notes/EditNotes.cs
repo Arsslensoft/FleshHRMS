@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
-using DevExpress.DevAV;
-using DevExpress.DevAV.ViewModels;
+using FHRMS.Data;
+using FHRMS.ViewModels;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.Mvvm;
 
-namespace DevExpress.DevAV.Modules {
+namespace FHRMS.Modules {
     public partial class EditNotes : BaseModuleControl {
         public EditNotes()
             : base(CreateViewModel<EvaluationViewModel>) {
@@ -72,7 +72,7 @@ namespace DevExpress.DevAV.Modules {
         public Notes()
             : base(CreateViewModel<EvaluationCollectionViewModel>) {
         }
-        protected override void OnInitServices(Mvvm.IServiceContainer serviceContainer) {
+        protected override void OnInitServices( DevExpress.Mvvm.IServiceContainer serviceContainer) {
             base.OnInitServices(serviceContainer);
             serviceContainer.RegisterService(new FlyoutDetailFormDocumentManagerService(ModuleType.EditNotes));
         }

@@ -1,9 +1,9 @@
 ﻿using System.Linq;
-using DevExpress.DevAV;
-using DevExpress.DevAV.DevAVDbDataModel;
-using DevExpress.DevAV.ViewModels;
+using FHRMS.Data;
+using FHRMS.DevAVDbDataModel;
+using FHRMS.ViewModels;
 
-namespace DevExpress.DevAV.ViewModels {
+namespace FHRMS.ViewModels {
     partial class EmployeeTaskCollectionViewModel {
         public int AllCount {
             get { return GetAllCount(); }

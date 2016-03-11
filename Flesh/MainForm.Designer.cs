@@ -1,5 +1,6 @@
 ﻿using DevExpress.Utils.Animation;
-namespace DevExpress.DevAV {
+using DevExpress;
+namespace FHRMS {
     partial class MainForm {
         /// <summary>
         /// Required designer variable.
@@ -66,7 +67,7 @@ namespace DevExpress.DevAV {
             this.salesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.opportunitiesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.transitionManager1 = new DevExpress.Utils.Animation.TransitionManager();
-            this.bottomPanelBase1 = new DevExpress.DevAV.Modules.BottomPanelBase();
+            this.bottomPanelBase1 = new FHRMS.Modules.BottomPanelBase();
             this.flyoutPanel1 = new DevExpress.Utils.FlyoutPanel();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -310,7 +311,7 @@ namespace DevExpress.DevAV {
             this.hdVideoTBI.Id = 0;
             this.hdVideoTBI.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.hdVideoTBI.Name = "hdVideoTBI";
-            this.hdVideoTBI.Tag = DevExpress.DevAV.Modules.ProductCustomFilter.HDVideoPlayer;
+            this.hdVideoTBI.Tag = FHRMS.Modules.ProductCustomFilter.HDVideoPlayer;
             // 
             // plasmaTBI
             // 
@@ -322,7 +323,7 @@ namespace DevExpress.DevAV {
             this.plasmaTBI.Id = 1;
             this.plasmaTBI.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.plasmaTBI.Name = "plasmaTBI";
-            this.plasmaTBI.Tag = DevExpress.DevAV.Modules.ProductCustomFilter.Plasma;
+            this.plasmaTBI.Tag = FHRMS.Modules.ProductCustomFilter.Plasma;
             // 
             // monitorTBI
             // 
@@ -334,7 +335,7 @@ namespace DevExpress.DevAV {
             this.monitorTBI.Id = 2;
             this.monitorTBI.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.monitorTBI.Name = "monitorTBI";
-            this.monitorTBI.Tag = DevExpress.DevAV.Modules.ProductCustomFilter.Monitor;
+            this.monitorTBI.Tag = FHRMS.Modules.ProductCustomFilter.Monitor;
             // 
             // remouteControlTBI
             // 
@@ -346,7 +347,7 @@ namespace DevExpress.DevAV {
             this.remouteControlTBI.Id = 3;
             this.remouteControlTBI.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.remouteControlTBI.Name = "remouteControlTBI";
-            this.remouteControlTBI.Tag = DevExpress.DevAV.Modules.ProductCustomFilter.RemoteControl;
+            this.remouteControlTBI.Tag = FHRMS.Modules.ProductCustomFilter.RemoteControl;
             // 
             // customersTileBarItem
             // 
@@ -422,7 +423,7 @@ namespace DevExpress.DevAV {
             this.AllStoresTBI.Id = 3;
             this.AllStoresTBI.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.AllStoresTBI.Name = "AllStoresTBI";
-            this.AllStoresTBI.Tag = DevExpress.DevAV.Modules.CustomersFilter.AllStores;
+            this.AllStoresTBI.Tag = FHRMS.Modules.CustomersFilter.AllStores;
             // 
             // customMyAccountTileBarItem
             // 
@@ -434,7 +435,7 @@ namespace DevExpress.DevAV {
             this.customMyAccountTileBarItem.Id = 0;
             this.customMyAccountTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.customMyAccountTileBarItem.Name = "customMyAccountTileBarItem";
-            this.customMyAccountTileBarItem.Tag = DevExpress.DevAV.Modules.CustomersFilter.MyAccount;
+            this.customMyAccountTileBarItem.Tag = FHRMS.Modules.CustomersFilter.MyAccount;
             // 
             // customJohnAccountTileBarItem
             // 
@@ -446,7 +447,7 @@ namespace DevExpress.DevAV {
             this.customJohnAccountTileBarItem.Id = 1;
             this.customJohnAccountTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.customJohnAccountTileBarItem.Name = "customJohnAccountTileBarItem";
-            this.customJohnAccountTileBarItem.Tag = DevExpress.DevAV.Modules.CustomersFilter.JohnAccount;
+            this.customJohnAccountTileBarItem.Tag = FHRMS.Modules.CustomersFilter.JohnAccount;
             // 
             // customTopStoresTileBarItem
             // 
@@ -458,7 +459,7 @@ namespace DevExpress.DevAV {
             this.customTopStoresTileBarItem.Id = 2;
             this.customTopStoresTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.customTopStoresTileBarItem.Name = "customTopStoresTileBarItem";
-            this.customTopStoresTileBarItem.Tag = DevExpress.DevAV.Modules.CustomersFilter.TopStores;
+            this.customTopStoresTileBarItem.Tag = FHRMS.Modules.CustomersFilter.TopStores;
             // 
             // salesTileBarItem
             // 
@@ -590,42 +591,42 @@ namespace DevExpress.DevAV {
 
         #endregion
 
-        private XtraBars.Navigation.TileNavPane tileNavPane;
-        private XtraBars.Navigation.NavButton navButtonHelp;
-        private XtraBars.Navigation.NavButton navButtonClose;
-        public XtraBars.Navigation.TileBar mainTileBar;
+        private DevExpress.XtraBars.Navigation.TileNavPane tileNavPane;
+        private DevExpress.XtraBars.Navigation.NavButton navButtonHelp;
+        private DevExpress.XtraBars.Navigation.NavButton navButtonClose;
+        public DevExpress.XtraBars.Navigation.TileBar mainTileBar;
         private DevExpress.XtraEditors.XtraUserControl modulesContainer;
         private TransitionManager transitionManager1;
-        private XtraBars.Navigation.TileBarGroup tileBarGroup2;
-        private XtraBars.Navigation.TileBarItem dashboardTileBarItem;
-        private XtraBars.Navigation.TileBarItem tasksTileBarItem;
-        private XtraBars.Navigation.TileBarItem employeesTileBarItem;
-        private XtraBars.Navigation.TileBarGroup tileBarGroup3;
-        private XtraBars.Navigation.TileBarItem productsTileBarItem;
-        private XtraBars.Navigation.TileBarItem customersTileBarItem;
-        private XtraBars.Navigation.TileBarItem salesTileBarItem;
-        private XtraBars.Navigation.TileBarItem opportunitiesTileBarItem;
-        private XtraBars.Navigation.TileBarDropDownContainer customTileBarDropDownContainter;
-        private XtraBars.Navigation.TileBarDropDownContainer productsTileBarDropDownContainter;
-        private XtraBars.Navigation.TileBarGroup tileBarGroup4;
-        private XtraBars.Navigation.TileBarItem customMyAccountTileBarItem;
-        private XtraBars.Navigation.TileBarItem customJohnAccountTileBarItem;
-        private XtraBars.Navigation.TileBarItem customTopStoresTileBarItem;
-        public XtraBars.Navigation.TileBar productTileBar;
-        private XtraBars.Navigation.TileBarGroup tileBarGroup1;
-        private XtraBars.Navigation.TileBarItem hdVideoTBI;
-        private XtraBars.Navigation.TileBarItem plasmaTBI;
-        private XtraBars.Navigation.TileBarItem monitorTBI;
-        private XtraBars.Navigation.TileBarItem remouteControlTBI;
-        private XtraBars.Navigation.NavButton navButtonHome;
+        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup2;
+        private DevExpress.XtraBars.Navigation.TileBarItem dashboardTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarItem tasksTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarItem employeesTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup3;
+        private DevExpress.XtraBars.Navigation.TileBarItem productsTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarItem customersTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarItem salesTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarItem opportunitiesTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarDropDownContainer customTileBarDropDownContainter;
+        private DevExpress.XtraBars.Navigation.TileBarDropDownContainer productsTileBarDropDownContainter;
+        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup4;
+        private DevExpress.XtraBars.Navigation.TileBarItem customMyAccountTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarItem customJohnAccountTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarItem customTopStoresTileBarItem;
+        public DevExpress.XtraBars.Navigation.TileBar productTileBar;
+        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup1;
+        private DevExpress.XtraBars.Navigation.TileBarItem hdVideoTBI;
+        private DevExpress.XtraBars.Navigation.TileBarItem plasmaTBI;
+        private DevExpress.XtraBars.Navigation.TileBarItem monitorTBI;
+        private DevExpress.XtraBars.Navigation.TileBarItem remouteControlTBI;
+        private DevExpress.XtraBars.Navigation.NavButton navButtonHome;
         public Modules.BottomPanelBase bottomPanelBase1;
-        private Utils.FlyoutPanel flyoutPanel1;
-        private XtraBars.Navigation.TileBarItem AllStoresTBI;
-        public XtraBars.Navigation.TileBar customTileBar;
-        private XtraBars.BarDockControl barDockControlLeft;
-        private XtraBars.BarDockControl barDockControlRight;
-        private XtraBars.BarDockControl barDockControlBottom;
-        private XtraBars.BarDockControl barDockControlTop;
-        private XtraBars.BarManager barManager1;
+        private  DevExpress.Utils.FlyoutPanel flyoutPanel1;
+        private DevExpress.XtraBars.Navigation.TileBarItem AllStoresTBI;
+        public DevExpress.XtraBars.Navigation.TileBar customTileBar;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarManager barManager1;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿namespace FHRMS.Modules {
     using DevExpress.XtraBars.Ribbon;
 
     public interface IRibbonModule {
