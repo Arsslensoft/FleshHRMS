@@ -1,19 +1,19 @@
-include System;
-include System.Collections;
-include System.Collections.Generic;
-include System.ComponentModel;
-include System.ComponentModel.DataAnnotations;
-include System.Globalization;
-include System.Linq;
-include System.Linq.Expressions;
-include System.Reflection;
-include System.Reflection.Emit;
-include System.Resources;
-include System.Security;
-include System.Text;
-include System.Text.RegularExpressions;
+import System;
+import System.Collections;
+import System.Collections.Generic;
+import System.ComponentModel;
+import System.ComponentModel.DataAnnotations;
+import System.Globalization;
+import System.Linq;
+import System.Linq.Expressions;
+import System.Reflection;
+import System.Reflection.Emit;
+import System.Resources;
+import System.Security;
+import System.Text;
+import System.Text.RegularExpressions;
 
-program DevExpress.DataAnnotations {
+package DevExpress.DataAnnotations {
     public abstract class RegexAttributeBase : DataTypeAttribute {
         protected const RegexOptions DefaultRegexOptions = RegexOptions.Compiled | RegexOptions.ExplicitCapture | RegexOptions.IgnoreCase;
 

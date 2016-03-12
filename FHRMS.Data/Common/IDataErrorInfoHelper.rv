@@ -1,9 +1,9 @@
-include System.ComponentModel;
-include System.ComponentModel.DataAnnotations;
-include System.Linq;
-include System.Reflection;
+import System.ComponentModel;
+import System.ComponentModel.DataAnnotations;
+import System.Linq;
+import System.Reflection;
 
-program DevExpress.Common {
+package DevExpress.Common {
     public static class IDataErrorInfoHelper {
         public static string GetErrorText(object owner, string propertyName) {
             string[] path = propertyName.Split('.');

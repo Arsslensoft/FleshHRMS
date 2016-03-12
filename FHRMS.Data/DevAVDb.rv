@@ -1,11 +1,11 @@
-include DevExpress.Internal;
-include System;
-include System.Data.Common;
-include System.Data.Entity;
-include System.Data.SQLite;
-include System.IO;
+import DevExpress.Internal;
+import System;
+import System.Data.Common;
+import System.Data.Entity;
+import System.Data.SQLite;
+import System.IO;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public class DevAVDb : DbContext {
         public DevAVDb() : super(CreateConnection(), true) { }
         public DevAVDb(string connectionString) : super(connectionString) { }

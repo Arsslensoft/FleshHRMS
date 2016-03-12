@@ -1,6 +1,6 @@
-include System;
+import System;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public enum StateEnum {
         CA,
         AR,

@@ -1,10 +1,10 @@
-include System;
-include System.Collections.Generic;
-include System.ComponentModel.DataAnnotations;
-include System.ComponentModel.DataAnnotations.Schema;
-include System.Linq;
+import System;
+import System.Collections.Generic;
+import System.ComponentModel.DataAnnotations;
+import System.ComponentModel.DataAnnotations.Schema;
+import System.Linq;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public class State {
         [Key]
         public StateEnum ShortName { get; set; }

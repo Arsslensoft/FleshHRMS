@@ -6,10 +6,9 @@
  * Rava Programming Language
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
-include System;
-include System.Collections.Generic;
+import System;
 
-program FHRMS.Core
+package FHRMS.Core
 {
 	/// <summary>
 	/// Description of MyClass.

@@ -1,11 +1,11 @@
-include System;
-include System.ComponentModel.DataAnnotations;
-include System.ComponentModel.DataAnnotations.Schema;
-include System.Drawing;
-include System.Runtime.Serialization;
-include DevExpress.DataAnnotations;
+import System;
+import System.ComponentModel.DataAnnotations;
+import System.ComponentModel.DataAnnotations.Schema;
+import System.Drawing;
+import System.Runtime.Serialization;
+import DevExpress.DataAnnotations;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public class CustomerEmployee : DatabaseObject {
         [Required, Display(Name = "First Name")]
         public string FirstName { get; set; }

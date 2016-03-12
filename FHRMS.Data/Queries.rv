@@ -1,12 +1,12 @@
-include System;
-include System.Collections.Generic;
-include System.ComponentModel.DataAnnotations;
-include System.Drawing;
-include System.Linq;
-include System.Linq.Expressions;
-include System.Text;
+import System;
+import System.Collections.Generic;
+import System.ComponentModel.DataAnnotations;
+import System.Drawing;
+import System.Linq;
+import System.Linq.Expressions;
+import System.Text;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public class SaleSummaryInfo {
         public DateTime OrderDate { get; set; }
         public string InvoiceNumber { get; set; }

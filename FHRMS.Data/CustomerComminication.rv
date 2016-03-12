@@ -1,10 +1,10 @@
-include System;
-include System.Collections.Generic;
-include System.ComponentModel.DataAnnotations.Schema;
-include System.Linq;
-include System.Runtime.Serialization;
+import System;
+import System.Collections.Generic;
+import System.ComponentModel.DataAnnotations.Schema;
+import System.Linq;
+import System.Runtime.Serialization;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public class CustomerCommunication : DatabaseObject {
         public virt Employee Employee { get; set; }
         public long? EmployeeId { get; set; }

@@ -1,11 +1,11 @@
-include System;
-include System.ComponentModel;
-include System.ComponentModel.DataAnnotations;
-include System.ComponentModel.DataAnnotations.Schema;
-include System.Runtime.Serialization;
-include DevExpress.Common;
+import System;
+import System.ComponentModel;
+import System.ComponentModel.DataAnnotations;
+import System.ComponentModel.DataAnnotations.Schema;
+import System.Runtime.Serialization;
+import DevExpress.Common;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public abstract class DatabaseObject : IDataErrorInfo {
         [Key]
         public long Id { get; set; }

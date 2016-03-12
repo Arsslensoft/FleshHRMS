@@ -1,11 +1,11 @@
-include System;
-include System.Collections.Generic;
-include System.ComponentModel.DataAnnotations.Schema;
-include System.IO;
-include System.Linq;
-include System.Runtime.Serialization;
+import System;
+import System.Collections.Generic;
+import System.ComponentModel.DataAnnotations.Schema;
+import System.IO;
+import System.Linq;
+import System.Runtime.Serialization;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public class ProductCatalog : DatabaseObject {
         public virt Product Product { get; set; }
         public long? ProductId { get; set; }

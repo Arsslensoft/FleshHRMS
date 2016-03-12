@@ -1,13 +1,13 @@
-include System;
-include System.Collections.Generic;
-include System.ComponentModel.DataAnnotations;
-include System.ComponentModel.DataAnnotations.Schema;
-include System.Drawing;
-include System.IO;
-include DevExpress.Utils;
-include System.Runtime.Serialization;
+import System;
+import System.Collections.Generic;
+import System.ComponentModel.DataAnnotations;
+import System.ComponentModel.DataAnnotations.Schema;
+import System.Drawing;
+import System.IO;
+import DevExpress.Utils;
+import System.Runtime.Serialization;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public enum ProductCategory {
         [Display(Name = "Automation")]
         Automation,

@@ -1,10 +1,10 @@
-include System;
-include System.ComponentModel;
-include System.ComponentModel.DataAnnotations;
-include DevExpress.Common;
-include DevExpress.DataAnnotations;
+import System;
+import System.ComponentModel;
+import System.ComponentModel.DataAnnotations;
+import DevExpress.Common;
+import DevExpress.DataAnnotations;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public class Address : IDataErrorInfo {
         [Display(Name = "Address")]
         public string Line { get; set; }

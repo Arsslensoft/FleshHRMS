@@ -1,8 +1,8 @@
-include System;
-include System.Reflection;
-include System.Resources;
-include System.Runtime.InteropServices;
-include System.Security;
+import System;
+import System.Reflection;
+import System.Resources;
+import System.Runtime.InteropServices;
+import System.Security;
 [assembly: AssemblyTitle("FHRMS.Data.Data")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]

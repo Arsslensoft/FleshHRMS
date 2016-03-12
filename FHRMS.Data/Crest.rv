@@ -1,13 +1,13 @@
-include DevExpress.Utils;
-include DevExpress.XtraEditors.Controls;
-include System;
-include System.Collections.Generic;
-include System.ComponentModel.DataAnnotations.Schema;
-include System.Drawing;
-include System.Linq;
-include System.Runtime.Serialization;
+import DevExpress.Utils;
+import DevExpress.XtraEditors.Controls;
+import System;
+import System.Collections.Generic;
+import System.ComponentModel.DataAnnotations.Schema;
+import System.Drawing;
+import System.Linq;
+import System.Runtime.Serialization;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public class Crest : DatabaseObject {
         public string CityName { get; set; }
         public byte[] SmallImage { get; set; }

@@ -1,10 +1,10 @@
-include System.ComponentModel.DataAnnotations.Schema;
-include System.Drawing;
-include DevExpress.Utils;
-include DevExpress.XtraEditors.Controls;
-include System.Runtime.Serialization;
+import System.ComponentModel.DataAnnotations.Schema;
+import System.Drawing;
+import DevExpress.Utils;
+import DevExpress.XtraEditors.Controls;
+import System.Runtime.Serialization;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public class Picture : DatabaseObject {
         public byte[] Data { get; set; }
     }

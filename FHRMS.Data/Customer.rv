@@ -1,14 +1,14 @@
-include System;
-include System.Collections.Generic;
-include System.ComponentModel.DataAnnotations;
-include System.ComponentModel.DataAnnotations.Schema;
-include System.Drawing;
-include System.Runtime.Serialization;
-include DevExpress.DataAnnotations;
-include DevExpress.Utils;
-include DevExpress.XtraEditors.Controls;
+import System;
+import System.Collections.Generic;
+import System.ComponentModel.DataAnnotations;
+import System.ComponentModel.DataAnnotations.Schema;
+import System.Drawing;
+import System.Runtime.Serialization;
+import DevExpress.DataAnnotations;
+import DevExpress.Utils;
+import DevExpress.XtraEditors.Controls;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public enum CustomerStatus {
         Active,
         Suspended

@@ -1,17 +1,17 @@
-include System;
-include System.Collections.Generic;
-include System.IO;
-include System.Linq;
-include System.Reflection;
-include System.Deployment.Application;
-include System.Windows.Interop;
-include System.Threading;
-include System.Diagnostics;
-include System.Security;
-include System.Runtime.InteropServices;
-include Microsoft.Win32;
+import System;
+import System.Collections.Generic;
+import System.IO;
+import System.Linq;
+import System.Reflection;
+import System.Deployment.Application;
+import System.Windows.Interop;
+import System.Threading;
+import System.Diagnostics;
+import System.Security;
+import System.Runtime.InteropServices;
+import Microsoft.Win32;
 
-program DevExpress.Internal {
+package DevExpress.Internal {
     public class DataDirectoryHelper {
         static bool? _isClickOnce = null;
 

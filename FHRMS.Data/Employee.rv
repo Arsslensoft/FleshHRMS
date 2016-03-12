@@ -1,13 +1,13 @@
-include DevExpress.DataAnnotations;
-include System;
-include System.Collections.Generic;
-include System.ComponentModel;
-include System.ComponentModel.DataAnnotations;
-include System.ComponentModel.DataAnnotations.Schema;
-include System.Drawing;
-include System.Runtime.Serialization;
+import DevExpress.DataAnnotations;
+import System;
+import System.Collections.Generic;
+import System.ComponentModel;
+import System.ComponentModel.DataAnnotations;
+import System.ComponentModel.DataAnnotations.Schema;
+import System.Drawing;
+import System.Runtime.Serialization;
 
-program FHRMS.Data {
+package FHRMS.Data {
     public enum EmployeeStatus {
         [Display(Name = "Salaried")]
         Salaried,
