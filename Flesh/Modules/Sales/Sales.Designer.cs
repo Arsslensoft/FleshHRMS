@@ -25,9 +25,8 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraEditors.RangeControlRange rangeControlRange1 = new DevExpress.XtraEditors.RangeControlRange();
             DevExpress.XtraEditors.AreaChartRangeControlClientView areaChartRangeControlClientView1 = new DevExpress.XtraEditors.AreaChartRangeControlClientView();
-            DevExpress.XtraCharts.SimpleDiagram simpleDiagram1 = new DevExpress.XtraCharts.SimpleDiagram();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.DoughnutSeriesLabel doughnutSeriesLabel1 = new DevExpress.XtraCharts.DoughnutSeriesLabel();
             DevExpress.XtraCharts.DoughnutSeriesView doughnutSeriesView1 = new DevExpress.XtraCharts.DoughnutSeriesView();
@@ -220,7 +219,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(simpleDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).BeginInit();
@@ -249,6 +247,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).BeginInit();
             this.SuspendLayout();
+            // 
+            // orderItemsGridView
+            // 
             this.orderItemsGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.ProductGC,
             this.unitsGridColumn,
@@ -263,12 +264,18 @@
             this.orderItemsGridView.OptionsView.ShowGroupPanel = false;
             this.orderItemsGridView.OptionsView.ShowIndicator = false;
             this.orderItemsGridView.PreviewFieldName = "OrderItems";
+            // 
+            // ProductGC
+            // 
             this.ProductGC.Caption = "Product";
             this.ProductGC.FieldName = "Product.Name";
             this.ProductGC.Name = "ProductGC";
             this.ProductGC.Visible = true;
             this.ProductGC.VisibleIndex = 0;
             this.ProductGC.Width = 159;
+            // 
+            // unitsGridColumn
+            // 
             this.unitsGridColumn.Caption = "Units";
             this.unitsGridColumn.FieldName = "ProductUnits";
             this.unitsGridColumn.Name = "unitsGridColumn";
@@ -276,6 +283,9 @@
             this.unitsGridColumn.Visible = true;
             this.unitsGridColumn.VisibleIndex = 1;
             this.unitsGridColumn.Width = 120;
+            // 
+            // unitPriceGridColumn
+            // 
             this.unitPriceGridColumn.Caption = "Unit Price";
             this.unitPriceGridColumn.DisplayFormat.FormatString = "c";
             this.unitPriceGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -285,6 +295,9 @@
             this.unitPriceGridColumn.Visible = true;
             this.unitPriceGridColumn.VisibleIndex = 2;
             this.unitPriceGridColumn.Width = 120;
+            // 
+            // totalGridColumn
+            // 
             this.totalGridColumn.Caption = "Total";
             this.totalGridColumn.DisplayFormat.FormatString = "c";
             this.totalGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -294,6 +307,9 @@
             this.totalGridColumn.Visible = true;
             this.totalGridColumn.VisibleIndex = 3;
             this.totalGridColumn.Width = 120;
+            // 
+            // discountGridColumn
+            // 
             this.discountGridColumn.Caption = "Discount";
             this.discountGridColumn.DisplayFormat.FormatString = "c";
             this.discountGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -303,6 +319,9 @@
             this.discountGridColumn.Visible = true;
             this.discountGridColumn.VisibleIndex = 4;
             this.discountGridColumn.Width = 120;
+            // 
+            // salesGridControl
+            // 
             this.salesGridControl.DataSource = this.salesBindingSource;
             gridLevelNode1.LevelTemplate = this.orderItemsGridView;
             gridLevelNode1.RelationName = "OrderItems";
@@ -319,7 +338,13 @@
             this.salesGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.salesGridView,
             this.orderItemsGridView});
+            // 
+            // salesBindingSource
+            // 
             this.salesBindingSource.DataSource = typeof(FHRMS.Data.Order);
+            // 
+            // salesGridView
+            // 
             this.salesGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colInvoiceNumber,
             this.colCustomer,
@@ -344,6 +369,9 @@
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colInvoiceNumber, DevExpress.Data.ColumnSortOrder.Descending)});
             this.salesGridView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.salesGridView_RowClick);
             this.salesGridView.FocusedRowObjectChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventHandler(this.salesGridView_FocusedRowObjectChanged);
+            // 
+            // colInvoiceNumber
+            // 
             this.colInvoiceNumber.Caption = "Invoice";
             this.colInvoiceNumber.FieldName = "InvoiceNumber";
             this.colInvoiceNumber.Name = "colInvoiceNumber";
@@ -351,23 +379,35 @@
             this.colInvoiceNumber.Visible = true;
             this.colInvoiceNumber.VisibleIndex = 0;
             this.colInvoiceNumber.Width = 120;
+            // 
+            // colCustomer
+            // 
             this.colCustomer.FieldName = "Customer.Name";
             this.colCustomer.Name = "colCustomer";
             this.colCustomer.Visible = true;
             this.colCustomer.VisibleIndex = 2;
             this.colCustomer.Width = 117;
+            // 
+            // colStore
+            // 
             this.colStore.Caption = "City";
             this.colStore.FieldName = "Store.Address.CityLine";
             this.colStore.Name = "colStore";
             this.colStore.Visible = true;
             this.colStore.VisibleIndex = 3;
             this.colStore.Width = 112;
+            // 
+            // colOrderDate
+            // 
             this.colOrderDate.FieldName = "OrderDate";
             this.colOrderDate.Name = "colOrderDate";
             this.colOrderDate.OptionsColumn.FixedWidth = true;
             this.colOrderDate.Visible = true;
             this.colOrderDate.VisibleIndex = 1;
             this.colOrderDate.Width = 100;
+            // 
+            // colTotalAmount
+            // 
             this.colTotalAmount.DisplayFormat.FormatString = "c";
             this.colTotalAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colTotalAmount.FieldName = "TotalAmount";
@@ -376,9 +416,15 @@
             this.colTotalAmount.Visible = true;
             this.colTotalAmount.VisibleIndex = 4;
             this.colTotalAmount.Width = 129;
+            // 
+            // repositoryItemProgressBar1
+            // 
             this.repositoryItemProgressBar1.Name = "repositoryItemProgressBar1";
             this.repositoryItemProgressBar1.ProgressViewStyle = DevExpress.XtraEditors.Controls.ProgressViewStyle.Solid;
             this.repositoryItemProgressBar1.ShowTitle = true;
+            // 
+            // repositoryItemComboBox1
+            // 
             this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
@@ -388,6 +434,9 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Urgent, 1)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             this.repositoryItemComboBox1.PopupSizeable = true;
+            // 
+            // rangeControl
+            // 
             this.rangeControl.AnimateOnDataChange = true;
             this.rangeControl.Client = this.dateTimeChartRangeControlClient1;
             this.rangeControl.Location = new System.Drawing.Point(42, 414);
@@ -395,22 +444,24 @@
             this.rangeControl.MaximumSize = new System.Drawing.Size(0, 138);
             this.rangeControl.MinimumSize = new System.Drawing.Size(0, 138);
             this.rangeControl.Name = "rangeControl";
-            rangeControlRange1.Maximum = new System.DateTime(((long)(0)));
-            rangeControlRange1.Minimum = new System.DateTime(2014, 6, 1, 0, 0, 0, 0);
-            rangeControlRange1.Owner = this.rangeControl;
-            this.rangeControl.SelectedRange = rangeControlRange1;
             this.rangeControl.ShowZoomScrollBar = false;
             this.rangeControl.Size = new System.Drawing.Size(599, 138);
             this.rangeControl.StyleController = this.dataLayoutControl1;
             this.rangeControl.TabIndex = 28;
             this.rangeControl.Text = "rangeControl1";
             this.rangeControl.RangeChanged += new DevExpress.XtraEditors.RangeChangedEventHandler(this.rangeControl_RangeChanged);
+            // 
+            // dateTimeChartRangeControlClient1
+            // 
             areaChartRangeControlClientView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(194)))), ((int)(((byte)(224)))));
             this.dateTimeChartRangeControlClient1.DataProvider.TemplateView = areaChartRangeControlClientView1;
             this.dateTimeChartRangeControlClient1.GridOptions.Auto = false;
             this.dateTimeChartRangeControlClient1.GridOptions.GridAlignment = DevExpress.XtraEditors.RangeControlDateTimeGridAlignment.Month;
             this.dateTimeChartRangeControlClient1.GridOptions.SnapAlignment = DevExpress.XtraEditors.RangeControlDateTimeGridAlignment.Month;
             this.dateTimeChartRangeControlClient1.PaletteName = "NatureColors";
+            // 
+            // dataLayoutControl1
+            // 
             this.dataLayoutControl1.AllowCustomization = false;
             this.dataLayoutControl1.BackColor = System.Drawing.Color.White;
             this.dataLayoutControl1.Controls.Add(this.dropDownButton1);
@@ -426,36 +477,47 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(955, 554);
             this.dataLayoutControl1.TabIndex = 27;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
+            // 
+            // dropDownButton1
+            // 
             this.dropDownButton1.AllowFocus = false;
             this.dropDownButton1.Appearance.FontSizeDelta = 3;
             this.dropDownButton1.Appearance.Options.UseFont = true;
             this.dropDownButton1.AutoWidthInLayoutControl = true;
             this.dropDownButton1.DropDownControl = this.popupMenu1;
-            this.dropDownButton1.Location = new System.Drawing.Point(754, 47);
+            this.dropDownButton1.Location = new System.Drawing.Point(738, 47);
             this.dropDownButton1.Name = "dropDownButton1";
-            this.dropDownButton1.Size = new System.Drawing.Size(78, 42);
+            this.dropDownButton1.Size = new System.Drawing.Size(110, 42);
             this.dropDownButton1.StyleController = this.dataLayoutControl1;
             this.dropDownButton1.TabIndex = 28;
             this.dropDownButton1.Text = "Sales";
             this.dropDownButton1.Click += new System.EventHandler(this.dropDownButton1_Click);
+            // 
+            // popupMenu1
+            // 
+            // 
+            // 
+            // 
+            this.popupMenu1.Gallery.Appearance.ItemCaptionAppearance.Disabled.Options.UseFont = true;
+            this.popupMenu1.Gallery.Appearance.ItemCaptionAppearance.Hovered.Options.UseFont = true;
+            this.popupMenu1.Gallery.Appearance.ItemCaptionAppearance.Normal.Options.UseFont = true;
+            this.popupMenu1.Gallery.Appearance.ItemCaptionAppearance.Pressed.Options.UseFont = true;
+            this.popupMenu1.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Both;
+            this.popupMenu1.Gallery.ColumnCount = 1;
+            this.popupMenu1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
+            galleryItemGroup1});
+            this.popupMenu1.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
+            this.popupMenu1.Gallery.ShowGroupCaption = false;
+            this.popupMenu1.Gallery.ShowItemImage = false;
+            this.popupMenu1.Gallery.ShowItemText = true;
+            this.popupMenu1.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Hide;
+            this.popupMenu1.Gallery.StretchItems = true;
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.ShowNavigationHeader = DevExpress.Utils.DefaultBoolean.True;
-            this.popupMenu1.Gallery.ShowItemText = true;
-            this.popupMenu1.Gallery.ShowItemImage = false;
-            this.popupMenu1.Gallery.StretchItems = true;
-            this.popupMenu1.Gallery.ColumnCount = 1;
-            this.popupMenu1.Gallery.ShowGroupCaption = false;
-            this.popupMenu1.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
-            this.popupMenu1.Gallery.Groups.Add(new DevExpress.XtraBars.Ribbon.GalleryItemGroup());
-            this.popupMenu1.Gallery.ItemClick += Gallery_ItemClick;
-            this.popupMenu1.Gallery.AutoSize = DevExpress.XtraBars.Ribbon.GallerySizeMode.Both;
-            this.popupMenu1.Gallery.Appearance.ItemCaptionAppearance.SetFont(DevExpress.XtraEditors.WindowsFormsSettings.DefaultMenuFont);
-            this.popupMenu1.Gallery.Appearance.ItemCaptionAppearance.Normal.Options.UseFont = true;
-            this.popupMenu1.Gallery.Appearance.ItemCaptionAppearance.Hovered.Options.UseFont = true;
-            this.popupMenu1.Gallery.Appearance.ItemCaptionAppearance.Pressed.Options.UseFont = true;
-            this.popupMenu1.Gallery.Appearance.ItemCaptionAppearance.Disabled.Options.UseFont = true;
-            this.popupMenu1.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Hide;
+            // 
+            // barManager1
+            // 
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
             this.barManager1.DockControls.Add(this.barDockControlLeft);
@@ -465,32 +527,51 @@
             this.barButtonItemContacts,
             this.barButtonItemStores});
             this.barManager1.MaxItemId = 2;
+            // 
+            // barDockControlTop
+            // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Size = new System.Drawing.Size(955, 0);
+            // 
+            // barDockControlBottom
+            // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 554);
             this.barDockControlBottom.Size = new System.Drawing.Size(955, 0);
+            // 
+            // barDockControlLeft
+            // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 554);
+            // 
+            // barDockControlRight
+            // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(955, 0);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 554);
+            // 
+            // barButtonItemContacts
+            // 
             this.barButtonItemContacts.Caption = "Contacts";
             this.barButtonItemContacts.Id = 0;
             this.barButtonItemContacts.Name = "barButtonItemContacts";
+            // 
+            // barButtonItemStores
+            // 
             this.barButtonItemStores.Caption = "Stores";
             this.barButtonItemStores.Id = 1;
             this.barButtonItemStores.Name = "barButtonItemStores";
+            // 
+            // chartControl
+            // 
             this.chartControl.AppearanceNameSerializable = "In A Fog";
             this.chartControl.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            simpleDiagram1.EqualPieSize = false;
-            this.chartControl.Diagram = simpleDiagram1;
             this.chartControl.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.chartControl.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.BottomOutside;
             this.chartControl.Legend.Antialiasing = true;
@@ -515,20 +596,17 @@
             series1.Label = doughnutSeriesLabel1;
             series1.LegendTextPattern = "{A}";
             series1.Name = "Series 1";
-            series1.SynchronizePointOptions = false;
             doughnutSeriesView1.HoleRadiusPercent = 56;
-            doughnutSeriesView1.RuntimeExploding = false;
-            doughnutSeriesView1.SweepDirection = DevExpress.XtraCharts.PieSweepDirection.Counterclockwise;
             series1.View = doughnutSeriesView1;
             this.chartControl.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl.SeriesTemplate.SynchronizePointOptions = false;
-            doughnutSeriesView2.RuntimeExploding = false;
-            doughnutSeriesView2.SweepDirection = DevExpress.XtraCharts.PieSweepDirection.Counterclockwise;
             this.chartControl.SeriesTemplate.View = doughnutSeriesView2;
             this.chartControl.Size = new System.Drawing.Size(240, 352);
             this.chartControl.TabIndex = 4;
             this.chartControl.CustomDrawSeriesPoint += new DevExpress.XtraCharts.CustomDrawSeriesPointEventHandler(this.chartControl_CustomDrawSeriesPoint);
+            // 
+            // layoutControlGroup1
+            // 
             this.layoutControlGroup1.CustomizationFormText = "Root";
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
@@ -542,17 +620,20 @@
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(40, 40, 0, 0);
             this.layoutControlGroup1.Size = new System.Drawing.Size(955, 554);
-            this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
             this.layoutControlItem1.Control = this.salesGridControl;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 45);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(603, 343);
-            this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // salesSLI
+            // 
             this.salesSLI.AllowHotTrack = false;
             this.salesSLI.AllowHtmlStringInCaption = true;
             this.salesSLI.AppearanceItemCaption.FontSizeDelta = 3;
@@ -566,6 +647,9 @@
             this.salesSLI.Size = new System.Drawing.Size(875, 45);
             this.salesSLI.Text = "SALES";
             this.salesSLI.TextSize = new System.Drawing.Size(51, 25);
+            // 
+            // buttonHide
+            // 
             this.buttonHide.AllowHotTrack = false;
             this.buttonHide.CustomizationFormText = " ";
             this.buttonHide.Image = ((System.Drawing.Image)(resources.GetObject("buttonHide.Image")));
@@ -578,17 +662,21 @@
             this.buttonHide.Text = " ";
             this.buttonHide.TextSize = new System.Drawing.Size(51, 25);
             this.buttonHide.Click += new System.EventHandler(this.collapseButton_Click);
+            // 
+            // layoutControlItem2
+            // 
             this.layoutControlItem2.Control = this.rangeControl;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem2.OptionsPrint.AllowPrint = false;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 388);
             this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.OptionsPrint.AllowPrint = false;
             this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 26, 2);
             this.layoutControlItem2.Size = new System.Drawing.Size(603, 166);
-            this.layoutControlItem2.Text = "layoutControlItem2";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextToControlDistance = 0;
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // lcgChart
+            // 
             this.lcgChart.CustomizationFormText = "lcgChart";
             this.lcgChart.GroupBordersVisible = false;
             this.lcgChart.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -599,7 +687,9 @@
             this.lcgChart.Name = "lcgChart";
             this.lcgChart.Size = new System.Drawing.Size(244, 509);
             this.lcgChart.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.lcgChart.Text = "lcgChart";
+            // 
+            // lcSales
+            // 
             this.lcSales.Control = this.dropDownButton1;
             this.lcSales.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lcSales.CustomizationFormText = "lcSales";
@@ -610,27 +700,31 @@
             this.lcSales.Name = "lcSales";
             this.lcSales.Size = new System.Drawing.Size(244, 46);
             this.lcSales.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.lcSales.Text = "lcSales";
             this.lcSales.TextSize = new System.Drawing.Size(0, 0);
-            this.lcSales.TextToControlDistance = 0;
             this.lcSales.TextVisible = false;
             this.lcSales.TrimClientAreaToControl = false;
+            // 
+            // chartControlLCI
+            // 
             this.chartControlLCI.Control = this.chartControl;
             this.chartControlLCI.CustomizationFormText = "chartControlLCI";
             this.chartControlLCI.Location = new System.Drawing.Point(0, 46);
             this.chartControlLCI.Name = "chartControlLCI";
             this.chartControlLCI.Size = new System.Drawing.Size(244, 356);
-            this.chartControlLCI.Text = "chartControlLCI";
             this.chartControlLCI.TextSize = new System.Drawing.Size(0, 0);
-            this.chartControlLCI.TextToControlDistance = 0;
             this.chartControlLCI.TextVisible = false;
+            // 
+            // emptySpaceItem
+            // 
             this.emptySpaceItem.AllowHotTrack = false;
             this.emptySpaceItem.CustomizationFormText = "emptySpaceItem";
             this.emptySpaceItem.Location = new System.Drawing.Point(0, 402);
             this.emptySpaceItem.Name = "emptySpaceItem";
             this.emptySpaceItem.Size = new System.Drawing.Size(244, 107);
-            this.emptySpaceItem.Text = "emptySpaceItem";
             this.emptySpaceItem.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // simpleLabelItem7
+            // 
             this.simpleLabelItem7.AllowHotTrack = false;
             this.simpleLabelItem7.AppearanceItemCaption.FontSizeDelta = 5;
             this.simpleLabelItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(82)))), ((int)(((byte)(163)))));
@@ -642,6 +736,9 @@
             this.simpleLabelItem7.Size = new System.Drawing.Size(830, 34);
             this.simpleLabelItem7.Text = "Status";
             this.simpleLabelItem7.TextSize = new System.Drawing.Size(127, 30);
+            // 
+            // simpleLabelItem4
+            // 
             this.simpleLabelItem4.AllowHotTrack = false;
             this.simpleLabelItem4.AppearanceItemCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.simpleLabelItem4.CustomizationFormText = " ";
@@ -655,6 +752,9 @@
             this.simpleLabelItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleLabelItem4.Text = " ";
             this.simpleLabelItem4.TextSize = new System.Drawing.Size(127, 13);
+            // 
+            // simpleLabelItem3
+            // 
             this.simpleLabelItem3.AllowHotTrack = false;
             this.simpleLabelItem3.AppearanceItemCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.simpleLabelItem3.CustomizationFormText = " ";
@@ -668,6 +768,9 @@
             this.simpleLabelItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleLabelItem3.Text = " ";
             this.simpleLabelItem3.TextSize = new System.Drawing.Size(127, 13);
+            // 
+            // simpleLabelItem2
+            // 
             this.simpleLabelItem2.AllowHotTrack = false;
             this.simpleLabelItem2.AppearanceItemCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.simpleLabelItem2.CustomizationFormText = " ";
@@ -681,6 +784,9 @@
             this.simpleLabelItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleLabelItem2.Text = " ";
             this.simpleLabelItem2.TextSize = new System.Drawing.Size(127, 13);
+            // 
+            // simpleLabelItem1
+            // 
             this.simpleLabelItem1.AllowHotTrack = false;
             this.simpleLabelItem1.AppearanceItemCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.simpleLabelItem1.CustomizationFormText = " ";
@@ -694,6 +800,9 @@
             this.simpleLabelItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleLabelItem1.Text = " ";
             this.simpleLabelItem1.TextSize = new System.Drawing.Size(127, 13);
+            // 
+            // simpleLabelItem5
+            // 
             this.simpleLabelItem5.AllowHotTrack = false;
             this.simpleLabelItem5.AppearanceItemCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.simpleLabelItem5.CustomizationFormText = " ";
@@ -707,6 +816,9 @@
             this.simpleLabelItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.simpleLabelItem5.Text = " ";
             this.simpleLabelItem5.TextSize = new System.Drawing.Size(127, 13);
+            // 
+            // tileItemHighPriority
+            // 
             tileItemElement1.Appearance.Hovered.FontSizeDelta = 10;
             tileItemElement1.Appearance.Hovered.Options.UseFont = true;
             tileItemElement1.Appearance.Hovered.Options.UseTextOptions = true;
@@ -734,6 +846,9 @@
             this.tileItemHighPriority.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemHighPriority.Name = "tileItemHighPriority";
             this.tileItemHighPriority.Tag = "Priority == \'High\'";
+            // 
+            // tileItemUrgent
+            // 
             tileItemElement3.Appearance.Hovered.FontSizeDelta = 15;
             tileItemElement3.Appearance.Hovered.Options.UseFont = true;
             tileItemElement3.Appearance.Hovered.Options.UseTextOptions = true;
@@ -761,6 +876,9 @@
             this.tileItemUrgent.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemUrgent.Name = "tileItemUrgent";
             this.tileItemUrgent.Tag = "Priority == \'Urgent\'";
+            // 
+            // tileItemCompleted
+            // 
             tileItemElement5.Appearance.Hovered.FontSizeDelta = 15;
             tileItemElement5.Appearance.Hovered.Options.UseFont = true;
             tileItemElement5.Appearance.Hovered.Options.UseTextOptions = true;
@@ -788,6 +906,9 @@
             this.tileItemCompleted.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemCompleted.Name = "tileItemCompleted";
             this.tileItemCompleted.Tag = "Status == \'Completed\'";
+            // 
+            // tileItemDeferred
+            // 
             tileItemElement7.Appearance.Hovered.FontSizeDelta = 15;
             tileItemElement7.Appearance.Hovered.Options.UseFont = true;
             tileItemElement7.Appearance.Hovered.Options.UseTextOptions = true;
@@ -815,6 +936,9 @@
             this.tileItemDeferred.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemDeferred.Name = "tileItemDeferred";
             this.tileItemDeferred.Tag = "Status = \'Deferred\'";
+            // 
+            // tileItemNotStartedTask
+            // 
             tileItemElement9.Appearance.Hovered.FontSizeDelta = 15;
             tileItemElement9.Appearance.Hovered.Options.UseFont = true;
             tileItemElement9.Appearance.Hovered.Options.UseTextOptions = true;
@@ -842,6 +966,9 @@
             this.tileItemNotStartedTask.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemNotStartedTask.Name = "tileItemNotStartedTask";
             this.tileItemNotStartedTask.Tag = "Status == \'NotStarted\'";
+            // 
+            // tileItemInProgress
+            // 
             tileItemElement11.Appearance.Hovered.FontSizeDelta = 15;
             tileItemElement11.Appearance.Hovered.Options.UseFont = true;
             tileItemElement11.Appearance.Hovered.Options.UseTextOptions = true;
@@ -869,6 +996,9 @@
             this.tileItemInProgress.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemInProgress.Name = "tileItemInProgress";
             this.tileItemInProgress.Tag = "Status == \'InProgress\'";
+            // 
+            // tileItemAll
+            // 
             tileItemElement13.Appearance.Hovered.FontSizeDelta = 15;
             tileItemElement13.Appearance.Hovered.Options.UseFont = true;
             tileItemElement13.Appearance.Hovered.Options.UseTextOptions = true;
@@ -896,6 +1026,12 @@
             this.tileItemAll.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemAll.Name = "tileItemAll";
             this.tileItemAll.Tag = "Priority != \'null\'";
+            // 
+            // commandBarGalleryDropDown1
+            // 
+            // 
+            // 
+            // 
             createBarChartItem1.Caption = "Clustered Column";
             createBarChartItem1.Description = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
     " order of categories is not important or for displaying item counts such as a hi" +
@@ -1090,6 +1226,12 @@
             this.commandBarGalleryDropDown1.Manager = this.barManager1;
             this.commandBarGalleryDropDown1.Name = "commandBarGalleryDropDown1";
             this.commandBarGalleryDropDown1.ShowNavigationHeader = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // commandBarGalleryDropDown2
+            // 
+            // 
+            // 
+            // 
             createLineChartItem1.Caption = "Line";
             createLineChartItem1.Description = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
     "e many data points and the order is important.";
@@ -1156,6 +1298,12 @@
             this.commandBarGalleryDropDown2.Manager = this.barManager1;
             this.commandBarGalleryDropDown2.Name = "commandBarGalleryDropDown2";
             this.commandBarGalleryDropDown2.ShowNavigationHeader = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // commandBarGalleryDropDown3
+            // 
+            // 
+            // 
+            // 
             createPieChartItem1.Caption = "Pie";
             createPieChartItem1.Description = resources.GetString("createPieChartItem1.Description");
             createPieChartItem1.Hint = resources.GetString("createPieChartItem1.Hint");
@@ -1192,6 +1340,12 @@
             this.commandBarGalleryDropDown3.Manager = this.barManager1;
             this.commandBarGalleryDropDown3.Name = "commandBarGalleryDropDown3";
             this.commandBarGalleryDropDown3.ShowNavigationHeader = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // commandBarGalleryDropDown4
+            // 
+            // 
+            // 
+            // 
             createRotatedBarChartItem1.Caption = "Bar";
             createRotatedBarChartItem1.Description = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
     "values.\r\n    ";
@@ -1230,6 +1384,12 @@
             this.commandBarGalleryDropDown4.Manager = this.barManager1;
             this.commandBarGalleryDropDown4.Name = "commandBarGalleryDropDown4";
             this.commandBarGalleryDropDown4.ShowNavigationHeader = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // commandBarGalleryDropDown5
+            // 
+            // 
+            // 
+            // 
             createAreaChartItem1.Caption = "Area";
             createAreaChartItem1.Description = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
     "f data over a period of time.\r\n    ";
@@ -1314,6 +1474,12 @@
             this.commandBarGalleryDropDown5.Manager = this.barManager1;
             this.commandBarGalleryDropDown5.Name = "commandBarGalleryDropDown5";
             this.commandBarGalleryDropDown5.ShowNavigationHeader = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // commandBarGalleryDropDown6
+            // 
+            // 
+            // 
+            // 
             createPointChartItem1.Caption = "Point";
             createPointChartItem1.Description = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
     ".";
@@ -1430,12 +1596,21 @@
             this.commandBarGalleryDropDown6.Manager = this.barManager1;
             this.commandBarGalleryDropDown6.Name = "commandBarGalleryDropDown6";
             this.commandBarGalleryDropDown6.ShowNavigationHeader = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // commandBarGalleryDropDown7
+            // 
             this.commandBarGalleryDropDown7.Manager = this.barManager1;
             this.commandBarGalleryDropDown7.Name = "commandBarGalleryDropDown7";
             this.commandBarGalleryDropDown7.ShowNavigationHeader = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // commandBarGalleryDropDown8
+            // 
             this.commandBarGalleryDropDown8.Manager = this.barManager1;
             this.commandBarGalleryDropDown8.Name = "commandBarGalleryDropDown8";
             this.commandBarGalleryDropDown8.ShowNavigationHeader = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // Sales
+            // 
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -1455,7 +1630,6 @@
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(simpleDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();

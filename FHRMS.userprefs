@@ -1,8 +1,11 @@
 ﻿<Properties StartupItem="Flesh\FHRMS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FHRMS.Data\Task.rv">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FHRMS.Data\CustomerComminication.rv">
     <Files>
       <File FileName="FHRMS.Data\Task.rv" Line="1" Column="1" />
+      <File FileName="FHRMS.Data\Crest.rv" Line="5" Column="46" />
+      <File FileName="FHRMS.Data\Customer.rv" Line="4" Column="46" />
+      <File FileName="FHRMS.Data\CustomerComminication.rv" Line="3" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

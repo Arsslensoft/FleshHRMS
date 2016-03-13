@@ -117,31 +117,55 @@ namespace FHRMS.Modules {
             ((System.ComponentModel.ISupportInitialize)(this.printEmployeeListItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // colPhoto
+            // 
             this.colPhoto.FieldName = "Photo";
             this.colPhoto.Name = "colPhoto";
             this.colPhoto.Visible = true;
             this.colPhoto.VisibleIndex = 18;
+            // 
+            // colFullName
+            // 
             this.colFullName.FieldName = "FullName";
             this.colFullName.Name = "colFullName";
             this.colFullName.Visible = true;
             this.colFullName.VisibleIndex = 8;
+            // 
+            // colAddress
+            // 
             this.colAddress.FieldName = "Address";
             this.colAddress.Name = "colAddress";
             this.colAddress.Visible = true;
             this.colAddress.VisibleIndex = 17;
+            // 
+            // colHomePhone
+            // 
             this.colHomePhone.FieldName = "HomePhone";
             this.colHomePhone.Name = "colHomePhone";
             this.colHomePhone.Visible = true;
             this.colHomePhone.VisibleIndex = 10;
+            // 
+            // colEmail
+            // 
             this.colEmail.FieldName = "Email";
             this.colEmail.Name = "colEmail";
             this.colEmail.Visible = true;
             this.colEmail.VisibleIndex = 12;
+            // 
+            // colMobilePhone
+            // 
             this.colMobilePhone.FieldName = "MobilePhone";
             this.colMobilePhone.Name = "colMobilePhone";
             this.colMobilePhone.Visible = true;
             this.colMobilePhone.VisibleIndex = 11;
+            // 
+            // employeeBindingSource
+            // 
             this.employeeBindingSource.DataSource = typeof(FHRMS.Data.Employee);
+            // 
+            // filterTileControl
+            // 
             this.filterTileControl.AllowDrag = false;
             this.filterTileControl.AllowGlyphSkinning = true;
             this.filterTileControl.AllowSelectedItem = true;
@@ -177,6 +201,9 @@ namespace FHRMS.Modules {
             this.filterTileControl.TabIndex = 0;
             this.filterTileControl.Text = "tileControl1";
             this.filterTileControl.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.filterTileControl_ItemClick);
+            // 
+            // tileGroup2
+            // 
             this.tileGroup2.Items.Add(this.tileItemAll);
             this.tileGroup2.Items.Add(this.tileItemSalaried);
             this.tileGroup2.Items.Add(this.tileItemCommission);
@@ -185,6 +212,9 @@ namespace FHRMS.Modules {
             this.tileGroup2.Items.Add(this.tileItemOnLeave);
             this.tileGroup2.Name = "tileGroup2";
             this.tileGroup2.Text = null;
+            // 
+            // tileItemAll
+            // 
             tileItemElement1.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement1.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement1.Appearance.Normal.Options.UseFont = true;
@@ -193,13 +223,11 @@ namespace FHRMS.Modules {
             tileItemElement1.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
             tileItemElement1.Appearance.Selected.Options.UseFont = true;
             tileItemElement1.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement1.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement1.Text = "5";
             tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement1.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement2.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement2.Image")));
             tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement2.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement2.Text = "All";
             tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemAll.Elements.Add(tileItemElement1);
@@ -207,6 +235,9 @@ namespace FHRMS.Modules {
             this.tileItemAll.Id = 0;
             this.tileItemAll.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemAll.Name = "tileItemAll";
+            // 
+            // tileItemSalaried
+            // 
             tileItemElement3.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement3.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement3.Appearance.Normal.Options.UseFont = true;
@@ -215,13 +246,11 @@ namespace FHRMS.Modules {
             tileItemElement3.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
             tileItemElement3.Appearance.Selected.Options.UseFont = true;
             tileItemElement3.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement3.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement3.Text = "5";
             tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement3.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement4.Image")));
             tileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement4.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement4.Text = "Salaried";
             tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemSalaried.Elements.Add(tileItemElement3);
@@ -230,6 +259,9 @@ namespace FHRMS.Modules {
             this.tileItemSalaried.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemSalaried.Name = "tileItemSalaried";
             this.tileItemSalaried.Tag = "Salaried";
+            // 
+            // tileItemCommission
+            // 
             tileItemElement5.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement5.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement5.Appearance.Normal.Options.UseFont = true;
@@ -238,13 +270,11 @@ namespace FHRMS.Modules {
             tileItemElement5.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
             tileItemElement5.Appearance.Selected.Options.UseFont = true;
             tileItemElement5.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement5.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement5.Text = "5";
             tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement5.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
             tileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement6.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement6.Text = "Commission";
             tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemCommission.Elements.Add(tileItemElement5);
@@ -253,6 +283,9 @@ namespace FHRMS.Modules {
             this.tileItemCommission.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemCommission.Name = "tileItemCommission";
             this.tileItemCommission.Tag = "Commission";
+            // 
+            // tileItemContract
+            // 
             tileItemElement7.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement7.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement7.Appearance.Normal.Options.UseFont = true;
@@ -261,13 +294,11 @@ namespace FHRMS.Modules {
             tileItemElement7.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
             tileItemElement7.Appearance.Selected.Options.UseFont = true;
             tileItemElement7.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement7.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement7.Text = "5";
             tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement7.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
             tileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement8.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement8.Text = "Contract";
             tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemContract.Elements.Add(tileItemElement7);
@@ -276,6 +307,9 @@ namespace FHRMS.Modules {
             this.tileItemContract.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemContract.Name = "tileItemContract";
             this.tileItemContract.Tag = "Contract";
+            // 
+            // tileItemTerminated
+            // 
             tileItemElement9.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement9.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement9.Appearance.Normal.Options.UseFont = true;
@@ -284,13 +318,11 @@ namespace FHRMS.Modules {
             tileItemElement9.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
             tileItemElement9.Appearance.Selected.Options.UseFont = true;
             tileItemElement9.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement9.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement9.Text = "5";
             tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement9.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement10.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement10.Image")));
             tileItemElement10.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement10.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement10.Text = "Terminated";
             tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemTerminated.Elements.Add(tileItemElement9);
@@ -299,6 +331,9 @@ namespace FHRMS.Modules {
             this.tileItemTerminated.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemTerminated.Name = "tileItemTerminated";
             this.tileItemTerminated.Tag = "Terminated";
+            // 
+            // tileItemOnLeave
+            // 
             tileItemElement11.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement11.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement11.Appearance.Normal.Options.UseFont = true;
@@ -307,13 +342,11 @@ namespace FHRMS.Modules {
             tileItemElement11.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
             tileItemElement11.Appearance.Selected.Options.UseFont = true;
             tileItemElement11.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement11.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement11.Text = "5";
             tileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement11.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement12.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement12.Image")));
             tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement12.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement12.Text = "On Leave";
             tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemOnLeave.Elements.Add(tileItemElement11);
@@ -322,6 +355,9 @@ namespace FHRMS.Modules {
             this.tileItemOnLeave.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemOnLeave.Name = "tileItemOnLeave";
             this.tileItemOnLeave.Tag = "OnLeave";
+            // 
+            // layoutControl1
+            // 
             this.layoutControl1.AllowCustomization = false;
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.flyoutPanel1);
@@ -335,6 +371,9 @@ namespace FHRMS.Modules {
             this.layoutControl1.Size = new System.Drawing.Size(948, 568);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // gridControl1
+            // 
             this.gridControl1.DataSource = this.employeeBindingSource;
             this.gridControl1.Location = new System.Drawing.Point(308, 35);
             this.gridControl1.MainView = this.tileView1;
@@ -344,6 +383,9 @@ namespace FHRMS.Modules {
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tileView1});
             this.gridControl1.Load += new System.EventHandler(this.gridControl1_Load);
+            // 
+            // tileView1
+            // 
             this.tileView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colDepartment,
             this.colTitle,
@@ -382,19 +424,16 @@ namespace FHRMS.Modules {
             tileViewItemElement1.Appearance.Normal.Options.UseBackColor = true;
             tileViewItemElement1.Column = null;
             tileViewItemElement1.Height = 31;
-            tileViewItemElement1.ImageBorderColor = System.Drawing.Color.Empty;
             tileViewItemElement1.StretchHorizontal = true;
             tileViewItemElement1.Text = "";
             tileViewItemElement1.TextLocation = new System.Drawing.Point(0, -9);
             tileViewItemElement2.Column = this.colPhoto;
             tileViewItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             tileViewItemElement2.ImageBorder = DevExpress.XtraEditors.TileItemElementImageBorderMode.SingleBorder;
-            tileViewItemElement2.ImageBorderColor = System.Drawing.Color.Empty;
             tileViewItemElement2.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
             tileViewItemElement2.ImageSize = new System.Drawing.Size(122, 153);
             tileViewItemElement2.Text = "colPhoto";
             tileViewItemElement3.Column = this.colFullName;
-            tileViewItemElement3.ImageBorderColor = System.Drawing.Color.Empty;
             tileViewItemElement3.Text = "colFullName";
             tileViewItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
             tileViewItemElement3.TextLocation = new System.Drawing.Point(0, -3);
@@ -404,12 +443,10 @@ namespace FHRMS.Modules {
             tileViewItemElement4.Appearance.Normal.ForeColor = System.Drawing.Color.Gray;
             tileViewItemElement4.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement4.Column = null;
-            tileViewItemElement4.ImageBorderColor = System.Drawing.Color.Empty;
             tileViewItemElement4.Text = "ADDRESS";
             tileViewItemElement5.AnchorElementIndex = 3;
             tileViewItemElement5.AnchorIndent = 0;
             tileViewItemElement5.Column = this.colAddress;
-            tileViewItemElement5.ImageBorderColor = System.Drawing.Color.Empty;
             tileViewItemElement5.Height = 40;
             tileViewItemElement5.MaxWidth = 160;
             tileViewItemElement5.Text = "colAddress";
@@ -418,23 +455,19 @@ namespace FHRMS.Modules {
             tileViewItemElement6.Appearance.Normal.ForeColor = System.Drawing.Color.Gray;
             tileViewItemElement6.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement6.Column = null;
-            tileViewItemElement6.ImageBorderColor = System.Drawing.Color.Empty;
             tileViewItemElement6.Text = "PHONE";
             tileViewItemElement7.AnchorElementIndex = 5;
             tileViewItemElement7.AnchorIndent = 0;
             tileViewItemElement7.Column = this.colHomePhone;
-            tileViewItemElement7.ImageBorderColor = System.Drawing.Color.Empty;
             tileViewItemElement7.Text = "colHomePhone";
             tileViewItemElement8.AnchorElementIndex = 6;
             tileViewItemElement8.Appearance.Normal.ForeColor = System.Drawing.Color.Gray;
             tileViewItemElement8.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement8.Column = null;
-            tileViewItemElement8.ImageBorderColor = System.Drawing.Color.Empty;
             tileViewItemElement8.Text = "EMAIL";
             tileViewItemElement9.AnchorElementIndex = 7;
             tileViewItemElement9.AnchorIndent = 0;
             tileViewItemElement9.Column = this.colEmail;
-            tileViewItemElement9.ImageBorderColor = System.Drawing.Color.Empty;
             tileViewItemElement9.Text = "colEmail";
             this.tileView1.TileTemplate.Add(tileViewItemElement1);
             this.tileView1.TileTemplate.Add(tileViewItemElement2);
@@ -445,71 +478,122 @@ namespace FHRMS.Modules {
             this.tileView1.TileTemplate.Add(tileViewItemElement7);
             this.tileView1.TileTemplate.Add(tileViewItemElement8);
             this.tileView1.TileTemplate.Add(tileViewItemElement9);
+            // 
+            // colDepartment
+            // 
             this.colDepartment.FieldName = "Department";
             this.colDepartment.Name = "colDepartment";
             this.colDepartment.Visible = true;
             this.colDepartment.VisibleIndex = 0;
+            // 
+            // colTitle
+            // 
             this.colTitle.FieldName = "Title";
             this.colTitle.Name = "colTitle";
             this.colTitle.Visible = true;
             this.colTitle.VisibleIndex = 1;
+            // 
+            // colStatus
+            // 
             this.colStatus.FieldName = "Status";
             this.colStatus.Name = "colStatus";
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 2;
+            // 
+            // colHireDate
+            // 
             this.colHireDate.FieldName = "HireDate";
             this.colHireDate.Name = "colHireDate";
             this.colHireDate.Visible = true;
             this.colHireDate.VisibleIndex = 3;
+            // 
+            // colPersonalProfile
+            // 
             this.colPersonalProfile.FieldName = "PersonalProfile";
             this.colPersonalProfile.Name = "colPersonalProfile";
             this.colPersonalProfile.Visible = true;
             this.colPersonalProfile.VisibleIndex = 4;
+            // 
+            // colProbationReason
+            // 
             this.colProbationReason.FieldName = "ProbationReason";
             this.colProbationReason.Name = "colProbationReason";
             this.colProbationReason.Visible = true;
             this.colProbationReason.VisibleIndex = 5;
+            // 
+            // colFirstName
+            // 
             this.colFirstName.FieldName = "FirstName";
             this.colFirstName.Name = "colFirstName";
             this.colFirstName.Visible = true;
             this.colFirstName.VisibleIndex = 6;
+            // 
+            // colLastName
+            // 
             this.colLastName.FieldName = "LastName";
             this.colLastName.Name = "colLastName";
             this.colLastName.Visible = true;
             this.colLastName.VisibleIndex = 7;
+            // 
+            // colPrefix
+            // 
             this.colPrefix.FieldName = "Prefix";
             this.colPrefix.Name = "colPrefix";
             this.colPrefix.Visible = true;
             this.colPrefix.VisibleIndex = 9;
+            // 
+            // colSkype
+            // 
             this.colSkype.FieldName = "Skype";
             this.colSkype.Name = "colSkype";
             this.colSkype.Visible = true;
             this.colSkype.VisibleIndex = 13;
+            // 
+            // colBirthDate
+            // 
             this.colBirthDate.FieldName = "BirthDate";
             this.colBirthDate.Name = "colBirthDate";
             this.colBirthDate.Visible = true;
             this.colBirthDate.VisibleIndex = 14;
+            // 
+            // colPicture
+            // 
             this.colPicture.FieldName = "Picture";
             this.colPicture.Name = "colPicture";
             this.colPicture.Visible = true;
             this.colPicture.VisibleIndex = 15;
+            // 
+            // colPictureId
+            // 
             this.colPictureId.FieldName = "PictureId";
             this.colPictureId.Name = "colPictureId";
             this.colPictureId.Visible = true;
             this.colPictureId.VisibleIndex = 16;
+            // 
+            // colFullNameBindable
+            // 
             this.colFullNameBindable.FieldName = "FullNameBindable";
             this.colFullNameBindable.Name = "colFullNameBindable";
             this.colFullNameBindable.Visible = true;
             this.colFullNameBindable.VisibleIndex = 19;
+            // 
+            // colId
+            // 
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
             this.colId.Visible = true;
             this.colId.VisibleIndex = 20;
+            // 
+            // flyoutPanel1
+            // 
             this.flyoutPanel1.Location = new System.Drawing.Point(1184, 95);
             this.flyoutPanel1.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.flyoutPanel1.Name = "flyoutPanel1";
             this.flyoutPanel1.Size = new System.Drawing.Size(241, 298);
             this.flyoutPanel1.TabIndex = 4;
+            // 
+            // layoutControlGroup1
+            // 
             this.layoutControlGroup1.CustomizationFormText = "Root";
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
@@ -523,6 +607,9 @@ namespace FHRMS.Modules {
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(40, 40, 0, 0);
             this.layoutControlGroup1.Size = new System.Drawing.Size(948, 568);
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // tileControlLayoutItem
+            // 
             this.tileControlLayoutItem.Control = this.filterTileControl;
             this.tileControlLayoutItem.CustomizationFormText = "tileControlLayoutItem";
             this.tileControlLayoutItem.Location = new System.Drawing.Point(0, 45);
@@ -535,6 +622,9 @@ namespace FHRMS.Modules {
             this.tileControlLayoutItem.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.tileControlLayoutItem.TextSize = new System.Drawing.Size(0, 0);
             this.tileControlLayoutItem.TextVisible = false;
+            // 
+            // buttonHide
+            // 
             this.buttonHide.AllowHotTrack = false;
             this.buttonHide.AppearanceItemCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.buttonHide.CustomizationFormText = " ";
@@ -549,6 +639,9 @@ namespace FHRMS.Modules {
             this.buttonHide.Text = " ";
             this.buttonHide.TextSize = new System.Drawing.Size(148, 20);
             this.buttonHide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.simpleLabelItem1_MouseDown);
+            // 
+            // simpleLabelItem2
+            // 
             this.simpleLabelItem2.AllowHotTrack = false;
             this.simpleLabelItem2.AllowHtmlStringInCaption = true;
             this.simpleLabelItem2.AppearanceItemCaption.FontSizeDelta = 3;
@@ -562,8 +655,11 @@ namespace FHRMS.Modules {
             this.simpleLabelItem2.Name = "simpleLabelItem2";
             this.simpleLabelItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(4, 2, 10, 10);
             this.simpleLabelItem2.Size = new System.Drawing.Size(868, 45);
-            this.simpleLabelItem2.Text = "EMPLOYEE <color=47, 81, 165>Status";
+            this.simpleLabelItem2.Text = "EMPLOYÉS <color=47, 81, 165>Status";
             this.simpleLabelItem2.TextSize = new System.Drawing.Size(148, 25);
+            // 
+            // layoutControlItem1
+            // 
             this.layoutControlItem1.Control = this.gridControl1;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(268, 45);
@@ -572,6 +668,9 @@ namespace FHRMS.Modules {
             this.layoutControlItem1.Size = new System.Drawing.Size(600, 523);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControl2
+            // 
             this.layoutControl2.AutoScroll = false;
             this.layoutControl2.Controls.Add(this.printEmployeeListButton);
             this.layoutControl2.Controls.Add(this.printEmployeeDirectoryButton);
@@ -589,6 +688,9 @@ namespace FHRMS.Modules {
             this.layoutControl2.Size = new System.Drawing.Size(215, 273);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // printEmployeeListButton
+            // 
             this.printEmployeeListButton.EditValue = ((object)(resources.GetObject("printEmployeeListButton.EditValue")));
             this.printEmployeeListButton.Location = new System.Drawing.Point(15, 185);
             this.printEmployeeListButton.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
@@ -599,6 +701,9 @@ namespace FHRMS.Modules {
             this.printEmployeeListButton.StyleController = this.layoutControl2;
             this.printEmployeeListButton.TabIndex = 6;
             this.printEmployeeListButton.Click += new System.EventHandler(this.printEmployeeListItem_Click);
+            // 
+            // printEmployeeDirectoryButton
+            // 
             this.printEmployeeDirectoryButton.EditValue = ((object)(resources.GetObject("printEmployeeDirectoryButton.EditValue")));
             this.printEmployeeDirectoryButton.Location = new System.Drawing.Point(15, 100);
             this.printEmployeeDirectoryButton.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
@@ -609,6 +714,9 @@ namespace FHRMS.Modules {
             this.printEmployeeDirectoryButton.StyleController = this.layoutControl2;
             this.printEmployeeDirectoryButton.TabIndex = 5;
             this.printEmployeeDirectoryButton.Click += new System.EventHandler(this.printEmployeeDirectoryItem_Click);
+            // 
+            // printEmployeeProfile
+            // 
             this.printEmployeeProfile.EditValue = ((object)(resources.GetObject("printEmployeeProfile.EditValue")));
             this.printEmployeeProfile.Location = new System.Drawing.Point(15, 15);
             this.printEmployeeProfile.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
@@ -619,6 +727,9 @@ namespace FHRMS.Modules {
             this.printEmployeeProfile.StyleController = this.layoutControl2;
             this.printEmployeeProfile.TabIndex = 4;
             this.printEmployeeProfile.Click += new System.EventHandler(this.printEmployeeProfileItem_Click);
+            // 
+            // layoutControlGroup2
+            // 
             this.layoutControlGroup2.CustomizationFormText = "layoutControlGroup2";
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup2.GroupBordersVisible = false;
@@ -631,6 +742,9 @@ namespace FHRMS.Modules {
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(221, 285);
             this.layoutControlGroup2.TextVisible = false;
+            // 
+            // printEmployeeProfileItem
+            // 
             this.printEmployeeProfileItem.Control = this.printEmployeeProfile;
             this.printEmployeeProfileItem.CustomizationFormText = "Employee Profile";
             this.printEmployeeProfileItem.Location = new System.Drawing.Point(0, 0);
@@ -641,6 +755,9 @@ namespace FHRMS.Modules {
             this.printEmployeeProfileItem.TextLocation = DevExpress.Utils.Locations.Right;
             this.printEmployeeProfileItem.TextSize = new System.Drawing.Size(131, 20);
             this.printEmployeeProfileItem.Click += new System.EventHandler(this.printEmployeeProfileItem_Click);
+            // 
+            // printEmployeeDirectoryItem
+            // 
             this.printEmployeeDirectoryItem.Control = this.printEmployeeDirectoryButton;
             this.printEmployeeDirectoryItem.CustomizationFormText = "Employee Directory";
             this.printEmployeeDirectoryItem.Location = new System.Drawing.Point(0, 85);
@@ -651,6 +768,9 @@ namespace FHRMS.Modules {
             this.printEmployeeDirectoryItem.TextLocation = DevExpress.Utils.Locations.Right;
             this.printEmployeeDirectoryItem.TextSize = new System.Drawing.Size(131, 20);
             this.printEmployeeDirectoryItem.Click += new System.EventHandler(this.printEmployeeDirectoryItem_Click);
+            // 
+            // printEmployeeListItem
+            // 
             this.printEmployeeListItem.Control = this.printEmployeeListButton;
             this.printEmployeeListItem.CustomizationFormText = "Employee List";
             this.printEmployeeListItem.Location = new System.Drawing.Point(0, 170);
@@ -661,12 +781,18 @@ namespace FHRMS.Modules {
             this.printEmployeeListItem.TextLocation = DevExpress.Utils.Locations.Right;
             this.printEmployeeListItem.TextSize = new System.Drawing.Size(131, 20);
             this.printEmployeeListItem.Click += new System.EventHandler(this.printEmployeeListItem_Click);
+            // 
+            // emptySpaceItem1
+            // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 255);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(201, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // Employees
+            // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);

@@ -196,15 +196,6 @@
   <data name="tileItemElement2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC4SURBVEhL1ZFtCoQwEEM9nqda8FT+2rPVRowMNtNO
-        tS7sg0A/89BOKSUVovZUSLFXLBwhak+FFHscfHMI5sSOPbzz6DwFFu+CR+28FMw5XMe4Re28FIzEfeRh
-        4eAt/kOwHFE8FqCYHUrySGDLkU/OlduCSDmoClCiPjtaDlyBLbGSnnLgCnDRFqG4txxUf9FVYhMpB81H
-        VpJoOWgKgJX0lIOQAKC4txyEBXf5nWDdp2NB5yl4KWnaABIHOEXfqL6NAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="tileItemElement3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFcSURBVEhLrdXBRkRRHMfxISIieoBZRfQMEb1E21bz
         AK16gNZtWrTpAVpFREQMbSPaliKtIkVExO37G/cc5x6/OffI/fFh+nfu/3/OzL0zo6Zpam3hHK8tvVbN
         rY1sMbGCE3xgXvbhrp2xxdYyHtCXX2zC9SgOOEBtpnA9igOeUJtPuB7FAT+ozRdcj8FOcAPXozjgBbW5
@@ -212,6 +203,15 @@
         3DWRLRprOIMeqG9cYANubYctDskWW/o23cVhUssdYwKtdf+3Axaxh3eEbCNfp9s4RJ+Hvn1X0VnX+QM7
         cL8B18jXqpZHg3SiuC68WII+xFLSU6S7d9Htq55xQOleD0lP4XafR7/ZccCVKhXRKfp2H3KLhTCg9ptT
         O6/ZvaKe8QRHbWGoqBc9m9EfAtO66CNUYCQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tileItemElement3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC4SURBVEhL1ZFtCoQwEEM9nqda8FT+2rPVRowMNtNO
+        tS7sg0A/89BOKSUVovZUSLFXLBwhak+FFHscfHMI5sSOPbzz6DwFFu+CR+28FMw5XMe4Re28FIzEfeRh
+        4eAt/kOwHFE8FqCYHUrySGDLkU/OlduCSDmoClCiPjtaDlyBLbGSnnLgCnDRFqG4txxUf9FVYhMpB81H
+        VpJoOWgKgJX0lIOQAKC4txyEBXf5nWDdp2NB5yl4KWnaABIHOEXfqL6NAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="tileItemElement8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
