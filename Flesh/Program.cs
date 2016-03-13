@@ -20,7 +20,9 @@ namespace FHRMS {
         /// </summary>
         [STAThread]
         private static void Main() {
+            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             AppDomain.CurrentDomain.AssemblyResolve += OnCurrentDomainAssemblyResolve;
+            AppDomain.CurrentDomain.UnhandledException+= CurrentDomain_UnhandledException;
             DataDirectoryHelper.LocalPrefix = "WinHybridApp";
             bool exit;
             using(IDisposable singleInstanceApplicationGuard = DataDirectoryHelper.SingleInstanceApplicationGuard("DevExpressWinHybridApp", out exit)) {
@@ -71,6 +73,12 @@ namespace FHRMS {
                 return Assembly.LoadFrom(path);
             }
             return null;
+        }
+
+        static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs args)
+        {
+            Exception e = (Exception)args.ExceptionObject;
+        
         }
     }
 }

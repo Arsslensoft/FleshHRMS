@@ -42,9 +42,9 @@ namespace FHRMS
             // 
             this.labelControl1.Location = new System.Drawing.Point(81, 139);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(298, 20);
+            this.labelControl1.Size = new System.Drawing.Size(304, 20);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Flesh Human Ressource Management System";
+            this.labelControl1.Text = "Flesh Human Ressources Management System";
             this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // labelControl2

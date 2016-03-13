@@ -11,10 +11,17 @@ namespace FHRMS.ViewModels {
         public List<SalesInfo> GetSales() {
             var salesInfoList = new List<SalesInfo>();
             var sortedOrders = GetSortedOrders();
-            var startDate = sortedOrders[0].Order.OrderDate;
-            var endDate = sortedOrders[sortedOrders.Count - 1].Order.OrderDate;
-            for (var time = startDate; time.Year <= endDate.Year; time = time.AddYears(1)) {
-                salesInfoList.Add(new SalesInfo() { time = time, ListProductInfo = GetSalesByYear(time)});
+            DateTime startDate = DateTime.Now;
+            if (sortedOrders.Count > 0)
+            {
+                startDate = sortedOrders[0].Order.OrderDate;
+
+
+                var endDate = sortedOrders[sortedOrders.Count - 1].Order.OrderDate;
+                for (var time = startDate; time.Year <= endDate.Year; time = time.AddYears(1))
+                {
+                    salesInfoList.Add(new SalesInfo() { time = time, ListProductInfo = GetSalesByYear(time) });
+                }
             }
             return salesInfoList;
         }

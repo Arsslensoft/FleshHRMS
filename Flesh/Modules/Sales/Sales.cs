@@ -31,6 +31,7 @@ namespace FHRMS.Modules {
             dateTimeChartRangeControlClient1.DataProvider.ValueDataMember = "TotalAmount";
             dateTimeChartRangeControlClient1.DataProvider.ArgumentDataMember = "OrderDate";
             FillComboBox();
+          if(listSales.Count > 0)
             RefreshChart(0);
         }
 
