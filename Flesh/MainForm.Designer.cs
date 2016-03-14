@@ -74,6 +74,7 @@ namespace FHRMS {
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.productsTileBarDropDownContainter)).BeginInit();
             this.productsTileBarDropDownContainter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customTileBarDropDownContainter)).BeginInit();
@@ -561,6 +562,13 @@ namespace FHRMS {
             this.barDockControlRight.Location = new System.Drawing.Point(1354, 0);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 737);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Flesh";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
             // MainForm
             // 
             this.ClientSize = new System.Drawing.Size(1354, 737);
@@ -577,6 +585,7 @@ namespace FHRMS {
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Flesh Human Ressources Management System";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productsTileBarDropDownContainter)).EndInit();
             this.productsTileBarDropDownContainter.ResumeLayout(false);
@@ -629,5 +638,6 @@ namespace FHRMS {
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarManager barManager1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

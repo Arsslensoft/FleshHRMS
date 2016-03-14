@@ -187,5 +187,16 @@ namespace FHRMS {
         void navButtonHelp_ElementClick(object sender, NavElementEventArgs e) {
             DevExpress.Utils.About.AboutHelper.Show(DevExpress.Utils.About.ProductKind.DXperienceWin, new DevExpress.Utils.About.ProductStringInfo("Hybrid App", "WinForm Controls"));
         }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+                this.Hide();
+                e.Cancel = true;
+        }
     }
 }
