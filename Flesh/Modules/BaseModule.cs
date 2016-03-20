@@ -154,22 +154,7 @@
                 return null;
             }
         }
-        public TileBar ProductTileBar {
-            get {
-                if(Parent == null || Parent.Parent == null) {
-                    return null;
-                }
-                var mainForm = Parent.Parent as MainForm;
-                if(mainForm != null) {
-                    return mainForm.productTileBar;
-                }
-                mainForm = Parent.Parent.Parent as MainForm;
-                if(mainForm != null) {
-                    return mainForm.productTileBar;
-                }
-                return null;
-            }
-        }
+     
         public TileBar MainTileBar {
             get {
                 if(Parent == null || Parent.Parent == null) {
@@ -186,22 +171,7 @@
                 return null;
             }
         }
-        public TileBar CustomerTileBar {
-            get {
-                if(Parent == null || Parent.Parent == null) {
-                    return null;
-                }
-                var mainForm = Parent.Parent as MainForm;
-                if(mainForm != null) {
-                    return mainForm.customTileBar;
-                }
-                mainForm = Parent.Parent.Parent as MainForm;
-                if(mainForm != null) {
-                    return mainForm.customTileBar;
-                }
-                return null;
-            }
-        }
+       
         protected internal virtual void OnTransitionCompleted() { }
     }
 }

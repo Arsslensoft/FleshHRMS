@@ -3,6 +3,8 @@
 namespace FHRMS {
     public enum ModuleType {
         Unknown,
+        CustomersPeek,
+        CustomersFilterPane,
 
         EmployeeView,
         ModifierEmployé,
@@ -10,26 +12,16 @@ namespace FHRMS {
         PublipostageEmployé,
         Employés,
 
-        CustomersFilterPane,
-        CustomersPeek,
-        CustomerEditableView,
-        CustomersModule,
-        CustomerDetails,
+     
 
-
-        Dashboard,
         Congés,
         ModifierCongés,
         ImprimerCongé,
 
-        Products,
-        ProductsEditableView,
-
-        Sales,
-        SalesPrint,
-        OrderView,
-        Opportunities,
+      
+        Absences,
         ModifierAbsence,
+        ImprimerAbsence,
         Notes,
 
     }

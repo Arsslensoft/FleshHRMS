@@ -85,22 +85,12 @@
       </HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.Map.v15.1.Core">
-      <HintPath>
-      </HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="DevExpress.Mvvm.v15.1">
       <HintPath>
       </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.RichEdit.v15.1.Core">
-      <HintPath>
-      </HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DevExpress.Pdf.v15.1.Core">
       <HintPath>
       </HintPath>
       <Private>False</Private>
@@ -140,22 +130,12 @@
       </HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraMap.v15.1">
-      <HintPath>
-      </HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="DevExpress.XtraPrinting.v15.1">
       <HintPath>
       </HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.XtraRichEdit.v15.1">
-      <HintPath>
-      </HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DevExpress.XtraPdfViewer.v15.1">
       <HintPath>
       </HintPath>
       <Private>False</Private>
@@ -186,16 +166,6 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.PivotGrid.v15.1.Core">
-      <HintPath>
-      </HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DevExpress.Sparkline.v15.1.Core">
-      <HintPath>
-      </HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DevExpress.XtraCharts.v15.1">
       <HintPath>
       </HintPath>
       <Private>False</Private>
@@ -247,8 +217,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\GroupPainter.cs" />
-    <Compile Include="DevAVDbDataModel\CustomRepositories\OrderRepository.cs" />
-    <Compile Include="DevAVDbDataModel\CustomRepositories\QuoteRepository.cs" />
     <Compile Include="DevAVDbDataModel\DevAVDbUnitOfWork.cs" />
     <Compile Include="DevAVDbDataModel\IDevAVDbUnitOfWork.cs" />
     <Compile Include="DevAVDbDataModel\UnitOfWorkFactory.cs" />
@@ -262,6 +230,12 @@
     <Compile Include="Helpers\ItemsHideHelper.cs" />
     <Compile Include="Helpers\ItemsSourceExtensions.cs" />
     <Compile Include="Helpers\LabelTabController.cs" />
+    <Compile Include="Modules\Absence\ImprimerAbsence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Absence\ImprimerAbsence.Designer.cs">
+      <DependentUpon>ImprimerAbsence.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\BaseModule.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -270,6 +244,12 @@
     </Compile>
     <Compile Include="Modules\BottomPanelBase.Designer.cs">
       <DependentUpon>BottomPanelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Absence\Absences.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Absence\Absences.Designer.cs">
+      <DependentUpon>Absences.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Controls\Reports\ExportSettings.cs">
       <SubType>UserControl</SubType>
@@ -288,36 +268,6 @@
     </Compile>
     <Compile Include="Modules\Controls\Reports\PrintSettings.Designer.cs">
       <DependentUpon>PrintSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Customers\AddressUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Customers\AddressUserControl.Designer.cs">
-      <DependentUpon>AddressUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Customers\CustomerMapView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Customers\CustomerMapView.Designer.cs">
-      <DependentUpon>CustomerMapView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Customers\EditCustomers.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Customers\EditCustomers.Designer.cs">
-      <DependentUpon>EditCustomers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Customers\CustomersFilterModule.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Customers\CustomersFilterModule.Designer.cs">
-      <DependentUpon>CustomersFilterModule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Dashboard\Dashboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Dashboard\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Employés\PublipostageEmployé.cs">
       <SubType>UserControl</SubType>
@@ -349,41 +299,11 @@
     <Compile Include="Modules\Absence\ModifierAbsence.Designer.cs">
       <DependentUpon>ModifierAbsence.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Opportunities\OpportunitiesMapView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Opportunities\OpportunitiesMapView.Designer.cs">
-      <DependentUpon>OpportunitiesMapView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modules\PrintSettings\PrintSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Modules\PrintSettings\PrintSettings.Designer.cs">
       <DependentUpon>PrintSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Products\ProductCustomFilter.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Products\ProductCustomFilter.Designer.cs">
-      <DependentUpon>ProductCustomFilter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Sales\OrderView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Sales\OrderView.Designer.cs">
-      <DependentUpon>OrderView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Products\EditProducts.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Products\EditProducts.Designer.cs">
-      <DependentUpon>EditProducts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Sales\SalesPrint.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Sales\SalesPrint.Designer.cs">
-      <DependentUpon>SalesPrint.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Setting\SettingsUC.cs">
       <SubType>UserControl</SubType>
@@ -405,31 +325,7 @@
     </Compile>
     <Compile Include="Modules\Helpers.cs" />
     <Compile Include="Modules\ColumnViewHelper.cs" />
-    <Compile Include="Modules\Customers\Customers.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Customers\Customers.Designer.cs">
-      <DependentUpon>Customers.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modules\Interfaces.cs" />
-    <Compile Include="Modules\Opportunities\Opportunities.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Opportunities\Opportunities.Designer.cs">
-      <DependentUpon>Opportunities.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Products\Products.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Products\Products.Designer.cs">
-      <DependentUpon>Products.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Sales\Sales.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Sales\Sales.Designer.cs">
-      <DependentUpon>Sales.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modules\Congé\ImprimerCongé.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -476,24 +372,24 @@
     <Compile Include="Services\ModuleTypesResolver.cs" />
     <Compile Include="Services\TransitionService.cs" />
     <Compile Include="Services\WorkspaceService.cs" />
+    <Compile Include="ViewModels\Absences\AbsencesCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Absences\AbsencesCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Absences\AbsencesViewModel.cs" />
+    <Compile Include="ViewModels\Absences\AbsencesViewModel.partial.cs" />
     <Compile Include="ViewModels\CollectionViewKind.cs" />
-    <Compile Include="ViewModels\Customer\CustomerCollectionViewModel.cs" />
-    <Compile Include="ViewModels\Customer\CustomerCollectionViewModel.partial.cs" />
-    <Compile Include="ViewModels\Customer\CustomerViewModel.cs" />
-    <Compile Include="ViewModels\Customer\CustomerViewModel.partial.cs" />
     <Compile Include="ViewModels\EmployeeReportType.cs" />
-    <Compile Include="ViewModels\EmployeeTask\EmployeeTaskCollectionViewModel.cs" />
-    <Compile Include="ViewModels\EmployeeTask\EmployeeTaskViewModel.cs" />
-    <Compile Include="ViewModels\EmployeeTask\TaskCollectionViewModel.partial.cs" />
-    <Compile Include="ViewModels\EmployeeTask\TaskViewModel.partial.cs" />
-    <Compile Include="ViewModels\Employee\EmployeeCollectionViewModel.cs" />
-    <Compile Include="ViewModels\Employee\EmployeeCollectionViewModel.partial.cs" />
-    <Compile Include="ViewModels\Employee\EmployeeMailMergeViewModel.cs" />
-    <Compile Include="ViewModels\Employee\EmployeeMailTemplate.cs" />
-    <Compile Include="ViewModels\Employee\EmployeePanelViewModel.cs" />
-    <Compile Include="ViewModels\Employee\EmployeesReportViewModel.cs" />
-    <Compile Include="ViewModels\Employee\EmployeeViewModel.cs" />
-    <Compile Include="ViewModels\Employee\EmployeeViewModel.partial.cs" />
+    <Compile Include="ViewModels\Congés\LeaveCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Congés\LeaveViewModel.cs" />
+    <Compile Include="ViewModels\Congés\LeaveCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Congés\LeaveViewModel.partial.cs" />
+    <Compile Include="ViewModels\Employé\EmployeeCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Employé\EmployeeCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Employé\EmployeeMailMergeViewModel.cs" />
+    <Compile Include="ViewModels\Employé\EmployeeMailTemplate.cs" />
+    <Compile Include="ViewModels\Employé\EmployeePanelViewModel.cs" />
+    <Compile Include="ViewModels\Employé\EmployeesReportViewModel.cs" />
+    <Compile Include="ViewModels\Employé\EmployeeViewModel.cs" />
+    <Compile Include="ViewModels\Employé\EmployeeViewModel.partial.cs" />
     <Compile Include="ViewModels\Evaluation\EvaluationCollectionViewModel.cs" />
     <Compile Include="ViewModels\Evaluation\EvaluationCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Evaluation\EvaluationViewModel.cs" />
@@ -502,18 +398,6 @@
     <Compile Include="ViewModels\MailMergeTemplatesHelper.cs" />
     <Compile Include="ViewModels\MailMergeViewModelBase.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="ViewModels\Order\OrderCollectionViewModel.cs" />
-    <Compile Include="ViewModels\Order\OrderCollectionViewModel.partial.cs" />
-    <Compile Include="ViewModels\Order\OrderViewModel.cs" />
-    <Compile Include="ViewModels\Order\OrderViewModel.partial.cs" />
-    <Compile Include="ViewModels\Product\ProductCollectionViewModel.cs" />
-    <Compile Include="ViewModels\Product\ProductCollectionViewModel.partial.cs" />
-    <Compile Include="ViewModels\Product\ProductViewModel.cs" />
-    <Compile Include="ViewModels\Product\ProductViewModel.partial.cs" />
-    <Compile Include="ViewModels\Quote\QuoteCollectionViewModel.cs" />
-    <Compile Include="ViewModels\Quote\QuoteCollectionViewModel.partial.cs" />
-    <Compile Include="ViewModels\Quote\QuoteViewModel.cs" />
-    <Compile Include="ViewModels\Quote\QuoteViewModel.partial.cs" />
     <Compile Include="ViewModels\ReportViewModelBase.cs" />
     <EmbeddedResource Include="Common\CommonResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -522,12 +406,18 @@
     <EmbeddedResource Include="FleshSplashScreen.resx">
       <DependentUpon>FleshSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Absence\ImprimerAbsence.resx">
+      <DependentUpon>ImprimerAbsence.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\BaseModule.resx">
       <DependentUpon>BaseModule.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\BottomPanelBase.resx">
       <DependentUpon>BottomPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Absence\Absences.resx">
+      <DependentUpon>Absences.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Controls\Reports\ExportSettings.resx">
       <DependentUpon>ExportSettings.cs</DependentUpon>
@@ -537,24 +427,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Controls\Reports\PrintSettings.resx">
       <DependentUpon>PrintSettings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Customers\AddressUserControl.resx">
-      <DependentUpon>AddressUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Customers\CustomerMapView.resx">
-      <DependentUpon>CustomerMapView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Customers\Customers.resx">
-      <DependentUpon>Customers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Customers\EditCustomers.resx">
-      <DependentUpon>EditCustomers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Customers\CustomersFilterModule.resx">
-      <DependentUpon>CustomersFilterModule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Dashboard\Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Employés\PublipostageEmployé.resx">
       <DependentUpon>PublipostageEmployé.cs</DependentUpon>
@@ -571,23 +443,8 @@
     <EmbeddedResource Include="Modules\Absence\ModifierAbsence.resx">
       <DependentUpon>ModifierAbsence.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Opportunities\OpportunitiesMapView.resx">
-      <DependentUpon>OpportunitiesMapView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Modules\PrintSettings\PrintSettings.resx">
       <DependentUpon>PrintSettings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Products\ProductCustomFilter.resx">
-      <DependentUpon>ProductCustomFilter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Sales\OrderView.resx">
-      <DependentUpon>OrderView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Products\EditProducts.resx">
-      <DependentUpon>EditProducts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Sales\SalesPrint.resx">
-      <DependentUpon>SalesPrint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Setting\SettingsUC.resx">
       <DependentUpon>SettingsUC.cs</DependentUpon>
@@ -597,15 +454,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Congé\ModifierCongés.resx">
       <DependentUpon>ModifierCongés.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Opportunities\Opportunities.resx">
-      <DependentUpon>Opportunities.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Products\Products.resx">
-      <DependentUpon>Products.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Sales\Sales.resx">
-      <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Congé\ImprimerCongé.resx">
       <DependentUpon>ImprimerCongé.cs</DependentUpon>

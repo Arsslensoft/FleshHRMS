@@ -157,7 +157,8 @@ namespace FHRMS.Modules {
             prevFocusedRow = GetSelectedIndex();
             var employee = GetSelectedEmployee();
             if(employee != null) {
-                ModifierAbsence.NewNoteOwner = employee;
+                ModifierAbsence.AbsenceOwner = employee;
+                ModifierAbsence.AbsenceCreator = employee;
                 NotesViewModel.New();
             }
         }

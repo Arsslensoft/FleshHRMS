@@ -70,7 +70,7 @@ namespace FHRMS.Modules {
             this.colStatus = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colHireDate = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colPersonalProfile = new DevExpress.XtraGrid.Columns.TileViewColumn();
-            this.colProbationReason = new DevExpress.XtraGrid.Columns.TileViewColumn();
+     
             this.colFirstName = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colLastName = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colPrefix = new DevExpress.XtraGrid.Columns.TileViewColumn();
@@ -392,7 +392,7 @@ namespace FHRMS.Modules {
             this.colStatus,
             this.colHireDate,
             this.colPersonalProfile,
-            this.colProbationReason,
+        
             this.colFirstName,
             this.colLastName,
             this.colFullName,
@@ -513,13 +513,7 @@ namespace FHRMS.Modules {
             this.colPersonalProfile.Name = "colPersonalProfile";
             this.colPersonalProfile.Visible = true;
             this.colPersonalProfile.VisibleIndex = 4;
-            // 
-            // colProbationReason
-            // 
-            this.colProbationReason.FieldName = "ProbationReason";
-            this.colProbationReason.Name = "colProbationReason";
-            this.colProbationReason.Visible = true;
-            this.colProbationReason.VisibleIndex = 5;
+        
             // 
             // colFirstName
             // 
@@ -861,7 +855,6 @@ namespace FHRMS.Modules {
         private DevExpress.XtraGrid.Columns.TileViewColumn colStatus;
         private DevExpress.XtraGrid.Columns.TileViewColumn colHireDate;
         private DevExpress.XtraGrid.Columns.TileViewColumn colPersonalProfile;
-        private DevExpress.XtraGrid.Columns.TileViewColumn colProbationReason;
         private DevExpress.XtraGrid.Columns.TileViewColumn colFirstName;
         private DevExpress.XtraGrid.Columns.TileViewColumn colLastName;
         private DevExpress.XtraGrid.Columns.TileViewColumn colFullName;

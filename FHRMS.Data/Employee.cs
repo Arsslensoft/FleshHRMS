@@ -72,13 +72,12 @@ namespace FHRMS.Data {
         [InverseProperty("Employee")]
         public virtual List<Absence> Evaluations { get; set; }
         public string PersonalProfile { get; set; }
-        public virtual Probation ProbationReason { get; set; }
         [Required, Display(Name = "First Name")]
         public string FirstName { get; set; }
         [Required, Display(Name = "Last Name")]
         public string LastName { get; set; }
-        [Display(Name = "Full Name")]
-        public string FullName { get; set; }
+        [NotMapped,Display(Name = "Full Name")]
+        public string FullName { get { return GetFullName(); } }
         public PersonPrefix Prefix { get; set; }
 		[DevExpress.DataAnnotations.Phone, Display(Name = "Home Phone")]
         public string HomePhone { get; set; }
@@ -124,21 +123,15 @@ namespace FHRMS.Data {
             get {
                 string fullname= string.IsNullOrEmpty(FullName) || unsetFullName ? GetFullName() : FullName;
 
-                if (string.IsNullOrEmpty(FullName))
-                {
-                    FullName = fullname;
-                    unsetFullName = false;
-                }
+                //if (string.IsNullOrEmpty(FullName))
+                //{
+                //    FullName = fullname;
+                //    unsetFullName = false;
+                //}
                 return fullname;
 
             }
-            set {
-                unsetFullName = string.IsNullOrEmpty(value);
-                if(unsetFullName)
-                    FullName = GetFullName();
-                else
-                    FullName = value;
-            }
+          
         }
         public void ResetBindable() {
             if(_photo != null)

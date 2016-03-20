@@ -52,12 +52,9 @@ namespace FHRMS {
 
         private void PrefetchChildModules() {
             if(System.Diagnostics.Debugger.IsAttached) return;
-            viewModel.GetModule(ModuleType.Opportunities);
+       
             viewModel.GetModule(ModuleType.Congés);
-            viewModel.GetModule(ModuleType.Products);
-            viewModel.GetModule(ModuleType.CustomersModule);
-            viewModel.GetModule(ModuleType.Dashboard);
-            viewModel.GetModule(ModuleType.Sales);
+          
         }
         void viewModel_ModuleAdded(object sender, EventArgs e) {
             var moduleControl = sender as Control;
@@ -125,12 +122,8 @@ namespace FHRMS {
         void InitTileBar() {
             employeesTileBarItem.Tag = ModuleType.Employés;
             employeesTileBarItem.Tag = ModuleType.Employés;
-            customersTileBarItem.Tag = ModuleType.CustomersModule;
             tasksTileBarItem.Tag = ModuleType.Congés;
-            productsTileBarItem.Tag = ModuleType.Products;
-            dashboardTileBarItem.Tag = ModuleType.Dashboard;
-            salesTileBarItem.Tag = ModuleType.Sales;
-            opportunitiesTileBarItem.Tag = ModuleType.Opportunities;
+            absencesTileBarItem.Tag = ModuleType.Absences;
         }
         bool transitionEffective = false;
         public void StartTransition(bool effective) {

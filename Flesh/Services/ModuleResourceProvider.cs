@@ -23,8 +23,7 @@ namespace FHRMS.Services.Win {
             }
             switch (moduleType) {
                 case ModuleType.Employés:
-                case ModuleType.CustomersModule:
-                case ModuleType.CustomersFilterPane:
+          
                     return DevExpress.Images.ImageResourceCache.Default.GetImage(@"images/people/usergroup_32x32.png");
                 default:
                     return null;

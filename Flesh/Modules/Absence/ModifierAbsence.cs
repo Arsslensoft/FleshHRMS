@@ -30,17 +30,24 @@ namespace FHRMS.Modules {
         protected override void OnParentViewModelAttached() {
             base.OnParentViewModelAttached();
             if(ViewModel.IsNew()) {
-                InitNew(NewNoteOwner);
+                InitNew(AbsenceOwner,AbsenceCreator);
             }
         }
         void ViewModel_EntityChanged(object sender, EventArgs e) {
             UpdateEditors(ViewModel.Entity);
         }
-        void InitNew(Employee employee) {
+        void InitNew(Employee employee, Employee creator)
+        {
             ViewModel.Entity.StartDate = DateTime.Now;
-            if(employee != null) {
-                ViewModel.Entity.CreatedBy = ViewModel.FindEmployeeId(employee);
-                ViewModel.Entity.CreatedById = employee.Id;
+            if (creator != null)
+            {
+                ViewModel.Entity.CreatedBy = ViewModel.FindEmployeeId(creator);
+                ViewModel.Entity.CreatedById = creator.Id;
+            }
+            if (employee != null)
+            {
+                ViewModel.Entity.Employee = ViewModel.FindEmployeeId(employee);
+                ViewModel.Entity.EmployeeId = employee.Id;
             }
         }
         DXErrorProvider errorProvider;
@@ -62,12 +69,14 @@ namespace FHRMS.Modules {
         void InitLookupEditors() {
             imageComboBoxEdit1.Properties.Items.AddEnum<FHRMS.Data.AbsenceType>();
             assignedToLookUpEdit.Properties.DataSource = ViewModel.GetEmployees().ToList();
+             lookUpEdit1.Properties.DataSource = ViewModel.GetEmployees().ToList();
         }
         void UpdateEditors(Absence note) {
             if(note == null) return;
             noteBindingSource.DataSource = note;
         }
-        public static Employee NewNoteOwner { get; set; }
+        public static Employee AbsenceOwner { get; set; }
+        public static Employee AbsenceCreator { get; set; }
     }
     public class Notes : BaseModuleControl {
         public Notes()

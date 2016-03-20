@@ -23,18 +23,10 @@ namespace FHRMS {
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement13 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.Utils.Animation.Transition transition1 = new DevExpress.Utils.Animation.Transition();
             DevExpress.Utils.Animation.SlideFadeTransition slideFadeTransition1 = new DevExpress.Utils.Animation.SlideFadeTransition();
             this.modulesContainer = new DevExpress.XtraEditors.XtraUserControl();
@@ -48,22 +40,8 @@ namespace FHRMS {
             this.employeesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tasksTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarGroup3 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.productsTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.productsTileBarDropDownContainter = new DevExpress.XtraBars.Navigation.TileBarDropDownContainer();
-            this.productTileBar = new DevExpress.XtraBars.Navigation.TileBar();
-            this.tileBarGroup1 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.hdVideoTBI = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.plasmaTBI = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.monitorTBI = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.remouteControlTBI = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.absencesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.customersTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.customTileBarDropDownContainter = new DevExpress.XtraBars.Navigation.TileBarDropDownContainer();
-            this.customTileBar = new DevExpress.XtraBars.Navigation.TileBar();
-            this.tileBarGroup4 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.AllStoresTBI = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.customMyAccountTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.customJohnAccountTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.customTopStoresTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.salesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.opportunitiesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.transitionManager1 = new DevExpress.Utils.Animation.TransitionManager();
@@ -75,10 +53,6 @@ namespace FHRMS {
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.productsTileBarDropDownContainter)).BeginInit();
-            this.productsTileBarDropDownContainter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customTileBarDropDownContainter)).BeginInit();
-            this.customTileBarDropDownContainter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).BeginInit();
             this.flyoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -226,241 +200,36 @@ namespace FHRMS {
             // 
             // tileBarGroup3
             // 
-            this.tileBarGroup3.Items.Add(this.productsTileBarItem);
+            this.tileBarGroup3.Items.Add(this.absencesTileBarItem);
             this.tileBarGroup3.Items.Add(this.customersTileBarItem);
             this.tileBarGroup3.Items.Add(this.salesTileBarItem);
             this.tileBarGroup3.Items.Add(this.opportunitiesTileBarItem);
             this.tileBarGroup3.Name = "tileBarGroup3";
             this.tileBarGroup3.Text = "OPERATIONS";
             // 
-            // productsTileBarItem
+            // absencesTileBarItem
             // 
-            this.productsTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.productsTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
-            this.productsTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.productsTileBarItem.DropDownControl = this.productsTileBarDropDownContainter;
-            this.productsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
-            tileItemElement8.Text = "Absences";
-            this.productsTileBarItem.Elements.Add(tileItemElement8);
-            this.productsTileBarItem.Id = 3;
-            this.productsTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.productsTileBarItem.Name = "productsTileBarItem";
-            // 
-            // productsTileBarDropDownContainter
-            // 
-            this.productsTileBarDropDownContainter.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
-            this.productsTileBarDropDownContainter.Appearance.Options.UseBackColor = true;
-            this.productsTileBarDropDownContainter.Controls.Add(this.productTileBar);
-            this.productsTileBarDropDownContainter.Location = new System.Drawing.Point(0, 0);
-            this.productsTileBarDropDownContainter.Name = "productsTileBarDropDownContainter";
-            this.productsTileBarDropDownContainter.Size = new System.Drawing.Size(931, 120);
-            this.productsTileBarDropDownContainter.TabIndex = 3;
-            // 
-            // productTileBar
-            // 
-            this.productTileBar.AllowDrag = false;
-            this.productTileBar.AllowSelectedItem = true;
-            this.productTileBar.AppearanceGroupText.ForeColor = System.Drawing.Color.White;
-            this.productTileBar.AppearanceGroupText.Options.UseForeColor = true;
-            this.productTileBar.AppearanceItem.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(209)))), ((int)(((byte)(255)))));
-            this.productTileBar.AppearanceItem.Hovered.ForeColor = System.Drawing.Color.Black;
-            this.productTileBar.AppearanceItem.Hovered.Options.UseBackColor = true;
-            this.productTileBar.AppearanceItem.Hovered.Options.UseForeColor = true;
-            this.productTileBar.AppearanceItem.Normal.BackColor = System.Drawing.Color.White;
-            this.productTileBar.AppearanceItem.Normal.ForeColor = System.Drawing.Color.Black;
-            this.productTileBar.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.productTileBar.AppearanceItem.Normal.Options.UseForeColor = true;
-            this.productTileBar.AppearanceItem.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(149)))), ((int)(((byte)(201)))));
-            this.productTileBar.AppearanceItem.Pressed.Options.UseBackColor = true;
-            this.productTileBar.AppearanceItem.Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.productTileBar.AppearanceItem.Selected.ForeColor = System.Drawing.Color.White;
-            this.productTileBar.AppearanceItem.Selected.Options.UseBackColor = true;
-            this.productTileBar.AppearanceItem.Selected.Options.UseForeColor = true;
-            this.productTileBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
-            this.productTileBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productTileBar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            this.productTileBar.Groups.Add(this.tileBarGroup1);
-            this.productTileBar.IndentBetweenGroups = 0;
-            this.productTileBar.ItemSize = 40;
-            this.productTileBar.Location = new System.Drawing.Point(0, 0);
-            this.productTileBar.MaxId = 5;
-            this.productTileBar.Name = "productTileBar";
-            this.productTileBar.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
-            this.productTileBar.SelectedItem = this.hdVideoTBI;
-            this.productTileBar.Size = new System.Drawing.Size(931, 120);
-            this.productTileBar.TabIndex = 1;
-            this.productTileBar.Text = "tileBar4";
-            this.productTileBar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.productTileBar_ItemClick);
-            // 
-            // tileBarGroup1
-            // 
-            this.tileBarGroup1.Items.Add(this.hdVideoTBI);
-            this.tileBarGroup1.Items.Add(this.plasmaTBI);
-            this.tileBarGroup1.Items.Add(this.monitorTBI);
-            this.tileBarGroup1.Items.Add(this.remouteControlTBI);
-            this.tileBarGroup1.Name = "tileBarGroup1";
-            this.tileBarGroup1.Text = "CUSTOM FILTER";
-            // 
-            // hdVideoTBI
-            // 
-            this.hdVideoTBI.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.hdVideoTBI.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.Text = "HD Video player";
-            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.hdVideoTBI.Elements.Add(tileItemElement4);
-            this.hdVideoTBI.Id = 0;
-            this.hdVideoTBI.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.hdVideoTBI.Name = "hdVideoTBI";
-            this.hdVideoTBI.Tag = FHRMS.Modules.ProductCustomFilter.HDVideoPlayer;
-            // 
-            // plasmaTBI
-            // 
-            this.plasmaTBI.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.plasmaTBI.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.Text = "50inch Plasma";
-            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.plasmaTBI.Elements.Add(tileItemElement5);
-            this.plasmaTBI.Id = 1;
-            this.plasmaTBI.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.plasmaTBI.Name = "plasmaTBI";
-            this.plasmaTBI.Tag = FHRMS.Modules.ProductCustomFilter.Plasma;
-            // 
-            // monitorTBI
-            // 
-            this.monitorTBI.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.monitorTBI.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement6.Text = "21inch Monitor";
-            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.monitorTBI.Elements.Add(tileItemElement6);
-            this.monitorTBI.Id = 2;
-            this.monitorTBI.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.monitorTBI.Name = "monitorTBI";
-            this.monitorTBI.Tag = FHRMS.Modules.ProductCustomFilter.Monitor;
-            // 
-            // remouteControlTBI
-            // 
-            this.remouteControlTBI.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.remouteControlTBI.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement7.Text = "Remote Control";
-            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.remouteControlTBI.Elements.Add(tileItemElement7);
-            this.remouteControlTBI.Id = 3;
-            this.remouteControlTBI.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.remouteControlTBI.Name = "remouteControlTBI";
-            this.remouteControlTBI.Tag = FHRMS.Modules.ProductCustomFilter.RemoteControl;
+            this.absencesTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.absencesTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
+            this.absencesTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
+            this.absencesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement4.Image")));
+            tileItemElement4.Text = "Absences";
+            this.absencesTileBarItem.Elements.Add(tileItemElement4);
+            this.absencesTileBarItem.Id = 3;
+            this.absencesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.absencesTileBarItem.Name = "absencesTileBarItem";
             // 
             // customersTileBarItem
             // 
             this.customersTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.customersTileBarItem.DropDownControl = this.customTileBarDropDownContainter;
             this.customersTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement13.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement13.Image")));
-            tileItemElement13.Text = "Pointage";
-            this.customersTileBarItem.Elements.Add(tileItemElement13);
+            tileItemElement5.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement5.Image")));
+            tileItemElement5.Text = "Pointage";
+            this.customersTileBarItem.Elements.Add(tileItemElement5);
             this.customersTileBarItem.Id = 4;
             this.customersTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.customersTileBarItem.Name = "customersTileBarItem";
-            // 
-            // customTileBarDropDownContainter
-            // 
-            this.customTileBarDropDownContainter.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.customTileBarDropDownContainter.Appearance.Options.UseBackColor = true;
-            this.customTileBarDropDownContainter.Controls.Add(this.customTileBar);
-            this.customTileBarDropDownContainter.Location = new System.Drawing.Point(0, 0);
-            this.customTileBarDropDownContainter.Name = "customTileBarDropDownContainter";
-            this.customTileBarDropDownContainter.Size = new System.Drawing.Size(821, 151);
-            this.customTileBarDropDownContainter.TabIndex = 2;
-            // 
-            // customTileBar
-            // 
-            this.customTileBar.AllowDrag = false;
-            this.customTileBar.AllowSelectedItem = true;
-            this.customTileBar.AppearanceGroupText.ForeColor = System.Drawing.Color.White;
-            this.customTileBar.AppearanceGroupText.Options.UseForeColor = true;
-            this.customTileBar.AppearanceItem.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.customTileBar.AppearanceItem.Hovered.ForeColor = System.Drawing.Color.White;
-            this.customTileBar.AppearanceItem.Hovered.Options.UseBackColor = true;
-            this.customTileBar.AppearanceItem.Hovered.Options.UseForeColor = true;
-            this.customTileBar.AppearanceItem.Normal.BackColor = System.Drawing.Color.White;
-            this.customTileBar.AppearanceItem.Normal.ForeColor = System.Drawing.Color.Black;
-            this.customTileBar.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.customTileBar.AppearanceItem.Normal.Options.UseForeColor = true;
-            this.customTileBar.AppearanceItem.Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.customTileBar.AppearanceItem.Selected.ForeColor = System.Drawing.Color.White;
-            this.customTileBar.AppearanceItem.Selected.Options.UseBackColor = true;
-            this.customTileBar.AppearanceItem.Selected.Options.UseForeColor = true;
-            this.customTileBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.customTileBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customTileBar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            this.customTileBar.Groups.Add(this.tileBarGroup4);
-            this.customTileBar.IndentBetweenGroups = 0;
-            this.customTileBar.ItemSize = 40;
-            this.customTileBar.Location = new System.Drawing.Point(0, 0);
-            this.customTileBar.MaxId = 4;
-            this.customTileBar.Name = "customTileBar";
-            this.customTileBar.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
-            this.customTileBar.SelectedItem = this.AllStoresTBI;
-            this.customTileBar.Size = new System.Drawing.Size(821, 151);
-            this.customTileBar.TabIndex = 0;
-            this.customTileBar.Text = "tileBar2";
-            this.customTileBar.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.customTileBar_ItemClick);
-            // 
-            // tileBarGroup4
-            // 
-            this.tileBarGroup4.Items.Add(this.AllStoresTBI);
-            this.tileBarGroup4.Items.Add(this.customMyAccountTileBarItem);
-            this.tileBarGroup4.Items.Add(this.customJohnAccountTileBarItem);
-            this.tileBarGroup4.Items.Add(this.customTopStoresTileBarItem);
-            this.tileBarGroup4.Name = "tileBarGroup4";
-            this.tileBarGroup4.Text = "CUSTOM FILTER";
-            // 
-            // AllStoresTBI
-            // 
-            this.AllStoresTBI.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement9.Text = "All Customers";
-            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.AllStoresTBI.Elements.Add(tileItemElement9);
-            this.AllStoresTBI.Id = 3;
-            this.AllStoresTBI.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.AllStoresTBI.Name = "AllStoresTBI";
-            this.AllStoresTBI.Tag = FHRMS.Modules.CustomersFilter.AllStores;
-            // 
-            // customMyAccountTileBarItem
-            // 
-            this.customMyAccountTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.customMyAccountTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement10.Text = "My Accounts";
-            tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.customMyAccountTileBarItem.Elements.Add(tileItemElement10);
-            this.customMyAccountTileBarItem.Id = 0;
-            this.customMyAccountTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.customMyAccountTileBarItem.Name = "customMyAccountTileBarItem";
-            this.customMyAccountTileBarItem.Tag = FHRMS.Modules.CustomersFilter.MyAccount;
-            // 
-            // customJohnAccountTileBarItem
-            // 
-            this.customJohnAccountTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.customJohnAccountTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement11.Text = "John\'s Accounts";
-            tileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.customJohnAccountTileBarItem.Elements.Add(tileItemElement11);
-            this.customJohnAccountTileBarItem.Id = 1;
-            this.customJohnAccountTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.customJohnAccountTileBarItem.Name = "customJohnAccountTileBarItem";
-            this.customJohnAccountTileBarItem.Tag = FHRMS.Modules.CustomersFilter.JohnAccount;
-            // 
-            // customTopStoresTileBarItem
-            // 
-            this.customTopStoresTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.customTopStoresTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement12.Text = "Top Stores";
-            tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.customTopStoresTileBarItem.Elements.Add(tileItemElement12);
-            this.customTopStoresTileBarItem.Id = 2;
-            this.customTopStoresTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.customTopStoresTileBarItem.Name = "customTopStoresTileBarItem";
-            this.customTopStoresTileBarItem.Tag = FHRMS.Modules.CustomersFilter.TopStores;
             // 
             // salesTileBarItem
             // 
@@ -468,9 +237,9 @@ namespace FHRMS {
             this.salesTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(112)))), ((int)(((byte)(56)))));
             this.salesTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
             this.salesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement14.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement14.Image")));
-            tileItemElement14.Text = "Avertissements";
-            this.salesTileBarItem.Elements.Add(tileItemElement14);
+            tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
+            tileItemElement6.Text = "Avertissements";
+            this.salesTileBarItem.Elements.Add(tileItemElement6);
             this.salesTileBarItem.Id = 5;
             this.salesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.salesTileBarItem.Name = "salesTileBarItem";
@@ -479,9 +248,9 @@ namespace FHRMS {
             // 
             this.opportunitiesTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.opportunitiesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement15.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement15.Image")));
-            tileItemElement15.Text = "Statistiques";
-            this.opportunitiesTileBarItem.Elements.Add(tileItemElement15);
+            tileItemElement7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement7.Image")));
+            tileItemElement7.Text = "Statistiques";
+            this.opportunitiesTileBarItem.Elements.Add(tileItemElement7);
             this.opportunitiesTileBarItem.Id = 6;
             this.opportunitiesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.opportunitiesTileBarItem.Name = "opportunitiesTileBarItem";
@@ -576,8 +345,6 @@ namespace FHRMS {
             this.Controls.Add(this.modulesContainer);
             this.Controls.Add(this.mainTileBar);
             this.Controls.Add(this.tileNavPane);
-            this.Controls.Add(this.customTileBarDropDownContainter);
-            this.Controls.Add(this.productsTileBarDropDownContainter);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -587,10 +354,6 @@ namespace FHRMS {
             this.Text = "Flesh Human Ressources Management System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.productsTileBarDropDownContainter)).EndInit();
-            this.productsTileBarDropDownContainter.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.customTileBarDropDownContainter)).EndInit();
-            this.customTileBarDropDownContainter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).EndInit();
             this.flyoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -612,27 +375,13 @@ namespace FHRMS {
         private DevExpress.XtraBars.Navigation.TileBarItem tasksTileBarItem;
         private DevExpress.XtraBars.Navigation.TileBarItem employeesTileBarItem;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup3;
-        private DevExpress.XtraBars.Navigation.TileBarItem productsTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarItem absencesTileBarItem;
         private DevExpress.XtraBars.Navigation.TileBarItem customersTileBarItem;
         private DevExpress.XtraBars.Navigation.TileBarItem salesTileBarItem;
         private DevExpress.XtraBars.Navigation.TileBarItem opportunitiesTileBarItem;
-        private DevExpress.XtraBars.Navigation.TileBarDropDownContainer customTileBarDropDownContainter;
-        private DevExpress.XtraBars.Navigation.TileBarDropDownContainer productsTileBarDropDownContainter;
-        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup4;
-        private DevExpress.XtraBars.Navigation.TileBarItem customMyAccountTileBarItem;
-        private DevExpress.XtraBars.Navigation.TileBarItem customJohnAccountTileBarItem;
-        private DevExpress.XtraBars.Navigation.TileBarItem customTopStoresTileBarItem;
-        public DevExpress.XtraBars.Navigation.TileBar productTileBar;
-        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup1;
-        private DevExpress.XtraBars.Navigation.TileBarItem hdVideoTBI;
-        private DevExpress.XtraBars.Navigation.TileBarItem plasmaTBI;
-        private DevExpress.XtraBars.Navigation.TileBarItem monitorTBI;
-        private DevExpress.XtraBars.Navigation.TileBarItem remouteControlTBI;
         private DevExpress.XtraBars.Navigation.NavButton navButtonHome;
         public Modules.BottomPanelBase bottomPanelBase1;
-        private  DevExpress.Utils.FlyoutPanel flyoutPanel1;
-        private DevExpress.XtraBars.Navigation.TileBarItem AllStoresTBI;
-        public DevExpress.XtraBars.Navigation.TileBar customTileBar;
+        private DevExpress.Utils.FlyoutPanel flyoutPanel1;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;

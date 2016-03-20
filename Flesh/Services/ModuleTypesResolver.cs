@@ -42,7 +42,6 @@
                 case ModuleType.ModifierEmployé:
                 case ModuleType.EmployeeView:
                     return new System.Guid("f4e3551d-6679-4db6-a103-1e25d7bc83a2");
-                case ModuleType.CustomersModule:
                 case ModuleType.CustomersPeek:
                 case ModuleType.CustomersFilterPane:
                     return new System.Guid("f4e3551d-6679-4db6-a103-1e25d7bc83a3");
@@ -59,9 +58,7 @@
         public ModuleType GetPeekModuleType(ModuleType moduleType) {
             switch (moduleType) {
                 case ModuleType.Employés:
-                case ModuleType.CustomersModule:
-                case ModuleType.CustomersPeek:
-                case ModuleType.CustomersFilterPane:
+      
                     return ModuleType.CustomersPeek;
                 default:
                     return ModuleType.Unknown;
@@ -70,9 +67,6 @@
         public ModuleType GetNavPaneModuleType(ModuleType moduleType) {
             switch (moduleType) {
                 case ModuleType.Employés:
-                case ModuleType.CustomersModule:
-                case ModuleType.CustomersPeek:
-                case ModuleType.CustomersFilterPane:
                     return ModuleType.CustomersFilterPane;
                 default:
                     return ModuleType.Unknown;

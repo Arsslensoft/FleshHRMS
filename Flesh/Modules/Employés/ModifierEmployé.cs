@@ -167,7 +167,7 @@ namespace FHRMS.Modules {
             BottomPanel.InitializeButtons(listBI, false);
         }
         void NoteButtonClick() {
-            ModifierAbsence.NewNoteOwner = ViewModel.Entity;
+            ModifierAbsence.AbsenceOwner = ViewModel.Entity;
             ViewModel.EmployeeEvaluationsLookUp.New();
         }
         void TaskButtonClick() {
