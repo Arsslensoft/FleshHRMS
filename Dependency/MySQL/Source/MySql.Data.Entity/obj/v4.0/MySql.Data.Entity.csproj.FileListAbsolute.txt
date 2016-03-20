@@ -1,0 +1,11 @@
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\bin\v4.0\Debug\MySql.Data.Entity.EF6.dll
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\bin\v4.0\Debug\MySql.Data.Entity.EF6.pdb
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\bin\v4.0\Debug\EntityFramework.dll
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\bin\v4.0\Debug\MySql.Data.dll
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\bin\v4.0\Debug\MySql.Data.pdb
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\bin\v4.0\Debug\EntityFramework.xml
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\obj\v4.0\MySql.Data.Entity.csprojResolveAssemblyReference.cache
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\obj\v4.0\MySql.Data.Entity.Properties.Resources.resources
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\obj\v4.0\MySql.Data.Entity.csproj.GenerateResource.Cache
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\obj\v4.0\MySql.Data.Entity.EF6.dll
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\obj\v4.0\MySql.Data.Entity.EF6.pdb

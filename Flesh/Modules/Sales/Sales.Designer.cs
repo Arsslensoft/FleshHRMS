@@ -428,10 +428,10 @@
             this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Low, 0),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Normal, 2),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.High, 1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.EmployeeTaskPriority.Urgent, 1)});
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.LeavePriority.Low, 0),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.LeavePriority.Normal, 2),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.LeavePriority.High, 1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", FHRMS.Data.LeavePriority.Urgent, 1)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             this.repositoryItemComboBox1.PopupSizeable = true;
             // 

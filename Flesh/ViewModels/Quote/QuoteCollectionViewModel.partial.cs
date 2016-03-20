@@ -22,7 +22,7 @@
             return result;
         }
         public override void Delete(Quote entity) {
-            MessageBoxService.ShowMessage("To ensure data integrity, the Opportunities module doesn't allow records to be deleted. Record deletion is supported by the Employees module.", "Delete Opportunity", MessageButton.OK);
+            MessageBoxService.ShowMessage("To ensure data integrity, the Opportunities module doesn't allow records to be deleted. Record deletion is supported by the Employés module.", "Delete Opportunity", MessageButton.OK);
         }
     }
 

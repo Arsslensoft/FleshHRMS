@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.documentViewer);
-            this.Name = "TaskPrint";
+            this.Name = "ImprimerCongé";
             this.Size = new System.Drawing.Size(795, 585);
             this.ResumeLayout(false);
 

@@ -13,9 +13,9 @@ using FHRMS.Common.ViewModel;
 
 namespace FHRMS.ViewModels {
     /// <summary>
-    /// Represents the single Evaluation object view model.
+    /// Represents the single Absence object view model.
     /// </summary>
-    public partial class EvaluationViewModel : SingleObjectViewModel<Evaluation, long, IDevAVDbUnitOfWork> {
+    public partial class EvaluationViewModel : SingleObjectViewModel<Absence, long, IDevAVDbUnitOfWork> {
 
         /// <summary>
         /// Initializes a new instance of the EvaluationViewModel class.
@@ -23,14 +23,14 @@ namespace FHRMS.ViewModels {
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
         protected EvaluationViewModel(IUnitOfWorkFactory<IDevAVDbUnitOfWork> unitOfWorkFactory = null)
-            : base(unitOfWorkFactory, x => x.Evaluations, x => x.Subject) {
+            : base(unitOfWorkFactory, x => x.Evaluations, x => x.Comment) {
         }
         public EvaluationViewModel()
             : this(DbUnitOfWorkFactory.Instance) {
         }
 
         /// <summary>
-        /// The look-up collection of Employees for the corresponding navigation property in the view.
+        /// The look-up collection of Employés for the corresponding navigation property in the view.
         /// </summary>
         public IList<Employee> LookUpEmployees {
             get { return GetLookUpEntities(x => x.Employees); }

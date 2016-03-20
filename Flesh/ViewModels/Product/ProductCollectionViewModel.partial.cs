@@ -64,7 +64,7 @@
             return Entities.Where(e => e.Category == ProductCategory.Televisions).Count();
         }
         public override void Delete(Product entity) {
-            MessageBoxService.ShowMessage("To ensure data integrity, the Products module doesn't allow records to be deleted. Record deletion is supported by the Employees module.", "Delete Product", MessageButton.OK);
+            MessageBoxService.ShowMessage("To ensure data integrity, the Products module doesn't allow records to be deleted. Record deletion is supported by the Employés module.", "Delete Product", MessageButton.OK);
         }
     }
 }

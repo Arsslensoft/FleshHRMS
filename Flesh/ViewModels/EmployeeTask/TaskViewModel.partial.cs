@@ -5,12 +5,12 @@
     using System.Linq;
     using FHRMS.DevAVDbDataModel;
 
-    partial class EmployeeTaskViewModel : IBaseViewModel {
+    partial class LeaveViewModel : IBaseViewModel {
         public new bool IsNew() { return base.IsNew(); }
         public IQueryable<Employee> GetEmployees() {
             return UnitOfWork.Employees.GetEntities();
         }
-        public EmployeeTask CreateTask() {
+        public Leave CreateTask() {
            return CreateEntity();
         }
         public event EventHandler EntityChanged;

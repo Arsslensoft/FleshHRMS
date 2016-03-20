@@ -10,18 +10,18 @@
 
     public class EmployeesReportViewModel :
     ReportViewModelBase<EmployeeReportType, Employee, long, IDevAVDbUnitOfWork> {
-        private Lazy<EmployeeTaskCollectionViewModel> taskCollectionViewModel;
+        private Lazy<LeaveCollectionViewModel> taskCollectionViewModel;
         public EmployeesReportViewModel() {
-            taskCollectionViewModel = new Lazy<EmployeeTaskCollectionViewModel>(ViewModelSource.Create<EmployeeTaskCollectionViewModel>);
+            taskCollectionViewModel = new Lazy<LeaveCollectionViewModel>(ViewModelSource.Create<LeaveCollectionViewModel>);
         }
-        public IList<EmployeeTask> Tasks {
+        public IList<Leave> Tasks {
             get {
                 return taskCollectionViewModel.Value.Entities.ToBindingList();
             }
         }
     }
-    public partial class EmployeeTaskCollectionViewModel : CollectionViewModel<EmployeeTask, long, IDevAVDbUnitOfWork> {
-        public EmployeeTaskCollectionViewModel()
+    public partial class LeaveCollectionViewModel : CollectionViewModel<Leave, long, IDevAVDbUnitOfWork> {
+        public LeaveCollectionViewModel()
             : base(DbUnitOfWorkFactory.Instance, x => x.Tasks) {
         }
     }

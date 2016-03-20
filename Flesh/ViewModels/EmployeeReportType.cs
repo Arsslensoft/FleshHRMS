@@ -7,7 +7,7 @@ namespace FHRMS.ViewModels {
         Profile,
         [Display(Name = "Summary Report")]
         Summary,
-        [Display(Name = "Employees Directory Report")]
+        [Display(Name = "Employés Directory Report")]
         Directory,
         [Display(Name = "Task List Report")]
         TaskList

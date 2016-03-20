@@ -344,7 +344,7 @@ namespace FHRMS.Reports {
             this.DetailReport.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
             this.ReportHeader1 });
-            this.DetailReport.DataMember = "Evaluations";
+            this.DetailReport.DataMember = "Absences";
             this.DetailReport.DataSource = this.bindingSource1;
             this.DetailReport.Level = 0;
             this.DetailReport.Name = "DetailReport";
@@ -367,13 +367,13 @@ namespace FHRMS.Reports {
             this.xrTableRow3.Name = "xrTableRow3";
             this.xrTableRow3.Weight = 0.52857141212930436D;
             this.xrTableCell7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Evaluations.CreatedOn", "{0:M/d/yyyy}") });
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Absences.StartDate", "{0:M/d/yyyy}") });
             this.xrTableCell7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.StylePriority.UseFont = false;
             this.xrTableCell7.Weight = 0.83410493056778723D;
             this.xrTableCell8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Evaluations.Subject") });
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Absences.Comment") });
             this.xrTableCell8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.StylePriority.UseFont = false;
@@ -386,7 +386,7 @@ namespace FHRMS.Reports {
             this.xrTableCell9.Name = "xrTableCell9";
             this.xrTableCell9.Weight = 0.83410493056778723D;
             this.xrTableCell10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Evaluations.Details") });
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Absences.Comment") });
             this.xrTableCell10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.StylePriority.UseFont = false;

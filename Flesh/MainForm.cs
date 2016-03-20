@@ -37,7 +37,7 @@ namespace FHRMS {
         void MainForm_Load(object sender, EventArgs e) {
             InitTileBar();
             mainTileBar.SelectedItem = employeesTileBarItem;
-            viewModel.SelectModule(ModuleType.Employees);
+            viewModel.SelectModule(ModuleType.Employés);
            // DevExpress.XtraSplashScreen.SplashScreenManager.CloseDefaultSplashScreen();
 
         }
@@ -53,7 +53,7 @@ namespace FHRMS {
         private void PrefetchChildModules() {
             if(System.Diagnostics.Debugger.IsAttached) return;
             viewModel.GetModule(ModuleType.Opportunities);
-            viewModel.GetModule(ModuleType.Tasks);
+            viewModel.GetModule(ModuleType.Congés);
             viewModel.GetModule(ModuleType.Products);
             viewModel.GetModule(ModuleType.CustomersModule);
             viewModel.GetModule(ModuleType.Dashboard);
@@ -123,10 +123,10 @@ namespace FHRMS {
             WindowsFormsSettings.PopupMenuStyle = DevExpress.XtraEditors.Controls.PopupMenuStyle.RadialMenu;
         }
         void InitTileBar() {
-            employeesTileBarItem.Tag = ModuleType.Employees;
-            employeesTileBarItem.Tag = ModuleType.Employees;
+            employeesTileBarItem.Tag = ModuleType.Employés;
+            employeesTileBarItem.Tag = ModuleType.Employés;
             customersTileBarItem.Tag = ModuleType.CustomersModule;
-            tasksTileBarItem.Tag = ModuleType.Tasks;
+            tasksTileBarItem.Tag = ModuleType.Congés;
             productsTileBarItem.Tag = ModuleType.Products;
             dashboardTileBarItem.Tag = ModuleType.Dashboard;
             salesTileBarItem.Tag = ModuleType.Sales;
@@ -195,8 +195,8 @@ namespace FHRMS {
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-                this.Hide();
-                e.Cancel = true;
+              //  this.Hide();
+                //e.Cancel = true;
         }
     }
 }

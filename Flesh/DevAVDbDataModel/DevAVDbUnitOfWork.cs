@@ -52,12 +52,12 @@ namespace FHRMS.DevAVDbDataModel {
             get { return GetRepository(x => x.Set<Employee>(), x => x.Id); }
         }
 
-        IRepository<EmployeeTask, long> IDevAVDbUnitOfWork.Tasks {
-            get { return GetRepository(x => x.Set<EmployeeTask>(), x => x.Id); }
+        IRepository<Leave, long> IDevAVDbUnitOfWork.Tasks {
+            get { return GetRepository(x => x.Set<Leave>(), x => x.Id); }
         }
 
-        IRepository<Evaluation, long> IDevAVDbUnitOfWork.Evaluations {
-            get { return GetRepository(x => x.Set<Evaluation>(), x => x.Id); }
+        IRepository<Absence, long> IDevAVDbUnitOfWork.Evaluations {
+            get { return GetRepository(x => x.Set<Absence>(), x => x.Id); }
         }
 
         IRepository<Picture, long> IDevAVDbUnitOfWork.Pictures {

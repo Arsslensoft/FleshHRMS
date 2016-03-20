@@ -17,7 +17,7 @@
             return querableStores.Where(e => e.Customer.Id == customer.Id).ToList();
         }
         public override void Delete(Customer entity) {
-            MessageBoxService.ShowMessage("To ensure data integrity, the Customers module doesn't allow records to be deleted. Record deletion is supported by the Employees module.", "Delete Customer", MessageButton.OK);
+            MessageBoxService.ShowMessage("To ensure data integrity, the Customers module doesn't allow records to be deleted. Record deletion is supported by the Employés module.", "Delete Customer", MessageButton.OK);
         }
     }
 }

@@ -23,7 +23,7 @@
             return QueriesHelper.GetQuotesTotal(UnitOfWork.Quotes.GetEntities(), store, begin, end);
         }
         public override void Delete() {
-            MessageBoxService.ShowMessage("To ensure data integrity, the Customers module doesn't allow records to be deleted. Record deletion is supported by the Employees module.", "Delete Customer", MessageButton.OK);
+            MessageBoxService.ShowMessage("To ensure data integrity, the Customers module doesn't allow records to be deleted. Record deletion is supported by the Employés module.", "Delete Customer", MessageButton.OK);
         }
     }
 }

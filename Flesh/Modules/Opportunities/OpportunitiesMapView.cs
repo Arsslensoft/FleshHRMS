@@ -88,7 +88,7 @@
                         cities.Add(city);
                         var item = new StoreProductSale(s.Store);
                         item.Total = s.Opportunities;
-                        item.MapItem = CreateHomeOfficeItem(string.Format("TOTAL OPPORTUNITIES{2}<color=206,113,0><b><size=+4>{0:c}</color></size></b>{2}{1}", s.Opportunities, s.Store.City, "<br>"), new GeoPoint(s.Store.Address.Latitude, s.Store.Address.Longitude));
+                        item.MapItem = CreateHomeOfficeItem(string.Format("TOTAL OPPORTUNITIES{2}<color=206,113,0><b><size=+4>{0:c}</color></size></b>{2}{1}", s.Opportunities, s.Store.City, "<br>"), new GeoPoint(0,0));
                         result.Add(item);
                     }
                 }

@@ -4,7 +4,7 @@ using System.Linq;
 using DevExpress.XtraReports.UI;
 
 namespace FHRMS.Reports {
-    internal class EmployeeTaskList : DevExpress.XtraReports.UI.XtraReport {
+    internal class LeaveList : DevExpress.XtraReports.UI.XtraReport {
         private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
         private DevExpress.XtraReports.UI.DetailBand detailBand1;
         private System.Windows.Forms.BindingSource bindingSource1;
@@ -64,13 +64,13 @@ namespace FHRMS.Reports {
         private GroupFooterBand GroupFooter1;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell3;
 
-        public EmployeeTaskList() {
+        public LeaveList() {
             InitializeComponent();
         }
 
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeTaskList));
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(LeaveList));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
@@ -331,7 +331,7 @@ namespace FHRMS.Reports {
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(156.25F, 23F);
             this.xrPageInfo1.StylePriority.UseForeColor = false;
-            this.bindingSource1.DataSource = typeof(FHRMS.Data.EmployeeTask);
+            this.bindingSource1.DataSource = typeof(FHRMS.Data.Leave);
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 22F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -355,7 +355,7 @@ namespace FHRMS.Reports {
             this.xrTableCell1.StylePriority.UseForeColor = false;
             this.xrTableCell1.StylePriority.UsePadding = false;
             this.xrTableCell1.StylePriority.UseTextAlignment = false;
-            this.xrTableCell1.Text = "Tasks";
+            this.xrTableCell1.Text = "Congés";
             this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell1.Weight = 0.80032469757233127D;
             this.xrTableCell2.Name = "xrTableCell2";
@@ -515,7 +515,7 @@ namespace FHRMS.Reports {
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.SnapToGrid;
             this.SnapToGrid = false;
             this.Version = "14.1";
-            this.DataSourceDemanded += new System.EventHandler<System.EventArgs>(this.EmployeeTaskList_DataSourceDemanded);
+            this.DataSourceDemanded += new System.EventHandler<System.EventArgs>(this.LeaveList_DataSourceDemanded);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
@@ -523,7 +523,7 @@ namespace FHRMS.Reports {
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
         }
-        private void EmployeeTaskList_DataSourceDemanded(object sender, EventArgs e) {
+        private void LeaveList_DataSourceDemanded(object sender, EventArgs e) {
             if (Equals(true, parameter1.Value)) {
                 xrTableCell3.Text = "Grouped by Status | Sorted by Due Date";
                 detailBand1.SortFields[0].FieldName = "DueDate";

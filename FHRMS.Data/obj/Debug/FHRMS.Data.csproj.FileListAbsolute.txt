@@ -1,0 +1,5 @@
+D:\Research\FHRMS\Bin\FHRMS.Data.dll
+D:\Research\FHRMS\Bin\FHRMS.Data.pdb
+D:\Research\FHRMS\FHRMS.Data\obj\Debug\FHRMS.Data.csprojResolveAssemblyReference.cache
+D:\Research\FHRMS\FHRMS.Data\obj\Debug\FHRMS.Data.dll
+D:\Research\FHRMS\FHRMS.Data\obj\Debug\FHRMS.Data.pdb

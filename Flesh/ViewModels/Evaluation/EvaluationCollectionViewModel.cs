@@ -11,7 +11,7 @@ namespace FHRMS.ViewModels {
     /// <summary>
     /// Represents the Evaluations collection view model.
     /// </summary>
-    public partial class EvaluationCollectionViewModel : CollectionViewModel<Evaluation, long, IDevAVDbUnitOfWork> {
+    public partial class EvaluationCollectionViewModel : CollectionViewModel<Absence, long, IDevAVDbUnitOfWork> {
 
         /// <summary>
         /// Initializes a new instance of the EvaluationCollectionViewModel class.

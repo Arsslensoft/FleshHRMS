@@ -44,7 +44,7 @@ namespace FHRMS.ViewModels {
         }
 
         /// <summary>
-        /// The look-up collection of Employees for the corresponding navigation property in the view.
+        /// The look-up collection of Employés for the corresponding navigation property in the view.
         /// </summary>
         public IList<Employee> LookUpEmployees {
             get { return GetLookUpEntities(x => x.Employees); }

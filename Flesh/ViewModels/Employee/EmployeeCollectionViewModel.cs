@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace FHRMS.ViewModels {
     /// <summary>
-    /// Represents the Employees collection view model.
+    /// Represents the Employés collection view model.
     /// </summary>
     public partial class EmployeeCollectionViewModel : CollectionViewModel<Employee, long, IDevAVDbUnitOfWork> {
 

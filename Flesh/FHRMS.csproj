@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -58,6 +59,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\AppIcon.ico</ApplicationIcon>
@@ -198,9 +200,6 @@
       </HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="FHRMS.Data">
-      <HintPath>..\Bin\FHRMS.Data.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -320,35 +319,35 @@
     <Compile Include="Modules\Dashboard\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Employees\EmployeeMailMerge.cs">
+    <Compile Include="Modules\Employés\PublipostageEmployé.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Employees\EmployeeMailMerge.Designer.cs">
-      <DependentUpon>EmployeeMailMerge.cs</DependentUpon>
+    <Compile Include="Modules\Employés\PublipostageEmployé.Designer.cs">
+      <DependentUpon>PublipostageEmployé.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Employees\Employees.cs">
+    <Compile Include="Modules\Employés\Employés.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Employees\Employees.Designer.cs">
-      <DependentUpon>Employees.cs</DependentUpon>
+    <Compile Include="Modules\Employés\Employés.Designer.cs">
+      <DependentUpon>Employés.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Employees\EmployeeEdit.cs">
+    <Compile Include="Modules\Employés\ModifierEmployé.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Employees\EmployeeEdit.Designer.cs">
-      <DependentUpon>EmployeeEdit.cs</DependentUpon>
+    <Compile Include="Modules\Employés\ModifierEmployé.Designer.cs">
+      <DependentUpon>ModifierEmployé.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Employees\EmployeesPrint.cs">
+    <Compile Include="Modules\Employés\ImprimerEmployé.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Employees\EmployeesPrint.Designer.cs">
-      <DependentUpon>EmployeesPrint.cs</DependentUpon>
+    <Compile Include="Modules\Employés\ImprimerEmployé.Designer.cs">
+      <DependentUpon>ImprimerEmployé.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Notes\EditNotes.cs">
+    <Compile Include="Modules\Absence\ModifierAbsence.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Notes\EditNotes.Designer.cs">
-      <DependentUpon>EditNotes.cs</DependentUpon>
+    <Compile Include="Modules\Absence\ModifierAbsence.Designer.cs">
+      <DependentUpon>ModifierAbsence.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Opportunities\OpportunitiesMapView.cs">
       <SubType>UserControl</SubType>
@@ -398,11 +397,11 @@
     <Compile Include="Modules\SimpleUC\StateUC.Designer.cs">
       <DependentUpon>StateUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Tasks\EditTask.cs">
+    <Compile Include="Modules\Congé\ModifierCongés.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Tasks\EditTask.Designer.cs">
-      <DependentUpon>EditTask.cs</DependentUpon>
+    <Compile Include="Modules\Congé\ModifierCongés.Designer.cs">
+      <DependentUpon>ModifierCongés.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Helpers.cs" />
     <Compile Include="Modules\ColumnViewHelper.cs" />
@@ -431,17 +430,17 @@
     <Compile Include="Modules\Sales\Sales.Designer.cs">
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Tasks\TaskPrint.cs">
+    <Compile Include="Modules\Congé\ImprimerCongé.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Tasks\TaskPrint.Designer.cs">
-      <DependentUpon>TaskPrint.cs</DependentUpon>
+    <Compile Include="Modules\Congé\ImprimerCongé.Designer.cs">
+      <DependentUpon>ImprimerCongé.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Tasks\Tasks.cs">
+    <Compile Include="Modules\Congé\Congé.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Tasks\Tasks.Designer.cs">
-      <DependentUpon>Tasks.cs</DependentUpon>
+    <Compile Include="Modules\Congé\Congé.Designer.cs">
+      <DependentUpon>Congé.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -557,20 +556,20 @@
     <EmbeddedResource Include="Modules\Dashboard\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Employees\EmployeeMailMerge.resx">
-      <DependentUpon>EmployeeMailMerge.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Employés\PublipostageEmployé.resx">
+      <DependentUpon>PublipostageEmployé.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Employees\Employees.resx">
-      <DependentUpon>Employees.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Employés\Employés.resx">
+      <DependentUpon>Employés.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Employees\EmployeeEdit.resx">
-      <DependentUpon>EmployeeEdit.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Employés\ModifierEmployé.resx">
+      <DependentUpon>ModifierEmployé.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Employees\EmployeesPrint.resx">
-      <DependentUpon>EmployeesPrint.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Employés\ImprimerEmployé.resx">
+      <DependentUpon>ImprimerEmployé.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Notes\EditNotes.resx">
-      <DependentUpon>EditNotes.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Absence\ModifierAbsence.resx">
+      <DependentUpon>ModifierAbsence.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Opportunities\OpportunitiesMapView.resx">
       <DependentUpon>OpportunitiesMapView.cs</DependentUpon>
@@ -596,8 +595,8 @@
     <EmbeddedResource Include="Modules\SimpleUC\StateUC.resx">
       <DependentUpon>StateUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Tasks\EditTask.resx">
-      <DependentUpon>EditTask.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Congé\ModifierCongés.resx">
+      <DependentUpon>ModifierCongés.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Opportunities\Opportunities.resx">
       <DependentUpon>Opportunities.cs</DependentUpon>
@@ -608,11 +607,11 @@
     <EmbeddedResource Include="Modules\Sales\Sales.resx">
       <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Tasks\TaskPrint.resx">
-      <DependentUpon>TaskPrint.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Congé\ImprimerCongé.resx">
+      <DependentUpon>ImprimerCongé.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Tasks\Tasks.resx">
-      <DependentUpon>Tasks.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Congé\Congé.resx">
+      <DependentUpon>Congé.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
@@ -792,6 +791,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FHRMS.Data\FHRMS.Data.csproj">
+      <Project>{5f39ce01-75ed-4db4-9456-b0a2b3fa33c0}</Project>
+      <Name>FHRMS.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

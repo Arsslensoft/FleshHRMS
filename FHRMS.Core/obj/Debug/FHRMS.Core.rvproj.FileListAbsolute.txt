@@ -1,5 +1,5 @@
 D:\Research\FHRMS\FHRMS.Core\bin\Debug\FHRMS.Core.dll
 D:\Research\FHRMS\FHRMS.Core\bin\Debug\FHRMS.Core.pdb
-D:\Research\FHRMS\FHRMS.Core\obj\Debug\FHRMS.Core.rvprojResolveAssemblyReference.cache
 D:\Research\FHRMS\FHRMS.Core\obj\Debug\FHRMS.Core.dll
 D:\Research\FHRMS\FHRMS.Core\obj\Debug\FHRMS.Core.pdb
+D:\Research\FHRMS\FHRMS.Core\obj\Debug\FHRMS.Core.rvprojResolveAssemblyReference.cache

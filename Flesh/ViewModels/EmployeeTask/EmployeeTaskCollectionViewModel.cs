@@ -9,19 +9,19 @@ using FHRMS.Common.ViewModel;
 
 namespace FHRMS.ViewModels {
     /// <summary>
-    /// Represents the Tasks collection view model.
+    /// Represents the Congés collection view model.
     /// </summary>
-    public partial class EmployeeTaskCollectionViewModel : CollectionViewModel<EmployeeTask, long, IDevAVDbUnitOfWork> {
+    public partial class LeaveCollectionViewModel : CollectionViewModel<Leave, long, IDevAVDbUnitOfWork> {
 
         /// <summary>
-        /// Initializes a new instance of the EmployeeTaskCollectionViewModel class.
-        /// This constructor is declared protected to avoid undesired instantiation of the EmployeeTaskCollectionViewModel type without the POCO proxy factory.
+        /// Initializes a new instance of the LeaveCollectionViewModel class.
+        /// This constructor is declared protected to avoid undesired instantiation of the LeaveCollectionViewModel type without the POCO proxy factory.
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
-        protected EmployeeTaskCollectionViewModel(IUnitOfWorkFactory<IDevAVDbUnitOfWork> unitOfWorkFactory = null)
+        protected LeaveCollectionViewModel(IUnitOfWorkFactory<IDevAVDbUnitOfWork> unitOfWorkFactory = null)
             : base(unitOfWorkFactory, x => x.Tasks) {
         }
-        public EmployeeTaskCollectionViewModel()
+        public LeaveCollectionViewModel()
             : this(DbUnitOfWorkFactory.Instance) {
         }
     }

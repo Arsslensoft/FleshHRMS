@@ -99,7 +99,7 @@
                         var item = new StoreProductSale(s);
                         decimal opportunities = customerVM.GetQuotesTotal(s, customerVM.Minimum, customerVM.Maximum);
                         item.Total = totalSales;
-                        item.MapItem = CreateHomeOfficeItem(string.Format("TOTAL SALES{3}<color=47,81,165><b><size=+4>{0:c}</color></size></b>{3}TOTAL OPPORTUNITIES{3}<color=206,113,0><b><size=+4>{1:c}</color></size></b>{3}{2}", totalSales, opportunities, s.City, "<br>"), new GeoPoint(s.Address.Latitude, s.Address.Longitude));
+                        item.MapItem = CreateHomeOfficeItem(string.Format("TOTAL SALES{3}<color=47,81,165><b><size=+4>{0:c}</color></size></b>{3}TOTAL OPPORTUNITIES{3}<color=206,113,0><b><size=+4>{1:c}</color></size></b>{3}{2}", totalSales, opportunities, s.City, "<br>"), new GeoPoint(0, 0));
                         result.Add(item);
                     }
                 }
@@ -145,12 +145,12 @@
         }
         public double Longitude {
             get {
-                return store.Address.Longitude;
+                return 0;
             }
         }
         public double Latitude {
             get {
-                return store.Address.Latitude;
+                return 0;
             }
         }
 

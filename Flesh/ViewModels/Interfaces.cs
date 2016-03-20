@@ -5,10 +5,10 @@ namespace FHRMS {
         Unknown,
 
         EmployeeView,
-        EmployeeEdit,
-        EmployeesPrint,
-        EmployeeMailMerge,
-        Employees,
+        ModifierEmployé,
+        ImprimerEmployé,
+        PublipostageEmployé,
+        Employés,
 
         CustomersFilterPane,
         CustomersPeek,
@@ -18,9 +18,9 @@ namespace FHRMS {
 
 
         Dashboard,
-        Tasks,
-        EditTask,
-        TaskPrint,
+        Congés,
+        ModifierCongés,
+        ImprimerCongé,
 
         Products,
         ProductsEditableView,
@@ -29,7 +29,7 @@ namespace FHRMS {
         SalesPrint,
         OrderView,
         Opportunities,
-        EditNotes,
+        ModifierAbsence,
         Notes,
 
     }

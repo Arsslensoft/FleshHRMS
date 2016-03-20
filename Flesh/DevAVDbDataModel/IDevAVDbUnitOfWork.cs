@@ -51,14 +51,14 @@ namespace FHRMS.DevAVDbDataModel {
         IRepository<Employee, long> Employees { get; }
 
         /// <summary>
-        /// The EmployeeTask entities repository.
+        /// The Leave entities repository.
         /// </summary>
-        IRepository<EmployeeTask, long> Tasks { get; }
+        IRepository<Leave, long> Tasks { get; }
 
         /// <summary>
-        /// The Evaluation entities repository.
+        /// The Absence entities repository.
         /// </summary>
-        IRepository<Evaluation, long> Evaluations { get; }
+        IRepository<Absence, long> Evaluations { get; }
 
         /// <summary>
         /// The Picture entities repository.

@@ -52,16 +52,16 @@ namespace FHRMS.ViewModels {
         /// <summary>
         /// The view model for the EmployeeAssignedTasks detail collection.
         /// </summary>
-        public virtual CollectionViewModel<EmployeeTask, long, IDevAVDbUnitOfWork> EmployeeAssignedTasksLookUp { get; set; }
+        public virtual CollectionViewModel<Leave, long, IDevAVDbUnitOfWork> EmployeeAssignedTasksLookUp { get; set; }
 
         /// <summary>
         /// The view model for the EmployeeOwnedTasks detail collection.
         /// </summary>
-        public virtual CollectionViewModel<EmployeeTask, long, IDevAVDbUnitOfWork> EmployeeOwnedTasksLookUp { get; set; }
+        public virtual CollectionViewModel<Leave, long, IDevAVDbUnitOfWork> EmployeeOwnedTasksLookUp { get; set; }
 
         /// <summary>
         /// The view model for the EmployeeEvaluations detail collection.
         /// </summary>
-        public virtual CollectionViewModel<Evaluation, long, IDevAVDbUnitOfWork> EmployeeEvaluationsLookUp { get; set; }
+        public virtual CollectionViewModel<Absence, long, IDevAVDbUnitOfWork> EmployeeEvaluationsLookUp { get; set; }
     }
 }
