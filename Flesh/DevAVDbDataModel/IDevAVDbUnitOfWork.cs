@@ -32,6 +32,17 @@ namespace FHRMS.DevAVDbDataModel {
         /// </summary>
         IRepository<Absence, long> Evaluations { get; }
 
+
+        /// <summary>
+        /// The Attendance entities repository.
+        /// </summary>
+        IRepository<Attendance, long> Attendances { get; }
+
+        /// <summary>
+        /// The Warning entities repository.
+        /// </summary>
+        IRepository<Warning, long> Warnings { get; }
+
         /// <summary>
         /// The Picture entities repository.
         /// </summary>

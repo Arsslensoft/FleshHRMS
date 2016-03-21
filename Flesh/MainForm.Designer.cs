@@ -41,8 +41,8 @@ namespace FHRMS {
             this.tasksTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarGroup3 = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.absencesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.customersTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.salesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.attendanceTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.warningsTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.opportunitiesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.transitionManager1 = new DevExpress.Utils.Animation.TransitionManager();
             this.bottomPanelBase1 = new FHRMS.Modules.BottomPanelBase();
@@ -201,8 +201,8 @@ namespace FHRMS {
             // tileBarGroup3
             // 
             this.tileBarGroup3.Items.Add(this.absencesTileBarItem);
-            this.tileBarGroup3.Items.Add(this.customersTileBarItem);
-            this.tileBarGroup3.Items.Add(this.salesTileBarItem);
+            this.tileBarGroup3.Items.Add(this.attendanceTileBarItem);
+            this.tileBarGroup3.Items.Add(this.warningsTileBarItem);
             this.tileBarGroup3.Items.Add(this.opportunitiesTileBarItem);
             this.tileBarGroup3.Name = "tileBarGroup3";
             this.tileBarGroup3.Text = "OPERATIONS";
@@ -220,29 +220,29 @@ namespace FHRMS {
             this.absencesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.absencesTileBarItem.Name = "absencesTileBarItem";
             // 
-            // customersTileBarItem
+            // attendanceTileBarItem
             // 
-            this.customersTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.customersTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.attendanceTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.attendanceTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement5.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement5.Image")));
             tileItemElement5.Text = "Pointage";
-            this.customersTileBarItem.Elements.Add(tileItemElement5);
-            this.customersTileBarItem.Id = 4;
-            this.customersTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.customersTileBarItem.Name = "customersTileBarItem";
+            this.attendanceTileBarItem.Elements.Add(tileItemElement5);
+            this.attendanceTileBarItem.Id = 4;
+            this.attendanceTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.attendanceTileBarItem.Name = "attendanceTileBarItem";
             // 
-            // salesTileBarItem
+            // warningsTileBarItem
             // 
-            this.salesTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.salesTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(112)))), ((int)(((byte)(56)))));
-            this.salesTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.salesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.warningsTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.warningsTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(112)))), ((int)(((byte)(56)))));
+            this.warningsTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
+            this.warningsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
             tileItemElement6.Text = "Avertissements";
-            this.salesTileBarItem.Elements.Add(tileItemElement6);
-            this.salesTileBarItem.Id = 5;
-            this.salesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.salesTileBarItem.Name = "salesTileBarItem";
+            this.warningsTileBarItem.Elements.Add(tileItemElement6);
+            this.warningsTileBarItem.Id = 5;
+            this.warningsTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.warningsTileBarItem.Name = "warningsTileBarItem";
             // 
             // opportunitiesTileBarItem
             // 
@@ -376,8 +376,8 @@ namespace FHRMS {
         private DevExpress.XtraBars.Navigation.TileBarItem employeesTileBarItem;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup3;
         private DevExpress.XtraBars.Navigation.TileBarItem absencesTileBarItem;
-        private DevExpress.XtraBars.Navigation.TileBarItem customersTileBarItem;
-        private DevExpress.XtraBars.Navigation.TileBarItem salesTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarItem attendanceTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarItem warningsTileBarItem;
         private DevExpress.XtraBars.Navigation.TileBarItem opportunitiesTileBarItem;
         private DevExpress.XtraBars.Navigation.NavButton navButtonHome;
         public Modules.BottomPanelBase bottomPanelBase1;

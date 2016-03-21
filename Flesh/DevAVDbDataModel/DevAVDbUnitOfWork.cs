@@ -33,10 +33,18 @@ namespace FHRMS.DevAVDbDataModel {
             get { return GetRepository(x => x.Set<Leave>(), x => x.Id); }
         }
 
+
+        IRepository<Warning, long> IDevAVDbUnitOfWork.Warnings
+        {
+            get { return GetRepository(x => x.Set<Warning>(), x => x.Id); }
+        }
         IRepository<Absence, long> IDevAVDbUnitOfWork.Evaluations {
             get { return GetRepository(x => x.Set<Absence>(), x => x.Id); }
         }
-
+        IRepository<Attendance, long> IDevAVDbUnitOfWork.Attendances
+        {
+            get { return GetRepository(x => x.Set<Attendance>(), x => x.Id); }
+        }
         IRepository<Picture, long> IDevAVDbUnitOfWork.Pictures {
             get { return GetRepository(x => x.Set<Picture>(), x => x.Id); }
         }

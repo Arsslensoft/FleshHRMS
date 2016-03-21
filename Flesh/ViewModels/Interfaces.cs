@@ -22,6 +22,15 @@ namespace FHRMS {
         Absences,
         ModifierAbsence,
         ImprimerAbsence,
+
+        Attendances,
+        ModifierPointage,
+        ImprimerPointage,
+
+        Avertissements,
+        ModifierAvertissement,
+        ImprimerAvertissements,
+
         Notes,
 
     }

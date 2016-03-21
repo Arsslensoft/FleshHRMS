@@ -90,3 +90,9 @@ D:\Research\FHRMS\Flesh\obj\Debug\Flesh.exe
 D:\Research\FHRMS\Flesh\obj\Debug\Flesh.pdb
 D:\Research\FHRMS\Flesh\obj\Debug\FHRMS.Modules.Absences.resources
 D:\Research\FHRMS\Flesh\obj\Debug\FHRMS.Modules.ImprimerAbsence.resources
+D:\Research\FHRMS\Flesh\obj\Debug\FHRMS.Modules.Attendances.resources
+D:\Research\FHRMS\Flesh\obj\Debug\FHRMS.Modules.ModifierPointage.resources
+D:\Research\FHRMS\Flesh\obj\Debug\FHRMS.Modules.ImprimerPointage.resources
+D:\Research\FHRMS\Flesh\obj\Debug\FHRMS.Modules.Avertissements.resources
+D:\Research\FHRMS\Flesh\obj\Debug\FHRMS.Modules.ModifierAvertissement.resources
+D:\Research\FHRMS\Flesh\obj\Debug\FHRMS.Modules.ImprimerAvertissements.resources

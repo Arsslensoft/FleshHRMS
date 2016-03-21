@@ -29,71 +29,62 @@ namespace FHRMS
         /// </summary>
         private void InitializeComponent()
         {
-        	this.components = new System.ComponentModel.Container();
-        	this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-        	this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-        	this.marqueeProgressBarControl1 = new DevExpress.XtraEditors.MarqueeProgressBarControl();
-        	this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
-        	((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).BeginInit();
-        	((System.ComponentModel.ISupportInitialize)(this.styleController1)).BeginInit();
-        	this.SuspendLayout();
-        	// 
-        	// labelControl1
-        	// 
-        	this.labelControl1.Location = new System.Drawing.Point(80, 131);
-        	this.labelControl1.Name = "labelControl1";
-        	this.labelControl1.Size = new System.Drawing.Size(222, 13);
-        	this.labelControl1.TabIndex = 0;
-        	this.labelControl1.Text = "Flesh Human Ressources Management System";
-        	this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
-        	// 
-        	// labelControl2
-        	// 
-        	this.labelControl2.Appearance.Font = new System.Drawing.Font("Sitka Subheading", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.labelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-        	this.labelControl2.Location = new System.Drawing.Point(0, 220);
-        	this.labelControl2.Name = "labelControl2";
-        	this.labelControl2.Size = new System.Drawing.Size(268, 16);
-        	this.labelControl2.TabIndex = 3;
-        	this.labelControl2.Text = "Copyright (c) 2015-2016 SDL Team. All rights reserved";
-        	this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
-        	// 
-        	// marqueeProgressBarControl1
-        	// 
-        	this.marqueeProgressBarControl1.EditValue = 0;
-        	this.marqueeProgressBarControl1.Location = new System.Drawing.Point(12, 168);
-        	this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
-        	this.marqueeProgressBarControl1.Size = new System.Drawing.Size(386, 11);
-        	this.marqueeProgressBarControl1.StyleController = this.styleController1;
-        	this.marqueeProgressBarControl1.TabIndex = 4;
-        	// 
-        	// styleController1
-        	// 
-        	this.styleController1.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
-        	this.styleController1.LookAndFeel.UseDefaultLookAndFeel = false;
-        	// 
-        	// FleshSplashScreen
-        	// 
-        	this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-        	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        	this.ClientSize = new System.Drawing.Size(410, 236);
-        	this.Controls.Add(this.marqueeProgressBarControl1);
-        	this.Controls.Add(this.labelControl2);
-        	this.Controls.Add(this.labelControl1);
-        	this.Name = "FleshSplashScreen";
-        	this.Text = "Form1";
-        	((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).EndInit();
-        	((System.ComponentModel.ISupportInitialize)(this.styleController1)).EndInit();
-        	this.ResumeLayout(false);
-        	this.PerformLayout();
+            this.components = new System.ComponentModel.Container();
+            this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
+            this.marqueeProgressBarControl1 = new DevExpress.XtraEditors.MarqueeProgressBarControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.styleController1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // styleController1
+            // 
+            this.styleController1.LookAndFeel.SkinName = "High Contrast";
+            this.styleController1.LookAndFeel.UseDefaultLookAndFeel = false;
+            // 
+            // marqueeProgressBarControl1
+            // 
+            this.marqueeProgressBarControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.marqueeProgressBarControl1.EditValue = 0;
+            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(0, 298);
+            this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
+            this.marqueeProgressBarControl1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.marqueeProgressBarControl1.Size = new System.Drawing.Size(539, 10);
+            this.marqueeProgressBarControl1.StyleController = this.styleController1;
+            this.marqueeProgressBarControl1.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::FHRMS.Properties.Resources.splash;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(539, 298);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // FleshSplashScreen
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(539, 308);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.marqueeProgressBarControl1);
+            this.Name = "FleshSplashScreen";
+            this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.styleController1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.MarqueeProgressBarControl marqueeProgressBarControl1;
         private DevExpress.XtraEditors.StyleController styleController1;
+        private DevExpress.XtraEditors.MarqueeProgressBarControl marqueeProgressBarControl1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

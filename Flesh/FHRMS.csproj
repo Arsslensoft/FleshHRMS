@@ -236,6 +236,36 @@
     <Compile Include="Modules\Absence\ImprimerAbsence.Designer.cs">
       <DependentUpon>ImprimerAbsence.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Attendance\Attendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Attendance\Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Attendance\ImprimerPointage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Attendance\ImprimerPointage.Designer.cs">
+      <DependentUpon>ImprimerPointage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Attendance\ModifierPointage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Attendance\ModifierPointage.Designer.cs">
+      <DependentUpon>ModifierPointage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Avertissements\Avertissements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Avertissements\Avertissements.Designer.cs">
+      <DependentUpon>Avertissements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Avertissements\ImprimerAvertissements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Avertissements\ImprimerCongé.Designer.cs">
+      <DependentUpon>ImprimerAvertissements.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\BaseModule.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -338,6 +368,12 @@
     <Compile Include="Modules\Congé\Congé.Designer.cs">
       <DependentUpon>Congé.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Avertissements\ModifierAvertissement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Avertissements\ModifierAvertissement.Designer.cs">
+      <DependentUpon>ModifierAvertissement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -377,6 +413,14 @@
     <Compile Include="ViewModels\Absences\AbsencesViewModel.cs" />
     <Compile Include="ViewModels\Absences\AbsencesViewModel.partial.cs" />
     <Compile Include="ViewModels\CollectionViewKind.cs" />
+    <Compile Include="ViewModels\Attendances\AttendancesCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Attendances\AttendancesCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Attendances\AttendancesViewModel.cs" />
+    <Compile Include="ViewModels\Attendances\AttendancesViewModel.partial.cs" />
+    <Compile Include="ViewModels\Avertissements\WarningsCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Avertissements\WarningsCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Avertissements\WarningsViewModel.cs" />
+    <Compile Include="ViewModels\Avertissements\WarningsViewModel.partial.cs" />
     <Compile Include="ViewModels\EmployeeReportType.cs" />
     <Compile Include="ViewModels\Congés\LeaveCollectionViewModel.cs" />
     <Compile Include="ViewModels\Congés\LeaveViewModel.cs" />
@@ -408,6 +452,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Absence\ImprimerAbsence.resx">
       <DependentUpon>ImprimerAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Attendance\Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Attendance\ImprimerPointage.resx">
+      <DependentUpon>ImprimerPointage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Attendance\ModifierPointage.resx">
+      <DependentUpon>ModifierPointage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Avertissements\Avertissements.resx">
+      <DependentUpon>Avertissements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Avertissements\ImprimerCongé.resx">
+      <DependentUpon>ImprimerAvertissements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\BaseModule.resx">
       <DependentUpon>BaseModule.cs</DependentUpon>
@@ -476,6 +535,9 @@
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Avertissements\ModifierAvertissement.resx">
+      <DependentUpon>ModifierAvertissement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -519,6 +581,7 @@
     <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.snx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\splash.png" />
     <EmbeddedResource Include="Resources\Toolbar\SortAZ.png" />
     <EmbeddedResource Include="Resources\Toolbar\SortZA.png" />
     <EmbeddedResource Include="Resources\DateEditIcon.png" />

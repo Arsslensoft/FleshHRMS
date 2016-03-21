@@ -56,6 +56,7 @@ namespace FHRMS.Data {
         public Employee() {
             AssignedTasks = new List<Leave>();
             OwnedTasks = new List<Leave>();
+            Shifts = new List<Shift>();
             Address = new Address();
         }
         public EmployeeDepartment Department { get; set; }
@@ -71,6 +72,9 @@ namespace FHRMS.Data {
         public virtual List<Leave> OwnedTasks { get; set; }
         [InverseProperty("Employee")]
         public virtual List<Absence> Evaluations { get; set; }
+
+   
+
         public string PersonalProfile { get; set; }
         [Required, Display(Name = "First Name")]
         public string FirstName { get; set; }
@@ -100,6 +104,10 @@ namespace FHRMS.Data {
         public int LeaveCredit { get; set; }
         [Required]
         public double Salary { get; set; }
+           
+        [Required]
+        public virtual List<Shift> Shifts { get; set; }
+
 
         Image _photo = null;
         [NotMapped]

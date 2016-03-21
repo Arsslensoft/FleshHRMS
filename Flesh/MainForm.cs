@@ -124,6 +124,8 @@ namespace FHRMS {
             employeesTileBarItem.Tag = ModuleType.Employés;
             tasksTileBarItem.Tag = ModuleType.Congés;
             absencesTileBarItem.Tag = ModuleType.Absences;
+            attendanceTileBarItem.Tag = ModuleType.Attendances;
+            warningsTileBarItem.Tag = ModuleType.Avertissements;
         }
         bool transitionEffective = false;
         public void StartTransition(bool effective) {
