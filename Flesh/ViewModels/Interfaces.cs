@@ -31,7 +31,10 @@ namespace FHRMS {
         ModifierAvertissement,
         ImprimerAvertissements,
 
+        ModifierPlaning,
+
         Notes,
+        Shifts
 
     }
     public interface IMainModule : IPeekModulesHost,

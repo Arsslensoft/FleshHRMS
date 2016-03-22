@@ -36,12 +36,16 @@ namespace FHRMS.ViewModels {
             get { return GetLookUpEntities(x => x.Pictures); }
         }
 
-      
+        public void SaveAll()
+        {
+            ((DevAVDbUnitOfWork)UnitOfWork).Context.SaveChanges();
+        }
 
         protected override void RefreshLookUpCollections(long key) {
             EmployeeAssignedTasksLookUp = CreateLookUpCollectionViewModel(x => x.Tasks, x => x.AssignedEmployeeId, (x, m) => x.AssignedEmployee = m, key);
             EmployeeOwnedTasksLookUp = CreateLookUpCollectionViewModel(x => x.Tasks, x => x.OwnerId, (x, m) => x.Owner = m, key);
             EmployeeEvaluationsLookUp = CreateLookUpCollectionViewModel(x => x.Evaluations, x => x.EmployeeId, (x, m) => x.Employee = m, key);
+            EmployeeShiftsLookUp = CreateLookUpCollectionViewModel(x => x.Shifts, x => x.EmployeeId, (x, m) => x.Employee = m, key);
         }
 
         /// <summary>
@@ -58,5 +62,11 @@ namespace FHRMS.ViewModels {
         /// The view model for the EmployeeEvaluations detail collection.
         /// </summary>
         public virtual CollectionViewModel<Absence, long, IDevAVDbUnitOfWork> EmployeeEvaluationsLookUp { get; set; }
+
+
+        /// <summary>
+        /// The view model for the EmployeeEvaluations detail collection.
+        /// </summary>
+        public virtual CollectionViewModel<Shift, long, IDevAVDbUnitOfWork> EmployeeShiftsLookUp { get; set; }
     }
 }

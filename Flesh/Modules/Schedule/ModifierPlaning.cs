@@ -7,9 +7,9 @@ using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.Mvvm;
 
 namespace FHRMS.Modules {
-    public partial class ModifierAbsence : BaseModuleControl {
-        public ModifierAbsence()
-            : base(CreateViewModel<EvaluationViewModel>) {
+    public partial class ModifierPlaning : BaseModuleControl {
+        public ModifierPlaning()
+            : base(CreateViewModel<ScheduleViewModel>) {
             InitializeComponent();
             ViewModel.EntityChanged += ViewModel_EntityChanged;
             InitLookupEditors();
@@ -20,8 +20,9 @@ namespace FHRMS.Modules {
             ViewModel.EntityChanged -= ViewModel_EntityChanged;
             base.OnDisposing();
         }
-        public EvaluationViewModel ViewModel {
-            get { return GetViewModel<EvaluationViewModel>(); }
+        public ScheduleViewModel ViewModel
+        {
+            get { return GetViewModel<ScheduleViewModel>(); }
         }
         protected override void UpdateViewModel() {
             ViewModel.ValidationErrors = errorProvider.HasErrors;
@@ -30,20 +31,16 @@ namespace FHRMS.Modules {
         protected override void OnParentViewModelAttached() {
             base.OnParentViewModelAttached();
             if(ViewModel.IsNew()) {
-                InitNew(AbsenceOwner,AbsenceCreator);
+                InitNew(AbsenceOwner);
             }
         }
         void ViewModel_EntityChanged(object sender, EventArgs e) {
             UpdateEditors(ViewModel.Entity);
         }
-        void InitNew(Employee employee, Employee creator)
+        void InitNew(Employee employee)
         {
-            ViewModel.Entity.StartDate = DateTime.Now;
-            if (creator != null)
-            {
-                ViewModel.Entity.CreatedBy = ViewModel.FindEmployeeId(creator);
-                ViewModel.Entity.CreatedById = creator.Id;
-            }
+            ViewModel.Entity.Start = DateTime.Now;
+        
             if (employee != null)
             {
                 ViewModel.Entity.Employee = ViewModel.FindEmployeeId(employee);
@@ -67,37 +64,18 @@ namespace FHRMS.Modules {
             cancelSimpleButton.BindCommand(() => ViewModel.Close(), ViewModel);
         }
         void InitLookupEditors() {
-            imageComboBoxEdit1.Properties.Items.AddEnum<FHRMS.Data.AbsenceType>();
+            imageComboBoxEdit1.Properties.Items.AddEnum<FHRMS.Data.ShiftType>();
+            imageComboBoxEdit2.Properties.Items.AddEnum<FHRMS.Data.ReccuranceType>();
             assignedToLookUpEdit.Properties.DataSource = ViewModel.GetEmployees().ToList();
-             lookUpEdit1.Properties.DataSource = ViewModel.GetEmployees().ToList();
+            imageComboBoxEdit3.Properties.Items.AddEnum<FHRMS.Data.StatusType>();
+            imageComboBoxEdit4.Properties.Items.AddEnum<FHRMS.Data.LabelType>();
         }
-        void UpdateEditors(Absence note) {
+        void UpdateEditors(Shift note) {
             if(note == null) return;
             noteBindingSource.DataSource = note;
         }
         public static Employee AbsenceOwner { get; set; }
-        public static Employee AbsenceCreator { get; set; }
+      
     }
-    public class Notes : BaseModuleControl {
-        public Notes()
-            : base(CreateViewModel<EvaluationCollectionViewModel>) {
-        }
-        protected override void OnInitServices( DevExpress.Mvvm.IServiceContainer serviceContainer) {
-            base.OnInitServices(serviceContainer);
-            serviceContainer.RegisterService(new FlyoutDetailFormDocumentManagerService(ModuleType.ModifierAbsence));
-        }
-    }
-    public class Shifts : BaseModuleControl
-    {
-        public Shifts()
-            : base(CreateViewModel<ScheduleCollectionViewModel>)
-        {
-        }
-        protected override void OnInitServices(DevExpress.Mvvm.IServiceContainer serviceContainer)
-        {
-            base.OnInitServices(serviceContainer);
-         serviceContainer.RegisterService(new FlyoutDetailFormDocumentManagerService(ModuleType.ModifierPlaning));
-        }
-    }
-
+  
 }

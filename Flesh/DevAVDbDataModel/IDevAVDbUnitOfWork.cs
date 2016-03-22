@@ -56,5 +56,15 @@ namespace FHRMS.DevAVDbDataModel {
         /// The State entities repository.
         /// </summary>
         IRepository<State, StateEnum> States { get; }
+
+        /// <summary>
+        /// The Holiday entities repository.
+        /// </summary>
+        IRepository<Holiday, long> Holidays { get; }
+
+        /// <summary>
+        /// The Shift entities repository.
+        /// </summary>
+        IRepository<Shift, long> Shifts { get; }
     }
 }

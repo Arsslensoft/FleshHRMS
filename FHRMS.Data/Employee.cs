@@ -72,7 +72,8 @@ namespace FHRMS.Data {
         public virtual List<Leave> OwnedTasks { get; set; }
         [InverseProperty("Employee")]
         public virtual List<Absence> Evaluations { get; set; }
-
+        [InverseProperty("Employee")]
+        public virtual List<Shift> Shifts { get; set; }
    
 
         public string PersonalProfile { get; set; }
@@ -105,8 +106,7 @@ namespace FHRMS.Data {
         [Required]
         public double Salary { get; set; }
            
-        [Required]
-        public virtual List<Shift> Shifts { get; set; }
+
 
 
         Image _photo = null;

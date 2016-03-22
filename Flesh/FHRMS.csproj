@@ -66,6 +66,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v15.1" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework">
       <HintPath>
       </HintPath>
@@ -335,6 +337,12 @@
     <Compile Include="Modules\PrintSettings\PrintSettings.Designer.cs">
       <DependentUpon>PrintSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Schedule\ModifierPlaning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Schedule\ModifierPlaning.Designer.cs">
+      <DependentUpon>ModifierPlaning.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Setting\SettingsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -421,6 +429,10 @@
     <Compile Include="ViewModels\Avertissements\WarningsCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Avertissements\WarningsViewModel.cs" />
     <Compile Include="ViewModels\Avertissements\WarningsViewModel.partial.cs" />
+    <Compile Include="ViewModels\Schedule\ScheduleCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Schedule\ScheduleCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Schedule\ScheduleViewModel.cs" />
+    <Compile Include="ViewModels\Schedule\ScheduleViewModel.partial.cs" />
     <Compile Include="ViewModels\EmployeeReportType.cs" />
     <Compile Include="ViewModels\Congés\LeaveCollectionViewModel.cs" />
     <Compile Include="ViewModels\Congés\LeaveViewModel.cs" />
@@ -504,6 +516,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\PrintSettings\PrintSettings.resx">
       <DependentUpon>PrintSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Schedule\ModifierPlaning.resx">
+      <DependentUpon>ModifierPlaning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Setting\SettingsUC.resx">
       <DependentUpon>SettingsUC.cs</DependentUpon>

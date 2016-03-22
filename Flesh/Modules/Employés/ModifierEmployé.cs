@@ -9,9 +9,16 @@ using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout.Utils;
 using FHRMS.Common.Utils;
+using System.Drawing;
 
 namespace FHRMS.Modules {
     public partial class ModifierEmployé : BaseModuleControl {
+
+        //public static string[] Statuses = { "Paid", "Unpaid" };
+        //public static Color[] ColorStatuses = { Color.Green, Color.Red };
+        //public static string[] IssueList = { "Consultation", "Treatment", "X-Ray" };
+        //public static Color[] IssueColorList = { Color.SteelBlue, Color.Pink, Color.SeaShell };
+
         BaseModuleControl openedSubModule;
         public ModifierEmployé()
             : base(CreateViewModel<EmployeeViewModel>) {
@@ -21,12 +28,14 @@ namespace FHRMS.Modules {
             InitializeCustomDrawRows();
             InitializeData();
             BindEditors();
-            lbNotes.Tag = true;
-            lbTasks.Tag = false;
-            new LabelTabController(lbTasks.Tag, lbNotes, lbTasks).EditValueChanged += (s, e) =>
+            lbNotes.Tag = 1;
+            lbTasks.Tag = 2;
+            lbSchedule.Tag = 3;
+            new LabelTabController(lbTasks.Tag, lbNotes, lbTasks, lbSchedule).EditValueChanged += (s, e) =>
             {
-                lciNotes.Visibility = (bool)s ? LayoutVisibility.Always : LayoutVisibility.Never;
-                lciTasks.Visibility = !(bool)s ? LayoutVisibility.Always : LayoutVisibility.Never;
+                lciNotes.Visibility = (int)s == 1 ? LayoutVisibility.Always : LayoutVisibility.Never;
+                lciTasks.Visibility = (int)s == 2 ? LayoutVisibility.Always : LayoutVisibility.Never;
+                lciSchedule.Visibility = (int)s == 3 ? LayoutVisibility.Always : LayoutVisibility.Never;
             };
         }
         protected override void OnDisposing() {
@@ -46,6 +55,12 @@ namespace FHRMS.Modules {
         EvaluationCollectionViewModel notesViewModel;
         public EvaluationCollectionViewModel NotesViewModel {
             get { return TryGetModuleViewModel<EvaluationCollectionViewModel>(ref notesViewModel, ModuleType.Notes); }
+        }
+
+        ScheduleCollectionViewModel shiftsViewModel;
+        public ScheduleCollectionViewModel ShiftsViewModel
+        {
+            get { return TryGetModuleViewModel<ScheduleCollectionViewModel>(ref shiftsViewModel, ModuleType.Shifts); }
         }
         protected override void UpdateViewModel() {
             ViewModel.ValidationErrors = errorProvider.HasErrors;
@@ -112,6 +127,7 @@ namespace FHRMS.Modules {
             if(employee == null) return;
             ViewModelHelper.EnsureViewModel(ViewModel.EmployeeAssignedTasksLookUp, TasksViewModel);
             ViewModelHelper.EnsureViewModel(ViewModel.EmployeeEvaluationsLookUp, NotesViewModel);
+            ViewModelHelper.EnsureViewModel(ViewModel.EmployeeShiftsLookUp, ShiftsViewModel);
             if(object.Equals(employeeBindingSource.DataSource, employee))
                 employeeBindingSource.ResetBindings(false);
             else
@@ -121,6 +137,7 @@ namespace FHRMS.Modules {
             }
             tasksBindingSource.SetItemsSource(ViewModel.EmployeeAssignedTasksLookUp.Entities);
             notesBindingSource.SetItemsSource(ViewModel.EmployeeEvaluationsLookUp.Entities);
+            shiftsBindingSource.SetItemsSource(ViewModel.EmployeeShiftsLookUp.Entities);
         }
         void InitializeButtonPanel() {
             var listBI = new List<ButtonInfo>();
@@ -222,6 +239,41 @@ namespace FHRMS.Modules {
         {
             dataLayoutControl.Size = new System.Drawing.Size(this.Width, System.Windows.Forms.SystemInformation.VirtualScreen.Height);
         }
+
+        private void schedulerControl1_EditAppointmentFormShowing(object sender, DevExpress.XtraScheduler.AppointmentFormEventArgs e)
+        {
+            e.Handled = true;
+            if (schedulerControl1.SelectedAppointments.Count == 0)
+            {
+                ModifierPlaning.AbsenceOwner = ViewModel.Entity;
+                ViewModel.EmployeeShiftsLookUp.New();
+            }
+            else
+            {
+             
+                if (ViewModel.EmployeeShiftsLookUp.CanEdit(shiftsBindingSource.Current as Shift))
+                    ViewModel.EmployeeShiftsLookUp.Edit(shiftsBindingSource.Current as Shift);
+
+                schedulerStorage1.RefreshData();
+            }
+         
+        }
+        private void schedulerStorage1_AppointmentDeleting(object sender, DevExpress.XtraScheduler.PersistentObjectCancelEventArgs e)
+        {
+       
+            if (ViewModel.EmployeeShiftsLookUp.CanDelete(shiftsBindingSource.Current as Shift))
+                ViewModel.EmployeeShiftsLookUp.Delete(shiftsBindingSource.Current as Shift);
+          
+        }
+        private void schedulerStorage1_AppointmentsChanged(object sender, DevExpress.XtraScheduler.PersistentObjectsEventArgs e)
+        {
+         
+                if (ViewModel.EmployeeShiftsLookUp.CanSave(shiftsBindingSource.Current as Shift))
+                    ViewModel.EmployeeShiftsLookUp.Save(shiftsBindingSource.Current as Shift);
+           
+        }
+
+   
 
        
     }

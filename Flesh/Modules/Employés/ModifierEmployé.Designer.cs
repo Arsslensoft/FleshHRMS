@@ -23,7 +23,9 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraScheduler.TimeRuler timeRuler1 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler2 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler3 = new DevExpress.XtraScheduler.TimeRuler();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifierEmployé));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -35,13 +37,18 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             this.dataLayoutControl = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.schedulerControl1 = new DevExpress.XtraScheduler.SchedulerControl();
+            this.schedulerStorage1 = new DevExpress.XtraScheduler.SchedulerStorage();
+            this.shiftsBindingSource = new System.Windows.Forms.BindingSource();
             this.lciBackPicture = new System.Windows.Forms.PictureBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.lbNotes = new DevExpress.XtraEditors.LabelControl();
             this.lbTasks = new DevExpress.XtraEditors.LabelControl();
+            this.lbSchedule = new DevExpress.XtraEditors.LabelControl();
             this.stateUC1 = new FHRMS.Modules.Customers.StateUC();
             this.notesGridControl = new DevExpress.XtraGrid.GridControl();
-            this.notesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.notesBindingSource = new System.Windows.Forms.BindingSource();
             this.notesGridView = new DevExpress.XtraGrid.Views.Grid.GridViewWithButtons();
             this.noteColDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.noteColCreatedBy = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,21 +57,21 @@
             this.colDateretour = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.tasksGridControl = new DevExpress.XtraGrid.GridControl();
-            this.tasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tasksBindingSource = new System.Windows.Forms.BindingSource();
             this.tasksGridView = new DevExpress.XtraGrid.Views.Grid.GridViewWithButtons();
             this.colAssignedTo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOwnedBy = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSubject = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPriority = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
-            this.priorityImageList = new DevExpress.Utils.ImageCollection(this.components);
+            this.priorityImageList = new DevExpress.Utils.ImageCollection();
             this.colDueDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colComplete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.completeProgressBar = new DevExpress.XtraEditors.Repository.RepositoryItemProgressBar();
             this.printRepositoryItemButtonEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.zipCodeTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.addressBindingSource = new System.Windows.Forms.BindingSource();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource();
             this.cityTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.addressTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.lbName = new DevExpress.XtraEditors.LabelControl();
@@ -93,9 +100,12 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lciTasks = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciNotes = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciSchedule = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lgEmployee = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForEvaluations = new DevExpress.XtraLayout.LayoutControlItem();
@@ -131,9 +141,12 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.errorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.errorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl)).BeginInit();
             this.dataLayoutControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulerControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulerStorage1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shiftsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBackPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notesGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notesBindingSource)).BeginInit();
@@ -178,9 +191,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTasks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNotes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lgEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEvaluations)).BeginInit();
@@ -223,10 +239,13 @@
             // 
             this.dataLayoutControl.AllowCustomization = false;
             this.dataLayoutControl.BackColor = System.Drawing.Color.White;
+            this.dataLayoutControl.Controls.Add(this.labelControl1);
+            this.dataLayoutControl.Controls.Add(this.schedulerControl1);
             this.dataLayoutControl.Controls.Add(this.lciBackPicture);
             this.dataLayoutControl.Controls.Add(this.labelControl5);
             this.dataLayoutControl.Controls.Add(this.lbNotes);
             this.dataLayoutControl.Controls.Add(this.lbTasks);
+            this.dataLayoutControl.Controls.Add(this.lbSchedule);
             this.dataLayoutControl.Controls.Add(this.stateUC1);
             this.dataLayoutControl.Controls.Add(this.notesGridControl);
             this.dataLayoutControl.Controls.Add(this.tasksGridControl);
@@ -263,6 +282,46 @@
             this.dataLayoutControl.Size = new System.Drawing.Size(1129, 757);
             this.dataLayoutControl.TabIndex = 0;
             this.dataLayoutControl.Text = "layoutControl1";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.FontSizeDelta = 2;
+            this.labelControl1.Location = new System.Drawing.Point(236, 517);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(4, 23);
+            this.labelControl1.TabIndex = 51;
+            this.labelControl1.Text = "|";
+            // 
+            // schedulerControl1
+            // 
+            this.schedulerControl1.Location = new System.Drawing.Point(72, 639);
+            this.schedulerControl1.Name = "schedulerControl1";
+            this.schedulerControl1.Size = new System.Drawing.Size(1015, 102);
+            this.schedulerControl1.Start = new System.DateTime(2016, 3, 21, 0, 0, 0, 0);
+            this.schedulerControl1.Storage = this.schedulerStorage1;
+            this.schedulerControl1.TabIndex = 54;
+            this.schedulerControl1.Text = "schedulerControl1";
+            this.schedulerControl1.Views.DayView.TimeRulers.Add(timeRuler1);
+            this.schedulerControl1.Views.FullWeekView.Enabled = true;
+            this.schedulerControl1.Views.FullWeekView.TimeRulers.Add(timeRuler2);
+            this.schedulerControl1.Views.WorkWeekView.TimeRulers.Add(timeRuler3);
+            this.schedulerControl1.EditAppointmentFormShowing += new DevExpress.XtraScheduler.AppointmentFormEventHandler(this.schedulerControl1_EditAppointmentFormShowing);
+            // 
+            // schedulerStorage1
+            // 
+            this.schedulerStorage1.Appointments.CustomFieldMappings.Add(new DevExpress.XtraScheduler.AppointmentCustomFieldMapping("Employee", "Employee"));
+            this.schedulerStorage1.Appointments.DataSource = this.shiftsBindingSource;
+            this.schedulerStorage1.Appointments.Mappings.End = "End";
+            this.schedulerStorage1.Appointments.Mappings.Label = "Label";
+            this.schedulerStorage1.Appointments.Mappings.Start = "Start";
+            this.schedulerStorage1.Appointments.Mappings.Status = "Status";
+            this.schedulerStorage1.Appointments.Mappings.Subject = "Subject";
+            this.schedulerStorage1.AppointmentsChanged += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.schedulerStorage1_AppointmentsChanged);
+            this.schedulerStorage1.AppointmentDeleting += new DevExpress.XtraScheduler.PersistentObjectCancelEventHandler(this.schedulerStorage1_AppointmentDeleting);
+            // 
+            // shiftsBindingSource
+            // 
+            this.shiftsBindingSource.DataSource = typeof(FHRMS.Data.Shift);
             // 
             // lciBackPicture
             // 
@@ -301,6 +360,15 @@
             this.lbTasks.TabIndex = 49;
             this.lbTasks.Text = "CONGÉS";
             // 
+            // lbSchedule
+            // 
+            this.lbSchedule.Appearance.FontSizeDelta = 2;
+            this.lbSchedule.Location = new System.Drawing.Point(244, 517);
+            this.lbSchedule.Name = "lbSchedule";
+            this.lbSchedule.Size = new System.Drawing.Size(82, 23);
+            this.lbSchedule.TabIndex = 55;
+            this.lbSchedule.Text = "SCHEDULE";
+            // 
             // stateUC1
             // 
             this.stateUC1.Location = new System.Drawing.Point(562, 425);
@@ -312,13 +380,13 @@
             // notesGridControl
             // 
             this.notesGridControl.DataSource = this.notesBindingSource;
-            this.notesGridControl.Location = new System.Drawing.Point(563, 548);
+            this.notesGridControl.Location = new System.Drawing.Point(513, 548);
             this.notesGridControl.MainView = this.notesGridView;
             this.notesGridControl.Name = "notesGridControl";
             this.notesGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.repositoryItemMemoEdit1});
-            this.notesGridControl.Size = new System.Drawing.Size(524, 193);
+            this.notesGridControl.Size = new System.Drawing.Size(574, 87);
             this.notesGridControl.TabIndex = 25;
             this.notesGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.notesGridView});
@@ -415,7 +483,7 @@
             this.completeProgressBar,
             this.repositoryItemComboBox1,
             this.printRepositoryItemButtonEdit});
-            this.tasksGridControl.Size = new System.Drawing.Size(487, 193);
+            this.tasksGridControl.Size = new System.Drawing.Size(437, 87);
             this.tasksGridControl.TabIndex = 24;
             this.tasksGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tasksGridView});
@@ -871,9 +939,12 @@
             this.layoutControlItem5,
             this.layoutControlItem12,
             this.layoutControlItem6,
+            this.layoutControlItem13,
+            this.layoutControlItem10,
             this.emptySpaceItem5,
             this.lciTasks,
             this.lciNotes,
+            this.lciSchedule,
             this.emptySpaceItem9});
             this.lgGrids.Location = new System.Drawing.Point(60, 515);
             this.lgGrids.Name = "lgGrids";
@@ -922,13 +993,41 @@
             this.layoutControlItem6.TextVisible = false;
             this.layoutControlItem6.TrimClientAreaToControl = false;
             // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.labelControl1;
+            this.layoutControlItem13.ControlAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.layoutControlItem13.CustomizationFormText = "layoutControlItem12";
+            this.layoutControlItem13.Location = new System.Drawing.Point(164, 0);
+            this.layoutControlItem13.Name = "layoutControlItem12";
+            this.layoutControlItem13.OptionsPrint.AllowPrint = false;
+            this.layoutControlItem13.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 6);
+            this.layoutControlItem13.Size = new System.Drawing.Size(8, 31);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem13.TextVisible = false;
+            this.layoutControlItem13.TrimClientAreaToControl = false;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.lbSchedule;
+            this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.layoutControlItem10.CustomizationFormText = "layoutControlItem10";
+            this.layoutControlItem10.Location = new System.Drawing.Point(172, 0);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.OptionsPrint.AllowPrint = false;
+            this.layoutControlItem10.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 6);
+            this.layoutControlItem10.Size = new System.Drawing.Size(86, 31);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
+            this.layoutControlItem10.TrimClientAreaToControl = false;
+            // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
-            this.emptySpaceItem5.Location = new System.Drawing.Point(164, 0);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(258, 0);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(855, 31);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(761, 31);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciTasks
@@ -937,7 +1036,7 @@
             this.lciTasks.CustomizationFormText = "lciTasks";
             this.lciTasks.Location = new System.Drawing.Point(0, 31);
             this.lciTasks.Name = "lciTasks";
-            this.lciTasks.Size = new System.Drawing.Size(491, 197);
+            this.lciTasks.Size = new System.Drawing.Size(441, 91);
             this.lciTasks.TextSize = new System.Drawing.Size(0, 0);
             this.lciTasks.TextVisible = false;
             // 
@@ -945,12 +1044,23 @@
             // 
             this.lciNotes.Control = this.notesGridControl;
             this.lciNotes.CustomizationFormText = "lciNotes";
-            this.lciNotes.Location = new System.Drawing.Point(491, 31);
+            this.lciNotes.Location = new System.Drawing.Point(441, 31);
             this.lciNotes.Name = "lciNotes";
-            this.lciNotes.Size = new System.Drawing.Size(528, 197);
+            this.lciNotes.Size = new System.Drawing.Size(578, 91);
             this.lciNotes.TextSize = new System.Drawing.Size(0, 0);
             this.lciNotes.TextVisible = false;
             this.lciNotes.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            // 
+            // lciSchedule
+            // 
+            this.lciSchedule.Control = this.schedulerControl1;
+            this.lciSchedule.CustomizationFormText = "lciSchedule";
+            this.lciSchedule.Location = new System.Drawing.Point(0, 122);
+            this.lciSchedule.Name = "lciSchedule";
+            this.lciSchedule.Size = new System.Drawing.Size(1019, 106);
+            this.lciSchedule.TextSize = new System.Drawing.Size(0, 0);
+            this.lciSchedule.TextVisible = false;
+            this.lciSchedule.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // emptySpaceItem9
             // 
@@ -1397,6 +1507,9 @@
             this.Resize += new System.EventHandler(this.ModifierEmployé_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl)).EndInit();
             this.dataLayoutControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.schedulerControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulerStorage1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shiftsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBackPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notesGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notesBindingSource)).EndInit();
@@ -1441,9 +1554,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciTasks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNotes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lgEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEvaluations)).EndInit();
@@ -1587,6 +1703,14 @@
         private DevExpress.XtraLayout.LayoutControlGroup lgGrids;
         private DevExpress.XtraLayout.LayoutControlGroup lgEmployee;
         private DevExpress.XtraGrid.Columns.GridColumn colDateretour;
+        private DevExpress.XtraScheduler.SchedulerControl schedulerControl1;
+        private DevExpress.XtraScheduler.SchedulerStorage schedulerStorage1;
+        private DevExpress.XtraLayout.LayoutControlItem lciSchedule;
+        private DevExpress.XtraEditors.LabelControl lbSchedule;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private System.Windows.Forms.BindingSource shiftsBindingSource;
 
 
     }

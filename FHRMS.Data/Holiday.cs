@@ -19,7 +19,7 @@ namespace FHRMS.Data
 
         public DateTime StartDate { get; set; }
         public DateTime DueDate { get; set; }
-
+        public bool ExcludePermanence { get; set; }
      
         [NotMapped]
         public TimeSpan TotalTime
