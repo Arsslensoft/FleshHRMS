@@ -49,8 +49,9 @@ namespace FHRMS.DevAVDbDataModel {
             get { return GetRepository(x => x.Set<Picture>(), x => x.Id); }
         }
 
-        IRepository<State, StateEnum> IDevAVDbUnitOfWork.States {
-            get { return GetRepository(x => x.Set<State>(), x => x.ShortName); }
+        IRepository<Notification, long> IDevAVDbUnitOfWork.Notifications
+        {
+            get { return GetRepository(x => x.Set<Notification>(), x => x.Id); }
         }
 
         IRepository<Shift, long> IDevAVDbUnitOfWork.Shifts
@@ -61,5 +62,7 @@ namespace FHRMS.DevAVDbDataModel {
         {
             get { return GetRepository(x => x.Set<Holiday>(), x => x.Id); }
         }
+
+
     }
 }

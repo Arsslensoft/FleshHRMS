@@ -58,6 +58,7 @@ namespace FHRMS.Data {
             OwnedTasks = new List<Leave>();
             Shifts = new List<Shift>();
             Address = new Address();
+            Credential = new Credential();
         }
         public EmployeeDepartment Department { get; set; }
         [Required]
@@ -96,7 +97,10 @@ namespace FHRMS.Data {
         public virtual Picture Picture { get; set; }
         public long? PictureId { get; set; }
         public Address Address { get; set; }
-       
+
+
+        public Credential Credential { get; set; }
+
         [Required]
         public EmployeeRole Role { get; set; }
         [Required, DevExpress.DataAnnotations.CIN]

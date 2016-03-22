@@ -1,5 +1,3 @@
-Gestion de congés
-Gestion de pointage
-Gestion d'absence
 Calcul de statistiques
-Generation d'avertissements
+Automatisme
+Access Control

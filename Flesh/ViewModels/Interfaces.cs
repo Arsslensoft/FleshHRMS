@@ -6,6 +6,8 @@ namespace FHRMS {
         CustomersPeek,
         CustomersFilterPane,
 
+        Dashboard,
+
         EmployeeView,
         ModifierEmployé,
         ImprimerEmployé,
@@ -33,6 +35,8 @@ namespace FHRMS {
 
         ModifierPlaning,
 
+
+ 
         Notes,
         Shifts
 

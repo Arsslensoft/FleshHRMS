@@ -48,7 +48,7 @@ namespace FHRMS.Modules {
         }
         void InitializeButtonPanel() {
             List<ButtonInfo> listBI = new List<ButtonInfo>();
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Nouveau pointage", Name = "1", Image = ImageHelper.GetImageFromToolbarResource("New"), mouseEventHandler = (s, e) => { NewButtonClick(); } });
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Nouvelle avertissement", Name = "1", Image = ImageHelper.GetImageFromToolbarResource("New"), mouseEventHandler = (s, e) => { NewButtonClick(); } });
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Modifier", Name = "2", Image = ImageHelper.GetImageFromToolbarResource("Edit"), mouseEventHandler = (s, e) => { EditButtonClick(); } });
           
             listBI.Add(new ButtonInfo());

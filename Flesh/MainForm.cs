@@ -37,7 +37,8 @@ namespace FHRMS {
         void MainForm_Load(object sender, EventArgs e) {
             InitTileBar();
             mainTileBar.SelectedItem = employeesTileBarItem;
-            viewModel.SelectModule(ModuleType.Employés);
+            viewModel.SelectModule(ModuleType.Dashboard);
+       
            // DevExpress.XtraSplashScreen.SplashScreenManager.CloseDefaultSplashScreen();
 
         }
@@ -120,7 +121,8 @@ namespace FHRMS {
             WindowsFormsSettings.PopupMenuStyle = DevExpress.XtraEditors.Controls.PopupMenuStyle.RadialMenu;
         }
         void InitTileBar() {
-            employeesTileBarItem.Tag = ModuleType.Employés;
+            dashboardTileBarItem.Tag = ModuleType.Dashboard;
+
             employeesTileBarItem.Tag = ModuleType.Employés;
             tasksTileBarItem.Tag = ModuleType.Congés;
             absencesTileBarItem.Tag = ModuleType.Absences;

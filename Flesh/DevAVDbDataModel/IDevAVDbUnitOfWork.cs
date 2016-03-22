@@ -48,14 +48,15 @@ namespace FHRMS.DevAVDbDataModel {
         /// </summary>
         IRepository<Picture, long> Pictures { get; }
 
-      
 
-     
 
         /// <summary>
-        /// The State entities repository.
+        /// The Notification entities repository.
         /// </summary>
-        IRepository<State, StateEnum> States { get; }
+        IRepository<Notification, long> Notifications { get; }
+
+
+
 
         /// <summary>
         /// The Holiday entities repository.

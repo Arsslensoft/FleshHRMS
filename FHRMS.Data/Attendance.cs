@@ -41,6 +41,8 @@ namespace FHRMS.Data
         public DateTime Date { get; set; }
         public TimeSpan TimeIn { get; set; }
         public TimeSpan TimeOut { get; set; }
+        public TimeSpan BreakIn { get; set; }
+        public TimeSpan BreakOut { get; set; }
 
         [NotMapped]
         public TimeSpan TotalWorkingHours

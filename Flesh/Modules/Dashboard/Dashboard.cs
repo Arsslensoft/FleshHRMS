@@ -4,104 +4,115 @@ using System.Drawing;
 using System.Linq;
 using FHRMS.ViewModels;
 using DevExpress.XtraEditors;
-using DevExpress.XtraCharts;
 using FHRMS.Common.Utils;
 using FHRMS.Helpers;
+using System.Windows.Forms;
+using DevExpress.XtraBars.Docking2010.Views;
+using DevExpress.XtraBars.Docking2010.Views.Widget;
+using FHRMS.Widgets;
 
-namespace FHRMS.Modules {
-    public enum Periods : int {
-        Month = 1,
-        Today = 2,
-        Year = 0
-    }
-    public partial class Dashboard : BaseModuleControl {
-        private List<FHRMS.ViewModels.SalesInfo> listSales;
-        private List<CostInfo> listCost;
+
+namespace FHRMS.Modules
+{
+  
+    public partial class Dashboard : BaseModuleControl
+    {
+   
+        Random random = new Random();
         public Dashboard()
-            : base(CreateViewModel<OrderCollectionViewModel>) {
+            : base(CreateViewModel<NotificationCollectionViewModel>)
+        {
             InitializeComponent();
             InitializeData();
+            widgetView1.AllowDocumentStateChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
+            widgetView1.QueryControl += OnQueryControl;
+            SetWidgetsAppearances();
         }
-        private void InitializeData() {
-            salesBindingSource.SetItemsSource(ViewModel.Entities);
-            InitializeOpportunitiesChartControl();
-            InitializeRevenuesChartControl();
-            InitializeCostChartControl();
+    
+   
+        protected override void OnLoad(EventArgs e)
+        {
+          
+            base.OnLoad(e);
+           
         }
-        private void InitializeCostChartControl() {
-            listCost = ViewModel.GetCostForDashboard();
-            costChartControl.Series[0].ArgumentDataMember = "Name";
-            costChartControl.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
-            SetCostData(0);
+        void OnQueryControl(object sender, DevExpress.XtraBars.Docking2010.Views.QueryControlEventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(e.Document.ControlTypeName))
+            {
+                e.Control = Activator.CreateInstance(Type.GetType(e.Document.ControlTypeName)) as Control;
+                if (e.Control is IDashboardWidget)
+                    ((IDashboardWidget)e.Control).ViewModel = ViewModel;
+                
+            }
+            else
+                e.Control = new Control();
         }
-        private void InitializeRevenuesChartControl() {
-            listSales = ViewModel.GetSalesForDashboard();
-            SetRevenuesData(0);
-            revenuesChartControl.Series[0].ArgumentDataMember = "Name";
-            revenuesChartControl.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
+        void OnLayoutModeCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LayoutMode layoutMode = (LayoutMode)e.Item.Tag;
+            widgetView1.BeginUpdateAnimation();
+            widgetView1.LayoutMode = layoutMode;
+            
+            widgetView1.EndUpdateAnimation();
         }
-        private void InitializeOpportunitiesChartControl() {
-            opportunitiesChartControl.Series[0].DataSource = CreateViewModel<QuoteCollectionViewModel>().GetQuoteInfos();
-            opportunitiesChartControl.Series[0].ArgumentDataMember = "StageName";
-            opportunitiesChartControl.Series[0].ValueDataMembers.AddRange(new string[] { "Summary" });
+        void OnFlowDirectionCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            widgetView1.BeginUpdateAnimation();
+            FlowDirection flowDirection = (FlowDirection)e.Item.Tag;
+            widgetView1.FlowLayoutProperties.FlowDirection = flowDirection;
+            widgetView1.EndUpdateAnimation();
         }
-        protected internal override void OnTransitionCompleted() {
+    
+    
+        void SetWidgetsAppearances()
+        {
+            List<BaseDocument> documents = new List<BaseDocument>();
+            documents.AddRange(widgetView1.Documents.ToArray());
+            documents.AddRange(widgetView1.FloatDocuments.ToArray());
+          
+            
+        }
+        void ResetWidgetAppearances()
+        {
+            List<BaseDocument> documents = new List<BaseDocument>();
+            documents.AddRange(widgetView1.FloatDocuments.ToArray());
+            documents.AddRange(widgetView1.Documents.ToArray());
+            foreach (Document document in documents)
+            {
+                document.AppearanceActiveCaption.Reset();
+                document.AppearanceCaption.Reset();
+            }
+        }
+
+
+
+
+        private void InitializeData()
+        {
+
+
+        }
+     
+        protected internal override void OnTransitionCompleted()
+        {
             base.OnTransitionCompleted();
             InitializeButtonPanel();
+
         }
-        private void InitializeButtonPanel() {
+        private void InitializeButtonPanel()
+        {
             BottomPanel.Visible = false;
         }
-        public OrderCollectionViewModel ViewModel {
-            get {
-                return GetViewModel<OrderCollectionViewModel>();
+        public NotificationCollectionViewModel ViewModel
+        {
+            get
+            {
+                return GetViewModel<NotificationCollectionViewModel>();
             }
         }
-        private void SetRevenuesData(Periods period) {
-            revenuesChartControl.Series[0].DataSource = listSales[(int)period].ListProductInfo;
-            revenuesChartControl.Refresh();
-        }
-        private void SetCostData(Periods period) {
-            costChartControl.Series[0].DataSource = listCost[(int)period].ListProductInfo;
-            costChartControl.Refresh();
-        }
-        private void todayRevenuesSimpleButton_Click(object sender, EventArgs e) {
-            SetRevenuesData(Periods.Today);
-        }
-        private void monthRevenuesSimpleButton_Click(object sender, EventArgs e) {
-            SetRevenuesData(Periods.Month);
-        }
-        private void yearRevenuesSimpleButton_Click(object sender, EventArgs e) {
-            SetRevenuesData(Periods.Year);
-        }
-        private void todayCostSimpleButton_Click(object sender, EventArgs e) {
-            SetCostData(Periods.Today);
-        }
-        private void monthCostSimpleButton_Click(object sender, EventArgs e) {
-            SetCostData(Periods.Month);
-        }
-        private void yearCostSimpleButton_Click(object sender, EventArgs e) {
-            SetCostData(Periods.Year);
-        }
 
-        private void revenuesChartControl_CustomDrawSeriesPoint(object sender, CustomDrawSeriesPointEventArgs e) {
-            ChartControlLegendCustomPainter.Paint(e);
-        }
+    }
 
-        private void opportunitiesChartControl_CustomDrawSeriesPoint(object sender, CustomDrawSeriesPointEventArgs e) {
-            ChartControlLegendCustomPainter.Paint(e);
-        }
-    }
-    public class ChartControlLegendCustomPainter {
-        public static void Paint(CustomDrawSeriesPointEventArgs e) {
-            int imageSizeW = 18, imageSizeH = 14;
-            var image = new Bitmap(imageSizeW, imageSizeH);
-            using (var graphics = Graphics.FromImage(image)) {
-                graphics.FillRectangle(new SolidBrush(e.LegendDrawOptions.Color), new Rectangle(new Point(0, 0), new Size(imageSizeW, imageSizeH)));
-            }
-            e.LegendMarkerImage = image;
-            e.DisposeLegendMarkerImage = true;
-            e.LegendMarkerVisible = true;
-        }
-    }
 }

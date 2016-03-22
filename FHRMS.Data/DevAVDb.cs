@@ -17,15 +17,16 @@ namespace FHRMS.Data {
 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Leave> Tasks { get; set; }
-        public DbSet<State> States { get; set; }
         public DbSet<Absence> Evaluations { get; set; }
         public DbSet<Attendance> Attendances { get; set; }
         public DbSet<Shift> Shifts { get; set; }
         public DbSet<Holiday> Holidays { get; set; }
-
+        public DbSet<Notification> Notifications { get; set; }
         public DbSet<Warning> Warnings { get; set; }
         public DbSet<Picture> Pictures { get; set; }
         public DbSet<DatabaseVersion> Version { get; set; }
+
+
 
         static string filePath;
 

@@ -50,6 +50,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             this.SuspendLayout();
+            // 
+            // layoutControl1
+            // 
             this.layoutControl1.Controls.Add(this.simpleButton2);
             this.layoutControl1.Controls.Add(this.saveSimpleButton);
             this.layoutControl1.Controls.Add(this.checkEdit1);
@@ -63,6 +66,9 @@
             this.layoutControl1.Size = new System.Drawing.Size(734, 381);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // simpleButton2
+            // 
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.simpleButton2.Location = new System.Drawing.Point(631, 327);
             this.simpleButton2.Name = "simpleButton2";
@@ -70,6 +76,9 @@
             this.simpleButton2.StyleController = this.layoutControl1;
             this.simpleButton2.TabIndex = 7;
             this.simpleButton2.Text = "Cancel";
+            // 
+            // saveSimpleButton
+            // 
             this.saveSimpleButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.saveSimpleButton.Location = new System.Drawing.Point(516, 327);
             this.saveSimpleButton.Name = "saveSimpleButton";
@@ -77,13 +86,19 @@
             this.saveSimpleButton.StyleController = this.layoutControl1;
             this.saveSimpleButton.TabIndex = 6;
             this.saveSimpleButton.Text = "Save";
+            // 
+            // checkEdit1
+            // 
             this.checkEdit1.EditValue = true;
             this.checkEdit1.Location = new System.Drawing.Point(12, 56);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "Enable animation.";
-            this.checkEdit1.Size = new System.Drawing.Size(710, 20);
+            this.checkEdit1.Size = new System.Drawing.Size(710, 24);
             this.checkEdit1.StyleController = this.layoutControl1;
             this.checkEdit1.TabIndex = 5;
+            // 
+            // labelControl1
+            // 
             this.labelControl1.Appearance.FontSizeDelta = 3;
             this.labelControl1.Location = new System.Drawing.Point(12, 12);
             this.labelControl1.Name = "labelControl1";
@@ -91,6 +106,9 @@
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Settings";
+            // 
+            // layoutControlGroup1
+            // 
             this.layoutControlGroup1.CustomizationFormText = "Root";
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
@@ -106,58 +124,68 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(734, 381);
-            this.layoutControlGroup1.Text = "Root";
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
             this.layoutControlItem1.Control = this.labelControl1;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(714, 29);
-            this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
             this.layoutControlItem2.Control = this.checkEdit1;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 44);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(714, 24);
-            this.layoutControlItem2.Text = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(714, 28);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextToControlDistance = 0;
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
             this.layoutControlItem3.Control = this.saveSimpleButton;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
             this.layoutControlItem3.Location = new System.Drawing.Point(504, 315);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(96, 46);
-            this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextToControlDistance = 0;
             this.layoutControlItem3.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
             this.layoutControlItem4.Control = this.simpleButton2;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
             this.layoutControlItem4.Location = new System.Drawing.Point(619, 315);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(95, 46);
-            this.layoutControlItem4.Text = "layoutControlItem4";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextToControlDistance = 0;
             this.layoutControlItem4.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 315);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(504, 46);
-            this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem2
+            // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 68);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 72);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(714, 247);
-            this.emptySpaceItem2.Text = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(714, 243);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem3
+            // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
             this.emptySpaceItem3.Location = new System.Drawing.Point(600, 315);
@@ -166,15 +194,19 @@
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(19, 46);
             this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem3.Text = "emptySpaceItem3";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem4
+            // 
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 29);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
             this.emptySpaceItem4.Size = new System.Drawing.Size(714, 15);
-            this.emptySpaceItem4.Text = "emptySpaceItem4";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // SettingsUC
+            // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);

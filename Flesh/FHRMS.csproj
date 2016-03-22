@@ -66,6 +66,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v15.1" />
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework">
@@ -181,6 +182,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -300,6 +302,12 @@
     </Compile>
     <Compile Include="Modules\Controls\Reports\PrintSettings.Designer.cs">
       <DependentUpon>PrintSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Dashboard\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Dashboard\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Employés\PublipostageEmployé.cs">
       <SubType>UserControl</SubType>
@@ -429,6 +437,10 @@
     <Compile Include="ViewModels\Avertissements\WarningsCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Avertissements\WarningsViewModel.cs" />
     <Compile Include="ViewModels\Avertissements\WarningsViewModel.partial.cs" />
+    <Compile Include="ViewModels\Dashboard\NotificationCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Dashboard\NotificationCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Dashboard\NotificationViewModel.cs" />
+    <Compile Include="ViewModels\Dashboard\NotificationViewModel.partial.cs" />
     <Compile Include="ViewModels\Schedule\ScheduleCollectionViewModel.cs" />
     <Compile Include="ViewModels\Schedule\ScheduleCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Schedule\ScheduleViewModel.cs" />
@@ -455,6 +467,48 @@
     <Compile Include="ViewModels\MailMergeViewModelBase.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ReportViewModelBase.cs" />
+    <Compile Include="Widgets\Calendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Calendar.designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Clock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Clock.designer.cs">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Mail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Mail.Designer.cs">
+      <DependentUpon>Mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\News.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\News.designer.cs">
+      <DependentUpon>News.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\ToDoList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\ToDoList.designer.cs">
+      <DependentUpon>ToDoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\ucChartProductItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\ucChartProductItem.designer.cs">
+      <DependentUpon>ucChartProductItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Weather.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Weather.designer.cs">
+      <DependentUpon>Weather.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Common\CommonResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CommonResources.Designer.cs</LastGenOutput>
@@ -499,6 +553,9 @@
     <EmbeddedResource Include="Modules\Controls\Reports\PrintSettings.resx">
       <DependentUpon>PrintSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Dashboard\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Employés\PublipostageEmployé.resx">
       <DependentUpon>PublipostageEmployé.cs</DependentUpon>
     </EmbeddedResource>
@@ -534,6 +591,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Congé\Congé.resx">
       <DependentUpon>Congé.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Clock.resx">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Mail.resx">
+      <DependentUpon>Mail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\News.resx">
+      <DependentUpon>News.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\ToDoList.resx">
+      <DependentUpon>ToDoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\ucChartProductItem.resx">
+      <DependentUpon>ucChartProductItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Weather.resx">
+      <DependentUpon>Weather.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
@@ -723,6 +801,9 @@
       <Project>{5f39ce01-75ed-4db4-9456-b0a2b3fa33c0}</Project>
       <Name>FHRMS.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\Statistiques\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

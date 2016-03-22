@@ -4,3 +4,4 @@ D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\obj\v4.0\MySql.Data.MySqlCl
 D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\obj\v4.0\MySql.Data.csproj.GenerateResource.Cache
 D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\obj\v4.0\MySql.Data.dll
 D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\obj\v4.0\MySql.Data.pdb
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\obj\v4.0\MySql.Data.csprojResolveAssemblyReference.cache

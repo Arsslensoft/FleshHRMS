@@ -47,6 +47,8 @@
             this.DueDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.StartDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEnter = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colbreakin = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colbreakout = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemProgressBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemProgressBar();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.priorityImageList = new DevExpress.Utils.ImageCollection(this.components);
@@ -121,7 +123,9 @@
             this.Subject,
             this.DueDate,
             this.StartDate,
-            this.colEnter});
+            this.colEnter,
+            this.colbreakin,
+            this.colbreakout});
             this.tasksGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.None;
             this.tasksGridView.FooterPanelHeight = 60;
             this.tasksGridView.GridControl = this.tasksGridControl;
@@ -147,7 +151,7 @@
             this.AssignedTo.Name = "AssignedTo";
             this.AssignedTo.Visible = true;
             this.AssignedTo.VisibleIndex = 1;
-            this.AssignedTo.Width = 190;
+            this.AssignedTo.Width = 122;
             // 
             // OwnedBy
             // 
@@ -156,7 +160,7 @@
             this.OwnedBy.Name = "OwnedBy";
             this.OwnedBy.Visible = true;
             this.OwnedBy.VisibleIndex = 2;
-            this.OwnedBy.Width = 185;
+            this.OwnedBy.Width = 142;
             // 
             // Subject
             // 
@@ -164,8 +168,8 @@
             this.Subject.FieldName = "Reason";
             this.Subject.Name = "Subject";
             this.Subject.Visible = true;
-            this.Subject.VisibleIndex = 5;
-            this.Subject.Width = 412;
+            this.Subject.VisibleIndex = 7;
+            this.Subject.Width = 246;
             // 
             // DueDate
             // 
@@ -184,7 +188,7 @@
             this.StartDate.Name = "StartDate";
             this.StartDate.OptionsColumn.FixedWidth = true;
             this.StartDate.Visible = true;
-            this.StartDate.VisibleIndex = 4;
+            this.StartDate.VisibleIndex = 6;
             this.StartDate.Width = 79;
             // 
             // colEnter
@@ -194,7 +198,25 @@
             this.colEnter.Name = "colEnter";
             this.colEnter.Visible = true;
             this.colEnter.VisibleIndex = 3;
-            this.colEnter.Width = 89;
+            this.colEnter.Width = 81;
+            // 
+            // colbreakin
+            // 
+            this.colbreakin.Caption = "Sortie en pause";
+            this.colbreakin.FieldName = "BreakIn";
+            this.colbreakin.Name = "colbreakin";
+            this.colbreakin.Visible = true;
+            this.colbreakin.VisibleIndex = 4;
+            this.colbreakin.Width = 140;
+            // 
+            // colbreakout
+            // 
+            this.colbreakout.Caption = "Rentrée de pause";
+            this.colbreakout.FieldName = "BreakOut";
+            this.colbreakout.Name = "colbreakout";
+            this.colbreakout.Visible = true;
+            this.colbreakout.VisibleIndex = 5;
+            this.colbreakout.Width = 145;
             // 
             // repositoryItemProgressBar1
             // 
@@ -676,6 +698,8 @@
         private  DevExpress.Utils.ImageCollection priorityImageList;
         private DevExpress.XtraGrid.Columns.GridColumn StartDate;
         private DevExpress.XtraGrid.Columns.GridColumn colEnter;
+        private DevExpress.XtraGrid.Columns.GridColumn colbreakin;
+        private DevExpress.XtraGrid.Columns.GridColumn colbreakout;
 
 
 

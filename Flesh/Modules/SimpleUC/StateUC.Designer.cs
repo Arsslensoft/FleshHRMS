@@ -16,13 +16,19 @@
             this.stateLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.stateLookUpEdit.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // stateLookUpEdit
+            // 
             this.stateLookUpEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stateLookUpEdit.Location = new System.Drawing.Point(0, 0);
             this.stateLookUpEdit.Name = "stateLookUpEdit";
             this.stateLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.stateLookUpEdit.Size = new System.Drawing.Size(300, 40);
+            this.stateLookUpEdit.Size = new System.Drawing.Size(300, 42);
             this.stateLookUpEdit.TabIndex = 0;
+            // 
+            // StateUC
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.stateLookUpEdit);

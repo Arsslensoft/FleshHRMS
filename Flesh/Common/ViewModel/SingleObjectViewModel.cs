@@ -218,7 +218,7 @@ namespace FHRMS.Common.ViewModel {
 
         protected TPrimaryKey PrimaryKey { get; private set; }
 
-        protected IMessageBoxService MessageBoxService { get { return this.GetRequiredService<IMessageBoxService>(); } }
+        internal IMessageBoxService MessageBoxService { get { return this.GetRequiredService<IMessageBoxService>(); } }
 
         protected virtual void OnParameterChanged(object parameter) {
             IEntityInitializer<TEntity, TUnitOfWork> initializer = parameter as IEntityInitializer<TEntity, TUnitOfWork>;
