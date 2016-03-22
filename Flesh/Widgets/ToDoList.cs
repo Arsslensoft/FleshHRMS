@@ -16,16 +16,16 @@ namespace FHRMS.Widgets
 {
     interface IDashboardWidget
     {
-        NotificationCollectionViewModel ViewModel { set; }
+        Dashboard Dashboard { set; }
     }
 
     public partial class ToDoList : UserControl, IDashboardWidget
     {
-        public NotificationCollectionViewModel ViewModel
+        public Dashboard Dashboard
         { 
             set {
            
-                gridControl1.SetItemsSource(value.Entities);
+                gridControl1.SetItemsSource(value.ViewModel.Entities);
             }
         
         }

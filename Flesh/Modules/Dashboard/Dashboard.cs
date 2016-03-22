@@ -28,8 +28,31 @@ namespace FHRMS.Modules
             widgetView1.QueryControl += OnQueryControl;
             SetWidgetsAppearances();
         }
-    
-   
+        EmployeeCollectionViewModel empViewModel;
+        public EmployeeCollectionViewModel EmployeeViewModel
+        {
+            get { return TryGetModuleViewModel<EmployeeCollectionViewModel>(ref empViewModel, ModuleType.Employés); }
+        }
+        public MainViewModel MainViewModel
+        {
+            get { return GetParentViewModel<MainViewModel>(); }
+        }
+        LeaveCollectionViewModel tasksViewModel;
+        public LeaveCollectionViewModel TasksViewModel
+        {
+            get { return TryGetModuleViewModel<LeaveCollectionViewModel>(ref tasksViewModel, ModuleType.Congés); }
+        }
+        EvaluationCollectionViewModel notesViewModel;
+        public EvaluationCollectionViewModel NotesViewModel
+        {
+            get { return TryGetModuleViewModel<EvaluationCollectionViewModel>(ref notesViewModel, ModuleType.Notes); }
+        }
+        AttendancesCollectionViewModel attViewModel;
+        public AttendancesCollectionViewModel AttendancesViewModel
+        {
+            get { return TryGetModuleViewModel<AttendancesCollectionViewModel>(ref attViewModel, ModuleType.Attendances); }
+        }
+
         protected override void OnLoad(EventArgs e)
         {
           
@@ -43,7 +66,7 @@ namespace FHRMS.Modules
             {
                 e.Control = Activator.CreateInstance(Type.GetType(e.Document.ControlTypeName)) as Control;
                 if (e.Control is IDashboardWidget)
-                    ((IDashboardWidget)e.Control).ViewModel = ViewModel;
+                    ((IDashboardWidget)e.Control).Dashboard = this;
                 
             }
             else
@@ -99,6 +122,7 @@ namespace FHRMS.Modules
         {
             base.OnTransitionCompleted();
             InitializeButtonPanel();
+         
 
         }
         private void InitializeButtonPanel()

@@ -1,3 +1,18 @@
 Calcul de statistiques
 Automatisme
 Access Control
+
+**********************************
+Change reports
+translate hole project to french
+Rename Evaluations to absences
+Rename Notes to absences
+Rename Tasks to leaves
+Rename Pointage to Attendance
+Add Statistics Control
+Remake Dashboard
+Add Login screen
+Display by Role (Director/Manager)
+Change icons
+
+Change database name

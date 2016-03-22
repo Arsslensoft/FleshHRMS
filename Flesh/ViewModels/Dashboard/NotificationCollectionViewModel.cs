@@ -26,8 +26,10 @@ namespace FHRMS.ViewModels {
         }
         public NotificationCollectionViewModel()
             : this(DbUnitOfWorkFactory.Instance) {
-        }
 
+        }
+        
+    
 
     }
 }
