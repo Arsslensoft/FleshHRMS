@@ -5,7 +5,6 @@ Access Control
 **********************************
 Change reports
 translate hole project to french
-Rename Evaluations to absences
 Rename Notes to absences
 Rename Tasks to leaves
 Rename Pointage to Attendance

@@ -234,6 +234,12 @@
     <Compile Include="Helpers\ItemsHideHelper.cs" />
     <Compile Include="Helpers\ItemsSourceExtensions.cs" />
     <Compile Include="Helpers\LabelTabController.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Absence\ImprimerAbsence.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -390,6 +396,12 @@
     <Compile Include="Modules\Avertissements\ModifierAvertissement.Designer.cs">
       <DependentUpon>ModifierAvertissement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Statistiques\Statistiques.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Statistiques\Statistiques.Designer.cs">
+      <DependentUpon>Statistiques.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -437,10 +449,11 @@
     <Compile Include="ViewModels\Avertissements\WarningsCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Avertissements\WarningsViewModel.cs" />
     <Compile Include="ViewModels\Avertissements\WarningsViewModel.partial.cs" />
-    <Compile Include="ViewModels\Dashboard\NotificationCollectionViewModel.cs" />
-    <Compile Include="ViewModels\Dashboard\NotificationCollectionViewModel.partial.cs" />
-    <Compile Include="ViewModels\Dashboard\NotificationViewModel.cs" />
-    <Compile Include="ViewModels\Dashboard\NotificationViewModel.partial.cs" />
+    <Compile Include="ViewModels\Dashboard\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\Notifications\NotificationCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Notifications\NotificationCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Notifications\NotificationViewModel.cs" />
+    <Compile Include="ViewModels\Notifications\NotificationViewModel.partial.cs" />
     <Compile Include="ViewModels\Schedule\ScheduleCollectionViewModel.cs" />
     <Compile Include="ViewModels\Schedule\ScheduleCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Schedule\ScheduleViewModel.cs" />
@@ -458,10 +471,6 @@
     <Compile Include="ViewModels\Employé\EmployeesReportViewModel.cs" />
     <Compile Include="ViewModels\Employé\EmployeeViewModel.cs" />
     <Compile Include="ViewModels\Employé\EmployeeViewModel.partial.cs" />
-    <Compile Include="ViewModels\Evaluation\EvaluationCollectionViewModel.cs" />
-    <Compile Include="ViewModels\Evaluation\EvaluationCollectionViewModel.partial.cs" />
-    <Compile Include="ViewModels\Evaluation\EvaluationViewModel.cs" />
-    <Compile Include="ViewModels\Evaluation\EvaluationViewModel.partial.cs" />
     <Compile Include="ViewModels\Interfaces.cs" />
     <Compile Include="ViewModels\MailMergeTemplatesHelper.cs" />
     <Compile Include="ViewModels\MailMergeViewModelBase.cs" />
@@ -479,35 +488,65 @@
     <Compile Include="Widgets\Clock.designer.cs">
       <DependentUpon>Clock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Widgets\NotificationItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\NotificationItem.designer.cs">
+      <DependentUpon>NotificationItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Widgets\Mail.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Widgets\Mail.Designer.cs">
       <DependentUpon>Mail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Widgets\News.cs">
+    <Compile Include="Widgets\NotificationWidget.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Widgets\News.designer.cs">
-      <DependentUpon>News.cs</DependentUpon>
+    <Compile Include="Widgets\NotificationWidget.designer.cs">
+      <DependentUpon>NotificationWidget.cs</DependentUpon>
     </Compile>
-    <Compile Include="Widgets\ToDoList.cs">
+    <Compile Include="Widgets\Stats\AbsenceWidget.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Widgets\ToDoList.designer.cs">
-      <DependentUpon>ToDoList.cs</DependentUpon>
+    <Compile Include="Widgets\Stats\AbsenceWidget.designer.cs">
+      <DependentUpon>AbsenceWidget.cs</DependentUpon>
     </Compile>
-    <Compile Include="Widgets\ucChartProductItem.cs">
+    <Compile Include="Widgets\Stats\AbsenceByDateWidget.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Widgets\ucChartProductItem.designer.cs">
-      <DependentUpon>ucChartProductItem.cs</DependentUpon>
+    <Compile Include="Widgets\Stats\AbsenceByDateWidget.designer.cs">
+      <DependentUpon>AbsenceByDateWidget.cs</DependentUpon>
     </Compile>
-    <Compile Include="Widgets\Weather.cs">
+    <Compile Include="Widgets\Stats\EmployeeStatsWidget.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Widgets\Weather.designer.cs">
-      <DependentUpon>Weather.cs</DependentUpon>
+    <Compile Include="Widgets\Stats\EmployeeStatsWidget.designer.cs">
+      <DependentUpon>EmployeeStatsWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Stats\LeaveByTypeWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Stats\LeaveByTypeWidget.designer.cs">
+      <DependentUpon>LeaveByTypeWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Stats\LeaveByStatusWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Stats\LeaveByStatusWidget.designer.cs">
+      <DependentUpon>LeaveByStatusWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Stats\WarningsWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Stats\WarningsWidget.designer.cs">
+      <DependentUpon>WarningsWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Stats\GlobalStatsWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Stats\GlobalStatsWidget.designer.cs">
+      <DependentUpon>GlobalStatsWidget.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Common\CommonResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -515,6 +554,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FleshSplashScreen.resx">
       <DependentUpon>FleshSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Absence\ImprimerAbsence.resx">
       <DependentUpon>ImprimerAbsence.cs</DependentUpon>
@@ -592,26 +634,44 @@
     <EmbeddedResource Include="Modules\Congé\Congé.resx">
       <DependentUpon>Congé.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Statistiques\Statistiques.resx">
+      <DependentUpon>Statistiques.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Widgets\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widgets\Clock.resx">
       <DependentUpon>Clock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\NotificationItem.resx">
+      <DependentUpon>NotificationItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Widgets\Mail.resx">
       <DependentUpon>Mail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Widgets\News.resx">
-      <DependentUpon>News.cs</DependentUpon>
+    <EmbeddedResource Include="Widgets\NotificationWidget.resx">
+      <DependentUpon>NotificationWidget.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Widgets\ToDoList.resx">
-      <DependentUpon>ToDoList.cs</DependentUpon>
+    <EmbeddedResource Include="Widgets\Stats\AbsenceWidget.resx">
+      <DependentUpon>AbsenceWidget.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Widgets\ucChartProductItem.resx">
-      <DependentUpon>ucChartProductItem.cs</DependentUpon>
+    <EmbeddedResource Include="Widgets\Stats\AbsenceByDateWidget.resx">
+      <DependentUpon>AbsenceByDateWidget.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Widgets\Weather.resx">
-      <DependentUpon>Weather.cs</DependentUpon>
+    <EmbeddedResource Include="Widgets\Stats\EmployeeStatsWidget.resx">
+      <DependentUpon>EmployeeStatsWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Stats\LeaveByTypeWidget.resx">
+      <DependentUpon>LeaveByTypeWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Stats\LeaveByStatusWidget.resx">
+      <DependentUpon>LeaveByStatusWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Stats\WarningsWidget.resx">
+      <DependentUpon>WarningsWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Stats\GlobalStatsWidget.resx">
+      <DependentUpon>GlobalStatsWidget.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
@@ -802,9 +862,7 @@
       <Name>FHRMS.Data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modules\Statistiques\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
   </PropertyGroup>

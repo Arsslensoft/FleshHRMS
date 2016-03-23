@@ -9,7 +9,8 @@ using DevExpress.Mvvm;
 namespace FHRMS.Modules {
     public partial class ModifierAbsence : BaseModuleControl {
         public ModifierAbsence()
-            : base(CreateViewModel<EvaluationViewModel>) {
+            : base(CreateViewModel<AbsencesViewModel>)
+        {
             InitializeComponent();
             ViewModel.EntityChanged += ViewModel_EntityChanged;
             InitLookupEditors();
@@ -20,8 +21,8 @@ namespace FHRMS.Modules {
             ViewModel.EntityChanged -= ViewModel_EntityChanged;
             base.OnDisposing();
         }
-        public EvaluationViewModel ViewModel {
-            get { return GetViewModel<EvaluationViewModel>(); }
+        public AbsencesViewModel ViewModel {
+            get { return GetViewModel<AbsencesViewModel>(); }
         }
         protected override void UpdateViewModel() {
             ViewModel.ValidationErrors = errorProvider.HasErrors;
@@ -78,15 +79,7 @@ namespace FHRMS.Modules {
         public static Employee AbsenceOwner { get; set; }
         public static Employee AbsenceCreator { get; set; }
     }
-    public class Notes : BaseModuleControl {
-        public Notes()
-            : base(CreateViewModel<EvaluationCollectionViewModel>) {
-        }
-        protected override void OnInitServices( DevExpress.Mvvm.IServiceContainer serviceContainer) {
-            base.OnInitServices(serviceContainer);
-            serviceContainer.RegisterService(new FlyoutDetailFormDocumentManagerService(ModuleType.ModifierAbsence));
-        }
-    }
+   
     public class Shifts : BaseModuleControl
     {
         public Shifts()
@@ -99,5 +92,16 @@ namespace FHRMS.Modules {
          serviceContainer.RegisterService(new FlyoutDetailFormDocumentManagerService(ModuleType.ModifierPlaning));
         }
     }
-
+    public class Notifications : BaseModuleControl
+    {
+        public Notifications()
+            : base(CreateViewModel<NotificationCollectionViewModel>)
+        {
+        }
+        protected override void OnInitServices(DevExpress.Mvvm.IServiceContainer serviceContainer)
+        {
+            base.OnInitServices(serviceContainer);
+ 
+        }
+    }
 }

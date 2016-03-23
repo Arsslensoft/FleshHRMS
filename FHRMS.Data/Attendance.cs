@@ -39,6 +39,7 @@ namespace FHRMS.Data
 
     
         public DateTime Date { get; set; }
+ 
         public TimeSpan TimeIn { get; set; }
         public TimeSpan TimeOut { get; set; }
         public TimeSpan BreakIn { get; set; }
@@ -50,7 +51,7 @@ namespace FHRMS.Data
             get
             {
                 if (Type != AttendanceType.EnterOnly)
-                    return TimeOut - TimeIn;
+                    return TimeOut - TimeIn - (BreakOut - BreakIn);
                 else return new TimeSpan(0);
             }
         }

@@ -43,7 +43,7 @@ namespace FHRMS {
             this.absencesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.attendanceTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.warningsTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.opportunitiesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.statsTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.transitionManager1 = new DevExpress.Utils.Animation.TransitionManager();
             this.bottomPanelBase1 = new FHRMS.Modules.BottomPanelBase();
             this.flyoutPanel1 = new DevExpress.Utils.FlyoutPanel();
@@ -203,7 +203,7 @@ namespace FHRMS {
             this.tileBarGroup3.Items.Add(this.absencesTileBarItem);
             this.tileBarGroup3.Items.Add(this.attendanceTileBarItem);
             this.tileBarGroup3.Items.Add(this.warningsTileBarItem);
-            this.tileBarGroup3.Items.Add(this.opportunitiesTileBarItem);
+            this.tileBarGroup3.Items.Add(this.statsTileBarItem);
             this.tileBarGroup3.Name = "tileBarGroup3";
             this.tileBarGroup3.Text = "OPERATIONS";
             // 
@@ -244,16 +244,16 @@ namespace FHRMS {
             this.warningsTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.warningsTileBarItem.Name = "warningsTileBarItem";
             // 
-            // opportunitiesTileBarItem
+            // statsTileBarItem
             // 
-            this.opportunitiesTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.opportunitiesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.statsTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.statsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement7.Image")));
             tileItemElement7.Text = "Statistiques";
-            this.opportunitiesTileBarItem.Elements.Add(tileItemElement7);
-            this.opportunitiesTileBarItem.Id = 6;
-            this.opportunitiesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.opportunitiesTileBarItem.Name = "opportunitiesTileBarItem";
+            this.statsTileBarItem.Elements.Add(tileItemElement7);
+            this.statsTileBarItem.Id = 6;
+            this.statsTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.statsTileBarItem.Name = "statsTileBarItem";
             // 
             // transitionManager1
             // 
@@ -378,7 +378,7 @@ namespace FHRMS {
         private DevExpress.XtraBars.Navigation.TileBarItem absencesTileBarItem;
         private DevExpress.XtraBars.Navigation.TileBarItem attendanceTileBarItem;
         private DevExpress.XtraBars.Navigation.TileBarItem warningsTileBarItem;
-        private DevExpress.XtraBars.Navigation.TileBarItem opportunitiesTileBarItem;
+        private DevExpress.XtraBars.Navigation.TileBarItem statsTileBarItem;
         private DevExpress.XtraBars.Navigation.NavButton navButtonHome;
         public Modules.BottomPanelBase bottomPanelBase1;
         private DevExpress.Utils.FlyoutPanel flyoutPanel1;

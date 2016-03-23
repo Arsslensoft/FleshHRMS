@@ -80,8 +80,10 @@ namespace FHRMS.Data
         {
             get
             {
-
-                return End - Start;
+                if (ShiftKind == ShiftType.Continuous)
+                    return (End - Start).Subtract(new TimeSpan(1, 0, 0));
+                else
+                    return End - Start;
             }
         }
      

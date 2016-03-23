@@ -125,9 +125,10 @@ namespace FHRMS.Modules {
         public LeaveCollectionViewModel TasksViewModel {
             get { return TryGetModuleViewModel<LeaveCollectionViewModel>(ref tasksViewModel, ModuleType.Congés); }
         }
-        EvaluationCollectionViewModel notesViewModel;
-        public EvaluationCollectionViewModel NotesViewModel {
-            get { return TryGetModuleViewModel<EvaluationCollectionViewModel>(ref notesViewModel, ModuleType.Notes); }
+        AbsencesCollectionViewModel notesViewModel;
+        public AbsencesCollectionViewModel NotesViewModel
+        {
+            get { return TryGetModuleViewModel<AbsencesCollectionViewModel>(ref notesViewModel, ModuleType.Absences); }
         }
         void InitializeButtonPanel() {
             var listBI = new List<ButtonInfo>();

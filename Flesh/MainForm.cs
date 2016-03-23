@@ -36,12 +36,15 @@ namespace FHRMS {
         }
         void MainForm_Load(object sender, EventArgs e) {
             InitTileBar();
-            mainTileBar.SelectedItem = employeesTileBarItem;
+            //Login lg = new Login(viewModel);
+            //lg.ShowDialog();
+            mainTileBar.SelectedItem = dashboardTileBarItem;
             viewModel.SelectModule(ModuleType.Dashboard);
        
            // DevExpress.XtraSplashScreen.SplashScreenManager.CloseDefaultSplashScreen();
 
         }
+    
         void InitViewModel() {
             viewModel = ViewModelSource.Create(() => new MainViewModel(this));
             PrefetchChildModules();
@@ -128,6 +131,7 @@ namespace FHRMS {
             absencesTileBarItem.Tag = ModuleType.Absences;
             attendanceTileBarItem.Tag = ModuleType.Attendances;
             warningsTileBarItem.Tag = ModuleType.Avertissements;
+            statsTileBarItem.Tag = ModuleType.Statistiques;
         }
         bool transitionEffective = false;
         public void StartTransition(bool effective) {

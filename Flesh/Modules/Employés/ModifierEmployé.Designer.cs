@@ -1118,11 +1118,11 @@
             // 
             this.ItemForEvaluations.BestFitWeight = 200;
             this.ItemForEvaluations.Control = this.personalProfileTextEdit;
-            this.ItemForEvaluations.CustomizationFormText = "Evaluations";
+            this.ItemForEvaluations.CustomizationFormText = "Absences";
             this.ItemForEvaluations.Location = new System.Drawing.Point(843, 45);
             this.ItemForEvaluations.Name = "ItemForEvaluations";
             this.ItemForEvaluations.Size = new System.Drawing.Size(176, 516);
-            this.ItemForEvaluations.Text = "Evaluations";
+            this.ItemForEvaluations.Text = "Absences";
             this.ItemForEvaluations.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForEvaluations.TextVisible = false;
             // 

@@ -48,7 +48,7 @@
             this.btnExcludeEvaluations.StyleController = this.settingsLayout;
             this.btnExcludeEvaluations.TabIndex = 2;
             this.btnExcludeEvaluations.TabStop = false;
-            this.btnExcludeEvaluations.Text = "Exclude Evaluations";
+            this.btnExcludeEvaluations.Text = "Exclude Absences";
             this.btnExcludeEvaluations.Click += new System.EventHandler(this.buttonSettings_Click);
             this.settingsLayout.Controls.Add(this.btnIncudeEvaluations);
             this.settingsLayout.Controls.Add(this.btnExcludeEvaluations);
@@ -70,7 +70,7 @@
             this.btnIncudeEvaluations.Size = new System.Drawing.Size(257, 40);
             this.btnIncudeEvaluations.StyleController = this.settingsLayout;
             this.btnIncudeEvaluations.TabIndex = 2;
-            this.btnIncudeEvaluations.Text = "Include Evaluations";
+            this.btnIncudeEvaluations.Text = "Include Absences";
             this.btnIncudeEvaluations.Click += new System.EventHandler(this.buttonSettings_Click);
             this.Root.CustomizationFormText = "Root";
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.False;

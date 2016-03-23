@@ -416,7 +416,7 @@ namespace FHRMS.Reports {
             this.xrTableCell4.StylePriority.UseForeColor = false;
             this.xrTableCell4.StylePriority.UsePadding = false;
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
-            this.xrTableCell4.Text = "Employee Evaluations";
+            this.xrTableCell4.Text = "Employee Absences";
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell4.Weight = 0.79745375929065565D;
             this.xrTableCell5.Name = "xrTableCell5";

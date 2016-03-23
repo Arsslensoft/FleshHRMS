@@ -36,8 +36,8 @@ namespace FHRMS {
         ModifierPlaning,
 
 
- 
-        Notes,
+        Statistiques,
+        Notifications,
         Shifts
 
     }

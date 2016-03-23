@@ -15,11 +15,11 @@ using FHRMS.Widgets;
 namespace FHRMS.Modules
 {
   
-    public partial class Dashboard : BaseModuleControl
+    public partial class Statistiques : BaseModuleControl
     {
    
         Random random = new Random();
-        public Dashboard()
+        public Statistiques()
             : base(CreateViewModel<BoardViewModel>)
         {
             InitializeComponent();

@@ -54,8 +54,8 @@ namespace FHRMS.Data {
     }
     public partial class Employee : DatabaseObject {
         public Employee() {
-            AssignedTasks = new List<Leave>();
-            OwnedTasks = new List<Leave>();
+            AssignedLeaves = new List<Leave>();
+            OwnedLeaves = new List<Leave>();
             Shifts = new List<Shift>();
             Address = new Address();
             Credential = new Credential();
@@ -68,11 +68,11 @@ namespace FHRMS.Data {
         [Display(Name = "Hire Date")]
         public DateTime? HireDate { get; set; }
         [InverseProperty("AssignedEmployee")]
-        public virtual List<Leave> AssignedTasks { get; set; }
+        public virtual List<Leave> AssignedLeaves { get; set; }
         [InverseProperty("Owner")]
-        public virtual List<Leave> OwnedTasks { get; set; }
+        public virtual List<Leave> OwnedLeaves { get; set; }
         [InverseProperty("Employee")]
-        public virtual List<Absence> Evaluations { get; set; }
+        public virtual List<Absence> Absences { get; set; }
         [InverseProperty("Employee")]
         public virtual List<Shift> Shifts { get; set; }
    

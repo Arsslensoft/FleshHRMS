@@ -9,7 +9,7 @@ using FHRMS.Common.ViewModel;
 
 namespace FHRMS.ViewModels {
     /// <summary>
-    /// Represents the Evaluations collection view model.
+    /// Represents the Absences collection view model.
     /// </summary>
     public partial class ScheduleCollectionViewModel : CollectionViewModel<Shift, long, IDevAVDbUnitOfWork> {
 

@@ -122,6 +122,20 @@
             }
             return moduleViewModel;
         }
+        protected TViewModel TryGetModuleViewModel<TViewModel>(ModuleType moduleType) where TViewModel : class
+        {
+            TViewModel moduleViewModel = null;
+         
+                var module = GetService<Services.IModuleLocator>().GetModule(moduleType);
+                if (module != null)
+                {
+                    object mainViewModel = ((DevExpress.Mvvm.ISupportParentViewModel)viewModelCore).ParentViewModel;
+                    moduleViewModel = ((ISupportViewModel)module).ViewModel as TViewModel;
+                    ViewModelHelper.EnsureViewModel(moduleViewModel, mainViewModel);
+                }
+            
+            return moduleViewModel;
+        }
         protected TService GetService<TService>() where TService : class {
             var serviceContainer = GetServiceContainer();
             return (serviceContainer != null) ? serviceContainer.GetService<TService>() : null;

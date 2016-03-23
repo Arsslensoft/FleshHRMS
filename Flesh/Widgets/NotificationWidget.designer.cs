@@ -1,5 +1,6 @@
-﻿namespace FHRMS.Widgets{
-    partial class Weather {
+﻿namespace FHRMS.Widgets
+{
+    partial class NotificationWidget {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -25,17 +26,23 @@
         private void InitializeComponent() {
             this.SuspendLayout();
             // 
-            // Weather
+            // NotificationWidget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "Weather";
-            this.Size = new System.Drawing.Size(340, 256);
+            this.AutoScroll = true;
+            this.Name = "NotificationWidget";
+            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Size = new System.Drawing.Size(598, 353);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+
+
+
 
     }
 }

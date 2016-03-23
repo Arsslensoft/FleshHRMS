@@ -1,6 +1,7 @@
 ﻿namespace FHRMS.Widgets
 {
-    partial class ucChartProductItem {
+    partial class WarningsWidget
+    {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -26,10 +27,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.monthlySalesItemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // monthlySalesItemBindingSource
-            // 
-            this.monthlySalesItemBindingSource.DataSource = typeof(FHRMS.Widgets.DailyAbsence);
+
             // 
             // chartControl1
             // 
@@ -43,7 +41,6 @@
             swiftPlotDiagram1.AxisX.DateTimeScaleOptions.GridOffset = 1D;
             swiftPlotDiagram1.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual;
             swiftPlotDiagram1.AxisX.Label.ResolveOverlappingOptions.MinIndent = 2;
-            swiftPlotDiagram1.AxisX.Label.TextPattern = "{A:MMMM}";
             swiftPlotDiagram1.AxisX.MinorCount = 5;
             swiftPlotDiagram1.AxisX.Tickmarks.MinorLength = 1;
             swiftPlotDiagram1.AxisX.Tickmarks.Thickness = 2;
@@ -55,12 +52,12 @@
             swiftPlotDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl1.Diagram = swiftPlotDiagram1;
             // 
-            // ucChartProductItem
+            // AbsenceWidget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.chartControl1);
-            this.Name = "ucChartProductItem";
+           
+            this.Name = "AbsenceWidget";
             this.Size = new System.Drawing.Size(764, 415);
             ((System.ComponentModel.ISupportInitialize)(this.monthlySalesItemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();

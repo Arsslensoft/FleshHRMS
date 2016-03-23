@@ -5,6 +5,8 @@
 
     public delegate void ModuleInitializeMethod(object module);
     public class MainViewModel : DevExpress.Mvvm.ViewModelBase {
+
+  
         static MainViewModel() {
             DevExpress.Mvvm.ServiceContainer.Default.RegisterService(new Services.Win.ModuleResourceProvider());
             DevExpress.Mvvm.ServiceContainer.Default.RegisterService(new Services.MessageBoxService());
@@ -113,6 +115,21 @@
                     ModuleAdded(SelectedModule, EventArgs.Empty);
                 }
             }
+        }
+
+        public TViewModel TryGetModuleViewModel<TViewModel>(ModuleType moduleType) where TViewModel : class
+        {
+            TViewModel moduleViewModel = null;
+
+            var module = GetService<Services.IModuleLocator>().GetModule(moduleType);
+            if (module != null)
+            {
+         
+                moduleViewModel = ((FHRMS.Modules.ISupportViewModel)module).ViewModel as TViewModel;
+                ViewModelHelper.EnsureViewModel(moduleViewModel, this);
+            }
+
+            return moduleViewModel;
         }
         public event EventHandler ModuleAdded;
         public event EventHandler ModuleRemoved;
