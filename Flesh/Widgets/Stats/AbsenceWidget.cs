@@ -33,11 +33,12 @@ namespace FHRMS.Widgets
         public ChartControl GetAbsenceByTypeChartControl(BoardViewModel value)
         {
             System.ComponentModel.DataAnnotations.DisplayAttribute dispatt = null;
+            var data = CacheStats(value);
             // Create an empty chart.
             ChartControl pieChart = new ChartControl();
             // Create a pie series.
             Series series1 = new Series("Absences par types", ViewType.Pie);
-            foreach (var at in value.AbsencesByType)
+            foreach (var at in data)
             {
                 dispatt = null;
                 series1.Points.Add(new SeriesPoint((dispatt=GetAttribute < System.ComponentModel.DataAnnotations.DisplayAttribute >( at.Type)) !=null?dispatt.Name:at.Type.ToString(), at.Percentage * 100));
@@ -73,7 +74,52 @@ namespace FHRMS.Widgets
 
             return pieChart;
         }
-        
+        IEnumerable<PercentageStats<Data.AbsenceType>> CacheStats(BoardViewModel bv)
+        {
+            IEnumerable<PercentageStats<Data.AbsenceType>> result = null;
+            string filename = Application.StartupPath + "\\Data\\abstypestats.dat";
+            if (System.IO.File.Exists(filename))
+            {
+
+                if (DateTime.Now.Subtract(new System.IO.FileInfo(filename).LastWriteTime).TotalDays >= 1)
+                {
+                    result = bv.AbsencesByType;
+
+                    System.IO.File.Delete(filename);
+
+                    System.IO.Stream stream = System.IO.File.Open(filename, System.IO.FileMode.Create);
+                    System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+
+
+                    bformatter.Serialize(stream, result);
+                    stream.Close();
+                }
+                else // deserialize
+                {
+
+                    System.IO.Stream stream = System.IO.File.Open(filename, System.IO.FileMode.Open);
+                    System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+
+                    result = (IEnumerable<PercentageStats<Data.AbsenceType>>)bformatter.Deserialize(stream);
+                    stream.Close();
+
+                }
+            }
+            else
+            {
+                result = bv.AbsencesByType;
+
+                System.IO.Stream stream = System.IO.File.Open(filename, System.IO.FileMode.Create);
+                System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+
+
+                bformatter.Serialize(stream, result);
+                stream.Close();
+
+            }
+
+            return result;
+        }
 
         public  void LoadDashboard(BoardViewModel value)
         {

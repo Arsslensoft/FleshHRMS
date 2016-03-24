@@ -31,17 +31,19 @@ namespace FHRMS {
         }
 
         void ShowSplashScreen() {
-           // DevExpress.XtraSplashScreen.SplashScreenManager.ShowDefaultSplashScreen(this, true, true, "DevExpress WinForms Controls", "When Only the Best Will Do");
           DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this,typeof( FleshSplashScreen),true,true,false);
+             
         }
+   
         void MainForm_Load(object sender, EventArgs e) {
             InitTileBar();
             //Login lg = new Login(viewModel);
             //lg.ShowDialog();
             mainTileBar.SelectedItem = dashboardTileBarItem;
+            FHRMS.Modules.Dashboard.MainView = viewModel;
             viewModel.SelectModule(ModuleType.Dashboard);
-       
-           // DevExpress.XtraSplashScreen.SplashScreenManager.CloseDefaultSplashScreen();
+            
+      
 
         }
     
@@ -85,7 +87,7 @@ namespace FHRMS {
         }
 
         void viewModel_ModuleTransitionCompleted(object sender, EventArgs e) {
-
+       
         }
         void ChangeToSlideAnimation() {
             transitionManager1.Transitions.Clear();

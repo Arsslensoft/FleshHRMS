@@ -28,12 +28,11 @@ namespace FHRMS.Data {
 
 
 
-        static string filePath;
 
         static DbConnection CreateConnection() {
-            if(filePath == null)
-                filePath = DataDirectoryHelper.GetFile("devav.sqlite3", DataDirectoryHelper.DataFolderName);
-            File.SetAttributes(filePath, File.GetAttributes(filePath) & ~FileAttributes.ReadOnly);
+            //if(filePath == null)
+            //    filePath = DataDirectoryHelper.GetFile("devav.sqlite3", DataDirectoryHelper.DataFolderName);
+            //File.SetAttributes(filePath, File.GetAttributes(filePath) & ~FileAttributes.ReadOnly);
             var connection = DbProviderFactories.GetFactory("MySql.Data.MySqlClient").CreateConnection();
             connection.ConnectionString = "Server=localhost;Database=test;Uid=root;Pwd=;";
             return connection;

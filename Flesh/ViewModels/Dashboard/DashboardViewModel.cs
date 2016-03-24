@@ -5,6 +5,7 @@
     using System.Collections.Generic;
     using System.Linq;
 using FHRMS.Data;
+using System.Runtime.Serialization;
     
     public class BoardViewModel : DevExpress.Mvvm.ViewModelBase {
 
@@ -16,6 +17,8 @@ using FHRMS.Data;
         public EmployeeCollectionViewModel EmployeesViewModel { get; set; }
         public ScheduleCollectionViewModel SchedulesViewModel { get; set; }
         public NotificationCollectionViewModel NotificationsViewModel { get; set; }
+
+
 
         #region Statistics
 
@@ -51,23 +54,7 @@ using FHRMS.Data;
                 return result;
             }
         }
-        public double AbsencesRate
-        {
-            get
-            {
-                var abs = from p in AbsenceViewModel.Entities
-                          group p.Id by p.StartDate.Date into g
-                          select new { AbsenceDate = g.Key, Absences = g.ToList() };
-
-                double rate = 0;
-                foreach (var item in abs)
-                    rate += (item.Absences.Count / EmployeesViewModel.Entities.Count) * 100;
-
-                rate /= abs.Count();
-                return rate;
-            }
-        }
-
+   
         public IEnumerable<PercentageStats<LeaveType>> LeavesByType
         {
             get
@@ -279,6 +266,7 @@ using FHRMS.Data;
         #endregion
     }
     #region Statistics Classes
+    [Serializable]
     public class PercentageStats<T>
     {
         public PercentageStats(T d, double c )
@@ -289,6 +277,7 @@ using FHRMS.Data;
         public T Type { get; set; }
         public double Percentage { get; set; }
     }
+    [Serializable]
     public class DailyAbsence
     {
         public DailyAbsence(DateTime d, int c)
@@ -311,6 +300,7 @@ using FHRMS.Data;
         [System.ComponentModel.DataAnnotations.Display(Name = "Retards")]
         Late
     }
+        [Serializable()]    //Set this attribute to all the classes that want to serialize
     public class WorkTime : IEquatable<WorkTime>
     {
 

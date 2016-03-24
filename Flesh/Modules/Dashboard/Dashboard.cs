@@ -17,8 +17,10 @@ namespace FHRMS.Modules
   
     public partial class Dashboard : BaseModuleControl
     {
-   
+    
+        static public MainViewModel MainView = null;
         Random random = new Random();
+  
         public Dashboard()
             : base(CreateViewModel<BoardViewModel>)
         {
@@ -27,6 +29,11 @@ namespace FHRMS.Modules
             widgetView1.AllowDocumentStateChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             widgetView1.QueryControl += OnQueryControl;
             SetWidgetsAppearances();
+
+            
+            ViewModelHelper.EnsureViewModel(ViewModel, MainView);
+            InitializeViewModels();
+     
         }
        
    
@@ -45,7 +52,7 @@ namespace FHRMS.Modules
                 e.Control = Activator.CreateInstance(Type.GetType(e.Document.ControlTypeName)) as Control;
                 if (e.Control is IDashboardWidget)
                 {
-                    InitializeViewModels();
+                 
                     ((IDashboardWidget)e.Control).LoadDashboard( ViewModel);
                 }
             }
@@ -104,6 +111,7 @@ namespace FHRMS.Modules
                 ViewModel.SchedulesViewModel = TryGetModuleViewModel<ScheduleCollectionViewModel>(ModuleType.Shifts);
                 ViewModel.WarningsViewModel = TryGetModuleViewModel<WarningsCollectionViewModel>(ModuleType.Avertissements);
                 init = true;
+        
             }
 
         }
@@ -112,7 +120,7 @@ namespace FHRMS.Modules
         {
             base.OnTransitionCompleted();
             InitializeButtonPanel();
-    
+
 
         }
         private void InitializeButtonPanel()

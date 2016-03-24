@@ -4,6 +4,9 @@ using System;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Linq;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections.Generic;
 namespace FHRMS.Widgets{
     public partial class GlobalStatsWidget : UserControl, IDashboardWidget
     {
@@ -23,7 +26,7 @@ namespace FHRMS.Widgets{
         }
         public ChartControl GetWorkTimeChartControl(BoardViewModel value)
         {
-
+            IEnumerable<WorkTime> data = CacheStats(value);
             // Create an empty chart.
             ChartControl swiftChart = new ChartControl();
             //// Create a pie series.
@@ -32,7 +35,7 @@ namespace FHRMS.Widgets{
             Series series3 = new Series("Temps supplémentaires", ViewType.FullStackedBar);
             Series series4 = new Series("Temps d'absence", ViewType.FullStackedBar);
             Series series5 = new Series("Temps de congés", ViewType.FullStackedBar);
-            foreach (var at in value.TotalWorkTime)
+            foreach (var at in data)
             {
 
                 series1.Points.Add(new SeriesPoint(at.Date, at.TotalWorkingTime.TotalHours));
@@ -69,7 +72,52 @@ namespace FHRMS.Widgets{
 
             return swiftChart;
         }
+        IEnumerable<WorkTime> CacheStats(BoardViewModel bv)
+        {
+            IEnumerable<WorkTime> result = null;
+            if (File.Exists(Application.StartupPath + "\\Data\\globalstats.dat"))
+            {
 
+                if (DateTime.Now.Subtract(new FileInfo(Application.StartupPath + "\\Data\\globalstats.dat").LastWriteTime).TotalDays >= 1)
+                {
+                    result = bv.TotalWorkTime;
+
+                    File.Delete(Application.StartupPath + "\\Data\\globalstats.dat");
+
+                    Stream stream = File.Open(Application.StartupPath + "\\Data\\globalstats.dat", FileMode.Create);
+                    BinaryFormatter bformatter = new BinaryFormatter();
+
+
+                    bformatter.Serialize(stream, result);
+                    stream.Close();
+                }
+                else // deserialize
+                {
+
+                    Stream stream = File.Open(Application.StartupPath + "\\Data\\globalstats.dat", FileMode.Open);
+                    BinaryFormatter bformatter = new BinaryFormatter();
+
+                    result = (IEnumerable<WorkTime>)bformatter.Deserialize(stream);
+                    stream.Close();
+        
+                }
+            }
+            else
+            {
+                result = bv.TotalWorkTime;
+
+                Stream stream = File.Open(Application.StartupPath + "\\Data\\globalstats.dat", FileMode.Create);
+                BinaryFormatter bformatter = new BinaryFormatter();
+
+
+                bformatter.Serialize(stream, result);
+                stream.Close();
+       
+            }
+
+            return result;
+        }
+      
         public void LoadDashboard(BoardViewModel value)
         {
             this.Controls.Add(GetWorkTimeChartControl(value));

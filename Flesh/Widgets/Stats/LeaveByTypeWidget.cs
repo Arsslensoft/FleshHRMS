@@ -33,12 +33,13 @@ namespace FHRMS.Widgets
   
         public ChartControl GetLeavesByTypeChartControl(BoardViewModel value)
         {
+            var data = CacheStats(value);
             System.ComponentModel.DataAnnotations.DisplayAttribute dispatt = null;
             // Create an empty chart.
             ChartControl pieChart = new ChartControl();
             // Create a pie series.
             Series series1 = new Series("Congés par types", ViewType.Pie);
-            foreach (var at in value.LeavesByType)
+            foreach (var at in data)
             {
                 dispatt = null;
                 series1.Points.Add(new SeriesPoint((dispatt = GetAttribute<System.ComponentModel.DataAnnotations.DisplayAttribute>(at.Type)) != null ? dispatt.Name : at.Type.ToString(), at.Percentage * 100));
@@ -73,7 +74,52 @@ namespace FHRMS.Widgets
 
             return pieChart;
         }
-   
+        IEnumerable<PercentageStats<Data.LeaveType>> CacheStats(BoardViewModel bv)
+        {
+            IEnumerable<PercentageStats<Data.LeaveType>> result = null;
+            string filename = Application.StartupPath + "\\Data\\leaveTPstats.dat";
+            if (System.IO.File.Exists(filename))
+            {
+
+                if (DateTime.Now.Subtract(new System.IO.FileInfo(filename).LastWriteTime).TotalDays >= 1)
+                {
+                    result = bv.LeavesByType;
+
+                    System.IO.File.Delete(filename);
+
+                    System.IO.Stream stream = System.IO.File.Open(filename, System.IO.FileMode.Create);
+                    System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+
+
+                    bformatter.Serialize(stream, result);
+                    stream.Close();
+                }
+                else // deserialize
+                {
+
+                    System.IO.Stream stream = System.IO.File.Open(filename, System.IO.FileMode.Open);
+                    System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+
+                    result = (IEnumerable<PercentageStats<Data.LeaveType>>)bformatter.Deserialize(stream);
+                    stream.Close();
+
+                }
+            }
+            else
+            {
+                result = bv.LeavesByType;
+
+                System.IO.Stream stream = System.IO.File.Open(filename, System.IO.FileMode.Create);
+                System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+
+
+                bformatter.Serialize(stream, result);
+                stream.Close();
+
+            }
+
+            return result;
+        }
 
         public  void LoadDashboard(BoardViewModel value)
         {
