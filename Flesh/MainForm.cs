@@ -42,7 +42,7 @@ namespace FHRMS {
             mainTileBar.SelectedItem = dashboardTileBarItem;
             FHRMS.Modules.Dashboard.MainView = viewModel;
             viewModel.SelectModule(ModuleType.Dashboard);
-            
+      
       
 
         }
@@ -201,5 +201,7 @@ namespace FHRMS {
               //  this.Hide();
                 //e.Cancel = true;
         }
+
+  
     }
 }

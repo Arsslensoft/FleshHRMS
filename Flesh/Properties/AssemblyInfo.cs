@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 
 
 
-[assembly: AssemblyTitle("Flesh")]
+[assembly: AssemblyTitle("Phexon")]
 [assembly: AssemblyDescription("DevExpress Hybrid Application")]
-[assembly: AssemblyConfiguration("Flesh  Human Ressources Management System")]
+[assembly: AssemblyConfiguration("Phexon  Human Ressources Management System")]
 [assembly: AssemblyCompany("SDL Team")]
-[assembly: AssemblyProduct("Flesh HRMS")]
+[assembly: AssemblyProduct("Phexon HRMS")]
 [assembly: AssemblyCopyright("Copyright (c) 2015-2016 SDL Team. All rights reserved")]
 [assembly: AssemblyTrademark("{BD2D8B66-0131-4457-AE7C-83BB865750FF}")]
 [assembly: AssemblyCulture("")]

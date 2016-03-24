@@ -6,13 +6,15 @@
     using DevExpress.XtraBars.Navigation;
     using DevExpress.XtraEditors;
 
-    public class BaseModuleControl : XtraUserControl, ISupportViewModel {
+    public class BaseModuleControl : XtraUserControl, ISupportViewModel
+    {
         BaseModuleControl() { }
         private object viewModelCore;
         protected BaseModuleControl(Func<object> viewModelnjector) {
             BindingContext = new System.Windows.Forms.BindingContext();
             viewModelCore = viewModelnjector();
             InitServices();
+         
         }
         IBaseViewModel IViewModel {
             get { return (IBaseViewModel)viewModelCore; }
@@ -187,6 +189,9 @@
         }
        
         protected internal virtual void OnTransitionCompleted() { }
+
+
+   
     }
 }
 namespace FHRMS.ViewModels {

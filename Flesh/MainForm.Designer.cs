@@ -20,15 +20,15 @@ namespace FHRMS {
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.Utils.Animation.Transition transition1 = new DevExpress.Utils.Animation.Transition();
-            DevExpress.Utils.Animation.SlideFadeTransition slideFadeTransition1 = new DevExpress.Utils.Animation.SlideFadeTransition();
+            DevExpress.XtraEditors.TileItemElement tileItemElement36 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement37 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement38 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement39 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement40 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement41 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement42 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.Utils.Animation.Transition transition6 = new DevExpress.Utils.Animation.Transition();
+            DevExpress.Utils.Animation.SlideFadeTransition slideFadeTransition6 = new DevExpress.Utils.Animation.SlideFadeTransition();
             this.modulesContainer = new DevExpress.XtraEditors.XtraUserControl();
             this.tileNavPane = new DevExpress.XtraBars.Navigation.TileNavPane();
             this.navButtonHome = new DevExpress.XtraBars.Navigation.NavButton();
@@ -109,9 +109,12 @@ namespace FHRMS {
             // 
             this.navButtonHome.Alignment = DevExpress.XtraBars.Navigation.NavButtonAlignment.Left;
             this.navButtonHome.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.navButtonHome.Caption = null;
+            this.navButtonHome.Appearance.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButtonHome.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(112)))), ((int)(((byte)(56)))));
+            this.navButtonHome.Appearance.Options.UseFont = true;
+            this.navButtonHome.Appearance.Options.UseForeColor = true;
+            this.navButtonHome.Caption = "PHE<b>X</b>ON";
             this.navButtonHome.Enabled = false;
-            this.navButtonHome.Glyph = ((System.Drawing.Image)(resources.GetObject("navButtonHome.Glyph")));
             this.navButtonHome.Name = "navButtonHome";
             // 
             // navButtonHelp
@@ -167,9 +170,9 @@ namespace FHRMS {
             this.dashboardTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
             this.dashboardTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
             this.dashboardTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement1.Image")));
-            tileItemElement1.Text = "Tableau de bord";
-            this.dashboardTileBarItem.Elements.Add(tileItemElement1);
+            tileItemElement36.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement36.Image")));
+            tileItemElement36.Text = "Tableau de bord";
+            this.dashboardTileBarItem.Elements.Add(tileItemElement36);
             this.dashboardTileBarItem.Id = 0;
             this.dashboardTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.dashboardTileBarItem.Name = "dashboardTileBarItem";
@@ -180,9 +183,9 @@ namespace FHRMS {
             this.employeesTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(109)))), ((int)(((byte)(0)))));
             this.employeesTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
             this.employeesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement2.Image")));
-            tileItemElement2.Text = "Employés";
-            this.employeesTileBarItem.Elements.Add(tileItemElement2);
+            tileItemElement37.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement37.Image")));
+            tileItemElement37.Text = "Employés";
+            this.employeesTileBarItem.Elements.Add(tileItemElement37);
             this.employeesTileBarItem.Id = 2;
             this.employeesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.employeesTileBarItem.Name = "employeesTileBarItem";
@@ -191,9 +194,9 @@ namespace FHRMS {
             // 
             this.tasksTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.tasksTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement3.Image")));
-            tileItemElement3.Text = "Congés";
-            this.tasksTileBarItem.Elements.Add(tileItemElement3);
+            tileItemElement38.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement38.Image")));
+            tileItemElement38.Text = "Congés";
+            this.tasksTileBarItem.Elements.Add(tileItemElement38);
             this.tasksTileBarItem.Id = 1;
             this.tasksTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tasksTileBarItem.Name = "tasksTileBarItem";
@@ -213,9 +216,9 @@ namespace FHRMS {
             this.absencesTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.absencesTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
             this.absencesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement4.Image")));
-            tileItemElement4.Text = "Absences";
-            this.absencesTileBarItem.Elements.Add(tileItemElement4);
+            tileItemElement39.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement39.Image")));
+            tileItemElement39.Text = "Absences";
+            this.absencesTileBarItem.Elements.Add(tileItemElement39);
             this.absencesTileBarItem.Id = 3;
             this.absencesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.absencesTileBarItem.Name = "absencesTileBarItem";
@@ -224,9 +227,9 @@ namespace FHRMS {
             // 
             this.attendanceTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.attendanceTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement5.Image")));
-            tileItemElement5.Text = "Pointage";
-            this.attendanceTileBarItem.Elements.Add(tileItemElement5);
+            tileItemElement40.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement40.Image")));
+            tileItemElement40.Text = "Pointage";
+            this.attendanceTileBarItem.Elements.Add(tileItemElement40);
             this.attendanceTileBarItem.Id = 4;
             this.attendanceTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.attendanceTileBarItem.Name = "attendanceTileBarItem";
@@ -237,9 +240,9 @@ namespace FHRMS {
             this.warningsTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(112)))), ((int)(((byte)(56)))));
             this.warningsTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
             this.warningsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
-            tileItemElement6.Text = "Avertissements";
-            this.warningsTileBarItem.Elements.Add(tileItemElement6);
+            tileItemElement41.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement41.Image")));
+            tileItemElement41.Text = "Avertissements";
+            this.warningsTileBarItem.Elements.Add(tileItemElement41);
             this.warningsTileBarItem.Id = 5;
             this.warningsTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.warningsTileBarItem.Name = "warningsTileBarItem";
@@ -248,9 +251,9 @@ namespace FHRMS {
             // 
             this.statsTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.statsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement7.Image")));
-            tileItemElement7.Text = "Statistiques";
-            this.statsTileBarItem.Elements.Add(tileItemElement7);
+            tileItemElement42.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement42.Image")));
+            tileItemElement42.Text = "Statistiques";
+            this.statsTileBarItem.Elements.Add(tileItemElement42);
             this.statsTileBarItem.Id = 6;
             this.statsTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.statsTileBarItem.Name = "statsTileBarItem";
@@ -258,12 +261,12 @@ namespace FHRMS {
             // transitionManager1
             // 
             this.transitionManager1.ShowWaitingIndicator = false;
-            transition1.Control = this.modulesContainer;
-            slideFadeTransition1.Parameters.Background = System.Drawing.Color.Empty;
-            slideFadeTransition1.Parameters.EffectOptions = DevExpress.Utils.Animation.PushEffectOptions.FromRight;
-            slideFadeTransition1.Parameters.FrameInterval = 5000;
-            transition1.TransitionType = slideFadeTransition1;
-            this.transitionManager1.Transitions.Add(transition1);
+            transition6.Control = this.modulesContainer;
+            slideFadeTransition6.Parameters.Background = System.Drawing.Color.Empty;
+            slideFadeTransition6.Parameters.EffectOptions = DevExpress.Utils.Animation.PushEffectOptions.FromRight;
+            slideFadeTransition6.Parameters.FrameInterval = 5000;
+            transition6.TransitionType = slideFadeTransition6;
+            this.transitionManager1.Transitions.Add(transition6);
             this.transitionManager1.BeforeTransitionStarts += new DevExpress.Utils.Animation.BeforeTransitionStartsEventHandler(this.transitionManager1_BeforeTransitionStarts);
             this.transitionManager1.AfterTransitionEnds += new DevExpress.Utils.Animation.AfterTransitionEndsEventHandler(this.transitionManager1_AfterTransitionEnds);
             // 
@@ -334,7 +337,7 @@ namespace FHRMS {
             // notifyIcon1
             // 
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "Flesh";
+            this.notifyIcon1.Text = "Phexon";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
@@ -351,7 +354,7 @@ namespace FHRMS {
             this.Controls.Add(this.barDockControlTop);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Flesh Human Ressources Management System";
+            this.Text = "Phexon Human Ressources Management System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).EndInit();

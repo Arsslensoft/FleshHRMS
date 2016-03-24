@@ -36,7 +36,7 @@
   </PostinstrumentEvent>
   <Binaries>
     <ProjBinary>
-      <Path>Flesh\obj\Debug\Flesh.exe</Path>
+      <Path>Phexon\obj\Debug\Phexon.exe</Path>
       <ArgumentTimestamp>01/01/0001 00:00:00</ArgumentTimestamp>
       <Instrument>true</Instrument>
       <Sample>true</Sample>
@@ -48,7 +48,7 @@
       <LaunchProject>true</LaunchProject>
       <OverrideProjectSettings>false</OverrideProjectSettings>
       <LaunchMethod>Executable</LaunchMethod>
-      <ExecutablePath>bin\Flesh.exe</ExecutablePath>
+      <ExecutablePath>bin\Phexon.exe</ExecutablePath>
       <StartupDirectory>bin\</StartupDirectory>
       <Arguments>
       </Arguments>
@@ -62,8 +62,8 @@
       <PostinstrumentEvent>
         <InstrEventExclude>false</InstrEventExclude>
       </PostinstrumentEvent>
-      <ProjRef>{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}|Flesh\FHRMS.csproj</ProjRef>
-      <ProjPath>Flesh\FHRMS.csproj</ProjPath>
+      <ProjRef>{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}|Phexon\FHRMS.csproj</ProjRef>
+      <ProjPath>Phexon\FHRMS.csproj</ProjPath>
       <ProjName>FHRMS</ProjName>
     </ProjBinary>
   </Binaries>
@@ -74,7 +74,7 @@
   </Reports>
   <Launches>
     <ProjBinary>
-      <Path>:PB:{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}|Flesh\FHRMS.csproj</Path>
+      <Path>:PB:{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}|Phexon\FHRMS.csproj</Path>
     </ProjBinary>
   </Launches>
 </VSPerformanceSession>
