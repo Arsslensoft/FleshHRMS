@@ -54,7 +54,7 @@ namespace FHRMS {
             }
         }
         public static Icon AppIcon {
-            get { return DevExpress.Utils.ResourceImageHelper.CreateIconFromResourcesEx("FHRMS.Resources.AppIcon.ico", typeof(MainForm).Assembly); }
+            get { return DevExpress.Utils.ResourceImageHelper.CreateIconFromResourcesEx("FHRMS.Resources.phexon.ico", typeof(MainForm).Assembly); }
         }
         public static MainForm MainForm { get; set; }
         private static bool? isTablet = null;

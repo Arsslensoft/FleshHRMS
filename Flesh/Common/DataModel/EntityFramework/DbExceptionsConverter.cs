@@ -20,7 +20,7 @@ namespace FHRMS.Common.DataModel.EntityFramework {
             while(originalException.InnerException != null) {
                 originalException = originalException.InnerException;
             }
-            return new DbException(originalException.Message, CommonResources.Exception_UpdateErrorCaption, exception);
+            return new DbException(originalException.Message,CommonResources.Exception_UpdateErrorCaption, exception);
         }
 
         /// <summary>
