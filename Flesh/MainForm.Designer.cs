@@ -63,9 +63,9 @@ namespace FHRMS {
             this.modulesContainer.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.modulesContainer.Appearance.Options.UseBackColor = true;
             this.modulesContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.modulesContainer.Location = new System.Drawing.Point(0, 183);
+            this.modulesContainer.Location = new System.Drawing.Point(0, 143);
             this.modulesContainer.Name = "modulesContainer";
-            this.modulesContainer.Size = new System.Drawing.Size(1354, 550);
+            this.modulesContainer.Size = new System.Drawing.Size(1354, 590);
             this.modulesContainer.TabIndex = 0;
             // 
             // tileNavPane
@@ -81,6 +81,7 @@ namespace FHRMS {
             this.tileNavPane.AppearanceSelected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.tileNavPane.AppearanceSelected.Options.UseBackColor = true;
             this.tileNavPane.AppearanceSelected.Options.UseForeColor = true;
+            this.tileNavPane.BackColor = System.Drawing.Color.Transparent;
             this.tileNavPane.ButtonPadding = new System.Windows.Forms.Padding(12);
             this.tileNavPane.Buttons.Add(this.navButtonHome);
             this.tileNavPane.Buttons.Add(this.navButtonHelp);
@@ -98,10 +99,11 @@ namespace FHRMS {
             this.tileNavPane.DefaultCategory.Tile.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Default;
             this.tileNavPane.Dock = System.Windows.Forms.DockStyle.Top;
             this.tileNavPane.Location = new System.Drawing.Point(0, 0);
+            this.tileNavPane.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.tileNavPane.Name = "tileNavPane";
             this.tileNavPane.OptionsPrimaryDropDown.BackColor = System.Drawing.Color.Empty;
             this.tileNavPane.OptionsSecondaryDropDown.BackColor = System.Drawing.Color.Empty;
-            this.tileNavPane.Size = new System.Drawing.Size(1354, 38);
+            this.tileNavPane.Size = new System.Drawing.Size(1354, 34);
             this.tileNavPane.TabIndex = 0;
             this.tileNavPane.Text = "tileNavPane1";
             // 
@@ -142,18 +144,20 @@ namespace FHRMS {
             this.mainTileBar.AppearanceGroupText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.mainTileBar.AppearanceGroupText.Options.UseForeColor = true;
             this.mainTileBar.BackColor = System.Drawing.Color.Black;
+            this.mainTileBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainTileBar.BackgroundImage")));
+            this.mainTileBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainTileBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainTileBar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             this.mainTileBar.Groups.Add(this.tileBarGroup2);
             this.mainTileBar.Groups.Add(this.tileBarGroup3);
-            this.mainTileBar.Location = new System.Drawing.Point(0, 38);
+            this.mainTileBar.Location = new System.Drawing.Point(0, 34);
             this.mainTileBar.MaxId = 7;
             this.mainTileBar.Name = "mainTileBar";
             this.mainTileBar.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
             this.mainTileBar.SelectedItem = this.dashboardTileBarItem;
             this.mainTileBar.SelectionBorderWidth = 2;
             this.mainTileBar.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.mainTileBar.Size = new System.Drawing.Size(1354, 145);
+            this.mainTileBar.Size = new System.Drawing.Size(1354, 109);
             this.mainTileBar.TabIndex = 1;
             this.mainTileBar.Text = "tileBar1";
             this.mainTileBar.SelectedItemChanged += new DevExpress.XtraEditors.TileItemClickEventHandler(this.mainTileBar_SelectedItemChanged);
@@ -254,6 +258,8 @@ namespace FHRMS {
             // statsTileBarItem
             // 
             this.statsTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.statsTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.statsTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
             this.statsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             tileItemElement7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement7.Image")));
             tileItemElement7.Text = "Statistiques";
@@ -360,6 +366,7 @@ namespace FHRMS {
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phexon Human Ressources Management System";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).EndInit();
