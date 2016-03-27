@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Deployment.Application;
-using System.Windows.Interop;
 using System.Threading;
 using System.Diagnostics;
 using System.Security;

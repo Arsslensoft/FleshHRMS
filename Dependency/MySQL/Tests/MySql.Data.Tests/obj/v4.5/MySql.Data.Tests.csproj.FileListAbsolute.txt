@@ -1,0 +1,1 @@
+D:\Research\FHRMS\Dependency\MySQL\Tests\MySql.Data.Tests\obj\v4.5\MySql.Data.Tests.csprojResolveAssemblyReference.cache

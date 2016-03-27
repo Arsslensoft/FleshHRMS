@@ -1,0 +1,9 @@
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\bin\v3.5\Release\MySql.Data.dll
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\bin\v3.5\Release\MySql.Data.pdb
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\bin\v3.5\Release\MySql.Data.XML
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\bin\v3.5\Debug\MySql.Data.dll
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\bin\v3.5\Debug\MySql.Data.pdb
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\obj\v3.5\MySql.Data.MySqlClient.Properties.Resources.resources
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\obj\v3.5\MySql.Data.csproj.GenerateResource.Cache
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\obj\v3.5\MySql.Data.dll
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data\obj\v3.5\MySql.Data.pdb

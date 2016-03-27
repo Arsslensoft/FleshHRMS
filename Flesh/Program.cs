@@ -1,9 +1,7 @@
-﻿using DevExpress.LookAndFeel;
-using DevExpress.Skins;
+﻿using DevExpress.Skins;
 using DevExpress.Skins.Info;
 using DevExpress.XtraBars.Docking2010.Customization;
 using System;
-using System.Linq;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
@@ -11,9 +9,9 @@ using DevExpress.XtraEditors;
 using DevExpress.Internal;
 using System.Reflection;
 using System.IO;
-using DevExpress.XtraEditors.Controls;
 
-namespace FHRMS {
+namespace FHRMS
+{
     internal static class Program {
         /// <summary>
         /// The main entry point for the application.

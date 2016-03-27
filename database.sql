@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 22 Mars 2016 à 14:07
+-- Généré le :  Dim 27 Mars 2016 à 09:25
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -43,11 +43,11 @@ CREATE TABLE IF NOT EXISTS `absences` (
 --
 
 INSERT INTO `absences` (`Id`, `CreatedById`, `StartDate`, `EndDate`, `EmployeeId`, `Comment`, `Kind`, `WarrantId`) VALUES
-(1, 1, '2016-03-19 13:50:50', '2016-03-20 13:50:50', 2, 'ABGdfdsfcsfd', 0, 0),
+(1, 1, '2016-03-17 00:00:00', '2016-03-22 00:00:00', 2, 'ABGdfdsfcs', 2, 1),
 (2, 1, '2016-03-19 00:00:00', '2016-03-20 00:00:00', 2, 'gfgd1Aucun', 1, 78),
-(3, 1, '2016-03-20 12:41:06', '0001-01-01 00:00:00', 3, 'vcbv', 0, 0),
-(4, 1, '2016-03-20 12:44:17', '0001-01-01 00:00:00', 3, 'FDFDFDddd', 0, 0),
-(5, 4, '2016-03-20 12:46:21', '0001-01-01 00:00:00', 4, '457', 0, 0);
+(3, 1, '2016-03-17 00:00:00', '2016-03-18 00:00:00', 3, 'vcbv', 0, 0),
+(4, 1, '2016-03-14 00:00:00', '2016-03-16 00:00:00', 3, 'FDFDFDddd', 0, 0),
+(5, 4, '2016-02-20 00:00:00', '2016-02-23 00:00:00', 4, '457', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -69,17 +69,18 @@ CREATE TABLE IF NOT EXISTS `attendances` (
   PRIMARY KEY (`Id`),
   KEY `EmployeeId` (`EmployeeId`),
   KEY `CreatedById` (`CreatedById`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `attendances`
 --
 
 INSERT INTO `attendances` (`Id`, `EmployeeId`, `Date`, `TimeIn`, `TimeOut`, `BreakIn`, `BreakOut`, `Type`, `CreatedById`, `Reason`) VALUES
-(1, 2, '2016-03-19', '08:00:00', '18:00:00', '00:00:00', '00:00:00', 0, 1, 'aaaeza'),
-(2, 3, '2016-03-20', '08:00:00', '13:00:00', '00:00:00', '00:00:00', 1, 1, 'Normal'),
-(3, 4, '2016-03-20', '08:00:00', '09:00:00', '00:00:00', '00:00:00', 2, 1, 'Justified'),
-(4, 1, '2016-03-20', '08:00:00', '08:01:00', '00:00:00', '00:00:00', 3, 1, 'Unjustified');
+(1, 2, '2016-01-17', '08:00:00', '18:00:00', '00:00:00', '00:00:00', 0, 1, 'aaaeza'),
+(2, 3, '2016-03-21', '08:00:00', '16:00:00', '12:00:00', '13:00:00', 1, 1, 'late'),
+(3, 4, '2016-03-23', '08:00:00', '17:00:00', '12:00:00', '13:00:00', 2, 1, 'Justifieda'),
+(4, 1, '2016-03-21', '08:00:00', '18:01:00', '12:00:00', '13:00:00', 1, 1, 'OVERTIME'),
+(5, 3, '2016-03-22', '00:00:00', '09:00:00', '00:00:00', '00:00:00', 0, 1, 'UNJ');
 
 -- --------------------------------------------------------
 
@@ -182,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `leaves` (
 
 INSERT INTO `leaves` (`Id`, `Subject`, `Description`, `StartDate`, `DueDate`, `Status`, `Priority`, `Reminder`, `ReminderDateTime`, `AssignedEmployeeId`, `OwnerId`, `Kind`) VALUES
 (1, 'gfg', NULL, '2016-03-19 11:53:49', '2016-03-20 00:00:00', 3, 0, b'0', NULL, 1, 1, 1),
-(2, NULL, NULL, '2016-03-20 13:02:40', '2016-03-22 13:02:40', 0, 0, b'0', NULL, 2, 1, 0);
+(2, NULL, NULL, '2016-03-21 00:00:00', '2016-03-22 00:00:00', 2, 0, b'0', NULL, 4, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -241,14 +242,18 @@ CREATE TABLE IF NOT EXISTS `shifts` (
   `Status` int(2) NOT NULL,
   PRIMARY KEY (`Id`),
   KEY `EmployeeId` (`EmployeeId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `shifts`
 --
 
 INSERT INTO `shifts` (`Id`, `EmployeeId`, `Start`, `End`, `Subject`, `ShiftKind`, `Recurrence`, `Label`, `Status`) VALUES
-(1, 1, '2016-03-21 07:42:00', '2016-03-21 10:00:00', 'asqdqsdfdfdsfsd', 1, 0, 4, 2);
+(1, 1, '2016-03-21 08:00:00', '2016-03-21 17:00:00', 'Monday', 0, 0, 1, 2),
+(2, 3, '2016-03-21 08:00:00', '2016-03-21 17:00:00', 'Lundi', 0, 0, 6, 2),
+(3, 3, '2016-03-22 08:00:00', '2016-03-22 17:00:00', 'Mardi', 0, 0, 6, 2),
+(4, 4, '2016-03-21 08:00:00', '2016-03-21 17:00:00', 'Monday', 0, 0, 3, 2),
+(5, 2, '2016-03-21 08:00:00', '2016-03-21 17:00:00', 'Monday', 0, 0, 1, 4);
 
 -- --------------------------------------------------------
 

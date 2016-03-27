@@ -1,0 +1,3 @@
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\obj\v3.5\MySql.Data.Entity.csprojResolveAssemblyReference.cache
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\obj\v3.5\MySql.Data.Entity.Properties.Resources.resources
+D:\Research\FHRMS\Dependency\MySQL\Source\MySql.Data.Entity\obj\v3.5\MySql.Data.Entity.csproj.GenerateResource.Cache

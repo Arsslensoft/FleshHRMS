@@ -76,13 +76,15 @@
     <Reference Include="EntityFramework">
       <HintPath>..\DevExpress.DevAV.Data\Dll\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\DevExpress.DevAV.Data\Dll\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependency\MySQL\Source\MySql.Data.Entity\bin\v4.0\Debug\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependency\MySQL\Source\MySql.Data.Entity\bin\v4.0\Debug\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -92,10 +94,6 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Credential.cs" />
@@ -126,16 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Unknown-user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Dependency\MySQL\Source\MySql.Data.Entity\MySql.Data.Entity.csproj">
-      <Project>{eded3135-95d2-4bce-a810-f3f2ad7935b7}</Project>
-      <Name>MySql.Data.Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Dependency\MySQL\Source\MySql.Data\MySql.Data.csproj">
-      <Project>{e9df5ed1-4cbd-4226-b931-9a51610ac14d}</Project>
-      <Name>MySql.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
