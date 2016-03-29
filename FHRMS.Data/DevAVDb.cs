@@ -34,7 +34,7 @@ namespace FHRMS.Data {
             //    filePath = DataDirectoryHelper.GetFile("devav.sqlite3", DataDirectoryHelper.DataFolderName);
             //File.SetAttributes(filePath, File.GetAttributes(filePath) & ~FileAttributes.ReadOnly);
             var connection = DbProviderFactories.GetFactory("MySql.Data.MySqlClient").CreateConnection();
-            connection.ConnectionString = "Server=localhost;Database=test;Uid=root;Pwd=;";
+            connection.ConnectionString = "Server=localhost;Database=fhrms;Uid=root;Pwd=;";
             return connection;
         }
     }

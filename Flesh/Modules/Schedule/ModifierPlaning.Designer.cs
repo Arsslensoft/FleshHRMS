@@ -24,8 +24,9 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource();
-            this.noteBindingSource = new System.Windows.Forms.BindingSource();
+            this.components = new System.ComponentModel.Container();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.noteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layout = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.imageComboBoxEdit4 = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.imageComboBoxEdit3 = new DevExpress.XtraEditors.ImageComboBoxEdit();

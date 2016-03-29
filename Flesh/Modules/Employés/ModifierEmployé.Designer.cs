@@ -38,6 +38,9 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             this.dataLayoutControl = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.usernametext = new DevExpress.XtraEditors.TextEdit();
+            this.credentialbindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.passtext = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.schedulerControl1 = new DevExpress.XtraScheduler.SchedulerControl();
@@ -73,7 +76,6 @@
             this.printRepositoryItemButtonEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.zipCodeTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.addressBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cityTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.addressTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.lbName = new DevExpress.XtraEditors.LabelControl();
@@ -127,7 +129,7 @@
             this.ItemForLastName = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForPrefix = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForDepartment = new DevExpress.XtraLayout.LayoutControlItem();
@@ -141,15 +143,16 @@
             this.ItemForSkype = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.errorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.usernametext = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.credentialbindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl)).BeginInit();
             this.dataLayoutControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usernametext.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.credentialbindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passtext.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerStorage1)).BeginInit();
@@ -169,7 +172,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.printRepositoryItemButtonEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zipCodeTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinTextEdit.Properties)).BeginInit();
@@ -223,7 +225,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForLastName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPrefix)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDepartment)).BeginInit();
@@ -237,13 +239,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForSkype)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usernametext.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.credentialbindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl
@@ -296,6 +296,23 @@
             this.dataLayoutControl.TabIndex = 0;
             this.dataLayoutControl.Text = "layoutControl1";
             // 
+            // usernametext
+            // 
+            this.usernametext.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.credentialbindingSource, "Username", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.usernametext.Location = new System.Drawing.Point(562, 517);
+            this.usernametext.Name = "usernametext";
+            this.usernametext.Size = new System.Drawing.Size(88, 42);
+            this.usernametext.TabIndex = 57;
+            // 
+            // credentialbindingSource
+            // 
+            this.credentialbindingSource.DataMember = "Credential";
+            this.credentialbindingSource.DataSource = this.employeeBindingSource;
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(FHRMS.Data.Employee);
+            // 
             // passtext
             // 
             this.passtext.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.credentialbindingSource, "Password", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -337,6 +354,7 @@
             this.schedulerStorage1.Appointments.Mappings.Start = "Start";
             this.schedulerStorage1.Appointments.Mappings.Status = "Status";
             this.schedulerStorage1.Appointments.Mappings.Subject = "Subject";
+            this.schedulerStorage1.AppointmentInserting += new DevExpress.XtraScheduler.PersistentObjectCancelEventHandler(this.schedulerStorage1_AppointmentInserting);
             this.schedulerStorage1.AppointmentsChanged += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.schedulerStorage1_AppointmentsChanged);
             this.schedulerStorage1.AppointmentDeleting += new DevExpress.XtraScheduler.PersistentObjectCancelEventHandler(this.schedulerStorage1_AppointmentDeleting);
             // 
@@ -649,10 +667,6 @@
             // 
             this.addressBindingSource.DataMember = "Address";
             this.addressBindingSource.DataSource = this.employeeBindingSource;
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(FHRMS.Data.Employee);
             // 
             // cityTextEdit
             // 
@@ -1325,14 +1339,14 @@
             this.layoutControlItem3.Text = "STATE";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(100, 17);
             // 
-            // layoutControlItem14
+            // layoutControlItem15
             // 
-            this.layoutControlItem14.Control = this.passtext;
-            this.layoutControlItem14.Location = new System.Drawing.Point(22, 470);
-            this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(225, 46);
-            this.layoutControlItem14.Text = "PASSWORD";
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(100, 17);
+            this.layoutControlItem15.Control = this.usernametext;
+            this.layoutControlItem15.Location = new System.Drawing.Point(0, 470);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(217, 46);
+            this.layoutControlItem15.Text = "USERNAME";
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(100, 17);
             // 
             // layoutControlGroup3
             // 
@@ -1494,6 +1508,15 @@
             this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.passtext;
+            this.layoutControlItem14.Location = new System.Drawing.Point(22, 470);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(225, 46);
+            this.layoutControlItem14.Text = "PASSWORD";
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(100, 17);
+            // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
@@ -1528,28 +1551,6 @@
             this.errorProvider.ContainerControl = this.dataLayoutControl;
             this.errorProvider.DataSource = this.employeeBindingSource;
             // 
-            // usernametext
-            // 
-            this.usernametext.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.credentialbindingSource, "Username", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.usernametext.Location = new System.Drawing.Point(562, 517);
-            this.usernametext.Name = "usernametext";
-            this.usernametext.Size = new System.Drawing.Size(88, 42);
-            this.usernametext.TabIndex = 57;
-            // 
-            // layoutControlItem15
-            // 
-            this.layoutControlItem15.Control = this.usernametext;
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 470);
-            this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(217, 46);
-            this.layoutControlItem15.Text = "USERNAME";
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(100, 17);
-            // 
-            // credentialbindingSource
-            // 
-            this.credentialbindingSource.DataMember = "Credential";
-            this.credentialbindingSource.DataSource = this.employeeBindingSource;
-            // 
             // ModifierEmployé
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1561,6 +1562,9 @@
             this.Resize += new System.EventHandler(this.ModifierEmployé_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl)).EndInit();
             this.dataLayoutControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.usernametext.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.credentialbindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passtext.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerStorage1)).EndInit();
@@ -1580,7 +1584,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.printRepositoryItemButtonEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zipCodeTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinTextEdit.Properties)).EndInit();
@@ -1634,7 +1637,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForLastName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPrefix)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDepartment)).EndInit();
@@ -1648,13 +1651,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForSkype)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usernametext.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.credentialbindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

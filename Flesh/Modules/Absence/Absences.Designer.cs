@@ -26,16 +26,16 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Absences));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement13 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             this.priorityImageList = new DevExpress.Utils.ImageCollection(this.components);
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.notesGridControl = new DevExpress.XtraGrid.GridControl();
@@ -46,6 +46,8 @@
             this.noteColSubject = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.colDateretour = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.tileControl1 = new DevExpress.XtraEditors.TileControl();
             this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
@@ -64,8 +66,6 @@
             this.simpleLabelItem4 = new DevExpress.XtraLayout.SimpleLabelItem();
             this.simpleLabelItem5 = new DevExpress.XtraLayout.SimpleLabelItem();
             this.simpleLabelItem7 = new DevExpress.XtraLayout.SimpleLabelItem();
-            this.colType = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.priorityImageList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
@@ -205,12 +205,28 @@
             this.colDateretour.VisibleIndex = 1;
             this.colDateretour.Width = 89;
             // 
+            // colType
+            // 
+            this.colType.Caption = "Type d\'absence";
+            this.colType.FieldName = "Kind";
+            this.colType.Name = "colType";
+            this.colType.Visible = true;
+            this.colType.VisibleIndex = 4;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Employé";
+            this.gridColumn2.FieldName = "Employee.FullName";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 2;
+            // 
             // repositoryItemButtonEdit1
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Edit", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Delete", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Edit", -1, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Delete", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
@@ -262,23 +278,23 @@
             // 
             // tileItemAll
             // 
-            tileItemElement9.Appearance.Normal.FontSizeDelta = 128;
-            tileItemElement9.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            tileItemElement9.Appearance.Normal.Options.UseFont = true;
-            tileItemElement9.Appearance.Normal.Options.UseForeColor = true;
-            tileItemElement9.Appearance.Selected.FontSizeDelta = 128;
-            tileItemElement9.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
-            tileItemElement9.Appearance.Selected.Options.UseFont = true;
-            tileItemElement9.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement9.Text = "183";
-            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement9.TextLocation = new System.Drawing.Point(-2, -12);
-            tileItemElement10.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement10.Image")));
-            tileItemElement10.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement10.Text = "Tous";
-            tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
-            this.tileItemAll.Elements.Add(tileItemElement9);
-            this.tileItemAll.Elements.Add(tileItemElement10);
+            tileItemElement1.Appearance.Normal.FontSizeDelta = 128;
+            tileItemElement1.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            tileItemElement1.Appearance.Normal.Options.UseFont = true;
+            tileItemElement1.Appearance.Normal.Options.UseForeColor = true;
+            tileItemElement1.Appearance.Selected.FontSizeDelta = 128;
+            tileItemElement1.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
+            tileItemElement1.Appearance.Selected.Options.UseFont = true;
+            tileItemElement1.Appearance.Selected.Options.UseForeColor = true;
+            tileItemElement1.Text = "183";
+            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement1.TextLocation = new System.Drawing.Point(-2, -12);
+            tileItemElement2.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement2.Image")));
+            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement2.Text = "Tous";
+            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
+            this.tileItemAll.Elements.Add(tileItemElement1);
+            this.tileItemAll.Elements.Add(tileItemElement2);
             this.tileItemAll.Id = 0;
             this.tileItemAll.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemAll.Name = "tileItemAll";
@@ -287,23 +303,23 @@
             // 
             // tileItemMotive
             // 
-            tileItemElement11.Appearance.Normal.FontSizeDelta = 128;
-            tileItemElement11.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            tileItemElement11.Appearance.Normal.Options.UseFont = true;
-            tileItemElement11.Appearance.Normal.Options.UseForeColor = true;
-            tileItemElement11.Appearance.Selected.FontSizeDelta = 128;
-            tileItemElement11.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
-            tileItemElement11.Appearance.Selected.Options.UseFont = true;
-            tileItemElement11.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement11.Text = "5";
-            tileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement11.TextLocation = new System.Drawing.Point(-2, -12);
-            tileItemElement12.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement12.Image")));
-            tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement12.Text = "Justifié avec motifs";
-            tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
-            this.tileItemMotive.Elements.Add(tileItemElement11);
-            this.tileItemMotive.Elements.Add(tileItemElement12);
+            tileItemElement3.Appearance.Normal.FontSizeDelta = 128;
+            tileItemElement3.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            tileItemElement3.Appearance.Normal.Options.UseFont = true;
+            tileItemElement3.Appearance.Normal.Options.UseForeColor = true;
+            tileItemElement3.Appearance.Selected.FontSizeDelta = 128;
+            tileItemElement3.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
+            tileItemElement3.Appearance.Selected.Options.UseFont = true;
+            tileItemElement3.Appearance.Selected.Options.UseForeColor = true;
+            tileItemElement3.Text = "5";
+            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement3.TextLocation = new System.Drawing.Point(-2, -12);
+            tileItemElement4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement4.Image")));
+            tileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement4.Text = "Justifié avec motifs";
+            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
+            this.tileItemMotive.Elements.Add(tileItemElement3);
+            this.tileItemMotive.Elements.Add(tileItemElement4);
             this.tileItemMotive.Id = 1;
             this.tileItemMotive.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemMotive.Name = "tileItemMotive";
@@ -312,23 +328,23 @@
             // 
             // tileItemCM
             // 
-            tileItemElement13.Appearance.Normal.FontSizeDelta = 128;
-            tileItemElement13.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            tileItemElement13.Appearance.Normal.Options.UseFont = true;
-            tileItemElement13.Appearance.Normal.Options.UseForeColor = true;
-            tileItemElement13.Appearance.Selected.FontSizeDelta = 128;
-            tileItemElement13.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
-            tileItemElement13.Appearance.Selected.Options.UseFont = true;
-            tileItemElement13.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement13.Text = "5";
-            tileItemElement13.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement13.TextLocation = new System.Drawing.Point(-2, -12);
-            tileItemElement14.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement14.Image")));
-            tileItemElement14.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement14.Text = "Justifié avec CM";
-            tileItemElement14.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
-            this.tileItemCM.Elements.Add(tileItemElement13);
-            this.tileItemCM.Elements.Add(tileItemElement14);
+            tileItemElement5.Appearance.Normal.FontSizeDelta = 128;
+            tileItemElement5.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            tileItemElement5.Appearance.Normal.Options.UseFont = true;
+            tileItemElement5.Appearance.Normal.Options.UseForeColor = true;
+            tileItemElement5.Appearance.Selected.FontSizeDelta = 128;
+            tileItemElement5.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
+            tileItemElement5.Appearance.Selected.Options.UseFont = true;
+            tileItemElement5.Appearance.Selected.Options.UseForeColor = true;
+            tileItemElement5.Text = "5";
+            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement5.TextLocation = new System.Drawing.Point(-2, -12);
+            tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
+            tileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement6.Text = "Justifié avec CM";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
+            this.tileItemCM.Elements.Add(tileItemElement5);
+            this.tileItemCM.Elements.Add(tileItemElement6);
             this.tileItemCM.Id = 2;
             this.tileItemCM.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemCM.Name = "tileItemCM";
@@ -337,23 +353,23 @@
             // 
             // tileItemDeferred
             // 
-            tileItemElement15.Appearance.Normal.FontSizeDelta = 128;
-            tileItemElement15.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            tileItemElement15.Appearance.Normal.Options.UseFont = true;
-            tileItemElement15.Appearance.Normal.Options.UseForeColor = true;
-            tileItemElement15.Appearance.Selected.FontSizeDelta = 128;
-            tileItemElement15.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
-            tileItemElement15.Appearance.Selected.Options.UseFont = true;
-            tileItemElement15.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement15.Text = "5";
-            tileItemElement15.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement15.TextLocation = new System.Drawing.Point(-2, -12);
-            tileItemElement16.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement16.Image")));
-            tileItemElement16.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement16.Text = "Non justifié";
-            tileItemElement16.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
-            this.tileItemDeferred.Elements.Add(tileItemElement15);
-            this.tileItemDeferred.Elements.Add(tileItemElement16);
+            tileItemElement7.Appearance.Normal.FontSizeDelta = 128;
+            tileItemElement7.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            tileItemElement7.Appearance.Normal.Options.UseFont = true;
+            tileItemElement7.Appearance.Normal.Options.UseForeColor = true;
+            tileItemElement7.Appearance.Selected.FontSizeDelta = 128;
+            tileItemElement7.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
+            tileItemElement7.Appearance.Selected.Options.UseFont = true;
+            tileItemElement7.Appearance.Selected.Options.UseForeColor = true;
+            tileItemElement7.Text = "5";
+            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement7.TextLocation = new System.Drawing.Point(-2, -12);
+            tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
+            tileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement8.Text = "Non justifié";
+            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
+            this.tileItemDeferred.Elements.Add(tileItemElement7);
+            this.tileItemDeferred.Elements.Add(tileItemElement8);
             this.tileItemDeferred.Id = 3;
             this.tileItemDeferred.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemDeferred.Name = "tileItemDeferred";
@@ -524,22 +540,6 @@
             this.simpleLabelItem7.Size = new System.Drawing.Size(830, 34);
             this.simpleLabelItem7.Text = "Status";
             this.simpleLabelItem7.TextSize = new System.Drawing.Size(127, 30);
-            // 
-            // colType
-            // 
-            this.colType.Caption = "Type d\'absence";
-            this.colType.FieldName = "Kind";
-            this.colType.Name = "colType";
-            this.colType.Visible = true;
-            this.colType.VisibleIndex = 4;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Employé";
-            this.gridColumn2.FieldName = "Employee.FullName";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
             // 
             // Absences
             // 

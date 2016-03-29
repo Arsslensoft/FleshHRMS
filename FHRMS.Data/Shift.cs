@@ -41,11 +41,19 @@ namespace FHRMS.Data
     public enum ReccuranceType
     {
         [Display(Name = "Chaque semaine")]
-        UpdatedWeekly,
+        Weekly,
         [Display(Name = "Chaque jour")]
-        UpdateDaily,
+        Daily,
         [Display(Name = "Fixe")]
-        Constant
+        Constant,
+        [Display(Name = "Chaque mois")]
+        Monthly,
+        [Display(Name = "Chaque année")]
+        Yearly,
+        [Display(Name = "Chaque jour sauf weekend")]
+        DailyExceptWeekend,
+        [Display(Name = "Chaque weekend")]
+        Weekend
     }
     public enum ShiftType
     {

@@ -10,14 +10,13 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout.Utils;
 using FHRMS.Common.Utils;
 using System.Drawing;
+using System.Linq;
+using DevExpress.XtraScheduler;
 
 namespace FHRMS.Modules {
     public partial class ModifierEmployé : BaseModuleControl {
 
-        //public static string[] Statuses = { "Paid", "Unpaid" };
-        //public static Color[] ColorStatuses = { Color.Green, Color.Red };
-        //public static string[] IssueList = { "Consultation", "Treatment", "X-Ray" };
-        //public static Color[] IssueColorList = { Color.SteelBlue, Color.Pink, Color.SeaShell };
+       
 
         BaseModuleControl openedSubModule;
         public ModifierEmployé()
@@ -243,6 +242,7 @@ namespace FHRMS.Modules {
 
         private void schedulerControl1_EditAppointmentFormShowing(object sender, DevExpress.XtraScheduler.AppointmentFormEventArgs e)
         {
+           
             e.Handled = true;
             if (schedulerControl1.SelectedAppointments.Count == 0)
             {
@@ -272,6 +272,33 @@ namespace FHRMS.Modules {
                 if (ViewModel.EmployeeShiftsLookUp.CanSave(shiftsBindingSource.Current as Shift))
                     ViewModel.EmployeeShiftsLookUp.Save(shiftsBindingSource.Current as Shift);
            
+        }
+
+        private void schedulerStorage1_AppointmentInserting(object sender, DevExpress.XtraScheduler.PersistentObjectCancelEventArgs e)
+        {
+            Appointment apt = (Appointment)e.Object;
+       Shift sh= new List<Shift>(ViewModel.EmployeeShiftsLookUp.Entities.ToList().Where(x => x.Id == (long)apt.Id))[0];
+     switch(sh.Recurrence){
+         case ReccuranceType.Daily:
+             
+apt.RecurrenceInfo.Type = RecurrenceType.Daily;
+apt.RecurrenceInfo.Start = apt.Start;
+apt.RecurrenceInfo.Periodicity = 1;
+apt.RecurrenceInfo.WeekDays = (WeekDays)(int)sh.Start.DayOfWeek;
+apt.RecurrenceInfo.Range = RecurrenceRange.NoEndDate;
+             break;
+         case ReccuranceType.DailyExceptWeekend:
+apt.RecurrenceInfo.Type = RecurrenceType.Daily;
+apt.RecurrenceInfo.Start = apt.Start;
+apt.RecurrenceInfo.Periodicity = 1;
+apt.RecurrenceInfo.WeekDays = WeekDays.WorkDays;
+apt.RecurrenceInfo.Range = RecurrenceRange.NoEndDate;
+             break;
+         
+
+
+     }
+
         }
 
    
