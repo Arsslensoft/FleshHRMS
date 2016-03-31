@@ -1,10 +1,2 @@
 ﻿* Autopilot
-	* Detect leaves
-	* Update leave status (onleavestart/onleaveend)
-	* Detect open attendances
-	* Get shifts for employee
-	* count holidays
-	* Warn on leave credit limit exceeded
 	* Warn on late credit limit exceeded
-	* Log late employees
-	* 

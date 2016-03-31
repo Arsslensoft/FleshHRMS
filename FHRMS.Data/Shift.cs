@@ -46,10 +46,7 @@ namespace FHRMS.Data
         Daily,
         [Display(Name = "Fixe")]
         Constant,
-        [Display(Name = "Chaque mois")]
-        Monthly,
-        [Display(Name = "Chaque année")]
-        Yearly,
+
         [Display(Name = "Chaque jour sauf weekend")]
         DailyExceptWeekend,
         [Display(Name = "Chaque weekend")]

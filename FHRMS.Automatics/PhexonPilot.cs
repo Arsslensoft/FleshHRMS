@@ -123,7 +123,7 @@ namespace FHRMS.Automatics
         /// <summary>
         /// Weekly Routine 
         /// </summary>
-        public void WeeklyRoutine()
+        public void DailyRoutine()
         {
             // TODO:sync
             // Updates all shifts weekly (add 7 days)
@@ -131,11 +131,47 @@ namespace FHRMS.Automatics
             for (int i = 0; i < shifts.Count; i++)
             {
                 Shift sh = shifts[i];
-                sh.Start = sh.Start.AddDays(7);
-                sh.End = sh.End.AddDays(7);
+                switch (sh.Recurrence)
+                {
+                    case ReccuranceType.Daily:
+                        sh.Start = sh.Start.AddDays(1);
+                        sh.End = sh.End.AddDays(1);
+                        break;
+                    case ReccuranceType.DailyExceptWeekend:
+                        if (DateTime.Now.DayOfWeek != DayOfWeek.Saturday && DateTime.Now.DayOfWeek != DayOfWeek.Sunday)
+                        {
+                            sh.Start = sh.Start.AddDays(1);
+                            sh.End = sh.End.AddDays(1);
+                        }
+                        else if (DateTime.Now.DayOfWeek != DayOfWeek.Sunday)
+                        {
+                            sh.Start = sh.Start.AddDays(2);
+                            sh.End = sh.End.AddDays(2);
+                        }
+                        break;
+                    case ReccuranceType.Weekend:
+                        if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+                        {
+                            sh.Start = sh.Start.AddDays(7);
+                            sh.End = sh.End.AddDays(7);
+                        }
+                        break;
+                }
+            
             }
         }
+        public Shift GetAppropriateShift(List<Shift> shifts)
+        {
+            DateTime now = DateTime.Now;
 
+            foreach (Shift s in shifts){
+                if (s.Start.Date <= now && s.End >= now) // in work shift
+                    return s;
+                else if (s.Start.Date == now.Date && (s.End <= now || s.Start >= now) )// after-shift / before-shift
+                    return s;
+        }
+            return null;
+        }
         public void MorningRoutineCheck()
         {
             Load();
@@ -143,33 +179,103 @@ namespace FHRMS.Automatics
             foreach (Attendance a in attendances)
             {
                 List<Shift> todays_shift = a.Employee.Shifts.Where(x => x.Start.Date == DateTime.Now.Date).ToList();
-                if (todays_shift.Count > 0)
-                {
+                Shift sh = GetAppropriateShift(todays_shift);
+                if (sh == null) // TODO:replace with assert sh == null : "Shift was not found for current employee";
+                    throw new Exception("Shift was not found for current employee");
 
+                if (a.TimeIn > sh.Start.TimeOfDay) // late
+                {
+                    if ((a.TimeIn - sh.Start.TimeOfDay) > new TimeSpan(0, 30, 0))
+                        MarkAsAbsent(a.Employee); // absent after 30 mins
+                    else
+                        MarkAsLate(a.Employee, DateTime.Parse(a.Date.ToShortDateString() + " "+a.TimeIn.ToString("mm:hh:ss"))); // late
                 }
+                    
+
             }
+            DatabaseManager.SaveChanges();
         }
-        public void DailyRoutineCheck()
+        public void NightRoutineCheck()
         {
             Load();
             List<Attendance> attendances = DatabaseManager.Attendances.Local.Where(x => x.ADate == AttendanceDate.Today).ToList();
             List<Leave> active_leaves = DatabaseManager.Leaves.Local.Where(x => Between(DateTime.Now.Date, x.StartDate.Value, x.DueDate.Value)).ToList(); // look for attendances
             List<Absence> open_absences = DatabaseManager.Absences.Local.Where(x => x.EndDate == IndeterminateDate).ToList(); // look for open absences 
             List<Employee> employees = DatabaseManager.Employees.Local.ToList();
+            List<Holiday> holidays = DatabaseManager.Holidays.Local.Where(x => Between(DateTime.Now.Date, x.StartDate, x.DueDate)).ToList();
 
             var unattended_employees = (from emp in DatabaseManager.Employees
                                         where !attendances.Any(m => m.EmployeeId == emp.Id)
                            select emp);
+            if (holidays.Count == 0) // no holidays
+            {
+                // mark all unattended working employees as absent
+                foreach (Employee emp in unattended_employees)
+                {
+                    List<Shift> todays_shift = emp.Shifts.Where(x => x.Start.Date == DateTime.Now.Date).ToList();
+                    if (todays_shift.Count == 0 || emp.Status == EmployeeStatus.OnLeave)
+                        continue;
+
+
+                    MarkAsAbsent(emp);
+                }
+
+                // Attended employees
+                foreach (Attendance at in attendances)
+                {
+                    if (at.Type == AttendanceType.UnjustifiedExit || at.Type == AttendanceType.EnterOnly) // unjustified exit absence
+                        MarkAsAbsent(at.Employee);
+                    else if (at.Type == AttendanceType.JustifiedExit)
+                        at.Employee.LeaveCredit--;
+                    else
+                    {
+                        List<Shift> todays_shift = at.Employee.Shifts.Where(x => x.Start.Date == DateTime.Now.Date).ToList();
+
+                        Shift sh = GetAppropriateShift(todays_shift);
+                        if (at.TimeOut < sh.End.TimeOfDay) // too early
+                        {
+                            if ((sh.End.TimeOfDay - at.TimeOut) > new TimeSpan(0, 30, 0))
+                                MarkAsAbsent(at.Employee); // absent before 30 mins
+                          
+                        }
+                    }
+
+                }
+
+
+            }
+            else
+            {
+                // mark all unattended permanence employees as absent
+                foreach (Employee emp in unattended_employees)
+                {
+                    List<Shift> todays_shift = emp.Shifts.Where(x => x.Start.Date == DateTime.Now.Date).ToList();
+                    if (todays_shift.Count == 0 || emp.Status == EmployeeStatus.OnLeave)
+                        continue;
+
+
+                    MarkAsAbsent(emp);
+                }
+            }
+
+
+            DatabaseManager.SaveChanges();
             
 
 
-
-           
-
-
-            
+        }
 
 
+        public void Start()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }
