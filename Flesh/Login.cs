@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -34,7 +35,7 @@ namespace FHRMS
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Process.GetCurrentProcess().Kill();
         }
         bool cancel_exit = true;
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -48,7 +49,7 @@ namespace FHRMS
                 {
                     if (li.User.Credential.GetSha256FromString(li.Password) == li.User.Credential.PasswordHash)
                     {
-                       
+                   ViewModel.CurrentEmployee = li.User;
                         cancel_exit = false;
                         this.Close();
                     }

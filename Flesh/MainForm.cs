@@ -27,6 +27,7 @@ namespace FHRMS {
             InitializeComponent();
             PrepareUI();
             InitViewModel();
+            
             DevExpress.Utils.About.UAlgo.Default.DoEventObject(DevExpress.Utils.About.UAlgo.kDemo, DevExpress.Utils.About.UAlgo.pWinForms, this);
         }
 
@@ -36,9 +37,9 @@ namespace FHRMS {
         }
    
         void MainForm_Load(object sender, EventArgs e) {
+        
             InitTileBar();
-            //Login lg = new Login(viewModel);
-            //lg.ShowDialog();
+          
             mainTileBar.SelectedItem = dashboardTileBarItem;
             FHRMS.Modules.Dashboard.MainView = viewModel;
             viewModel.SelectModule(ModuleType.Dashboard);
@@ -49,6 +50,10 @@ namespace FHRMS {
     
         void InitViewModel() {
             viewModel = ViewModelSource.Create(() => new MainViewModel(this));
+
+            Login lg = new Login(viewModel);
+            lg.ShowDialog();
+
             PrefetchChildModules();
             viewModel.ModuleAdded += viewModel_ModuleAdded;
             viewModel.ModuleRemoved += viewModel_ModuleRemoved;

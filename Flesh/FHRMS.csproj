@@ -347,6 +347,12 @@
     <Compile Include="Modules\Absence\ModifierAbsence.Designer.cs">
       <DependentUpon>ModifierAbsence.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Holidays\ModifierFérier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Holidays\ModifierFérier.Designer.cs">
+      <DependentUpon>ModifierFérier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\PrintSettings\PrintSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -451,13 +457,15 @@
     <Compile Include="ViewModels\Avertissements\WarningsCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Avertissements\WarningsViewModel.cs" />
     <Compile Include="ViewModels\Avertissements\WarningsViewModel.partial.cs" />
+    <Compile Include="ViewModels\Holidays\HolidayCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Holidays\HolidayViewModel.cs" />
+    <Compile Include="ViewModels\Holidays\HolidayViewModel.partial.cs" />
     <Compile Include="ViewModels\Dashboard\DashboardViewModel.cs" />
     <Compile Include="ViewModels\Notifications\NotificationCollectionViewModel.cs" />
     <Compile Include="ViewModels\Notifications\NotificationCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Notifications\NotificationViewModel.cs" />
     <Compile Include="ViewModels\Notifications\NotificationViewModel.partial.cs" />
     <Compile Include="ViewModels\Schedule\ScheduleCollectionViewModel.cs" />
-    <Compile Include="ViewModels\Schedule\ScheduleCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Schedule\ScheduleViewModel.cs" />
     <Compile Include="ViewModels\Schedule\ScheduleViewModel.partial.cs" />
     <Compile Include="ViewModels\EmployeeReportType.cs" />
@@ -489,6 +497,12 @@
     </Compile>
     <Compile Include="Widgets\Clock.designer.cs">
       <DependentUpon>Clock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\HolidayWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\HolidayWidget.designer.cs">
+      <DependentUpon>HolidayWidget.cs</DependentUpon>
     </Compile>
     <Compile Include="Widgets\NotificationItem.cs">
       <SubType>Component</SubType>
@@ -616,6 +630,9 @@
     <EmbeddedResource Include="Modules\Absence\ModifierAbsence.resx">
       <DependentUpon>ModifierAbsence.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Holidays\ModifierFérier.resx">
+      <DependentUpon>ModifierFérier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\PrintSettings\PrintSettings.resx">
       <DependentUpon>PrintSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -645,6 +662,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Widgets\Clock.resx">
       <DependentUpon>Clock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\HolidayWidget.resx">
+      <DependentUpon>HolidayWidget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Widgets\NotificationItem.resx">
       <DependentUpon>NotificationItem.cs</DependentUpon>

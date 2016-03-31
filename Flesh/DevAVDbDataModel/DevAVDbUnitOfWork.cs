@@ -14,13 +14,13 @@ namespace FHRMS.DevAVDbDataModel {
     /// <summary>
     /// A DevAVDbUnitOfWork instance that represents the run-time implementation of the IDevAVDbUnitOfWork interface.
     /// </summary>
-    public class DevAVDbUnitOfWork : DbUnitOfWork<DevAVDb>, IDevAVDbUnitOfWork {
+    public class DevAVDbUnitOfWork : DbUnitOfWork<PhexonDb>, IDevAVDbUnitOfWork {
 
         /// <summary>
         /// Initializes a new instance of the DevAVDbUnitOfWork class.
         /// </summary>
         /// <param name="context">An underlying DbContext.</param>
-        public DevAVDbUnitOfWork(DevAVDb context)
+        public DevAVDbUnitOfWork(PhexonDb context)
             : base(context) {
         }
 

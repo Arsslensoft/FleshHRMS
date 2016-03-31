@@ -104,4 +104,17 @@ namespace FHRMS.Modules {
  
         }
     }
+
+    public class Holidays : BaseModuleControl
+    {
+        public Holidays()
+            : base(CreateViewModel<HolidayCollectionViewModel>)
+        {
+        }
+        protected override void OnInitServices(DevExpress.Mvvm.IServiceContainer serviceContainer)
+        {
+            base.OnInitServices(serviceContainer);
+            serviceContainer.RegisterService(new FlyoutDetailFormDocumentManagerService(ModuleType.ModifierFérier));
+        }
+    }
 }

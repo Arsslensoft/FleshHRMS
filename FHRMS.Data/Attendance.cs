@@ -1,4 +1,4 @@
-using DevExpress.DataAnnotations;
+using FHRMS.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

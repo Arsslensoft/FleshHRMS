@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 
-namespace DevExpress.Common {
+namespace FHRMS.Data {
     public static class IDataErrorInfoHelper {
         public static string GetErrorText(object owner, string propertyName) {
             string[] path = propertyName.Split('.');

@@ -36,6 +36,8 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
             this.priorityImageList = new DevExpress.Utils.ImageCollection(this.components);
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.notesGridControl = new DevExpress.XtraGrid.GridControl();
@@ -54,6 +56,7 @@
             this.tileItemAll = new DevExpress.XtraEditors.TileItem();
             this.tileItemMotive = new DevExpress.XtraEditors.TileItem();
             this.tileItemCM = new DevExpress.XtraEditors.TileItem();
+            this.tileItemLT = new DevExpress.XtraEditors.TileItem();
             this.tileItemDeferred = new DevExpress.XtraEditors.TileItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tileControlLCI = new DevExpress.XtraLayout.LayoutControlItem();
@@ -108,23 +111,25 @@
             this.dataLayoutControl1.Controls.Add(this.tileControl1);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(810, 371, 864, 732);
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1424, 589);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1068, 383);
             this.dataLayoutControl1.TabIndex = 26;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
             // notesGridControl
             // 
             this.notesGridControl.DataSource = this.notesBindingSource;
-            this.notesGridControl.Location = new System.Drawing.Point(310, 47);
+            this.notesGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.notesGridControl.Location = new System.Drawing.Point(310, 40);
             this.notesGridControl.MainView = this.notesGridView;
             this.notesGridControl.Name = "notesGridControl";
             this.notesGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.repositoryItemMemoEdit1});
-            this.notesGridControl.Size = new System.Drawing.Size(1072, 540);
+            this.notesGridControl.Size = new System.Drawing.Size(716, 341);
             this.notesGridControl.TabIndex = 27;
             this.notesGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.notesGridView});
@@ -256,14 +261,14 @@
             this.tileControl1.IndentBetweenItems = 5;
             this.tileControl1.ItemPadding = new System.Windows.Forms.Padding(7, 7, 7, 4);
             this.tileControl1.ItemSize = 80;
-            this.tileControl1.Location = new System.Drawing.Point(42, 47);
+            this.tileControl1.Location = new System.Drawing.Point(42, 40);
             this.tileControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tileControl1.MaxId = 7;
             this.tileControl1.Name = "tileControl1";
             this.tileControl1.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.tileControl1.Padding = new System.Windows.Forms.Padding(0);
             this.tileControl1.SelectedItem = this.tileItemAll;
-            this.tileControl1.Size = new System.Drawing.Size(236, 540);
+            this.tileControl1.Size = new System.Drawing.Size(236, 341);
             this.tileControl1.TabIndex = 26;
             this.tileControl1.Text = "tileControl1";
             // 
@@ -273,6 +278,7 @@
             this.tileGroup2.Items.Add(this.tileItemMotive);
             this.tileGroup2.Items.Add(this.tileItemCM);
             this.tileGroup2.Items.Add(this.tileItemDeferred);
+            this.tileGroup2.Items.Add(tileItemLT);
             this.tileGroup2.Name = "tileGroup2";
             this.tileGroup2.Text = null;
             // 
@@ -351,6 +357,31 @@
             this.tileItemCM.Tag = "Kind == \'CertificateWarranted\'";
             this.tileItemCM.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem_ItemClick);
             // 
+            // tileItemLT
+            // 
+            tileItemElement9.Appearance.Normal.FontSizeDelta = 128;
+            tileItemElement9.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            tileItemElement9.Appearance.Normal.Options.UseFont = true;
+            tileItemElement9.Appearance.Normal.Options.UseForeColor = true;
+            tileItemElement9.Appearance.Selected.FontSizeDelta = 128;
+            tileItemElement9.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
+            tileItemElement9.Appearance.Selected.Options.UseFont = true;
+            tileItemElement9.Appearance.Selected.Options.UseForeColor = true;
+            tileItemElement9.Text = "6";
+            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement9.TextLocation = new System.Drawing.Point(-2, -12);
+            tileItemElement10.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
+            tileItemElement10.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement10.Text = "Retard";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
+            this.tileItemLT.Elements.Add(tileItemElement9);
+            this.tileItemLT.Elements.Add(tileItemElement10);
+            this.tileItemLT.Id = 2;
+            this.tileItemLT.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileItemLT.Name = "tileItemLT";
+            this.tileItemLT.Tag = "Kind == \'Late\'";
+            this.tileItemLT.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem_ItemClick);
+            // 
             // tileItemDeferred
             // 
             tileItemElement7.Appearance.Normal.FontSizeDelta = 128;
@@ -389,19 +420,19 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(40, 40, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1424, 589);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1068, 383);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // tileControlLCI
             // 
             this.tileControlLCI.Control = this.tileControl1;
             this.tileControlLCI.CustomizationFormText = "tileControlLCI";
-            this.tileControlLCI.Location = new System.Drawing.Point(0, 45);
+            this.tileControlLCI.Location = new System.Drawing.Point(0, 38);
             this.tileControlLCI.MaxSize = new System.Drawing.Size(240, 0);
             this.tileControlLCI.MinSize = new System.Drawing.Size(240, 24);
             this.tileControlLCI.Name = "tileControlLCI";
             this.tileControlLCI.OptionsPrint.AllowPrint = false;
-            this.tileControlLCI.Size = new System.Drawing.Size(240, 544);
+            this.tileControlLCI.Size = new System.Drawing.Size(240, 345);
             this.tileControlLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.tileControlLCI.TextSize = new System.Drawing.Size(0, 0);
             this.tileControlLCI.TextVisible = false;
@@ -418,16 +449,16 @@
             this.tasksSLI.Location = new System.Drawing.Point(0, 0);
             this.tasksSLI.Name = "tasksSLI";
             this.tasksSLI.Padding = new DevExpress.XtraLayout.Utils.Padding(4, 2, 10, 10);
-            this.tasksSLI.Size = new System.Drawing.Size(1344, 45);
+            this.tasksSLI.Size = new System.Drawing.Size(988, 38);
             this.tasksSLI.Text = "Absences";
-            this.tasksSLI.TextSize = new System.Drawing.Size(79, 25);
+            this.tasksSLI.TextSize = new System.Drawing.Size(62, 18);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.notesGridControl;
-            this.layoutControlItem1.Location = new System.Drawing.Point(268, 45);
+            this.layoutControlItem1.Location = new System.Drawing.Point(268, 38);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1076, 544);
+            this.layoutControlItem1.Size = new System.Drawing.Size(720, 345);
             this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
@@ -437,14 +468,14 @@
             this.buttonHide.AllowHotTrack = false;
             this.buttonHide.CustomizationFormText = " ";
             this.buttonHide.Image = ((System.Drawing.Image)(resources.GetObject("buttonHide.Image")));
-            this.buttonHide.Location = new System.Drawing.Point(240, 45);
+            this.buttonHide.Location = new System.Drawing.Point(240, 38);
             this.buttonHide.MaxSize = new System.Drawing.Size(28, 0);
             this.buttonHide.MinSize = new System.Drawing.Size(28, 1);
             this.buttonHide.Name = "buttonHide";
-            this.buttonHide.Size = new System.Drawing.Size(28, 544);
+            this.buttonHide.Size = new System.Drawing.Size(28, 345);
             this.buttonHide.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.buttonHide.Text = " ";
-            this.buttonHide.TextSize = new System.Drawing.Size(79, 25);
+            this.buttonHide.TextSize = new System.Drawing.Size(62, 25);
             this.buttonHide.Click += new System.EventHandler(this.collapseButton_Click);
             // 
             // simpleLabelItem1
@@ -543,11 +574,12 @@
             // 
             // Absences
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataLayoutControl1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Absences";
-            this.Size = new System.Drawing.Size(1424, 589);
+            this.Size = new System.Drawing.Size(1068, 383);
             ((System.ComponentModel.ISupportInitialize)(this.priorityImageList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
@@ -581,6 +613,7 @@
         private DevExpress.XtraEditors.TileItem tileItemMotive;
         private DevExpress.XtraEditors.TileItem tileItemDeferred;
         private DevExpress.XtraEditors.TileItem tileItemCM;
+        private DevExpress.XtraEditors.TileItem tileItemLT;
         private DevExpress.XtraLayout.LayoutControlItem tileControlLCI;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;

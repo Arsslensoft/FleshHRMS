@@ -1,0 +1,866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 11.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="11.0">
+ <Targets>
+  <Target Name="E:\Research\FHRMS\Bin\Phexon.exe">
+   <Modules>
+    <Module Name="phexon.exe">
+     <Namespaces>
+      <Namespace Name="DevExpress.XtraEditors.Controls">
+       <Types>
+        <Type Name="ButtonsPanel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="Breaking">
+           <Issue Name="ProvideDisposeBool" Certainty="95" Level="Error">Provide an overridable implementation of Dispose(bool) on 'ButtonsPanel' or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="Breaking">
+             <Issue Name="DisposeImplementation" Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Controls" File="ButtonsPanel.cs" Line="39">Modify 'ButtonsPanel.Dispose()' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Issue>
+             <Issue Name="DisposeSignature" Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Controls" File="ButtonsPanel.cs" Line="39">Ensure that 'ButtonsPanel.Dispose()' is declared as public and sealed.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ButtonsPanelInfoEventsProvider" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="Breaking">
+           <Issue Name="ProvideDisposeBool" Certainty="95" Level="Error">Provide an overridable implementation of Dispose(bool) on 'ButtonsPanelInfoEventsProvider' or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="Breaking">
+             <Issue Name="DisposeImplementation" Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Controls" File="ButtonsPanel.cs" Line="207">Modify 'ButtonsPanelInfoEventsProvider.Dispose()' so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Issue>
+             <Issue Name="DisposeSignature" Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Controls" File="ButtonsPanel.cs" Line="207">Ensure that 'ButtonsPanelInfoEventsProvider.Dispose()' is declared as public and sealed.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="DevExpress.XtraEditors.Drawing">
+       <Types>
+        <Type Name="PanelWrapper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DevExpress.Utils.Drawing.IPanelControlOwner.GetForeColor()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Controls" File="GroupPainter.cs" Line="11">Make 'PanelWrapper' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IPanelControlOwner.GetForeColor()' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DevExpress.Utils.Drawing.IPanelControlOwner.OnCustomDrawCaption(DevExpress.XtraEditors.GroupCaptionCustomDrawEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Controls" File="GroupPainter.cs" Line="16">Make 'PanelWrapper' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IPanelControlOwner.OnCustomDrawCaption(GroupCaptionCustomDrawEventArgs)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="FHRMS">
+       <Types>
+        <Type Name="DocumentContentViewModelBase" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DevExpress.Mvvm.IDocumentContent.DocumentOwner" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#DevExpress.Mvvm.IDocumentContent.get_DocumentOwner()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error">Make 'DocumentContentViewModelBase' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDocumentContent.DocumentOwner.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+            <Accessor Name="#DevExpress.Mvvm.IDocumentContent.set_DocumentOwner(DevExpress.Mvvm.IDocumentOwner)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error">Make 'DocumentContentViewModelBase' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDocumentContent.DocumentOwner.set(IDocumentOwner)' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#DevExpress.Mvvm.IDocumentContent.OnClose(System.ComponentModel.CancelEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="DocumentContentViewModelBase.cs" Line="10">Make 'DocumentContentViewModelBase' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDocumentContent.OnClose(CancelEventArgs)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DevExpress.Mvvm.IDocumentContent.OnDestroy()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="DocumentContentViewModelBase.cs" Line="14">Make 'DocumentContentViewModelBase' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDocumentContent.OnDestroy()' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DevExpress.Mvvm.IDocumentContent.Title" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#DevExpress.Mvvm.IDocumentContent.get_Title()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="DocumentContentViewModelBase.cs" Line="21">Make 'DocumentContentViewModelBase' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDocumentContent.Title.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FlyoutDetailFormDocumentManagerService+FlyoutDocument" Kind="Class" Accessibility="Family" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+           <Issue Name="NonBreaking" Certainty="95" Level="CriticalError">Implement IDisposable on 'FlyoutDetailFormDocumentManagerService.FlyoutDocument' because it creates members of the following IDisposable types: 'FlyoutDialog'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="FHRMS.Common.DataModel">
+       <Types>
+        <Type Name="DbException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Add [Serializable] to 'DbException' as this type implements ISerializable.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="FHRMS.Common.DataModel.EntityFramework">
+       <Types>
+        <Type Name="DbReadOnlyRepository`2" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FHRMS.Common.DataModel.IReadOnlyRepository`1&lt;!0&gt;.Local" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.Common.DataModel.IReadOnlyRepository`1&lt;!0&gt;.get_Local()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbReadOnlyRepository.cs" Line="71">Make 'DbReadOnlyRepository&lt;TEntity, TDbContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IReadOnlyRepository&lt;TEntity&gt;.Local.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#FHRMS.Common.DataModel.IReadOnlyRepository`1&lt;!0&gt;.UnitOfWork" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.Common.DataModel.IReadOnlyRepository`1&lt;!0&gt;.get_UnitOfWork()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbReadOnlyRepository.cs" Line="66">Make 'DbReadOnlyRepository&lt;TEntity, TDbContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IReadOnlyRepository&lt;TEntity&gt;.UnitOfWork.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DbRepository`3" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FHRMS.Common.DataModel.IRepository`2&lt;!0,!1&gt;.Create()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbRepository.cs" Line="106">Make 'DbRepository&lt;TEntity, TPrimaryKey, TDbContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IRepository&lt;TEntity, TPrimaryKey&gt;.Create()' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FHRMS.Common.DataModel.IRepository`2&lt;!0,!1&gt;.Find(!1)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbRepository.cs" Line="96">Make 'DbRepository&lt;TEntity, TPrimaryKey, TDbContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IRepository&lt;TEntity, TPrimaryKey&gt;.Find(TPrimaryKey)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FHRMS.Common.DataModel.IRepository`2&lt;!0,!1&gt;.GetPrimaryKey(!0)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbRepository.cs" Line="126">Make 'DbRepository&lt;TEntity, TPrimaryKey, TDbContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IRepository&lt;TEntity, TPrimaryKey&gt;.GetPrimaryKey(TEntity)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FHRMS.Common.DataModel.IRepository`2&lt;!0,!1&gt;.GetPrimaryKeyExpression" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.Common.DataModel.IRepository`2&lt;!0,!1&gt;.get_GetPrimaryKeyExpression()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbRepository.cs" Line="117">Make 'DbRepository&lt;TEntity, TPrimaryKey, TDbContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IRepository&lt;TEntity, TPrimaryKey&gt;.GetPrimaryKeyExpression.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#FHRMS.Common.DataModel.IRepository`2&lt;!0,!1&gt;.HasPrimaryKey(!0)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbRepository.cs" Line="131">Make 'DbRepository&lt;TEntity, TPrimaryKey, TDbContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IRepository&lt;TEntity, TPrimaryKey&gt;.HasPrimaryKey(TEntity)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FHRMS.Common.DataModel.IRepository`2&lt;!0,!1&gt;.Reload(!0)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbRepository.cs" Line="111">Make 'DbRepository&lt;TEntity, TPrimaryKey, TDbContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IRepository&lt;TEntity, TPrimaryKey&gt;.Reload(TEntity)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FHRMS.Common.DataModel.IRepository`2&lt;!0,!1&gt;.Remove(!0)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbRepository.cs" Line="101">Make 'DbRepository&lt;TEntity, TPrimaryKey, TDbContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IRepository&lt;TEntity, TPrimaryKey&gt;.Remove(TEntity)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FHRMS.Common.DataModel.IRepository`2&lt;!0,!1&gt;.SetPrimaryKey(!0,!1)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbRepository.cs" Line="121">Make 'DbRepository&lt;TEntity, TPrimaryKey, TDbContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IRepository&lt;TEntity, TPrimaryKey&gt;.SetPrimaryKey(TEntity, TPrimaryKey)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DbUnitOfWork`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FHRMS.Common.DataModel.IUnitOfWork.Detach(System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbUnitOfWork.cs" Line="57">Make 'DbUnitOfWork&lt;TContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IUnitOfWork.Detach(object)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FHRMS.Common.DataModel.IUnitOfWork.GetState(System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbUnitOfWork.cs" Line="48">Make 'DbUnitOfWork&lt;TContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IUnitOfWork.GetState(object)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FHRMS.Common.DataModel.IUnitOfWork.HasChanges()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbUnitOfWork.cs" Line="62">Make 'DbUnitOfWork&lt;TContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IUnitOfWork.HasChanges()' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FHRMS.Common.DataModel.IUnitOfWork.SaveChanges()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbUnitOfWork.cs" Line="32">Make 'DbUnitOfWork&lt;TContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IUnitOfWork.SaveChanges()' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FHRMS.Common.DataModel.IUnitOfWork.Update(System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\DataModel\EntityFramework" File="DbUnitOfWork.cs" Line="53">Make 'DbUnitOfWork&lt;TContext&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IUnitOfWork.Update(object)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="FHRMS.Common.ViewModel">
+       <Types>
+        <Type Name="CollectionViewModel`3" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DevExpress.Mvvm.IDocumentContent.Title" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#DevExpress.Mvvm.IDocumentContent.get_Title()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="CollectionViewModel.partial.cs" Line="26">Make 'CollectionViewModel&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDocumentContent.Title.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#DevExpress.Mvvm.ISupportParameter.Parameter" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#DevExpress.Mvvm.ISupportParameter.set_Parameter(System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="CollectionViewModel.partial.cs" Line="153">Make 'CollectionViewModel&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISupportParameter.Parameter.set(object)' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CollectionViewModelBase`3" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DevExpress.Mvvm.IDocumentContent.DocumentOwner" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#DevExpress.Mvvm.IDocumentContent.set_DocumentOwner(DevExpress.Mvvm.IDocumentOwner)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="CollectionViewModel.cs" Line="379">Make 'CollectionViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDocumentContent.DocumentOwner.set(IDocumentOwner)' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#DevExpress.Mvvm.IDocumentContent.OnClose(System.ComponentModel.CancelEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="CollectionViewModel.cs" Line="368">Make 'CollectionViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDocumentContent.OnClose(CancelEventArgs)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DevExpress.Mvvm.IDocumentContent.Title" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#DevExpress.Mvvm.IDocumentContent.get_Title()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="CollectionViewModel.cs" Line="364">Make 'CollectionViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDocumentContent.Title.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DefaultEntityInitializer`2" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FHRMS.Common.ViewModel.IEntityInitializer`2&lt;!0,!1&gt;.InitializeEntity(!1,!0)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="EntityInitializers.cs" Line="37">Make 'DefaultEntityInitializer&lt;TEntity, TUnitOfWork&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IEntityInitializer&lt;TEntity, TUnitOfWork&gt;.InitializeEntity(TUnitOfWork, TEntity)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EntityMultiInitializer`2" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FHRMS.Common.ViewModel.IEntityInitializer`2&lt;!0,!1&gt;.InitializeEntity(!1,!0)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="EntityInitializers.partial.cs" Line="17">Make 'EntityMultiInitializer&lt;TEntity, TUnitOfWork&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IEntityInitializer&lt;TEntity, TUnitOfWork&gt;.InitializeEntity(TUnitOfWork, TEntity)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EntityPropertyInitializerBase`3" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FHRMS.Common.ViewModel.IEntityInitializer`2&lt;!0,!1&gt;.InitializeEntity(!1,!0)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="EntityInitializers.cs" Line="65">Make 'EntityPropertyInitializerBase&lt;TEntity, TUnitOfWork, TProperty&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IEntityInitializer&lt;TEntity, TUnitOfWork&gt;.InitializeEntity(TUnitOfWork, TEntity)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ReadOnlyCollectionViewModelBase`2" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(FHRMS.Common.DataModel.IUnitOfWorkFactory`1&lt;!1&gt;,System.Func`2&lt;!1,FHRMS.Common.DataModel.IReadOnlyRepository`1&lt;!0&gt;&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="ReadOnlyCollectionViewModel.cs" Line="57">'ReadOnlyCollectionViewModelBase&lt;TEntity, TUnitOfWork&gt;.ReadOnlyCollectionViewModelBase(IUnitOfWorkFactory&lt;TUnitOfWork&gt;, Func&lt;TUnitOfWork, IReadOnlyRepository&lt;TEntity&gt;&gt;)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;ReadOnlyCollectionViewModelBase&lt;TEntity, TUnitOfWork&gt;..ctor(IUnitOfWorkFactory&lt;TUnitOfWork&gt;, Func&lt;TUnitOfWork,IReadOnlyRepository&lt;TEntity&gt;&gt;)&#xD;&#xA;ReadOnlyCollectionViewModelBase&lt;TEntity, TUnitOfWork&gt;.OnInitializeInRuntime():Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SingleObjectChildViewModel`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DevExpress.Mvvm.ISupportParameter.Parameter" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#DevExpress.Mvvm.ISupportParameter.get_Parameter()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="SingleObjectChildViewModel.cs" Line="19">Make 'SingleObjectChildViewModel&lt;TEntity&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISupportParameter.Parameter.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+            <Accessor Name="#DevExpress.Mvvm.ISupportParameter.set_Parameter(System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="SingleObjectChildViewModel.cs" Line="20">Make 'SingleObjectChildViewModel&lt;TEntity&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISupportParameter.Parameter.set(object)' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SingleObjectViewModelBase`3" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(FHRMS.Common.DataModel.IUnitOfWorkFactory`1&lt;!2&gt;,System.Func`2&lt;!2,FHRMS.Common.DataModel.IRepository`2&lt;!0,!1&gt;&gt;,System.Func`2&lt;!0,System.Object&gt;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="SingleObjectViewModel.cs" Line="73">'SingleObjectViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;.SingleObjectViewModelBase(IUnitOfWorkFactory&lt;TUnitOfWork&gt;, Func&lt;TUnitOfWork, IRepository&lt;TEntity, TPrimaryKey&gt;&gt;, Func&lt;TEntity, object&gt;)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SingleObjectViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;..ctor(IUnitOfWorkFactory&lt;TUnitOfWork&gt;, Func&lt;TUnitOfWork,IRepository&lt;TEntity,TPrimaryKey&gt;&gt;, Func&lt;TEntity,Object&gt;)&#xD;&#xA;SingleObjectViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;.OnInitializeInRuntime():Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="SingleObjectViewModel.cs" Line="73">'SingleObjectViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;.SingleObjectViewModelBase(IUnitOfWorkFactory&lt;TUnitOfWork&gt;, Func&lt;TUnitOfWork, IRepository&lt;TEntity, TPrimaryKey&gt;&gt;, Func&lt;TEntity, object&gt;)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;SingleObjectViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;..ctor(IUnitOfWorkFactory&lt;TUnitOfWork&gt;, Func&lt;TUnitOfWork,IRepository&lt;TEntity,TPrimaryKey&gt;&gt;, Func&lt;TEntity,Object&gt;)&#xD;&#xA;SingleObjectViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;.set_Entity(TEntity):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DevExpress.Mvvm.IDocumentContent.DocumentOwner" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#DevExpress.Mvvm.IDocumentContent.set_DocumentOwner(DevExpress.Mvvm.IDocumentOwner)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="SingleObjectViewModel.cs" Line="502">Make 'SingleObjectViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDocumentContent.DocumentOwner.set(IDocumentOwner)' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#DevExpress.Mvvm.IDocumentContent.OnClose(System.ComponentModel.CancelEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="SingleObjectViewModel.cs" Line="490">Make 'SingleObjectViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDocumentContent.OnClose(CancelEventArgs)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DevExpress.Mvvm.ISupportParameter.Parameter" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#DevExpress.Mvvm.ISupportParameter.get_Parameter()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="SingleObjectViewModel.cs" Line="123">Make 'SingleObjectViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISupportParameter.Parameter.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+            <Accessor Name="#DevExpress.Mvvm.ISupportParameter.set_Parameter(System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Common\ViewModel" File="SingleObjectViewModel.cs" Line="124">Make 'SingleObjectViewModelBase&lt;TEntity, TPrimaryKey, TUnitOfWork&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISupportParameter.Parameter.set(object)' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="FHRMS.DevAVDbDataModel">
+       <Types>
+        <Type Name="DbUnitOfWorkFactory" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FHRMS.Common.DataModel.IUnitOfWorkFactory`1&lt;FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork&gt;.CreateUnitOfWork()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\DevAVDbDataModel" File="UnitOfWorkFactory.cs" Line="18">Make 'DbUnitOfWorkFactory' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IUnitOfWorkFactory&lt;IDevAVDbUnitOfWork&gt;.CreateUnitOfWork()' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DevAVDbUnitOfWork" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.Attendances" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.get_Attendances()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\DevAVDbDataModel" File="DevAVDbUnitOfWork.cs" Line="45">Make 'DevAVDbUnitOfWork' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDevAVDbUnitOfWork.Attendances.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.Employees" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.get_Employees()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\DevAVDbDataModel" File="DevAVDbUnitOfWork.cs" Line="24">Make 'DevAVDbUnitOfWork' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDevAVDbUnitOfWork.Employees.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.Evaluations" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.get_Evaluations()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\DevAVDbDataModel" File="DevAVDbUnitOfWork.cs" Line="40">Make 'DevAVDbUnitOfWork' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDevAVDbUnitOfWork.Evaluations.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.Holidays" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.get_Holidays()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\DevAVDbDataModel" File="DevAVDbUnitOfWork.cs" Line="65">Make 'DevAVDbUnitOfWork' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDevAVDbUnitOfWork.Holidays.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.Notifications" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.get_Notifications()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\DevAVDbDataModel" File="DevAVDbUnitOfWork.cs" Line="55">Make 'DevAVDbUnitOfWork' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDevAVDbUnitOfWork.Notifications.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.Pictures" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.get_Pictures()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\DevAVDbDataModel" File="DevAVDbUnitOfWork.cs" Line="50">Make 'DevAVDbUnitOfWork' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDevAVDbUnitOfWork.Pictures.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.Shifts" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.get_Shifts()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\DevAVDbDataModel" File="DevAVDbUnitOfWork.cs" Line="60">Make 'DevAVDbUnitOfWork' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDevAVDbUnitOfWork.Shifts.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.Tasks" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.get_Tasks()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\DevAVDbDataModel" File="DevAVDbUnitOfWork.cs" Line="29">Make 'DevAVDbUnitOfWork' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDevAVDbUnitOfWork.Tasks.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.Warnings" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.DevAVDbDataModel.IDevAVDbUnitOfWork.get_Warnings()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\DevAVDbDataModel" File="DevAVDbUnitOfWork.cs" Line="35">Make 'DevAVDbUnitOfWork' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IDevAVDbUnitOfWork.Warnings.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="FHRMS.Modules">
+       <Types>
+        <Type Name="BaseModuleControl" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FHRMS.Modules.ISupportViewModel.ParentViewModelAttached()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Modules" File="BaseModule.cs" Line="84">Make 'BaseModuleControl' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISupportViewModel.ParentViewModelAttached()' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FHRMS.Modules.ISupportViewModel.ViewModel" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#FHRMS.Modules.ISupportViewModel.get_ViewModel()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Modules" File="BaseModule.cs" Line="80">Make 'BaseModuleControl' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISupportViewModel.ViewModel.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="FHRMS.Preview">
+       <Types>
+        <Type Name="ReportExportSettingsControl" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="menuExport" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="e:\Research\FHRMS\Flesh\Modules\Controls\Reports" File="ExportSettings.Designer.cs" Line="13">'ReportExportSettingsControl' contains field 'ReportExportSettingsControl.menuExport' that is of IDisposable type: 'DXPopupMenu'. Change the Dispose method on 'ReportExportSettingsControl' to call Dispose or Close on this field.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="FHRMS.Reports">
+       <Types>
+        <Type Name="EmployeeDirectory" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="e:\Research\FHRMS\Flesh\Reports" File="EmployeeDirectory.cs" Line="56">'EmployeeDirectory.EmployeeDirectory()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;EmployeeDirectory..ctor()&#xD;&#xA;EmployeeDirectory.InitializeComponent():Void&#xD;&#xA;ISupportInitialize.BeginInit():Void&#xD;&#xA;XtraReportBase.get_Bands():BandCollection&#xD;&#xA;XtraReport.get_CalculatedFields():CalculatedFieldCollection&#xD;&#xA;XtraReportBase.set_DataSource(Object):Void&#xD;&#xA;XRControl.set_Dpi(Single):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="e:\Research\FHRMS\Flesh\Reports" File="EmployeeDirectory.cs" Line="56">'EmployeeDirectory.EmployeeDirectory()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;EmployeeDirectory..ctor()&#xD;&#xA;EmployeeDirectory.InitializeComponent():Void&#xD;&#xA;ISupportInitialize.BeginInit():Void&#xD;&#xA;XtraReportBase.get_Bands():BandCollection&#xD;&#xA;XtraReport.get_CalculatedFields():CalculatedFieldCollection&#xD;&#xA;XtraReportBase.set_DataSource(Object):Void&#xD;&#xA;XRControl.set_Dpi(Single):Void&#xD;&#xA;XtraReport.set_DrawWatermark(Boolean):Void&#xD;&#xA;XRControl.set_Font(Font):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EmployeeProfile" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="e:\Research\FHRMS\Flesh\Reports" File="EmployeeProfile.cs" Line="72">'EmployeeProfile.EmployeeProfile()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;EmployeeProfile..ctor()&#xD;&#xA;EmployeeProfile.InitializeComponent():Void&#xD;&#xA;ISupportInitialize.BeginInit():Void&#xD;&#xA;XtraReportBase.get_Bands():BandCollection&#xD;&#xA;XtraReportBase.set_DataSource(Object):Void&#xD;&#xA;XtraReportBase.set_FilterString(String):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="e:\Research\FHRMS\Flesh\Reports" File="EmployeeProfile.cs" Line="72">'EmployeeProfile.EmployeeProfile()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;EmployeeProfile..ctor()&#xD;&#xA;EmployeeProfile.InitializeComponent():Void&#xD;&#xA;ISupportInitialize.BeginInit():Void&#xD;&#xA;XtraReportBase.get_Bands():BandCollection&#xD;&#xA;XtraReportBase.set_DataSource(Object):Void&#xD;&#xA;XtraReportBase.set_FilterString(String):Void&#xD;&#xA;XRControl.set_Font(Font):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="e:\Research\FHRMS\Flesh\Reports" File="EmployeeProfile.cs" Line="72">'EmployeeProfile.EmployeeProfile()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;EmployeeProfile..ctor()&#xD;&#xA;EmployeeProfile.InitializeComponent():Void&#xD;&#xA;ISupportInitialize.BeginInit():Void&#xD;&#xA;XtraReportBase.get_Bands():BandCollection&#xD;&#xA;XtraReportBase.set_DataSource(Object):Void&#xD;&#xA;XtraReportBase.set_FilterString(String):Void&#xD;&#xA;XRControl.set_Font(Font):Void&#xD;&#xA;XtraReport.set_Margins(Margins):Void&#xD;&#xA;XtraReport.get_Parameters():ParameterCollection&#xD;&#xA;XtraReport.set_Version(Str&#xD;&#xA;XRControl.add_BeforePrint(PrintEventHandler):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="LeaveList" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="e:\Research\FHRMS\Flesh\Reports" File="EmployeeTaskList.cs" Line="75">'LeaveList.LeaveList()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;LeaveList..ctor()&#xD;&#xA;LeaveList.InitializeComponent():Void&#xD;&#xA;ISupportInitialize.BeginInit():Void&#xD;&#xA;XtraReportBase.get_Bands():BandCollection&#xD;&#xA;XtraReport.get_CalculatedFields():CalculatedFieldCollection&#xD;&#xA;XtraReportBase.set_DataSource(Object):Void&#xD;&#xA;XtraReport.get_DesignerOptions():DesignerOptions&#xD;&#xA;XtraReport.set_DrawWatermark(Boolean):Void&#xD;&#xA;XRControl.set_Font(Font):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="FHRMS.Services">
+       <Types>
+        <Type Name="MessageBoxService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DevExpress.Mvvm.IMessageBoxService.Show(System.String,System.String,DevExpress.Mvvm.MessageButton,DevExpress.Mvvm.MessageIcon,DevExpress.Mvvm.MessageResult)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\Services" File="MessageBoxService.cs" Line="12">Make 'MessageBoxService' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IMessageBoxService.Show(string, string, MessageButton, MessageIcon, MessageResult)' and is visible to derived classes.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="FHRMS.ViewModel">
+       <Types>
+        <Type Name="ReportViewModelBase`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DevExpress.Mvvm.ISupportParameter.Parameter" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#DevExpress.Mvvm.ISupportParameter.get_Parameter()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\ViewModels" File="ReportViewModelBase.cs" Line="15">Make 'ReportViewModelBase&lt;TReportType&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISupportParameter.Parameter.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+            <Accessor Name="#DevExpress.Mvvm.ISupportParameter.set_Parameter(System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\ViewModels" File="ReportViewModelBase.cs" Line="17">Make 'ReportViewModelBase&lt;TReportType&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISupportParameter.Parameter.set(object)' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="FHRMS.ViewModels">
+       <Types>
+        <Type Name="MailMergeViewModelBase`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DevExpress.Mvvm.ISupportParameter.Parameter" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#DevExpress.Mvvm.ISupportParameter.get_Parameter()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\ViewModels" File="MailMergeViewModelBase.cs" Line="14">Make 'MailMergeViewModelBase&lt;TMailTemplate&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISupportParameter.Parameter.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+            <Accessor Name="#DevExpress.Mvvm.ISupportParameter.set_Parameter(System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="e:\Research\FHRMS\Flesh\ViewModels" File="MailMergeViewModelBase.cs" Line="16">Make 'MailMergeViewModelBase&lt;TMailTemplate&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'ISupportParameter.Parameter.set(object)' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="FHRMS.Widgets">
+       <Types>
+        <Type Name="AbsenceByDateWidget" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="swiftPlotSeriesView1" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="e:\Research\FHRMS\Flesh\Widgets\Stats" File="AbsenceByDateWidget.cs" Line="116">'AbsenceByDateWidget' contains field 'AbsenceByDateWidget.swiftPlotSeriesView1' that is of IDisposable type: 'SwiftPlotSeriesView'. Change the Dispose method on 'AbsenceByDateWidget' to call Dispose or Close on this field.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AbsenceWidget" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="swiftPlotSeriesView1" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="e:\Research\FHRMS\Flesh\Widgets\Stats" File="AbsenceWidget.cs" Line="136">'AbsenceWidget' contains field 'AbsenceWidget.swiftPlotSeriesView1' that is of IDisposable type: 'SwiftPlotSeriesView'. Change the Dispose method on 'AbsenceWidget' to call Dispose or Close on this field.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="LeaveByStatusWidget" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="swiftPlotSeriesView1" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="e:\Research\FHRMS\Flesh\Widgets\Stats" File="LeaveByStatusWidget.cs" Line="137">'LeaveByStatusWidget' contains field 'LeaveByStatusWidget.swiftPlotSeriesView1' that is of IDisposable type: 'SwiftPlotSeriesView'. Change the Dispose method on 'LeaveByStatusWidget' to call Dispose or Close on this field.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="LeaveByTypeWidget" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="swiftPlotSeriesView1" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="e:\Research\FHRMS\Flesh\Widgets\Stats" File="LeaveByTypeWidget.cs" Line="136">'LeaveByTypeWidget' contains field 'LeaveByTypeWidget.swiftPlotSeriesView1' that is of IDisposable type: 'SwiftPlotSeriesView'. Change the Dispose method on 'LeaveByTypeWidget' to call Dispose or Close on this field.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WarningsWidget" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="swiftPlotSeriesView1" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-03-30 07:37:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="e:\Research\FHRMS\Flesh\Widgets\Stats" File="WarningsWidget.cs" Line="137">'WarningsWidget' contains field 'WarningsWidget.swiftPlotSeriesView1' that is of IDisposable type: 'SwiftPlotSeriesView'. Change the Dispose method on 'WarningsWidget' to call Dispose or Close on this field.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+   <Name>Disposable fields should be disposed</Name>
+   <Description>If a type that implements IDisposable owns fields that also implement IDisposable, the encapsulating type's Dispose() implementation should call Dispose() on each disposable field.</Description>
+   <Resolution Name="Default">{0} contains field {1} that is of IDisposable type: {2}. Change the Dispose method on {0} to call Dispose or Close on this field.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182328(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214">
+   <Name>Do not call overridable methods in constructors</Name>
+   <Description>Virtual methods defined on the class should not be called from constructors. If a derived class has overridden the method, the derived class version will be called (before the derived class constructor is called).</Description>
+   <Resolution Name="Default">{0} contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: {1}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182331(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementIDisposableCorrectly" Category="Microsoft.Design" CheckId="CA1063">
+   <Name>Implement IDisposable correctly</Name>
+   <Description>All IDisposable types should implement the Dispose pattern correctly.</Description>
+   <Resolution Name="DisposeImplementation">Modify {0} so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.</Resolution>
+   <Resolution Name="DisposeSignature">Ensure that {0} is declared as public and sealed.</Resolution>
+   <Resolution Name="ProvideDisposeBool">Provide an overridable implementation of Dispose(bool) on {0} or mark the type as sealed. A call to Dispose(false) should only clean up native resources. A call to Dispose(true) should clean up both managed and native resources.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms244737(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033">
+   <Name>Interface methods should be callable by child types</Name>
+   <Description>Explicit method implementations are defined with private accessibility. Classes that derive from classes with explicit method implementations and choose to re-declare them on the class will not be able to call into the base class implementation unless the base class has provided an alternate method with appropriate accessibility. When overriding a base class method that has been hidden by explicit interface implementation, in order to call into the base class implementation, a derived class must cast the base pointer to the relevant interface. When calling through this reference, however, the derived class implementation will actually be invoked, resulting in recursion and an eventual stack overflow.</Description>
+   <Resolution Name="Default">Make {0} sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of {1} and is visible to derived classes.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182153(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237">
+   <Name>Mark ISerializable types with SerializableAttribute</Name>
+   <Description>The System.Runtime.Serialization.ISerializable interface allows the type to customize its serialization, while the Serializable attribute enables the runtime to recognize the type as being serializable.</Description>
+   <Resolution Name="Default">Add [Serializable] to {0} as this type implements ISerializable.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182350(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="NonBreaking">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="11.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

@@ -9,6 +9,7 @@ using DevExpress.XtraEditors;
 using DevExpress.Internal;
 using System.Reflection;
 using System.IO;
+using FHRMS.Data;
 
 namespace FHRMS
 {

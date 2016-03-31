@@ -13,7 +13,7 @@ using System.Security;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace DevExpress.DataAnnotations {
+namespace FHRMS.Data {
     public abstract class RegexAttributeBase : DataTypeAttribute {
         protected const RegexOptions DefaultRegexOptions = RegexOptions.Compiled | RegexOptions.ExplicitCapture | RegexOptions.IgnoreCase;
 

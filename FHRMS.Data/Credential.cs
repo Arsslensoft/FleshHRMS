@@ -1,5 +1,5 @@
-﻿using DevExpress.Common;
-using DevExpress.DataAnnotations;
+﻿using FHRMS.Data;
+using FHRMS.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

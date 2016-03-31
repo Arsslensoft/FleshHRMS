@@ -10,7 +10,7 @@ using System.Security;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
 
-namespace DevExpress.Internal {
+namespace FHRMS.Data{
     public class DataDirectoryHelper {
         static bool? _isClickOnce = null;
 

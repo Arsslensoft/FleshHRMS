@@ -1,0 +1,6 @@
+E:\Research\FHRMS\Cleaner\bin\Debug\Cleaner.exe.config
+E:\Research\FHRMS\Cleaner\bin\Debug\Cleaner.exe
+E:\Research\FHRMS\Cleaner\bin\Debug\Cleaner.pdb
+E:\Research\FHRMS\Cleaner\obj\Debug\Cleaner.csprojResolveAssemblyReference.cache
+E:\Research\FHRMS\Cleaner\obj\Debug\Cleaner.exe
+E:\Research\FHRMS\Cleaner\obj\Debug\Cleaner.pdb

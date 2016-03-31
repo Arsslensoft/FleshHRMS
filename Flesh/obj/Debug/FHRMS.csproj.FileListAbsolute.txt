@@ -227,5 +227,16 @@ E:\Research\FHRMS\Flesh\obj\Debug\FHRMS.Reports.EmployeeSummary.resources
 E:\Research\FHRMS\Flesh\obj\Debug\FHRMS.Reports.LeaveList.resources
 E:\Research\FHRMS\Flesh\obj\Debug\FHRMS.csproj.GenerateResource.Cache
 E:\Research\FHRMS\Flesh\obj\Debug\Phexon.exe.licenses
+E:\Research\FHRMS\Bin\Icons\DevExpress.ico
+E:\Research\FHRMS\Bin\Icons\Universal.ico
+E:\Research\FHRMS\Bin\Icons\Win.ico
+E:\Research\FHRMS\Bin\Dll\System.Data.SQLite.dll
+E:\Research\FHRMS\Bin\Dll\System.Data.SQLite.EF6.dll
+E:\Research\FHRMS\Bin\Dll\EntityFramework.dll
+E:\Research\FHRMS\Bin\Phexon.exe.config
+E:\Research\FHRMS\Bin\Phexon.exe
+E:\Research\FHRMS\Bin\Phexon.pdb
 E:\Research\FHRMS\Flesh\obj\Debug\Phexon.exe
 E:\Research\FHRMS\Flesh\obj\Debug\Phexon.pdb
+E:\Research\FHRMS\Flesh\obj\Debug\FHRMS.Modules.ModifierFérier.resources
+E:\Research\FHRMS\Flesh\obj\Debug\FHRMS.Widgets.HolidayWidget.resources

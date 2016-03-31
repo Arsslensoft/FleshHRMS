@@ -34,11 +34,12 @@ namespace FHRMS {
         ImprimerAvertissements,
 
         ModifierPlaning,
-
+        ModifierFérier,
 
         Statistiques,
         Notifications,
-        Shifts
+        Shifts,
+        Holidays
 
     }
     public interface IMainModule : IPeekModulesHost,

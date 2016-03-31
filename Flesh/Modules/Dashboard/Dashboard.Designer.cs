@@ -41,7 +41,7 @@ namespace FHRMS.Modules
             this.mailDocument = new DevExpress.XtraBars.Docking2010.Views.Widget.Document(this.components);
             this.weatherDocument = new DevExpress.XtraBars.Docking2010.Views.Widget.Document(this.components);
             this.newsDocument = new DevExpress.XtraBars.Docking2010.Views.Widget.Document(this.components);
-
+            holDocument = new Document();
             this.rowDefinition1 = new DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition();
             this.rowDefinition2 = new DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition();
             this.rowDefinition3 = new DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition();
@@ -87,6 +87,7 @@ namespace FHRMS.Modules
             this.calendarDocument,
             this.dateTimeDocument,
             this.mailDocument,
+            holDocument,
             this.weatherDocument,
             this.newsDocument});
             this.widgetView1.DocumentSpacing = 3;
@@ -94,6 +95,7 @@ namespace FHRMS.Modules
             this.calendarDocument,
             this.dateTimeDocument,
             this.mailDocument,
+            holDocument,
             this.weatherDocument,
             this.newsDocument   });
             this.widgetView1.Rows.AddRange(new DevExpress.XtraBars.Docking2010.Views.Widget.RowDefinition[] {
@@ -150,12 +152,22 @@ namespace FHRMS.Modules
             this.newsDocument.Height = 290;
             this.newsDocument.RowIndex = 1;
             this.newsDocument.Width = 496;
-
+            // 
+            // holDocument
+            // 
+            this.holDocument.Caption = "Jours fériers";
+            this.holDocument.ColumnIndex = 2;
+            this.holDocument.ControlName = "Jours fériers";
+            this.holDocument.ControlTypeName = "FHRMS.Widgets.HolidayWidget";
+            this.holDocument.Height = 290;
+            this.holDocument.RowIndex = 1;
+            this.holDocument.Width = 496;
             // 
             // stackGroup1
             // 
             this.stackGroup1.Caption = "Timeline";
             this.stackGroup1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Widget.Document[] {
+                holDocument,
             this.weatherDocument,
             this.newsDocument});
             this.stackGroup1.Length.UnitValue = 2.5D;
@@ -210,6 +222,7 @@ namespace FHRMS.Modules
         private DevExpress.XtraBars.Docking2010.Views.Widget.Document mailDocument;
         private DevExpress.XtraBars.Docking2010.Views.Widget.Document weatherDocument;
         private DevExpress.XtraBars.Docking2010.Views.Widget.Document newsDocument;
+        private DevExpress.XtraBars.Docking2010.Views.Widget.Document holDocument;
         private ColumnDefinition columnDefinition1;
         private ColumnDefinition columnDefinition2;
         private ColumnDefinition columnDefinition3;

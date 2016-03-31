@@ -110,6 +110,7 @@ namespace FHRMS.Modules
                 ViewModel.NotificationsViewModel = TryGetModuleViewModel<NotificationCollectionViewModel>(ModuleType.Notifications);
                 ViewModel.SchedulesViewModel = TryGetModuleViewModel<ScheduleCollectionViewModel>(ModuleType.Shifts);
                 ViewModel.WarningsViewModel = TryGetModuleViewModel<WarningsCollectionViewModel>(ModuleType.Avertissements);
+                ViewModel.HolidaysViewModel = TryGetModuleViewModel<HolidayCollectionViewModel>(ModuleType.Holidays);
                 init = true;
         
             }
@@ -125,7 +126,19 @@ namespace FHRMS.Modules
         }
         private void InitializeButtonPanel()
         {
-            BottomPanel.Visible = false;
+            var listBI = new List<ButtonInfo>();
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Ajouter un jour fériers", Name = "10", Image = ImageHelper.GetImageFromToolbarResource("Note"), mouseEventHandler = holidayMouseClick });
+            BottomPanel.InitializeButtons(listBI);
+        }
+        void holidayMouseClick(object sender, EventArgs e)
+        {
+
+            var employee = MainView.CurrentEmployee;
+            if (employee != null)
+            {
+                ModifierFérier.HolidayOwner = employee;
+                ViewModel.HolidaysViewModel.New();
+            }
         }
         public BoardViewModel ViewModel
         {

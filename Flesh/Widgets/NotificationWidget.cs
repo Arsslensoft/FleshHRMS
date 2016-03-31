@@ -14,12 +14,7 @@ using System.Windows.Forms;
 using FHRMS.Helpers;
 namespace FHRMS.Widgets
 {
-    public delegate void LoadDashboardAsyncDelegate(BoardViewModel b);
-    interface IDashboardWidget
-    {
-       void LoadDashboard(BoardViewModel d);
-    }
-
+ 
     public partial class NotificationWidget : UserControl, IDashboardWidget
     {
         public void LoadDashboard(BoardViewModel value)

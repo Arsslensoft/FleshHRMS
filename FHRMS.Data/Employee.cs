@@ -1,4 +1,4 @@
-using DevExpress.DataAnnotations;
+using FHRMS.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,8 +49,10 @@ namespace FHRMS.Data {
         Employee,
        [Display(Name = "Responsable")]
         Manager,
-            [Display(Name = "Directeur")]
-        Director
+     [Display(Name = "Directeur")]
+        Director,
+     [Display(Name = "Super Utilisateur")]
+        SuperUser
     }
     public partial class Employee : DatabaseObject {
         public Employee() {
@@ -85,11 +87,11 @@ namespace FHRMS.Data {
         [NotMapped,Display(Name = "Full Name")]
         public string FullName { get { return GetFullName(); } }
         public PersonPrefix Prefix { get; set; }
-		[DevExpress.DataAnnotations.Phone, Display(Name = "Home Phone")]
+		[FHRMS.Data.Phone, Display(Name = "Home Phone")]
         public string HomePhone { get; set; }
-		[Required, DevExpress.DataAnnotations.Phone, Display(Name = "Mobile Phone")]
+		[Required, FHRMS.Data.Phone, Display(Name = "Mobile Phone")]
         public string MobilePhone { get; set; }
-		[Required, DevExpress.DataAnnotations.EmailAddress]
+		[Required, FHRMS.Data.EmailAddress]
         public string Email { get; set; }
         public string Skype { get; set; }
         [Display(Name = "Birth Date")]
@@ -103,10 +105,14 @@ namespace FHRMS.Data {
 
         [Required]
         public EmployeeRole Role { get; set; }
-        [Required, DevExpress.DataAnnotations.CIN]
+
+        [Required, FHRMS.Data.CIN]
         public string CIN { get; set; }
+
         [Required]
         public int LeaveCredit { get; set; }
+
+
         [Required]
         public double Salary { get; set; }
            

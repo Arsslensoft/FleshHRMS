@@ -1,4 +1,4 @@
-﻿using DevExpress.DataAnnotations;
+﻿using FHRMS.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +17,9 @@ namespace FHRMS.Data
 
         public string Name { get; set; }
         public DateTime StartDate { get; set; }
-   
         public DateTime DueDate { get; set; }
-        public bool ExcludePermanence { get; set; }
+
+        
      
         [NotMapped]
         public TimeSpan TotalTime

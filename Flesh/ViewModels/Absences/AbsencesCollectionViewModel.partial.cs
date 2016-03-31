@@ -18,7 +18,10 @@ namespace FHRMS.ViewModels {
         public int UnwarrantedCount {
             get { return GetUnwarrantedCount(); }
         }
-
+        public int LateCount
+        {
+            get { return GetLateCount(); }
+        }
         int GetUnwarrantedCount()
         {
             return Entities.Where(e => e.Kind == AbsenceType.Unwarranted).Count();
@@ -32,7 +35,11 @@ namespace FHRMS.ViewModels {
         {
             return Entities.Where(e => e.Kind == AbsenceType.MotiveWarranted).Count();
         }
-      
+
+        int GetLateCount()
+        {
+            return Entities.Where(e => e.Kind == AbsenceType.Late).Count();
+        }
         int GetAllCount() {
             return Entities.Count();
         }

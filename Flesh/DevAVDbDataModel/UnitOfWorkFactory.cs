@@ -15,8 +15,8 @@ namespace FHRMS.DevAVDbDataModel {
         public static readonly IUnitOfWorkFactory<IDevAVDbUnitOfWork> Instance = new DbUnitOfWorkFactory();
         DbUnitOfWorkFactory() { }
         IDevAVDbUnitOfWork IUnitOfWorkFactory<IDevAVDbUnitOfWork>.CreateUnitOfWork() {
-            Database.SetInitializer<DevAVDb>(null);
-            return new DevAVDbUnitOfWork(new DevAVDb());
+            Database.SetInitializer<PhexonDb>(null);
+            return new DevAVDbUnitOfWork(new PhexonDb());
         }
     }
     #region UnitOfWorkSourceBase

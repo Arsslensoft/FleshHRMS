@@ -35,7 +35,7 @@ namespace FHRMS.Modules {
                 tileItemDeferred.Text = ViewModel.UnwarrantedCount.ToString();
                 tileItemMotive.Text = ViewModel.MotiveWarrantedCount.ToString();
                 tileItemCM.Text = ViewModel.CMWarrantedCount.ToString();
-       
+                tileItemLT.Text = ViewModel.LateCount.ToString();
             }
         }
         public AbsencesCollectionViewModel ViewModel

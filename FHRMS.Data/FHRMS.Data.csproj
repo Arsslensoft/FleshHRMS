@@ -101,19 +101,19 @@
     <Compile Include="Holiday.cs" />
     <Compile Include="Shift.cs" />
     <Compile Include="Warnings.cs" />
-    <Compile Include="Done\Address.cs" />
+    <Compile Include="Address.cs" />
     <Compile Include="Common\DataDirectoryHelper.cs" />
     <Compile Include="Common\IDataErrorInfoHelper.cs" />
     <Compile Include="Common\ValidationAttributes.cs" />
     <Compile Include="DatabaseObject.cs" />
-    <Compile Include="DevAVDb.cs" />
+    <Compile Include="PhexonDb.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="Done\Absence.cs" />
+    <Compile Include="Absence.cs" />
     <Compile Include="Attendance.cs" />
     <Compile Include="Picture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Done\StateEnum.cs" />
-    <Compile Include="Done\Leave.cs" />
+    <Compile Include="StateEnum.cs" />
+    <Compile Include="Leave.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DevAV.snk" />

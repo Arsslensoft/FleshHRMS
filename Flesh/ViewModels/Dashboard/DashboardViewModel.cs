@@ -17,7 +17,7 @@ using System.Runtime.Serialization;
         public EmployeeCollectionViewModel EmployeesViewModel { get; set; }
         public ScheduleCollectionViewModel SchedulesViewModel { get; set; }
         public NotificationCollectionViewModel NotificationsViewModel { get; set; }
-
+        public HolidayCollectionViewModel HolidaysViewModel { get; set; }
 
 
         #region Statistics

@@ -2,11 +2,16 @@
     using System;
     using FHRMS.Services;
     using DevExpress.Mvvm;
+using FHRMS.Data;
 
     public delegate void ModuleInitializeMethod(object module);
     public class MainViewModel : DevExpress.Mvvm.ViewModelBase {
 
-  
+        public Employee CurrentEmployee
+        {
+            get;
+            set;
+        }
         static MainViewModel() {
             DevExpress.Mvvm.ServiceContainer.Default.RegisterService(new Services.Win.ModuleResourceProvider());
             DevExpress.Mvvm.ServiceContainer.Default.RegisterService(new Services.MessageBoxService());

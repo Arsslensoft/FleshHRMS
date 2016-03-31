@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
-using DevExpress.Common;
+using FHRMS.Data;
 
 namespace FHRMS.Data {
     public abstract class DatabaseObject : IDataErrorInfo {
