@@ -18,6 +18,7 @@ namespace FHRMS.Automatics
         public FHRMS.Data.PhexonDb DatabaseManager { get; set; }
         public TimeSpan NightCheckTime { get; set; }
         public TimeSpan DailyCheckTime { get; set; }
+        public TimeSpan ResetTime { get; set; }
         public bool IsRuning
         {
             get
@@ -26,11 +27,12 @@ namespace FHRMS.Automatics
             }
         }
 
-        public PhexonPilot(TimeSpan daily, TimeSpan night)
+        public PhexonPilot(TimeSpan daily, TimeSpan night,TimeSpan reset)
         { 
             DatabaseManager = new Data.PhexonDb();
             DailyCheckTime = daily;
             NightCheckTime = night;
+            ResetTime = reset;
         }
 
         public bool Between(DateTime x, DateTime start, DateTime end)
@@ -165,6 +167,7 @@ namespace FHRMS.Automatics
         {
             try
             {
+                Load();
                 // TODO:sync
                 // Updates all shifts weekly (add 7 days)
                 List<Shift> shifts = DatabaseManager.Shifts.Local.ToList();
@@ -189,6 +192,7 @@ namespace FHRMS.Automatics
                                 sh.End = sh.End.AddDays(2);
                             }
                             break;
+                        case ReccuranceType.Weekly:
                         case ReccuranceType.Weekend:
                             if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
                             {
@@ -199,6 +203,7 @@ namespace FHRMS.Automatics
                     }
 
                 }
+                DatabaseManager.SaveChanges();
             }
             catch (Exception ex)
             {
@@ -327,17 +332,27 @@ namespace FHRMS.Automatics
             serverTimer.AutoReset = true;
             serverTimer.Enabled = true;
         }
-        
+        bool daily_executed = false;
+        bool nightly_executed = false;
         private void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
-            if (DateTime.Now.TimeOfDay.Hours == NightCheckTime.Hours && DateTime.Now.TimeOfDay.Minutes == NightCheckTime.Minutes)
+            if (DateTime.Now.TimeOfDay.Hours == NightCheckTime.Hours && DateTime.Now.TimeOfDay.Minutes == NightCheckTime.Minutes && !nightly_executed)
+            {
                 NightRoutineCheck();
+                nightly_executed = true;
+            }
 
-
-            if (DateTime.Now.TimeOfDay.Hours == DailyCheckTime.Hours && DateTime.Now.TimeOfDay.Minutes == DailyCheckTime.Minutes)
+            if (DateTime.Now.TimeOfDay.Hours == DailyCheckTime.Hours && DateTime.Now.TimeOfDay.Minutes == DailyCheckTime.Minutes && !daily_executed)
+            {
                 DailyRoutine();
+                 daily_executed = true;
+           }
 
-            
+            if (DateTime.Now.TimeOfDay.Hours == ResetTime.Hours && DateTime.Now.TimeOfDay.Minutes == ResetTime.Minutes)
+            {
+                 daily_executed = false;
+                 nightly_executed = false;
+            }
         }
 
         public void Start()
