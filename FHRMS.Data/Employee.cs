@@ -111,7 +111,8 @@ namespace FHRMS.Data {
 
         [Required]
         public int LeaveCredit { get; set; }
-
+        [Required]
+        public int LateCredit { get; set; }
 
         [Required]
         public double Salary { get; set; }

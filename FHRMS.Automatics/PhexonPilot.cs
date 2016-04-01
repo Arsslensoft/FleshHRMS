@@ -5,23 +5,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using FHRMS.Data;
+using System.Timers;
 namespace FHRMS.Automatics
 {
     public class PhexonPilot
     {
         public static DateTime IndeterminateDate = DateTime.Parse("1/1/2015 00:00:00");
-        public bool Between( DateTime x, DateTime start, DateTime end)
+
+
+
+        private System.Timers.Timer serverTimer;
+        public FHRMS.Data.PhexonDb DatabaseManager { get; set; }
+        public TimeSpan NightCheckTime { get; set; }
+        public TimeSpan DailyCheckTime { get; set; }
+        public bool IsRuning
+        {
+            get
+            {
+                return serverTimer.Enabled;
+            }
+        }
+
+        public PhexonPilot(TimeSpan daily, TimeSpan night)
+        { 
+            DatabaseManager = new Data.PhexonDb();
+            DailyCheckTime = daily;
+            NightCheckTime = night;
+        }
+
+        public bool Between(DateTime x, DateTime start, DateTime end)
         {
             if (end == IndeterminateDate || (x.Date >= start.Date && x.Date <= end.Date)) // indeterminate date or between 2 dates
                 return true;
             return false;
         }
-        public FHRMS.Data.PhexonDb DatabaseManager { get; set; }
-        public PhexonPilot()
-        { 
-            DatabaseManager = new Data.PhexonDb(); 
-        }
-
         public void Load()
         {
             DatabaseManager.Employees.Load();
@@ -46,6 +63,8 @@ namespace FHRMS.Automatics
             abs.CreatedById = 5;
             abs.StartDate = DateTime.Now.Date;
             abs.WarrantId = 0;
+
+  
             abs.Kind = AbsenceType.Unwarranted;
             abs.EndDate = IndeterminateDate.Date;
             DatabaseManager.Absences.Add(abs);
@@ -69,6 +88,11 @@ namespace FHRMS.Automatics
             abs.WarrantId = 0;
             abs.Kind = AbsenceType.Late;
             abs.EndDate = entry_date;
+            if (abs.Employee.LateCredit >= 1)
+                abs.Employee.LateCredit--;
+            else WarnLateCreditLimitExceeded(abs.Employee);
+            
+           
             DatabaseManager.Absences.Add(abs);
             DatabaseManager.SaveChanges();
 
@@ -113,7 +137,21 @@ namespace FHRMS.Automatics
             w.Date = DateTime.Now;
             w.EmployeeId = emp.Id;
             w.Employee = emp;
-            w.Reason = "L'employé "+emp.FullName + " a dépassé les limites autorisés de d'absences";
+            w.Reason = "Vous avez dépassé les limites autorisés de d'absences";
+            w.Severity = WarningSeverity.Inconvenient;
+            w.Type = WarningType.Verbal;
+            DatabaseManager.Warnings.Add(w);
+            DatabaseManager.SaveChanges();
+        }
+
+        public void WarnLateCreditLimitExceeded(Employee emp)
+        {
+            Warning w = new Warning();
+            w.CreatedById = 5;
+            w.Date = DateTime.Now;
+            w.EmployeeId = emp.Id;
+            w.Employee = emp;
+            w.Reason = "Vous avez dépassé les limites autorisés de de retards";
             w.Severity = WarningSeverity.Inconvenient;
             w.Type = WarningType.Verbal;
             DatabaseManager.Warnings.Add(w);
@@ -125,39 +163,46 @@ namespace FHRMS.Automatics
         /// </summary>
         public void DailyRoutine()
         {
-            // TODO:sync
-            // Updates all shifts weekly (add 7 days)
-            List<Shift> shifts = DatabaseManager.Shifts.Local.ToList();
-            for (int i = 0; i < shifts.Count; i++)
+            try
             {
-                Shift sh = shifts[i];
-                switch (sh.Recurrence)
+                // TODO:sync
+                // Updates all shifts weekly (add 7 days)
+                List<Shift> shifts = DatabaseManager.Shifts.Local.ToList();
+                for (int i = 0; i < shifts.Count; i++)
                 {
-                    case ReccuranceType.Daily:
-                        sh.Start = sh.Start.AddDays(1);
-                        sh.End = sh.End.AddDays(1);
-                        break;
-                    case ReccuranceType.DailyExceptWeekend:
-                        if (DateTime.Now.DayOfWeek != DayOfWeek.Saturday && DateTime.Now.DayOfWeek != DayOfWeek.Sunday)
-                        {
+                    Shift sh = shifts[i];
+                    switch (sh.Recurrence)
+                    {
+                        case ReccuranceType.Daily:
                             sh.Start = sh.Start.AddDays(1);
                             sh.End = sh.End.AddDays(1);
-                        }
-                        else if (DateTime.Now.DayOfWeek != DayOfWeek.Sunday)
-                        {
-                            sh.Start = sh.Start.AddDays(2);
-                            sh.End = sh.End.AddDays(2);
-                        }
-                        break;
-                    case ReccuranceType.Weekend:
-                        if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
-                        {
-                            sh.Start = sh.Start.AddDays(7);
-                            sh.End = sh.End.AddDays(7);
-                        }
-                        break;
+                            break;
+                        case ReccuranceType.DailyExceptWeekend:
+                            if (DateTime.Now.DayOfWeek != DayOfWeek.Saturday && DateTime.Now.DayOfWeek != DayOfWeek.Sunday)
+                            {
+                                sh.Start = sh.Start.AddDays(1);
+                                sh.End = sh.End.AddDays(1);
+                            }
+                            else if (DateTime.Now.DayOfWeek != DayOfWeek.Sunday)
+                            {
+                                sh.Start = sh.Start.AddDays(2);
+                                sh.End = sh.End.AddDays(2);
+                            }
+                            break;
+                        case ReccuranceType.Weekend:
+                            if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+                            {
+                                sh.Start = sh.Start.AddDays(7);
+                                sh.End = sh.End.AddDays(7);
+                            }
+                            break;
+                    }
+
                 }
-            
+            }
+            catch (Exception ex)
+            {
+                Logger.Instance.Log.Error("Daily routine failed",ex);
             }
         }
         public Shift GetAppropriateShift(List<Shift> shifts)
@@ -172,10 +217,21 @@ namespace FHRMS.Automatics
         }
             return null;
         }
-        public void MorningRoutineCheck()
+        public void NightRoutineCheck()
         {
+            try{
             Load();
             List<Attendance> attendances = DatabaseManager.Attendances.Local.Where(x => x.ADate == AttendanceDate.Today).ToList();
+            List<Leave> active_leaves = DatabaseManager.Leaves.Local.Where(x => Between(DateTime.Now.Date, x.StartDate.Value, x.DueDate.Value)).ToList(); // look for attendances
+            List<Absence> open_absences = DatabaseManager.Absences.Local.Where(x => x.EndDate == IndeterminateDate).ToList(); // look for open absences 
+            List<Employee> employees = DatabaseManager.Employees.Local.ToList();
+            List<Holiday> holidays = DatabaseManager.Holidays.Local.Where(x => Between(DateTime.Now.Date, x.StartDate, x.DueDate)).ToList();
+
+            var unattended_employees = (from emp in DatabaseManager.Employees
+                                        where !attendances.Any(m => m.EmployeeId == emp.Id)
+                           select emp);
+
+                // detect late employees
             foreach (Attendance a in attendances)
             {
                 List<Shift> todays_shift = a.Employee.Shifts.Where(x => x.Start.Date == DateTime.Now.Date).ToList();
@@ -188,25 +244,12 @@ namespace FHRMS.Automatics
                     if ((a.TimeIn - sh.Start.TimeOfDay) > new TimeSpan(0, 30, 0))
                         MarkAsAbsent(a.Employee); // absent after 30 mins
                     else
-                        MarkAsLate(a.Employee, DateTime.Parse(a.Date.ToShortDateString() + " "+a.TimeIn.ToString("mm:hh:ss"))); // late
+                        MarkAsLate(a.Employee, DateTime.Parse(a.Date.ToShortDateString() + " " + a.TimeIn.ToString("mm:hh:ss"))); // late
                 }
-                    
+
 
             }
-            DatabaseManager.SaveChanges();
-        }
-        public void NightRoutineCheck()
-        {
-            Load();
-            List<Attendance> attendances = DatabaseManager.Attendances.Local.Where(x => x.ADate == AttendanceDate.Today).ToList();
-            List<Leave> active_leaves = DatabaseManager.Leaves.Local.Where(x => Between(DateTime.Now.Date, x.StartDate.Value, x.DueDate.Value)).ToList(); // look for attendances
-            List<Absence> open_absences = DatabaseManager.Absences.Local.Where(x => x.EndDate == IndeterminateDate).ToList(); // look for open absences 
-            List<Employee> employees = DatabaseManager.Employees.Local.ToList();
-            List<Holiday> holidays = DatabaseManager.Holidays.Local.Where(x => Between(DateTime.Now.Date, x.StartDate, x.DueDate)).ToList();
 
-            var unattended_employees = (from emp in DatabaseManager.Employees
-                                        where !attendances.Any(m => m.EmployeeId == emp.Id)
-                           select emp);
             if (holidays.Count == 0) // no holidays
             {
                 // mark all unattended working employees as absent
@@ -226,7 +269,12 @@ namespace FHRMS.Automatics
                     if (at.Type == AttendanceType.UnjustifiedExit || at.Type == AttendanceType.EnterOnly) // unjustified exit absence
                         MarkAsAbsent(at.Employee);
                     else if (at.Type == AttendanceType.JustifiedExit)
-                        at.Employee.LeaveCredit--;
+                    {
+                        if (at.Employee.LeaveCredit >= 1)
+                            at.Employee.LeaveCredit--;
+                        else WarnLeaveCreditLimitExceeded(at.Employee);
+
+                    }
                     else
                     {
                         List<Shift> todays_shift = at.Employee.Shifts.Where(x => x.Start.Date == DateTime.Now.Date).ToList();
@@ -236,7 +284,7 @@ namespace FHRMS.Automatics
                         {
                             if ((sh.End.TimeOfDay - at.TimeOut) > new TimeSpan(0, 30, 0))
                                 MarkAsAbsent(at.Employee); // absent before 30 mins
-                          
+
                         }
                     }
 
@@ -260,21 +308,61 @@ namespace FHRMS.Automatics
 
 
             DatabaseManager.SaveChanges();
-            
 
+        }
+        catch (Exception ex)
+        {
+            Logger.Instance.Log.Error("Nightly routine failed", ex);
+        }
 
         }
 
+       
+        private void SetTimer()
+        {
+            // Create a timer with a 1 sec interval.
+            serverTimer = new System.Timers.Timer(1000);
+            // Hook up the Elapsed event for the timer. 
+            serverTimer.Elapsed += OnTimedEvent;
+            serverTimer.AutoReset = true;
+            serverTimer.Enabled = true;
+        }
+        
+        private void OnTimedEvent(Object source, ElapsedEventArgs e)
+        {
+            if (DateTime.Now.TimeOfDay.Hours == NightCheckTime.Hours && DateTime.Now.TimeOfDay.Minutes == NightCheckTime.Minutes)
+                NightRoutineCheck();
+
+
+            if (DateTime.Now.TimeOfDay.Hours == DailyCheckTime.Hours && DateTime.Now.TimeOfDay.Minutes == DailyCheckTime.Minutes)
+                DailyRoutine();
+
+            
+        }
 
         public void Start()
         {
             try
             {
+                SetTimer();
 
             }
             catch (Exception ex)
             {
-
+                Logger.Instance.Log.Error("Global routine failed", ex);
+            }
+           
+        }
+        public void Stop()
+        {
+            try
+            {
+                serverTimer.Stop();
+                serverTimer.Dispose();
+            }
+            catch (Exception ex)
+            {
+                Logger.Instance.Log.Error("Failed to stop", ex);
             }
         }
     }
