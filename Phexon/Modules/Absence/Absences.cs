@@ -28,6 +28,7 @@ namespace PHRMS.Modules {
             notesGridControl.SetItemsSource(ViewModel.Entities);
             TileItemsUpdateElementText();
         }
+   
         void TileItemsUpdateElementText() {
             if(ViewModel.Entities != null) {
                 tileItemAll.Text = ViewModel.AllCount.ToString();
@@ -66,20 +67,29 @@ namespace PHRMS.Modules {
         }
         void DeleteButtonClick()
         {
-            ViewModel.Delete(ViewModel.SelectedEntity);
-            TileItemsUpdateElementText();
+            if (MainViewModel.CurrentEmployee.Role > EmployeeRole.Agent)
+            {
+                ViewModel.Delete(ViewModel.SelectedEntity);
+                TileItemsUpdateElementText();
+            }
+            else if (MainViewModel.CurrentEmployee.Role <= EmployeeRole.Agent)
+                DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
         }
      
         void NewButtonClick() {
+            if (MainViewModel.CurrentEmployee.Role != EmployeeRole.Employee ) 
             ViewModel.New();
+            else DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
         }
         void EditButtonClick() {
             Edit(ViewModel.SelectedEntity);
         }
         void Edit(Absence task)
         {
-            if(ViewModel.CanEdit(task))
+            if (ViewModel.CanEdit(task) && MainViewModel.CurrentEmployee.Role != EmployeeRole.Employee)
                 ViewModel.Edit(task);
+            else if ( MainViewModel.CurrentEmployee.Role == EmployeeRole.Employee) 
+             DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
         }
         void collapseButton_Click(object sender, EventArgs e) {
             if(tileControlLCI.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always) {

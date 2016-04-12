@@ -184,8 +184,12 @@ namespace PHRMS.Modules {
             ShowEditEmployee(GetSelectedEmployee());
         }
         void newMouseClick(object sender, EventArgs e) {
+            if (MainViewModel.CurrentEmployee.Role > EmployeeRole.Agent ) {
             ViewModel.SelectedEntity = null;
-            ShowEditEmployee(null);
+            ShowEditEmployee(null);} 
+            else if (MainViewModel.CurrentEmployee.Role <= EmployeeRole.Agent)
+                DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+
         }
         void SortAscendingClick(object sender, EventArgs e) {
             SortEmployees(true);
@@ -200,6 +204,7 @@ namespace PHRMS.Modules {
             tileView1.SortInfo.Add(new DevExpress.XtraGrid.Columns.GridColumnSortInfo(lastName, ascending ? DevExpress.Data.ColumnSortOrder.Ascending : DevExpress.Data.ColumnSortOrder.Descending));
         }
         void ShowEditEmployee(Employee employee) {
+            if (MainViewModel.CurrentEmployee.Role > EmployeeRole.Agent ) {
             var main = GetParentViewModel<MainViewModel>();
             main.SelectModule(ModuleType.ModifierEmployé, (x) =>
             {
@@ -210,7 +215,9 @@ namespace PHRMS.Modules {
                     ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, main, new DefaultEntityInitializer<Employee, IPhexonDbUnitOfWork>());
                 }
                 ((ModifierEmployé)main.SelectedModule).Refresh();
-            });
+            });}
+            else if (MainViewModel.CurrentEmployee.Role <= EmployeeRole.Agent )
+                DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
         }
         void deleteMouseClick(object sender, EventArgs e) {
             ViewModel.Delete(GetSelectedEmployee());

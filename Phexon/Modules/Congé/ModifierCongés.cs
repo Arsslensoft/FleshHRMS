@@ -52,13 +52,23 @@ namespace PHRMS.Modules {
         void ViewModel_EntityChanged(object sender, EventArgs e) {
             UpdateEditors(ViewModel.Entity);
         }
+    
         void InitNew(Employee employee) {
             ViewModel.Entity.StartDate = DateTime.Now;
             ViewModel.Entity.DueDate = DateTime.Now + new TimeSpan(48, 0, 0);
             if(employee != null) {
                 ViewModel.Entity.Owner = ViewModel.FindEmployeeId(employee);
                 ViewModel.Entity.OwnerId = employee.Id;
+
             }
+
+            this.layoutControlItem7.Visibility = (MainViewModel.CurrentEmployee.Role > EmployeeRole.Agent) ? DevExpress.XtraLayout.Utils.LayoutVisibility.Always : DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+
+
+
+
+
+            
         }
         void InitLookupEditors() {
             var employeesLookup = ViewModel.GetEmployees().ToList();

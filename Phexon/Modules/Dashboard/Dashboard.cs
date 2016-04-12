@@ -110,7 +110,9 @@ namespace PHRMS.Modules
                 ViewModel.NotificationsViewModel = TryGetModuleViewModel<NotificationCollectionViewModel>(ModuleType.Notifications);
                 ViewModel.SchedulesViewModel = TryGetModuleViewModel<ScheduleCollectionViewModel>(ModuleType.Shifts);
                 ViewModel.WarningsViewModel = TryGetModuleViewModel<WarningsCollectionViewModel>(ModuleType.Avertissements);
+                
                 ViewModel.HolidaysViewModel = TryGetModuleViewModel<HolidayCollectionViewModel>(ModuleType.Holidays);
+               
                 init = true;
         
             }
@@ -127,13 +129,14 @@ namespace PHRMS.Modules
         private void InitializeButtonPanel()
         {
             var listBI = new List<ButtonInfo>();
+            if (MainViewModel.CurrentEmployee.Role > PHRMS.Data.EmployeeRole.Agent)
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Ajouter un jour fériers", Name = "10", Image = ImageHelper.GetImageFromToolbarResource("Note"), mouseEventHandler = holidayMouseClick });
             BottomPanel.InitializeButtons(listBI);
         }
         void holidayMouseClick(object sender, EventArgs e)
         {
 
-            var employee = MainView.CurrentEmployee;
+            var employee = MainViewModel.CurrentEmployee;
             if (employee != null)
             {
                 ModifierFérier.HolidayOwner = employee;

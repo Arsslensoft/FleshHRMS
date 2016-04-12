@@ -7,7 +7,7 @@ using PHRMS.Data;
     public delegate void ModuleInitializeMethod(object module);
     public class MainViewModel : DevExpress.Mvvm.ViewModelBase {
 
-        public Employee CurrentEmployee
+        public static Employee CurrentEmployee
         {
             get;
             set;

@@ -38,6 +38,7 @@ namespace PHRMS.Modules {
             
             }
         }
+      
         public WarningsCollectionViewModel ViewModel
         {
             get { return GetViewModel<WarningsCollectionViewModel>(); }
@@ -65,14 +66,20 @@ namespace PHRMS.Modules {
         }
       
         void NewButtonClick() {
+            if ( MainViewModel.CurrentEmployee.Role != EmployeeRole.Employee)
             ViewModel.New();
+            else if (MainViewModel.CurrentEmployee.Role == EmployeeRole.Employee)
+                DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
         }
         void EditButtonClick() {
             Edit(ViewModel.SelectedEntity);
         }
         void Edit(Warning task) {
-            if(ViewModel.CanEdit(task))
+            if(ViewModel.CanEdit(task)&& MainViewModel.CurrentEmployee.Role != EmployeeRole.Employee )
                 ViewModel.Edit(task);
+            else if (MainViewModel.CurrentEmployee.Role == EmployeeRole.Employee)
+                DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+
         }
         void collapseButton_Click(object sender, EventArgs e) {
             if(tileControlLCI.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always) {

@@ -71,6 +71,7 @@ namespace PHRMS.ViewModels {
         /// Since CollectionViewModelBase is a POCO view model, an instance of this class will also expose the NewCommand property that can be used as a binding source in views.
         /// </summary>
         public virtual void New() {
+          
             IDocument document = CreateDocument(newEntityInitializerFactory != null ? newEntityInitializerFactory() : new DefaultEntityInitializer<TEntity, TUnitOfWork>());
             if(document != null)
                 document.Show();

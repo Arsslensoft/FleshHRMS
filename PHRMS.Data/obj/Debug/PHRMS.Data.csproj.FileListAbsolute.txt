@@ -5,3 +5,10 @@ E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.CommonResources.resources
 E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.csproj.GenerateResource.Cache
 E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.dll
 E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.pdb
+E:\flesh-hrms\Bin\PHRMS.Data.dll
+E:\flesh-hrms\Bin\PHRMS.Data.pdb
+E:\flesh-hrms\PHRMS.Data\obj\Debug\PHRMS.Data.csprojResolveAssemblyReference.cache
+E:\flesh-hrms\PHRMS.Data\obj\Debug\PHRMS.Data.CommonResources.resources
+E:\flesh-hrms\PHRMS.Data\obj\Debug\PHRMS.Data.csproj.GenerateResource.Cache
+E:\flesh-hrms\PHRMS.Data\obj\Debug\PHRMS.Data.dll
+E:\flesh-hrms\PHRMS.Data\obj\Debug\PHRMS.Data.pdb

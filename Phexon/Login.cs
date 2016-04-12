@@ -47,9 +47,9 @@ namespace PHRMS
                     DevExpress.XtraEditors.XtraMessageBox.Show("Informations incorrectes", "Invalid login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
-                    if (li.User.Credential.GetSha256FromString(li.Password) == li.User.Credential.PasswordHash)
+                    if (li.User.Credential.GetSha256FromString(textEdit1.Text) == li.User.Credential.PasswordHash)
                     {
-                   ViewModel.CurrentEmployee = li.User;
+                   MainViewModel.CurrentEmployee = li.User;
                         cancel_exit = false;
                         this.Close();
                     }
@@ -69,8 +69,15 @@ namespace PHRMS
             {
                 if(DevExpress.XtraEditors.XtraMessageBox.Show("The application requires login to proceed. \r\nDo you want to login?", "Authentification required", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
                             e.Cancel = true;
-
+                else
+                    Process.GetCurrentProcess().Kill();
             }
+        }
+
+        private void textEdit1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+                simpleButton1_Click(this, EventArgs.Empty);
         }
     }
     class LoginInfo
