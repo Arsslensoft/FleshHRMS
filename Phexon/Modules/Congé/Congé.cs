@@ -45,6 +45,11 @@ namespace PHRMS.Modules {
             base.OnTransitionCompleted();
             InitializeButtonPanel();
         }
+        public MainViewModel MainViewModel
+        {
+            get { return GetParentViewModel<MainViewModel>(); }
+        }
+          
         void InitializeButtonPanel() {
             List<ButtonInfo> listBI = new List<ButtonInfo>();
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Nouvelle demande", Name = "1", Image = ImageHelper.GetImageFromToolbarResource("New"), mouseEventHandler = (s, e) => { NewButtonClick(); } });
@@ -73,8 +78,11 @@ namespace PHRMS.Modules {
             Edit(ViewModel.SelectedEntity);
         }
         void Edit(Leave task) {
-            if(ViewModel.CanEdit(task))
+
+            if (ViewModel.CanEdit(task) && MainViewModel.CurrentEmployee.Role >= EmployeeRole.Agent)
                 ViewModel.Edit(task);
+            else if (MainViewModel.CurrentEmployee.Role < EmployeeRole.Agent)
+                DevExpress.XtraEditors.XtraMessageBox.Show("Accès refusé", "Contrôle d'accès", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
         }
         void collapseButton_Click(object sender, EventArgs e) {
             if(tileControlLCI.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always) {
@@ -106,6 +114,7 @@ namespace PHRMS.Modules {
         void tasksGridView_RowClick(object sender, RowClickEventArgs e) {
             if(e.Clicks > 1 && e.RowHandle >= 0)
                 Edit(GetTask(e.RowHandle));
+           
         }
         Leave GetTask(int rowHandle) {
             return tasksGridView.GetRow(rowHandle) as Leave;

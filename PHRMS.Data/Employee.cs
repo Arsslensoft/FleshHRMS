@@ -43,16 +43,16 @@ namespace PHRMS.Data {
         Miss,
         Mrs
     }
-    public enum EmployeeRole
+    public enum EmployeeRole : int
     {
         [Display(Name = "Employé")]
-        Employee,
-       [Display(Name = "Responsable")]
-        Manager,
-     [Display(Name = "Directeur")]
-        Director,
+        Employee=0,
+       [Display(Name = "Agent")]
+        Agent=1,
+     [Display(Name = "Responsable")]
+        Manager=2,
      [Display(Name = "Super Utilisateur")]
-        SuperUser
+        SuperUser=3
     }
     public partial class Employee : DatabaseObject {
         public Employee() {
