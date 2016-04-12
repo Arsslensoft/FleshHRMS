@@ -1,0 +1,913 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PHRMS</RootNamespace>
+    <AssemblyName>Phexon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>FHRMS.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\phexon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1" />
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework">
+      <HintPath>
+      </HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.1.Core">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.1.Core">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1.UI">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.1.Core">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v15.1.Core">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v15.1">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core">
+      <HintPath>
+      </HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ViewModels\CollectionViewModel.cs" />
+    <Compile Include="ViewModels\CollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\DocumentContentViewModelBase.cs" />
+    <Compile Include="ViewModels\EntityInitializers.cs" />
+    <Compile Include="ViewModels\EntityInitializers.partial.cs" />
+    <Compile Include="ViewModels\ISingleObjectViewModel.cs" />
+    <Compile Include="ViewModels\Messages.cs" />
+    <Compile Include="ViewModels\ReadOnlyCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SingleObjectChildViewModel.cs" />
+    <Compile Include="ViewModels\SingleObjectViewModel.cs" />
+    <Compile Include="ViewModels\SingleObjectViewModel.partial.cs" />
+    <Compile Include="Controls\ButtonsPanel.cs" />
+    <Compile Include="Controls\DataTileControl.cs" />
+    <Compile Include="Controls\GridViewWithButtons.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GroupPainter.cs" />
+    <Compile Include="PhexonDbDataModel\PhexonDbUnitOfWork.cs" />
+    <Compile Include="PhexonDbDataModel\IPhexonDbUnitOfWork.cs" />
+    <Compile Include="PhexonDbDataModel\UnitOfWorkFactory.cs" />
+    <Compile Include="FleshSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FleshSplashScreen.Designer.cs">
+      <DependentUpon>FleshSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ButtonInfo.cs" />
+    <Compile Include="Helpers\ItemsHideHelper.cs" />
+    <Compile Include="Helpers\ItemsSourceExtensions.cs" />
+    <Compile Include="Helpers\LabelTabController.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Absence\ImprimerAbsence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Absence\ImprimerAbsence.Designer.cs">
+      <DependentUpon>ImprimerAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Attendance\Attendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Attendance\Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Attendance\ImprimerPointage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Attendance\ImprimerPointage.Designer.cs">
+      <DependentUpon>ImprimerPointage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Attendance\ModifierPointage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Attendance\ModifierPointage.Designer.cs">
+      <DependentUpon>ModifierPointage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Avertissements\Avertissements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Avertissements\Avertissements.Designer.cs">
+      <DependentUpon>Avertissements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Avertissements\ImprimerAvertissements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Avertissements\ImprimerCongé.Designer.cs">
+      <DependentUpon>ImprimerAvertissements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BaseModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BottomPanelBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\BottomPanelBase.Designer.cs">
+      <DependentUpon>BottomPanelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Absence\Absences.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Absence\Absences.Designer.cs">
+      <DependentUpon>Absences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Controls\Reports\ExportSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Controls\Reports\ExportSettings.Designer.cs">
+      <DependentUpon>ExportSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Controls\Reports\PreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Controls\Reports\PreviewControl.Designer.cs">
+      <DependentUpon>PreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Controls\Reports\PrintSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Controls\Reports\PrintSettings.Designer.cs">
+      <DependentUpon>PrintSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Dashboard\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Dashboard\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Employés\PublipostageEmployé.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Employés\PublipostageEmployé.Designer.cs">
+      <DependentUpon>PublipostageEmployé.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Employés\Employés.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Employés\Employés.Designer.cs">
+      <DependentUpon>Employés.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Employés\ModifierEmployé.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Employés\ModifierEmployé.Designer.cs">
+      <DependentUpon>ModifierEmployé.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Employés\ImprimerEmployé.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Employés\ImprimerEmployé.Designer.cs">
+      <DependentUpon>ImprimerEmployé.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Absence\ModifierAbsence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Absence\ModifierAbsence.Designer.cs">
+      <DependentUpon>ModifierAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Holidays\ModifierFérier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Holidays\ModifierFérier.Designer.cs">
+      <DependentUpon>ModifierFérier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PrintSettings\PrintSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\PrintSettings\PrintSettings.Designer.cs">
+      <DependentUpon>PrintSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Schedule\ModifierPlaning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Schedule\ModifierPlaning.Designer.cs">
+      <DependentUpon>ModifierPlaning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setting\SettingsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Setting\SettingsUC.Designer.cs">
+      <DependentUpon>SettingsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SimpleUC\StateUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SimpleUC\StateUC.Designer.cs">
+      <DependentUpon>StateUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Congé\ModifierCongés.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Congé\ModifierCongés.Designer.cs">
+      <DependentUpon>ModifierCongés.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Helpers.cs" />
+    <Compile Include="Modules\ColumnViewHelper.cs" />
+    <Compile Include="Modules\Interfaces.cs" />
+    <Compile Include="Modules\Congé\ImprimerCongé.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Congé\ImprimerCongé.Designer.cs">
+      <DependentUpon>ImprimerCongé.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Congé\Congé.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Congé\Congé.Designer.cs">
+      <DependentUpon>Congé.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Avertissements\ModifierAvertissement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Avertissements\ModifierAvertissement.Designer.cs">
+      <DependentUpon>ModifierAvertissement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Statistiques\Statistiques.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Statistiques\Statistiques.Designer.cs">
+      <DependentUpon>Statistiques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EmployeeDirectory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeListReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeProfile.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeTaskList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\SkinInfoBlob.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkinInfoBlob.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FlyoutDetailFormDocumentManagerService.cs" />
+    <Compile Include="Services\MessageBoxService.cs" />
+    <Compile Include="Services\ModuleActivator.cs" />
+    <Compile Include="Services\ModuleLocator.cs" />
+    <Compile Include="Services\ModuleResourceProvider.cs" />
+    <Compile Include="Services\ModulesHostingService.cs" />
+    <Compile Include="Services\ModuleTypesResolver.cs" />
+    <Compile Include="Services\TransitionService.cs" />
+    <Compile Include="Services\WorkspaceService.cs" />
+    <Compile Include="ViewModels\Absences\AbsencesCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Absences\AbsencesCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Absences\AbsencesViewModel.cs" />
+    <Compile Include="ViewModels\Absences\AbsencesViewModel.partial.cs" />
+    <Compile Include="ViewModels\CollectionViewKind.cs" />
+    <Compile Include="ViewModels\Attendances\AttendancesCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Attendances\AttendancesCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Attendances\AttendancesViewModel.cs" />
+    <Compile Include="ViewModels\Attendances\AttendancesViewModel.partial.cs" />
+    <Compile Include="ViewModels\Avertissements\WarningsCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Avertissements\WarningsCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Avertissements\WarningsViewModel.cs" />
+    <Compile Include="ViewModels\Avertissements\WarningsViewModel.partial.cs" />
+    <Compile Include="ViewModels\Holidays\HolidayCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Holidays\HolidayViewModel.cs" />
+    <Compile Include="ViewModels\Holidays\HolidayViewModel.partial.cs" />
+    <Compile Include="ViewModels\Dashboard\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\Notifications\NotificationCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Notifications\NotificationCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Notifications\NotificationViewModel.cs" />
+    <Compile Include="ViewModels\Notifications\NotificationViewModel.partial.cs" />
+    <Compile Include="ViewModels\Schedule\ScheduleCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Schedule\ScheduleViewModel.cs" />
+    <Compile Include="ViewModels\Schedule\ScheduleViewModel.partial.cs" />
+    <Compile Include="ViewModels\EmployeeReportType.cs" />
+    <Compile Include="ViewModels\Congés\LeaveCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Congés\LeaveViewModel.cs" />
+    <Compile Include="ViewModels\Congés\LeaveCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Congés\LeaveViewModel.partial.cs" />
+    <Compile Include="ViewModels\Employé\EmployeeCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Employé\EmployeeCollectionViewModel.partial.cs" />
+    <Compile Include="ViewModels\Employé\EmployeeMailMergeViewModel.cs" />
+    <Compile Include="ViewModels\Employé\EmployeeMailTemplate.cs" />
+    <Compile Include="ViewModels\Employé\EmployeePanelViewModel.cs" />
+    <Compile Include="ViewModels\Employé\EmployeesReportViewModel.cs" />
+    <Compile Include="ViewModels\Employé\EmployeeViewModel.cs" />
+    <Compile Include="ViewModels\Employé\EmployeeViewModel.partial.cs" />
+    <Compile Include="ViewModels\Interfaces.cs" />
+    <Compile Include="ViewModels\MailMergeTemplatesHelper.cs" />
+    <Compile Include="ViewModels\MailMergeViewModelBase.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\ReportViewModelBase.cs" />
+    <Compile Include="Widgets\Calendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Calendar.designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Clock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Clock.designer.cs">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\HolidayWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\HolidayWidget.designer.cs">
+      <DependentUpon>HolidayWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\NotificationItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widgets\NotificationItem.designer.cs">
+      <DependentUpon>NotificationItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Mail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Mail.Designer.cs">
+      <DependentUpon>Mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\NotificationWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\NotificationWidget.designer.cs">
+      <DependentUpon>NotificationWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Stats\AbsenceWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Stats\AbsenceWidget.designer.cs">
+      <DependentUpon>AbsenceWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Stats\AbsenceByDateWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Stats\AbsenceByDateWidget.designer.cs">
+      <DependentUpon>AbsenceByDateWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Stats\EmployeeStatsWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Stats\EmployeeStatsWidget.designer.cs">
+      <DependentUpon>EmployeeStatsWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Stats\LeaveByTypeWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Stats\LeaveByTypeWidget.designer.cs">
+      <DependentUpon>LeaveByTypeWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Stats\LeaveByStatusWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Stats\LeaveByStatusWidget.designer.cs">
+      <DependentUpon>LeaveByStatusWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Stats\WarningsWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Stats\WarningsWidget.designer.cs">
+      <DependentUpon>WarningsWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\Stats\GlobalStatsWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\Stats\GlobalStatsWidget.designer.cs">
+      <DependentUpon>GlobalStatsWidget.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FleshSplashScreen.resx">
+      <DependentUpon>FleshSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Absence\ImprimerAbsence.resx">
+      <DependentUpon>ImprimerAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Attendance\Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Attendance\ImprimerPointage.resx">
+      <DependentUpon>ImprimerPointage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Attendance\ModifierPointage.resx">
+      <DependentUpon>ModifierPointage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Avertissements\Avertissements.resx">
+      <DependentUpon>Avertissements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Avertissements\ImprimerCongé.resx">
+      <DependentUpon>ImprimerAvertissements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BaseModule.resx">
+      <DependentUpon>BaseModule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\BottomPanelBase.resx">
+      <DependentUpon>BottomPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Absence\Absences.resx">
+      <DependentUpon>Absences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Controls\Reports\ExportSettings.resx">
+      <DependentUpon>ExportSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Controls\Reports\PreviewControl.resx">
+      <DependentUpon>PreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Controls\Reports\PrintSettings.resx">
+      <DependentUpon>PrintSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Dashboard\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Employés\PublipostageEmployé.resx">
+      <DependentUpon>PublipostageEmployé.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Employés\Employés.resx">
+      <DependentUpon>Employés.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Employés\ModifierEmployé.resx">
+      <DependentUpon>ModifierEmployé.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Employés\ImprimerEmployé.resx">
+      <DependentUpon>ImprimerEmployé.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Absence\ModifierAbsence.resx">
+      <DependentUpon>ModifierAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Holidays\ModifierFérier.resx">
+      <DependentUpon>ModifierFérier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PrintSettings\PrintSettings.resx">
+      <DependentUpon>PrintSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Schedule\ModifierPlaning.resx">
+      <DependentUpon>ModifierPlaning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Setting\SettingsUC.resx">
+      <DependentUpon>SettingsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SimpleUC\StateUC.resx">
+      <DependentUpon>StateUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Congé\ModifierCongés.resx">
+      <DependentUpon>ModifierCongés.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Congé\ImprimerCongé.resx">
+      <DependentUpon>ImprimerCongé.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Congé\Congé.resx">
+      <DependentUpon>Congé.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Statistiques\Statistiques.resx">
+      <DependentUpon>Statistiques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Clock.resx">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\HolidayWidget.resx">
+      <DependentUpon>HolidayWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\NotificationItem.resx">
+      <DependentUpon>NotificationItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Mail.resx">
+      <DependentUpon>Mail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\NotificationWidget.resx">
+      <DependentUpon>NotificationWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Stats\AbsenceWidget.resx">
+      <DependentUpon>AbsenceWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Stats\AbsenceByDateWidget.resx">
+      <DependentUpon>AbsenceByDateWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Stats\EmployeeStatsWidget.resx">
+      <DependentUpon>EmployeeStatsWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Stats\LeaveByTypeWidget.resx">
+      <DependentUpon>LeaveByTypeWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Stats\LeaveByStatusWidget.resx">
+      <DependentUpon>LeaveByStatusWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Stats\WarningsWidget.resx">
+      <DependentUpon>WarningsWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\Stats\GlobalStatsWidget.resx">
+      <DependentUpon>GlobalStatsWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Avertissements\ModifierAvertissement.resx">
+      <DependentUpon>ModifierAvertissement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Resources\SkinInfoBlob.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SkinInfoBlob.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinData\hybridapp.blob" />
+    <EmbeddedResource Include="Resources\Map\NorthAmerica.dbf" />
+    <EmbeddedResource Include="Resources\Map\NorthAmerica.shp" />
+    <EmbeddedResource Include="Resources\Analysis\CustomerAnalysis.xlsx" />
+    <EmbeddedResource Include="Resources\Analysis\ProductAnalysis.xlsx" />
+    <EmbeddedResource Include="Resources\MailMerge\Employee of the Month.rtf" />
+    <EmbeddedResource Include="Resources\MailMerge\Employee of the Month.snx" />
+    <EmbeddedResource Include="Resources\MailMerge\Employee Probation Notice.rtf" />
+    <EmbeddedResource Include="Resources\MailMerge\Employee Probation Notice.snx" />
+    <EmbeddedResource Include="Resources\MailMerge\Employee Service Excellence.rtf" />
+    <EmbeddedResource Include="Resources\MailMerge\Employee Service Excellence.snx" />
+    <EmbeddedResource Include="Resources\MailMerge\Employee Thank You Note.rtf" />
+    <EmbeddedResource Include="Resources\MailMerge\Employee Thank You Note.snx" />
+    <EmbeddedResource Include="Resources\MailMerge\Order.snx" />
+    <EmbeddedResource Include="Resources\MailMerge\Sales Analysys Report.snx" />
+    <EmbeddedResource Include="Resources\MailMerge\Sales Invoice.snx" />
+    <EmbeddedResource Include="Resources\MailMerge\Sales Order Summary Report.snx" />
+    <EmbeddedResource Include="Resources\MailMerge\Sales Thank You.rtf" />
+    <EmbeddedResource Include="Resources\MailMerge\Sales Thank You.snx" />
+    <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.rtf" />
+    <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.snx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash.png" />
+    <EmbeddedResource Include="Resources\Toolbar\SortAZ.png" />
+    <EmbeddedResource Include="Resources\Toolbar\SortZA.png" />
+    <EmbeddedResource Include="Resources\DateEditIcon.png" />
+    <EmbeddedResource Include="Resources\Clear.png" />
+    <EmbeddedResource Include="Resources\Clear1.png" />
+    <None Include="Dll\System.Data.SQLite.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Dll\System.Data.SQLite.EF6.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Icons\DevExpress.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Universal.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Win.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="phexon.ico" />
+    <Content Include="Resources\Employees\Commission.png" />
+    <Content Include="Resources\phexon.ico" />
+    <Content Include="Resources\Products\All.png" />
+    <Content Include="Resources\returnButton.png" />
+    <EmbeddedResource Include="Resources\Separator.png" />
+    <EmbeddedResource Include="SkinData\hybridapp.skin.xml" />
+    <EmbeddedResource Include="Resources\Contacts\Email.png" />
+    <EmbeddedResource Include="Resources\Contacts\HomePhone.png" />
+    <EmbeddedResource Include="Resources\Contacts\MobilePhone.png" />
+    <EmbeddedResource Include="Resources\Contacts\Skype.png" />
+    <EmbeddedResource Include="Resources\Employees\All.png" />
+    <EmbeddedResource Include="Resources\Employees\OnLeave.png" />
+    <EmbeddedResource Include="Resources\Employees\Probation.png" />
+    <EmbeddedResource Include="Resources\Employees\Salaried.png" />
+    <EmbeddedResource Include="Resources\Employees\Terminated.png" />
+    <EmbeddedResource Include="Resources\Menu\Customers.png" />
+    <EmbeddedResource Include="Resources\Menu\Dashboard.png" />
+    <EmbeddedResource Include="Resources\Menu\Employees.png" />
+    <EmbeddedResource Include="Resources\Menu\Opportunities.png" />
+    <EmbeddedResource Include="Resources\Menu\Products.png" />
+    <EmbeddedResource Include="Resources\Menu\Sales.png" />
+    <EmbeddedResource Include="Resources\Menu\Tasks.png" />
+    <EmbeddedResource Include="Resources\Priority\HighPriority.png" />
+    <EmbeddedResource Include="Resources\Priority\LowPriority.png" />
+    <EmbeddedResource Include="Resources\Priority\MediumPriority.png" />
+    <EmbeddedResource Include="Resources\Priority\NormalPriority.png" />
+    <EmbeddedResource Include="Resources\Products\Automation.png" />
+    <EmbeddedResource Include="Resources\Products\Monitors.png" />
+    <EmbeddedResource Include="Resources\Products\Projectors.png" />
+    <EmbeddedResource Include="Resources\Products\TVs.png" />
+    <EmbeddedResource Include="Resources\Products\VideoPlayers.png" />
+    <EmbeddedResource Include="Resources\Status\Completed.png" />
+    <EmbeddedResource Include="Resources\Status\Deferred.png" />
+    <EmbeddedResource Include="Resources\Status\InProgress.png" />
+    <EmbeddedResource Include="Resources\Status\NeedAssistance.png" />
+    <EmbeddedResource Include="Resources\Status\NotStarted.png" />
+    <EmbeddedResource Include="Resources\Tasks\AllTasks.png" />
+    <EmbeddedResource Include="Resources\Tasks\Completed.png" />
+    <EmbeddedResource Include="Resources\Tasks\Deferred.png" />
+    <EmbeddedResource Include="Resources\Tasks\HighPriority.png" />
+    <EmbeddedResource Include="Resources\Tasks\InProgress.png" />
+    <EmbeddedResource Include="Resources\Tasks\NotStarted.png" />
+    <EmbeddedResource Include="Resources\Tasks\Urgent.png" />
+    <EmbeddedResource Include="Resources\Toolbar\Cancel.png" />
+    <EmbeddedResource Include="Resources\Toolbar\CustomFilter.png" />
+    <EmbeddedResource Include="Resources\Toolbar\Delete.png" />
+    <EmbeddedResource Include="Resources\Toolbar\Edit.png" />
+    <EmbeddedResource Include="Resources\Toolbar\MailMerge.png" />
+    <EmbeddedResource Include="Resources\Toolbar\MapView.png" />
+    <EmbeddedResource Include="Resources\Toolbar\Meeting.png" />
+    <EmbeddedResource Include="Resources\Toolbar\New.png" />
+    <EmbeddedResource Include="Resources\Toolbar\Note.png" />
+    <EmbeddedResource Include="Resources\Toolbar\OrderList.png" />
+    <EmbeddedResource Include="Resources\Toolbar\PivotTable.png" />
+    <EmbeddedResource Include="Resources\Toolbar\Print.png" />
+    <EmbeddedResource Include="Resources\Toolbar\Reports.png" />
+    <EmbeddedResource Include="Resources\Toolbar\SalesMap.png" />
+    <EmbeddedResource Include="Resources\Toolbar\Save.png" />
+    <EmbeddedResource Include="Resources\Toolbar\SaveAndClose.png" />
+    <EmbeddedResource Include="Resources\Toolbar\Settings.png" />
+    <EmbeddedResource Include="Resources\Toolbar\Task.png" />
+    <EmbeddedResource Include="Resources\Toolbar\ZoomIn.png" />
+    <EmbeddedResource Include="Resources\Toolbar\ZoomOut.png" />
+    <EmbeddedResource Include="Reports\EmployeeDirectory.resx">
+      <DependentUpon>EmployeeDirectory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeeProfile.resx">
+      <DependentUpon>EmployeeProfile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeeSummary.resx">
+      <DependentUpon>EmployeeSummary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeeTaskList.resx">
+      <DependentUpon>EmployeeTaskList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\splitter3.png" />
+    <None Include="Dll\EntityFramework.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Resources\ArrowLeft.png" />
+    <EmbeddedResource Include="Resources\ArrowRight.png" />
+    <Content Include="Resources\Calendar.png" />
+    <Content Include="Resources\devAV-logo-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PHRMS.Data\PHRMS.Data.csproj">
+      <Project>{5f39ce01-75ed-4db4-9456-b0a2b3fa33c0}</Project>
+      <Name>PHRMS.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+  </PropertyGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

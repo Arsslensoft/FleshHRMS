@@ -1,0 +1,7 @@
+E:\Research\FHRMS\Bin\PHRMS.Data.dll
+E:\Research\FHRMS\Bin\PHRMS.Data.pdb
+E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.csprojResolveAssemblyReference.cache
+E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.CommonResources.resources
+E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.csproj.GenerateResource.Cache
+E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.dll
+E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.pdb

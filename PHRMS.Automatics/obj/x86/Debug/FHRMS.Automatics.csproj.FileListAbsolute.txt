@@ -1,0 +1,9 @@
+E:\Research\FHRMS\FHRMS.Automatics\bin\x86\Debug\FHRMS.Automatics.dll
+E:\Research\FHRMS\FHRMS.Automatics\bin\x86\Debug\FHRMS.Automatics.pdb
+E:\Research\FHRMS\FHRMS.Automatics\bin\x86\Debug\EntityFramework.dll
+E:\Research\FHRMS\FHRMS.Automatics\bin\x86\Debug\FHRMS.Data.dll
+E:\Research\FHRMS\FHRMS.Automatics\bin\x86\Debug\log4net.dll
+E:\Research\FHRMS\FHRMS.Automatics\bin\x86\Debug\FHRMS.Data.pdb
+E:\Research\FHRMS\FHRMS.Automatics\obj\x86\Debug\FHRMS.Automatics.csprojResolveAssemblyReference.cache
+E:\Research\FHRMS\FHRMS.Automatics\obj\x86\Debug\FHRMS.Automatics.dll
+E:\Research\FHRMS\FHRMS.Automatics\obj\x86\Debug\FHRMS.Automatics.pdb

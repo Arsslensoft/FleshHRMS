@@ -1,0 +1,15 @@
+D:\Research\FHRMS\Bin\FHRMS.Data.dll
+D:\Research\FHRMS\Bin\FHRMS.Data.pdb
+D:\Research\FHRMS\FHRMS.Data\obj\Debug\FHRMS.Data.dll
+D:\Research\FHRMS\FHRMS.Data\obj\Debug\FHRMS.Data.pdb
+D:\Research\FHRMS\FHRMS.Data\obj\Debug\FHRMS.Data.csprojResolveAssemblyReference.cache
+E:\Research\FHRMS\FHRMS.Data\bin\x86\Debug\FHRMS.Data.dll
+E:\Research\FHRMS\FHRMS.Data\bin\x86\Debug\FHRMS.Data.pdb
+E:\Research\FHRMS\FHRMS.Data\bin\x86\Debug\EntityFramework.dll
+E:\Research\FHRMS\FHRMS.Data\bin\x86\Debug\MySql.Data.dll
+E:\Research\FHRMS\FHRMS.Data\bin\x86\Debug\MySql.Data.Entity.EF6.dll
+E:\Research\FHRMS\FHRMS.Data\bin\x86\Debug\MySql.Data.pdb
+E:\Research\FHRMS\FHRMS.Data\bin\x86\Debug\MySql.Data.Entity.EF6.pdb
+E:\Research\FHRMS\FHRMS.Data\obj\Debug\FHRMS.Data.csprojResolveAssemblyReference.cache
+E:\Research\FHRMS\FHRMS.Data\obj\Debug\FHRMS.Data.dll
+E:\Research\FHRMS\FHRMS.Data\obj\Debug\FHRMS.Data.pdb
