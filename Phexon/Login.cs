@@ -47,7 +47,7 @@ namespace PHRMS
                     DevExpress.XtraEditors.XtraMessageBox.Show("Informations incorrectes", "Invalid login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
-                    if (li.User.Credential.GetSha256FromString(textEdit1.Text) == li.User.Credential.PasswordHash)
+                    if (li.User.GetSha256FromString(textEdit1.Text) == li.User.PasswordHash)
                     {
                    MainViewModel.CurrentEmployee = li.User;
                         cancel_exit = false;

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{636F237C-CE76-4AD8-A933-77A796613AA0}</ProjectGuid>
+    <ProjectGuid>{FAB9F8F0-EFDC-4ED1-A9C6-0412EC68218A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PhexonServer</RootNamespace>

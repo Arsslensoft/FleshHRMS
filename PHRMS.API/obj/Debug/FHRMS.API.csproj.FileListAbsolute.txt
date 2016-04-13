@@ -1,4 +1,0 @@
-D:\Research\FHRMS\FHRMS.API\bin\Debug\FHRMS.API.dll
-D:\Research\FHRMS\FHRMS.API\bin\Debug\FHRMS.API.pdb
-D:\Research\FHRMS\FHRMS.API\obj\Debug\FHRMS.API.dll
-D:\Research\FHRMS\FHRMS.API\obj\Debug\FHRMS.API.pdb

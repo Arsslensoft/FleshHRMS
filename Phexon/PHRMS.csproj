@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D9516FB-FEFC-4DF5-97EC-9239A1AA026E}</ProjectGuid>
+    <ProjectGuid>{236BBC4E-299F-4BAF-B664-ABF7725BD00C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PHRMS</RootNamespace>

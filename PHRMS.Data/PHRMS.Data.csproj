@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5F39CE01-75ED-4DB4-9456-B0A2B3FA33C0}</ProjectGuid>
+    <ProjectGuid>{E7129694-C8C7-4BB7-A7AB-C31D20200486}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PHRMS.Data</RootNamespace>
@@ -136,7 +136,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Credential.cs" />
     <Compile Include="DataModel\DbExceptions.cs" />
     <Compile Include="DataModel\DbExceptionsConverter.cs" />
     <Compile Include="DataModel\DbReadOnlyRepository.cs" />

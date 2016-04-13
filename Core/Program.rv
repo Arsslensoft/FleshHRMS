@@ -1,0 +1,25 @@
+﻿/*
+ * Created by SharpDevelop.
+ * User: Arsslen
+ * Date: 13/04/2016
+ * Time: 07:56
+ * Rava Programming Language
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+import System;
+
+package Core
+{
+	class Program
+	{
+		public static sub Main(string[] args)
+		{
+			Writeln("Hello World!");
+			
+			// TODO: Implement Functionality Here
+			
+			Write("Press any key to continue . . . ");
+			ReadKey(true);
+		}
+	}
+}

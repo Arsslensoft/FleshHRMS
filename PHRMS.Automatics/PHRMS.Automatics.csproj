@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{820260E8-44D2-4B26-A8D8-F1D274EC9719}</ProjectGuid>
+    <ProjectGuid>{CD4A7E5F-0EFD-435F-8028-C4B5058E1B21}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PHRMS.Automatics</RootNamespace>
