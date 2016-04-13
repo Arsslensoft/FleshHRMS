@@ -30,6 +30,7 @@ namespace PHRMS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FleshSplashScreen));
             this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
             this.marqueeProgressBarControl1 = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,7 +58,7 @@ namespace PHRMS
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::PHRMS.Properties.Resources.splash;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(539, 298);

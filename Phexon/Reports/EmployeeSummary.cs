@@ -53,7 +53,6 @@ namespace PHRMS {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeSummary));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
-            this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -84,16 +83,17 @@ namespace PHRMS {
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow10 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell15 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell17 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -102,14 +102,6 @@ namespace PHRMS {
             this.xrPictureBox2});
             this.topMarginBand1.HeightF = 125F;
             this.topMarginBand1.Name = "topMarginBand1";
-            // 
-            // xrPictureBox2
-            // 
-            this.xrPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox2.Image")));
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(382.6075F, 10.00001F);
-            this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(337.5175F, 115F);
-            this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // detailBand1
             // 
@@ -378,10 +370,6 @@ namespace PHRMS {
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(156.25F, 23F);
             this.xrPageInfo1.StylePriority.UseForeColor = false;
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(PHRMS.Data.Employee);
-            // 
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -418,7 +406,7 @@ namespace PHRMS {
             this.xrTableCell15.StylePriority.UseForeColor = false;
             this.xrTableCell15.StylePriority.UsePadding = false;
             this.xrTableCell15.StylePriority.UseTextAlignment = false;
-            this.xrTableCell15.Text = "Employee List";
+            this.xrTableCell15.Text = "Liste des employés";
             this.xrTableCell15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell15.Weight = 0.7808441558441559D;
             // 
@@ -434,6 +422,18 @@ namespace PHRMS {
             this.xrTableCell17.StylePriority.UseBackColor = false;
             this.xrTableCell17.Weight = 2.1752232142857144D;
             // 
+            // xrPictureBox2
+            // 
+            this.xrPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox2.Image")));
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(382.6075F, 10.00001F);
+            this.xrPictureBox2.Name = "xrPictureBox2";
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(337.5175F, 115F);
+            this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(PHRMS.Data.Employee);
+            // 
             // EmployeeSummary
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -446,8 +446,8 @@ namespace PHRMS {
             this.Margins = new System.Drawing.Printing.Margins(104, 54, 125, 102);
             this.Version = "15.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

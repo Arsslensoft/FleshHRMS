@@ -145,9 +145,9 @@ namespace PHRMS {
             // xrPictureBox1
             // 
             this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(391.6667F, 12.49358F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(392.7083F, 6.243578F);
             this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(322.9167F, 125.1618F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(344.7917F, 125.1618F);
             this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // detailBand1

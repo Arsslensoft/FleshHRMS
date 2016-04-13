@@ -78,7 +78,6 @@ namespace PHRMS {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeProfile));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow13 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -107,7 +106,6 @@ namespace PHRMS {
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.parameterId = new DevExpress.XtraReports.Parameters.Parameter();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
@@ -131,12 +129,14 @@ namespace PHRMS {
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
             this.ShowEvaluationsParameter = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -147,16 +147,6 @@ namespace PHRMS {
             this.topMarginBand1.HeightF = 160F;
             this.topMarginBand1.Name = "topMarginBand1";
             this.topMarginBand1.StylePriority.UseFont = false;
-            // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(373.765F, 0F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(442.9017F, 160F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
-            this.xrPictureBox1.StylePriority.UsePadding = false;
             // 
             // detailBand1
             // 
@@ -395,10 +385,6 @@ namespace PHRMS {
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(102.0834F, 23.00008F);
             this.xrPageInfo1.StylePriority.UseForeColor = false;
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(PHRMS.Data.Employee);
-            // 
             // parameterId
             // 
             this.parameterId.Description = "ParameterId";
@@ -442,7 +428,7 @@ namespace PHRMS {
             this.xrTableCell1.StylePriority.UseForeColor = false;
             this.xrTableCell1.StylePriority.UsePadding = false;
             this.xrTableCell1.StylePriority.UseTextAlignment = false;
-            this.xrTableCell1.Text = "Employee List";
+            this.xrTableCell1.Text = "Employé";
             this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell1.Weight = 0.79745375929065565D;
             // 
@@ -571,7 +557,7 @@ namespace PHRMS {
             this.xrTableCell4.StylePriority.UseForeColor = false;
             this.xrTableCell4.StylePriority.UsePadding = false;
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
-            this.xrTableCell4.Text = "Employee Absences";
+            this.xrTableCell4.Text = "Absences";
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell4.Weight = 0.79745375929065565D;
             // 
@@ -595,6 +581,20 @@ namespace PHRMS {
             this.ShowEvaluationsParameter.ValueInfo = "True";
             this.ShowEvaluationsParameter.Visible = false;
             // 
+            // xrPictureBox1
+            // 
+            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(373.765F, 0F);
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            this.xrPictureBox1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(442.9017F, 160F);
+            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
+            this.xrPictureBox1.StylePriority.UsePadding = false;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(PHRMS.Data.Employee);
+            // 
             // EmployeeProfile
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -613,10 +613,10 @@ namespace PHRMS {
             this.Version = "15.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
