@@ -72,10 +72,9 @@ namespace PHRMS.Modules {
                DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
         }
         void NewButtonClick() {
-            if ( MainViewModel.CurrentEmployee.Role != EmployeeRole.Employee)
+          
             ViewModel.New();
-            else if (MainViewModel.CurrentEmployee.Role == EmployeeRole.Employee) 
-                DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+        
         }
         void EditButtonClick() {
             Edit(ViewModel.SelectedEntity);

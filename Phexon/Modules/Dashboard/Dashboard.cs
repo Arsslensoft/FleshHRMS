@@ -130,8 +130,10 @@ namespace PHRMS.Modules
         {
             var listBI = new List<ButtonInfo>();
             if (MainViewModel.CurrentEmployee.Role > PHRMS.Data.EmployeeRole.Agent)
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Ajouter un jour fériers", Name = "10", Image = ImageHelper.GetImageFromToolbarResource("Note"), mouseEventHandler = holidayMouseClick });
-            BottomPanel.InitializeButtons(listBI);
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Ajouter un jour férié", Name = "10", Image = ImageHelper.GetImageFromToolbarResource("Note"), mouseEventHandler = holidayMouseClick });
+            BottomPanel.InitializeButtons(listBI,false);
+       
+     
         }
         void holidayMouseClick(object sender, EventArgs e)
         {

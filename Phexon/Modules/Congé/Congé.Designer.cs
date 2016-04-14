@@ -96,14 +96,13 @@
             // 
             // tasksGridControl
             // 
-            this.tasksGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tasksGridControl.Location = new System.Drawing.Point(310, 42);
+            this.tasksGridControl.Location = new System.Drawing.Point(310, 49);
             this.tasksGridControl.MainView = this.tasksGridView;
             this.tasksGridControl.Name = "tasksGridControl";
             this.tasksGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemProgressBar1,
             this.repositoryItemComboBox1});
-            this.tasksGridControl.Size = new System.Drawing.Size(716, 339);
+            this.tasksGridControl.Size = new System.Drawing.Size(1072, 538);
             this.tasksGridControl.TabIndex = 1;
             this.tasksGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tasksGridView});
@@ -230,7 +229,7 @@
             this.Complete.MaxWidth = 296;
             this.Complete.Name = "Complete";
             this.Complete.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Completion", "<color=gray>TOTAL # OF TASKS</color><br><b>{0}</b>")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Completion", "<color=gray>CONGÉS </color><br><b>{0}</b>")});
             this.Complete.Visible = true;
             this.Complete.VisibleIndex = 6;
             this.Complete.Width = 125;
@@ -261,11 +260,10 @@
             this.dataLayoutControl1.DataSource = this.taskBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(810, 371, 864, 732);
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1068, 383);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1424, 589);
             this.dataLayoutControl1.TabIndex = 26;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
@@ -295,14 +293,14 @@
             this.tileControl1.IndentBetweenItems = 5;
             this.tileControl1.ItemPadding = new System.Windows.Forms.Padding(7, 7, 7, 4);
             this.tileControl1.ItemSize = 80;
-            this.tileControl1.Location = new System.Drawing.Point(42, 40);
+            this.tileControl1.Location = new System.Drawing.Point(42, 47);
             this.tileControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tileControl1.MaxId = 7;
             this.tileControl1.Name = "tileControl1";
             this.tileControl1.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.tileControl1.Padding = new System.Windows.Forms.Padding(0);
             this.tileControl1.SelectedItem = this.tileItemAll;
-            this.tileControl1.Size = new System.Drawing.Size(236, 341);
+            this.tileControl1.Size = new System.Drawing.Size(236, 540);
             this.tileControl1.TabIndex = 26;
             this.tileControl1.Text = "tileControl1";
             // 
@@ -510,17 +508,17 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(40, 40, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1068, 383);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1424, 589);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.tasksGridControl;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(268, 38);
+            this.layoutControlItem1.Location = new System.Drawing.Point(268, 45);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 4, 2);
-            this.layoutControlItem1.Size = new System.Drawing.Size(720, 345);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1076, 544);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -528,12 +526,12 @@
             // 
             this.tileControlLCI.Control = this.tileControl1;
             this.tileControlLCI.CustomizationFormText = "tileControlLCI";
-            this.tileControlLCI.Location = new System.Drawing.Point(0, 38);
+            this.tileControlLCI.Location = new System.Drawing.Point(0, 45);
             this.tileControlLCI.MaxSize = new System.Drawing.Size(240, 0);
             this.tileControlLCI.MinSize = new System.Drawing.Size(240, 24);
             this.tileControlLCI.Name = "tileControlLCI";
             this.tileControlLCI.OptionsPrint.AllowPrint = false;
-            this.tileControlLCI.Size = new System.Drawing.Size(240, 345);
+            this.tileControlLCI.Size = new System.Drawing.Size(240, 544);
             this.tileControlLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.tileControlLCI.TextSize = new System.Drawing.Size(0, 0);
             this.tileControlLCI.TextVisible = false;
@@ -543,14 +541,14 @@
             this.buttonHide.AllowHotTrack = false;
             this.buttonHide.CustomizationFormText = " ";
             this.buttonHide.Image = ((System.Drawing.Image)(resources.GetObject("buttonHide.Image")));
-            this.buttonHide.Location = new System.Drawing.Point(240, 38);
+            this.buttonHide.Location = new System.Drawing.Point(240, 45);
             this.buttonHide.MaxSize = new System.Drawing.Size(28, 0);
             this.buttonHide.MinSize = new System.Drawing.Size(28, 1);
             this.buttonHide.Name = "buttonHide";
-            this.buttonHide.Size = new System.Drawing.Size(28, 345);
+            this.buttonHide.Size = new System.Drawing.Size(28, 544);
             this.buttonHide.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.buttonHide.Text = " ";
-            this.buttonHide.TextSize = new System.Drawing.Size(48, 25);
+            this.buttonHide.TextSize = new System.Drawing.Size(63, 25);
             this.buttonHide.Click += new System.EventHandler(this.collapseButton_Click);
             // 
             // tasksSLI
@@ -565,9 +563,9 @@
             this.tasksSLI.Location = new System.Drawing.Point(0, 0);
             this.tasksSLI.Name = "tasksSLI";
             this.tasksSLI.Padding = new DevExpress.XtraLayout.Utils.Padding(4, 2, 10, 10);
-            this.tasksSLI.Size = new System.Drawing.Size(988, 38);
+            this.tasksSLI.Size = new System.Drawing.Size(1344, 45);
             this.tasksSLI.Text = "Congés";
-            this.tasksSLI.TextSize = new System.Drawing.Size(48, 18);
+            this.tasksSLI.TextSize = new System.Drawing.Size(63, 25);
             // 
             // simpleLabelItem1
             // 
@@ -665,12 +663,11 @@
             // 
             // Congés
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataLayoutControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Congés";
-            this.Size = new System.Drawing.Size(1068, 383);
+            this.Size = new System.Drawing.Size(1424, 589);
             ((System.ComponentModel.ISupportInitialize)(this.tasksGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tasksGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();

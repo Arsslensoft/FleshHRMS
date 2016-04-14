@@ -70,29 +70,29 @@
             // simpleButton2
             // 
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.simpleButton2.Location = new System.Drawing.Point(631, 327);
+            this.simpleButton2.Location = new System.Drawing.Point(624, 327);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(91, 42);
+            this.simpleButton2.Size = new System.Drawing.Size(98, 42);
             this.simpleButton2.StyleController = this.layoutControl1;
             this.simpleButton2.TabIndex = 7;
-            this.simpleButton2.Text = "Cancel";
+            this.simpleButton2.Text = "Annuler";
             // 
             // saveSimpleButton
             // 
             this.saveSimpleButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.saveSimpleButton.Location = new System.Drawing.Point(516, 327);
+            this.saveSimpleButton.Location = new System.Drawing.Point(483, 327);
             this.saveSimpleButton.Name = "saveSimpleButton";
-            this.saveSimpleButton.Size = new System.Drawing.Size(92, 42);
+            this.saveSimpleButton.Size = new System.Drawing.Size(118, 42);
             this.saveSimpleButton.StyleController = this.layoutControl1;
             this.saveSimpleButton.TabIndex = 6;
-            this.saveSimpleButton.Text = "Save";
+            this.saveSimpleButton.Text = "Enregistrer";
             // 
             // checkEdit1
             // 
             this.checkEdit1.EditValue = true;
             this.checkEdit1.Location = new System.Drawing.Point(12, 56);
             this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Caption = "Enable animation.";
+            this.checkEdit1.Properties.Caption = "Activer les animations.";
             this.checkEdit1.Size = new System.Drawing.Size(710, 24);
             this.checkEdit1.StyleController = this.layoutControl1;
             this.checkEdit1.TabIndex = 5;
@@ -102,10 +102,10 @@
             this.labelControl1.Appearance.FontSizeDelta = 3;
             this.labelControl1.Location = new System.Drawing.Point(12, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(67, 25);
+            this.labelControl1.Size = new System.Drawing.Size(95, 25);
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 4;
-            this.labelControl1.Text = "Settings";
+            this.labelControl1.Text = "Paramètres";
             // 
             // layoutControlGroup1
             // 
@@ -150,9 +150,9 @@
             // 
             this.layoutControlItem3.Control = this.saveSimpleButton;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(504, 315);
+            this.layoutControlItem3.Location = new System.Drawing.Point(471, 315);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(96, 46);
+            this.layoutControlItem3.Size = new System.Drawing.Size(122, 46);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -160,9 +160,9 @@
             // 
             this.layoutControlItem4.Control = this.simpleButton2;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(619, 315);
+            this.layoutControlItem4.Location = new System.Drawing.Point(612, 315);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(95, 46);
+            this.layoutControlItem4.Size = new System.Drawing.Size(102, 46);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -172,7 +172,7 @@
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 315);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(504, 46);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(471, 46);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
@@ -188,7 +188,7 @@
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(600, 315);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(593, 315);
             this.emptySpaceItem3.MaxSize = new System.Drawing.Size(19, 0);
             this.emptySpaceItem3.MinSize = new System.Drawing.Size(19, 10);
             this.emptySpaceItem3.Name = "emptySpaceItem3";

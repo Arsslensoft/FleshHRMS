@@ -125,7 +125,6 @@ namespace PHRMS {
             this.navButtonHelp.Caption = null;
             this.navButtonHelp.Glyph = ((System.Drawing.Image)(resources.GetObject("navButtonHelp.Glyph")));
             this.navButtonHelp.Name = "navButtonHelp";
-            this.navButtonHelp.Visible = false;
             this.navButtonHelp.ElementClick += new DevExpress.XtraBars.Navigation.NavElementClickEventHandler(this.navButtonHelp_ElementClick);
             // 
             // navButtonClose
@@ -134,7 +133,6 @@ namespace PHRMS {
             this.navButtonClose.Caption = null;
             this.navButtonClose.Glyph = ((System.Drawing.Image)(resources.GetObject("navButtonClose.Glyph")));
             this.navButtonClose.Name = "navButtonClose";
-            this.navButtonClose.Visible = false;
             this.navButtonClose.ElementClick += new DevExpress.XtraBars.Navigation.NavElementClickEventHandler(this.navButtonClose_ElementClick);
             // 
             // mainTileBar

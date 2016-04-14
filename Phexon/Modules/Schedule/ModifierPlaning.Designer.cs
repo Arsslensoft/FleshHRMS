@@ -382,7 +382,7 @@
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 29);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(814, 46);
-            this.layoutControlItem5.Text = "DÉBUT";
+            this.layoutControlItem5.Text = "DATE DÉBUT";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(80, 17);
             // 
             // emptySpaceItem1
@@ -430,7 +430,7 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 121);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(896, 46);
-            this.layoutControlItem2.Text = "Employé";
+            this.layoutControlItem2.Text = "EMPLOYÉ";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(80, 17);
             // 
             // layoutControlItem1
@@ -441,7 +441,7 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 75);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(896, 46);
-            this.layoutControlItem1.Text = "FIN";
+            this.layoutControlItem1.Text = "DATE FIN";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(80, 17);
             // 
             // layoutControlItem4
@@ -486,7 +486,7 @@
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 305);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(896, 46);
-            this.layoutControlItem7.Text = "Status";
+            this.layoutControlItem7.Text = "STATUT";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(80, 17);
             // 
             // layoutControlItem8
@@ -497,7 +497,7 @@
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 351);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(896, 46);
-            this.layoutControlItem8.Text = "Label";
+            this.layoutControlItem8.Text = "LABEL";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(80, 17);
             // 
             // layoutControlItem3

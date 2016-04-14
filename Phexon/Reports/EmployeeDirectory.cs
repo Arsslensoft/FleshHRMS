@@ -253,7 +253,7 @@ namespace PHRMS {
             this.xrTableCell7.StylePriority.UseBorderColor = false;
             this.xrTableCell7.StylePriority.UseForeColor = false;
             this.xrTableCell7.StylePriority.UsePadding = false;
-            this.xrTableCell7.Text = "HOME ADDRESS";
+            this.xrTableCell7.Text = "ADRESSE";
             this.xrTableCell7.Weight = 1.4868341453229292D;
             // 
             // xrTableCell8
@@ -261,7 +261,7 @@ namespace PHRMS {
             this.xrTableCell8.CanGrow = false;
             this.xrTableCell8.Dpi = 96F;
             this.xrTableCell8.Name = "xrTableCell8";
-            this.xrTableCell8.Text = "PHONE";
+            this.xrTableCell8.Text = "MOBILE";
             this.xrTableCell8.Weight = 1.5131658546770708D;
             // 
             // xrTableRow6
@@ -320,7 +320,7 @@ namespace PHRMS {
             this.xrTableCell12.CanGrow = false;
             this.xrTableCell12.Dpi = 96F;
             this.xrTableCell12.Name = "xrTableCell12";
-            this.xrTableCell12.Text = "[HomePhone] (Home)";
+            this.xrTableCell12.Text = "[HomePhone] (Fixe)";
             this.xrTableCell12.Weight = 1.5131658451951064D;
             this.xrTableCell12.WordWrap = false;
             // 
@@ -474,7 +474,7 @@ namespace PHRMS {
             this.xrTableCell1.StylePriority.UseForeColor = false;
             this.xrTableCell1.StylePriority.UsePadding = false;
             this.xrTableCell1.StylePriority.UseTextAlignment = false;
-            this.xrTableCell1.Text = "Directory";
+            this.xrTableCell1.Text = "Répertoire";
             this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell1.Weight = 0.7808441558441559D;
             // 

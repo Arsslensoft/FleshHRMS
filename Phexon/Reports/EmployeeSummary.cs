@@ -53,6 +53,7 @@ namespace PHRMS {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeSummary));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -89,7 +90,6 @@ namespace PHRMS {
             this.xrTableCell15 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell17 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -102,6 +102,14 @@ namespace PHRMS {
             this.xrPictureBox2});
             this.topMarginBand1.HeightF = 125F;
             this.topMarginBand1.Name = "topMarginBand1";
+            // 
+            // xrPictureBox2
+            // 
+            this.xrPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox2.Image")));
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(382.6075F, 10.00001F);
+            this.xrPictureBox2.Name = "xrPictureBox2";
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(337.5175F, 115F);
+            this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // detailBand1
             // 
@@ -212,14 +220,14 @@ namespace PHRMS {
             this.xrTableCell4.StylePriority.UseBorderColor = false;
             this.xrTableCell4.StylePriority.UseForeColor = false;
             this.xrTableCell4.StylePriority.UsePadding = false;
-            this.xrTableCell4.Text = "HOME ADDRESS";
+            this.xrTableCell4.Text = "ADRESSE";
             this.xrTableCell4.Weight = 1.4636767710884846D;
             // 
             // xrTableCell3
             // 
             this.xrTableCell3.CanGrow = false;
             this.xrTableCell3.Name = "xrTableCell3";
-            this.xrTableCell3.Text = "PHONE";
+            this.xrTableCell3.Text = "TELEPHONE";
             this.xrTableCell3.Weight = 1.5363232289115154D;
             // 
             // xrTableRow5
@@ -268,7 +276,7 @@ namespace PHRMS {
             // 
             this.xrTableCell9.CanGrow = false;
             this.xrTableCell9.Name = "xrTableCell9";
-            this.xrTableCell9.Text = "[HomePhone] (Home)";
+            this.xrTableCell9.Text = "[HomePhone] (Fixe)";
             this.xrTableCell9.Weight = 1.5363231157800379D;
             this.xrTableCell9.WordWrap = false;
             // 
@@ -421,14 +429,6 @@ namespace PHRMS {
             this.xrTableCell17.Name = "xrTableCell17";
             this.xrTableCell17.StylePriority.UseBackColor = false;
             this.xrTableCell17.Weight = 2.1752232142857144D;
-            // 
-            // xrPictureBox2
-            // 
-            this.xrPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox2.Image")));
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(382.6075F, 10.00001F);
-            this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(337.5175F, 115F);
-            this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // bindingSource1
             // 

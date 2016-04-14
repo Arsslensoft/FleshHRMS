@@ -9,12 +9,15 @@ using System.Windows.Forms;
 
 namespace PHRMS
 {
+    delegate void Invoker();
     public partial class FleshSplashScreen : DevExpress.XtraSplashForm.SplashFormBase
     {
         public FleshSplashScreen()
         {
             InitializeComponent();
+         
         }
+    
 
         private void labelControl2_Click(object sender, EventArgs e)
         {

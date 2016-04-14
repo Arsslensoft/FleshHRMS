@@ -87,11 +87,10 @@
             this.layout.Controls.Add(this.memoEdit2);
             this.layout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout.Location = new System.Drawing.Point(0, 0);
-            this.layout.Margin = new System.Windows.Forms.Padding(2);
             this.layout.Name = "layout";
             this.layout.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(450, 194, 650, 760);
             this.layout.Root = this.layoutControlGroup1;
-            this.layout.Size = new System.Drawing.Size(687, 180);
+            this.layout.Size = new System.Drawing.Size(916, 277);
             this.layout.TabIndex = 0;
             this.layout.Text = "layoutControl1";
             // 
@@ -99,7 +98,7 @@
             // 
             this.dateEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "DueDate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(69, 58);
+            this.dateEdit2.Location = new System.Drawing.Point(111, 87);
             this.dateEdit2.Name = "dateEdit2";
             this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -113,7 +112,7 @@
             this.dateEdit2.Properties.Mask.EditMask = "g";
             this.dateEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.dateEdit2.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit2.Size = new System.Drawing.Size(606, 20);
+            this.dateEdit2.Size = new System.Drawing.Size(793, 42);
             this.dateEdit2.StyleController = this.layout;
             this.dateEdit2.TabIndex = 7;
             // 
@@ -122,9 +121,9 @@
             this.fullNameLabelControl.AllowHtmlString = true;
             this.fullNameLabelControl.Appearance.FontSizeDelta = 3;
             this.fullNameLabelControl.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.fullNameLabelControl.Location = new System.Drawing.Point(107, 12);
+            this.fullNameLabelControl.Location = new System.Drawing.Point(141, 12);
             this.fullNameLabelControl.Name = "fullNameLabelControl";
-            this.fullNameLabelControl.Size = new System.Drawing.Size(568, 18);
+            this.fullNameLabelControl.Size = new System.Drawing.Size(763, 25);
             this.fullNameLabelControl.StyleController = this.layout;
             this.fullNameLabelControl.TabIndex = 20;
             this.fullNameLabelControl.Text = "%USERNAME";
@@ -134,40 +133,44 @@
             this.labelControl1.Appearance.FontSizeDelta = 3;
             this.labelControl1.Location = new System.Drawing.Point(12, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(91, 18);
+            this.labelControl1.Size = new System.Drawing.Size(125, 25);
             this.labelControl1.StyleController = this.layout;
             this.labelControl1.TabIndex = 19;
             this.labelControl1.Text = "Modifier Férier";
             // 
             // cancelSimpleButton
             // 
+            this.cancelSimpleButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelSimpleButton.Appearance.Options.UseFont = true;
             this.cancelSimpleButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelSimpleButton.Location = new System.Drawing.Point(574, 130);
+            this.cancelSimpleButton.Location = new System.Drawing.Point(803, 203);
             this.cancelSimpleButton.MaximumSize = new System.Drawing.Size(101, 35);
             this.cancelSimpleButton.MinimumSize = new System.Drawing.Size(101, 35);
             this.cancelSimpleButton.Name = "cancelSimpleButton";
             this.cancelSimpleButton.Size = new System.Drawing.Size(101, 35);
             this.cancelSimpleButton.StyleController = this.layout;
             this.cancelSimpleButton.TabIndex = 18;
-            this.cancelSimpleButton.Text = "Cancel";
+            this.cancelSimpleButton.Text = "Annuler";
             // 
             // saveSimpleButton
             // 
+            this.saveSimpleButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveSimpleButton.Appearance.Options.UseFont = true;
             this.saveSimpleButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.saveSimpleButton.Location = new System.Drawing.Point(469, 130);
+            this.saveSimpleButton.Location = new System.Drawing.Point(696, 203);
             this.saveSimpleButton.MaximumSize = new System.Drawing.Size(101, 35);
             this.saveSimpleButton.MinimumSize = new System.Drawing.Size(101, 35);
             this.saveSimpleButton.Name = "saveSimpleButton";
             this.saveSimpleButton.Size = new System.Drawing.Size(101, 35);
             this.saveSimpleButton.StyleController = this.layout;
             this.saveSimpleButton.TabIndex = 17;
-            this.saveSimpleButton.Text = "Save";
+            this.saveSimpleButton.Text = "Enregistrer";
             // 
             // dateEdit1
             // 
             this.dateEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "StartDate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(69, 34);
+            this.dateEdit1.Location = new System.Drawing.Point(111, 41);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -181,18 +184,18 @@
             this.dateEdit1.Properties.Mask.EditMask = "g";
             this.dateEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.dateEdit1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit1.Size = new System.Drawing.Size(606, 20);
+            this.dateEdit1.Size = new System.Drawing.Size(793, 42);
             this.dateEdit1.StyleController = this.layout;
             this.dateEdit1.TabIndex = 7;
             // 
             // memoEdit2
             // 
             this.memoEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.memoEdit2.Location = new System.Drawing.Point(69, 82);
+            this.memoEdit2.Location = new System.Drawing.Point(111, 133);
             this.memoEdit2.Name = "memoEdit2";
             this.memoEdit2.Properties.NullValuePrompt = "Enter Comment";
             this.memoEdit2.Properties.NullValuePromptShowForEmptyValue = true;
-            this.memoEdit2.Size = new System.Drawing.Size(606, 20);
+            this.memoEdit2.Size = new System.Drawing.Size(793, 42);
             this.memoEdit2.StyleController = this.layout;
             this.memoEdit2.TabIndex = 12;
             // 
@@ -216,26 +219,26 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 25;
-            this.layoutControlGroup1.Size = new System.Drawing.Size(687, 180);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(916, 277);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 118);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 191);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(457, 42);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(684, 66);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.saveSimpleButton;
             this.layoutControlItem15.CustomizationFormText = "layoutControlItem15";
-            this.layoutControlItem15.Location = new System.Drawing.Point(457, 118);
+            this.layoutControlItem15.Location = new System.Drawing.Point(684, 191);
             this.layoutControlItem15.Name = "layoutControlItem15";
             this.layoutControlItem15.OptionsPrint.AllowPrint = false;
-            this.layoutControlItem15.Size = new System.Drawing.Size(105, 42);
+            this.layoutControlItem15.Size = new System.Drawing.Size(107, 66);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
             // 
@@ -245,7 +248,7 @@
             this.layoutControlItem17.CustomizationFormText = "layoutControlItem17";
             this.layoutControlItem17.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(95, 22);
+            this.layoutControlItem17.Size = new System.Drawing.Size(129, 29);
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextVisible = false;
             // 
@@ -253,10 +256,10 @@
             // 
             this.layoutControlItem18.Control = this.fullNameLabelControl;
             this.layoutControlItem18.CustomizationFormText = "layoutControlItem18";
-            this.layoutControlItem18.Location = new System.Drawing.Point(95, 0);
+            this.layoutControlItem18.Location = new System.Drawing.Point(129, 0);
             this.layoutControlItem18.MinSize = new System.Drawing.Size(1, 1);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(572, 22);
+            this.layoutControlItem18.Size = new System.Drawing.Size(767, 29);
             this.layoutControlItem18.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
@@ -267,11 +270,11 @@
             this.layoutControlItem10.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem10.Control = this.memoEdit2;
             this.layoutControlItem10.CustomizationFormText = "NOM";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 70);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 121);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(667, 24);
+            this.layoutControlItem10.Size = new System.Drawing.Size(896, 46);
             this.layoutControlItem10.Text = "NOM";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(32, 12);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(74, 17);
             // 
             // layoutControlItem5
             // 
@@ -279,21 +282,21 @@
             this.layoutControlItem5.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem5.Control = this.dateEdit1;
             this.layoutControlItem5.CustomizationFormText = "START DATE";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 22);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 29);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(667, 24);
-            this.layoutControlItem5.Text = "DÉBUT";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(32, 12);
+            this.layoutControlItem5.Size = new System.Drawing.Size(896, 46);
+            this.layoutControlItem5.Text = "DATE DÉBUT";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(74, 17);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 94);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 167);
             this.emptySpaceItem1.MaxSize = new System.Drawing.Size(0, 24);
             this.emptySpaceItem1.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(667, 24);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(896, 24);
             this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -301,10 +304,10 @@
             // 
             this.layoutControlItem16.Control = this.cancelSimpleButton;
             this.layoutControlItem16.CustomizationFormText = "layoutControlItem16";
-            this.layoutControlItem16.Location = new System.Drawing.Point(562, 118);
+            this.layoutControlItem16.Location = new System.Drawing.Point(791, 191);
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.OptionsPrint.AllowPrint = false;
-            this.layoutControlItem16.Size = new System.Drawing.Size(105, 42);
+            this.layoutControlItem16.Size = new System.Drawing.Size(105, 66);
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextVisible = false;
             // 
@@ -313,20 +316,19 @@
             this.layoutControlItem1.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.layoutControlItem1.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem1.Control = this.dateEdit2;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 46);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 75);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(667, 24);
-            this.layoutControlItem1.Text = "FIN";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(32, 12);
+            this.layoutControlItem1.Size = new System.Drawing.Size(896, 46);
+            this.layoutControlItem1.Text = "DATE FIN";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(74, 17);
             // 
             // ModifierFérier
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layout);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ModifierFérier";
-            this.Size = new System.Drawing.Size(687, 180);
+            this.Size = new System.Drawing.Size(916, 277);
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout)).EndInit();

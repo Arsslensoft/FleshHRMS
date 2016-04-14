@@ -77,8 +77,7 @@ namespace PHRMS.Data {
                    
             }
         }
-        public bool Reminder { get; set; }
-        public DateTime? ReminderDateTime { get; set; }
+   
         public virtual Employee AssignedEmployee { get; set; }
         public long? AssignedEmployeeId { get; set; }
         public virtual Employee Owner { get; set; }

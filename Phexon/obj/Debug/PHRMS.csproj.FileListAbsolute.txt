@@ -23,7 +23,6 @@ E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Preview.ReportExportSettingsControl.res
 E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.ReportPreviewControl.resources
 E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.ReportPrintSettingsControl.resources
 E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.Dashboard.resources
-E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.PublipostageEmployé.resources
 E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.Employés.resources
 E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.ModifierEmployé.resources
 E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.ImprimerEmployé.resources
@@ -126,3 +125,4 @@ E:\flesh-hrms\Bin\Dll\EntityFramework.dll
 E:\flesh-hrms\Bin\Phexon.exe.config
 E:\flesh-hrms\Bin\Phexon.exe
 E:\flesh-hrms\Bin\Phexon.pdb
+E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.AboutForm.resources

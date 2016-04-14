@@ -23,10 +23,10 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource();
-            this.noteBindingSource = new System.Windows.Forms.BindingSource();
+            this.components = new System.ComponentModel.Container();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.noteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layout = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.imageComboBoxEdit1 = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
@@ -51,14 +51,12 @@
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout)).BeginInit();
             this.layout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
@@ -81,7 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +95,6 @@
             // 
             this.layout.AllowCustomization = false;
             this.layout.BackColor = System.Drawing.Color.White;
-            this.layout.Controls.Add(this.lookUpEdit1);
             this.layout.Controls.Add(this.numericUpDown1);
             this.layout.Controls.Add(this.imageComboBoxEdit1);
             this.layout.Controls.Add(this.dateEdit2);
@@ -117,25 +113,6 @@
             this.layout.Size = new System.Drawing.Size(916, 331);
             this.layout.TabIndex = 0;
             this.layout.Text = "layoutControl1";
-            // 
-            // lookUpEdit1
-            // 
-            this.lookUpEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "CreatedBy", true));
-            this.lookUpEdit1.EditValue = "<Null>";
-            this.lookUpEdit1.Location = new System.Drawing.Point(585, 87);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("FullNameBindable", "FullName")});
-            this.lookUpEdit1.Properties.DisplayMember = "FullNameBindable";
-            this.lookUpEdit1.Properties.NullText = "";
-            this.lookUpEdit1.Properties.NullValuePrompt = "None";
-            this.lookUpEdit1.Properties.NullValuePromptShowForEmptyValue = true;
-            this.lookUpEdit1.Properties.ShowHeader = false;
-            this.lookUpEdit1.Size = new System.Drawing.Size(307, 42);
-            this.lookUpEdit1.StyleController = this.layout;
-            this.lookUpEdit1.TabIndex = 5;
             // 
             // numericUpDown1
             // 
@@ -197,6 +174,8 @@
             // 
             // cancelSimpleButton
             // 
+            this.cancelSimpleButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelSimpleButton.Appearance.Options.UseFont = true;
             this.cancelSimpleButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelSimpleButton.Location = new System.Drawing.Point(791, 273);
             this.cancelSimpleButton.MaximumSize = new System.Drawing.Size(101, 35);
@@ -205,19 +184,21 @@
             this.cancelSimpleButton.Size = new System.Drawing.Size(101, 35);
             this.cancelSimpleButton.StyleController = this.layout;
             this.cancelSimpleButton.TabIndex = 18;
-            this.cancelSimpleButton.Text = "Cancel";
+            this.cancelSimpleButton.Text = "Annuler";
             // 
             // saveSimpleButton
             // 
+            this.saveSimpleButton.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveSimpleButton.Appearance.Options.UseFont = true;
             this.saveSimpleButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.saveSimpleButton.Location = new System.Drawing.Point(686, 273);
+            this.saveSimpleButton.Location = new System.Drawing.Point(684, 273);
             this.saveSimpleButton.MaximumSize = new System.Drawing.Size(101, 35);
             this.saveSimpleButton.MinimumSize = new System.Drawing.Size(101, 35);
             this.saveSimpleButton.Name = "saveSimpleButton";
             this.saveSimpleButton.Size = new System.Drawing.Size(101, 35);
             this.saveSimpleButton.StyleController = this.layout;
             this.saveSimpleButton.TabIndex = 17;
-            this.saveSimpleButton.Text = "Save";
+            this.saveSimpleButton.Text = "Enregistrer";
             // 
             // dateEdit1
             // 
@@ -251,7 +232,7 @@
             this.assignedToLookUpEdit.Properties.NullValuePrompt = "None";
             this.assignedToLookUpEdit.Properties.NullValuePromptShowForEmptyValue = true;
             this.assignedToLookUpEdit.Properties.ShowHeader = false;
-            this.assignedToLookUpEdit.Size = new System.Drawing.Size(309, 42);
+            this.assignedToLookUpEdit.Size = new System.Drawing.Size(750, 42);
             this.assignedToLookUpEdit.StyleController = this.layout;
             this.assignedToLookUpEdit.TabIndex = 5;
             // 
@@ -287,7 +268,6 @@
             this.layoutControlItem16,
             this.layoutControlItem1,
             this.layoutControlItem6,
-            this.layoutControlItem7,
             this.layoutControlItem4});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
@@ -301,17 +281,17 @@
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 261);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(674, 50);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(672, 50);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.saveSimpleButton;
             this.layoutControlItem15.CustomizationFormText = "layoutControlItem15";
-            this.layoutControlItem15.Location = new System.Drawing.Point(674, 261);
+            this.layoutControlItem15.Location = new System.Drawing.Point(672, 261);
             this.layoutControlItem15.Name = "layoutControlItem15";
             this.layoutControlItem15.OptionsPrint.AllowPrint = false;
-            this.layoutControlItem15.Size = new System.Drawing.Size(105, 50);
+            this.layoutControlItem15.Size = new System.Drawing.Size(107, 50);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
             // 
@@ -405,8 +385,8 @@
             this.layoutControlItem2.CustomizationFormText = "ASSIGNED TO";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 75);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(443, 46);
-            this.layoutControlItem2.Text = "Employé";
+            this.layoutControlItem2.Size = new System.Drawing.Size(884, 46);
+            this.layoutControlItem2.Text = "EMPLOYÉ";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(105, 17);
             // 
             // layoutControlItem16
@@ -439,19 +419,8 @@
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 167);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(884, 24);
-            this.layoutControlItem6.Text = "Id motif";
+            this.layoutControlItem6.Text = "ID MOTIF";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(105, 17);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.layoutControlItem7.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem7.Control = this.lookUpEdit1;
-            this.layoutControlItem7.Location = new System.Drawing.Point(443, 75);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(441, 46);
-            this.layoutControlItem7.Text = "Crée par";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(105, 17);
             // 
             // layoutControlItem4
             // 
@@ -484,7 +453,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout)).EndInit();
             this.layout.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
@@ -507,7 +475,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
@@ -545,7 +512,5 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }

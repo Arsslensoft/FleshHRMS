@@ -78,6 +78,7 @@ namespace PHRMS {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeProfile));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow13 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -128,9 +129,8 @@ namespace PHRMS {
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.ShowEvaluationsParameter = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ShowEvaluationsParameter = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -147,6 +147,16 @@ namespace PHRMS {
             this.topMarginBand1.HeightF = 160F;
             this.topMarginBand1.Name = "topMarginBand1";
             this.topMarginBand1.StylePriority.UseFont = false;
+            // 
+            // xrPictureBox1
+            // 
+            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(373.765F, 0F);
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            this.xrPictureBox1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(442.9017F, 160F);
+            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
+            this.xrPictureBox1.StylePriority.UsePadding = false;
             // 
             // detailBand1
             // 
@@ -185,7 +195,7 @@ namespace PHRMS {
             this.xrTableCell20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.xrTableCell20.Name = "xrTableCell20";
             this.xrTableCell20.StylePriority.UseForeColor = false;
-            this.xrTableCell20.Text = "HOME ADDRESS";
+            this.xrTableCell20.Text = "ADRESSE";
             this.xrTableCell20.Weight = 1.5238964537134105D;
             // 
             // xrTableCell21
@@ -193,7 +203,7 @@ namespace PHRMS {
             this.xrTableCell21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.xrTableCell21.Name = "xrTableCell21";
             this.xrTableCell21.StylePriority.UseForeColor = false;
-            this.xrTableCell21.Text = "PHONE";
+            this.xrTableCell21.Text = "TELEPHONE";
             this.xrTableCell21.Weight = 1.4761035462865895D;
             // 
             // xrTableRow14
@@ -233,7 +243,7 @@ namespace PHRMS {
             // xrTableCell25
             // 
             this.xrTableCell25.Name = "xrTableCell25";
-            this.xrTableCell25.Text = "[HomePhone] (Home)";
+            this.xrTableCell25.Text = "[HomePhone] (Fixe)";
             this.xrTableCell25.Weight = 1.4761035485101002D;
             // 
             // xrTableRow16
@@ -573,6 +583,10 @@ namespace PHRMS {
             this.xrTableCell6.StylePriority.UseBackColor = false;
             this.xrTableCell6.Weight = 2.1658950483378594D;
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(PHRMS.Data.Employee);
+            // 
             // ShowEvaluationsParameter
             // 
             this.ShowEvaluationsParameter.Description = "ShowEvaluations";
@@ -580,20 +594,6 @@ namespace PHRMS {
             this.ShowEvaluationsParameter.Type = typeof(bool);
             this.ShowEvaluationsParameter.ValueInfo = "True";
             this.ShowEvaluationsParameter.Visible = false;
-            // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(373.765F, 0F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(442.9017F, 160F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
-            this.xrPictureBox1.StylePriority.UsePadding = false;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(PHRMS.Data.Employee);
             // 
             // EmployeeProfile
             // 

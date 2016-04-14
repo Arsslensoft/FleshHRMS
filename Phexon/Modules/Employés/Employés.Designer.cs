@@ -70,7 +70,6 @@ namespace PHRMS.Modules {
             this.colStatus = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colHireDate = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colPersonalProfile = new DevExpress.XtraGrid.Columns.TileViewColumn();
-     
             this.colFirstName = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colLastName = new DevExpress.XtraGrid.Columns.TileViewColumn();
             this.colPrefix = new DevExpress.XtraGrid.Columns.TileViewColumn();
@@ -123,42 +122,42 @@ namespace PHRMS.Modules {
             this.colPhoto.FieldName = "Photo";
             this.colPhoto.Name = "colPhoto";
             this.colPhoto.Visible = true;
-            this.colPhoto.VisibleIndex = 18;
+            this.colPhoto.VisibleIndex = 17;
             // 
             // colFullName
             // 
             this.colFullName.FieldName = "FullName";
             this.colFullName.Name = "colFullName";
             this.colFullName.Visible = true;
-            this.colFullName.VisibleIndex = 8;
+            this.colFullName.VisibleIndex = 7;
             // 
             // colAddress
             // 
             this.colAddress.FieldName = "Address";
             this.colAddress.Name = "colAddress";
             this.colAddress.Visible = true;
-            this.colAddress.VisibleIndex = 17;
+            this.colAddress.VisibleIndex = 16;
             // 
             // colHomePhone
             // 
             this.colHomePhone.FieldName = "HomePhone";
             this.colHomePhone.Name = "colHomePhone";
             this.colHomePhone.Visible = true;
-            this.colHomePhone.VisibleIndex = 10;
+            this.colHomePhone.VisibleIndex = 9;
             // 
             // colEmail
             // 
             this.colEmail.FieldName = "Email";
             this.colEmail.Name = "colEmail";
             this.colEmail.Visible = true;
-            this.colEmail.VisibleIndex = 12;
+            this.colEmail.VisibleIndex = 11;
             // 
             // colMobilePhone
             // 
             this.colMobilePhone.FieldName = "MobilePhone";
             this.colMobilePhone.Name = "colMobilePhone";
             this.colMobilePhone.Visible = true;
-            this.colMobilePhone.VisibleIndex = 11;
+            this.colMobilePhone.VisibleIndex = 10;
             // 
             // employeeBindingSource
             // 
@@ -392,7 +391,6 @@ namespace PHRMS.Modules {
             this.colStatus,
             this.colHireDate,
             this.colPersonalProfile,
-        
             this.colFirstName,
             this.colLastName,
             this.colFullName,
@@ -443,7 +441,7 @@ namespace PHRMS.Modules {
             tileViewItemElement4.Appearance.Normal.ForeColor = System.Drawing.Color.Gray;
             tileViewItemElement4.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement4.Column = null;
-            tileViewItemElement4.Text = "ADDRESS";
+            tileViewItemElement4.Text = "ADRESSE";
             tileViewItemElement5.AnchorElementIndex = 3;
             tileViewItemElement5.AnchorIndent = 0;
             tileViewItemElement5.Column = this.colAddress;
@@ -455,7 +453,7 @@ namespace PHRMS.Modules {
             tileViewItemElement6.Appearance.Normal.ForeColor = System.Drawing.Color.Gray;
             tileViewItemElement6.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement6.Column = null;
-            tileViewItemElement6.Text = "PHONE";
+            tileViewItemElement6.Text = "MOBILE";
             tileViewItemElement7.AnchorElementIndex = 5;
             tileViewItemElement7.AnchorIndent = 0;
             tileViewItemElement7.Column = this.colHomePhone;
@@ -513,70 +511,69 @@ namespace PHRMS.Modules {
             this.colPersonalProfile.Name = "colPersonalProfile";
             this.colPersonalProfile.Visible = true;
             this.colPersonalProfile.VisibleIndex = 4;
-        
             // 
             // colFirstName
             // 
             this.colFirstName.FieldName = "FirstName";
             this.colFirstName.Name = "colFirstName";
             this.colFirstName.Visible = true;
-            this.colFirstName.VisibleIndex = 6;
+            this.colFirstName.VisibleIndex = 5;
             // 
             // colLastName
             // 
             this.colLastName.FieldName = "LastName";
             this.colLastName.Name = "colLastName";
             this.colLastName.Visible = true;
-            this.colLastName.VisibleIndex = 7;
+            this.colLastName.VisibleIndex = 6;
             // 
             // colPrefix
             // 
             this.colPrefix.FieldName = "Prefix";
             this.colPrefix.Name = "colPrefix";
             this.colPrefix.Visible = true;
-            this.colPrefix.VisibleIndex = 9;
+            this.colPrefix.VisibleIndex = 8;
             // 
             // colSkype
             // 
             this.colSkype.FieldName = "Skype";
             this.colSkype.Name = "colSkype";
             this.colSkype.Visible = true;
-            this.colSkype.VisibleIndex = 13;
+            this.colSkype.VisibleIndex = 12;
             // 
             // colBirthDate
             // 
             this.colBirthDate.FieldName = "BirthDate";
             this.colBirthDate.Name = "colBirthDate";
             this.colBirthDate.Visible = true;
-            this.colBirthDate.VisibleIndex = 14;
+            this.colBirthDate.VisibleIndex = 13;
             // 
             // colPicture
             // 
             this.colPicture.FieldName = "Picture";
             this.colPicture.Name = "colPicture";
             this.colPicture.Visible = true;
-            this.colPicture.VisibleIndex = 15;
+            this.colPicture.VisibleIndex = 14;
             // 
             // colPictureId
             // 
             this.colPictureId.FieldName = "PictureId";
             this.colPictureId.Name = "colPictureId";
             this.colPictureId.Visible = true;
-            this.colPictureId.VisibleIndex = 16;
+            this.colPictureId.VisibleIndex = 15;
             // 
             // colFullNameBindable
             // 
             this.colFullNameBindable.FieldName = "FullNameBindable";
             this.colFullNameBindable.Name = "colFullNameBindable";
             this.colFullNameBindable.Visible = true;
-            this.colFullNameBindable.VisibleIndex = 19;
+            this.colFullNameBindable.VisibleIndex = 18;
             // 
             // colId
             // 
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
             this.colId.Visible = true;
-            this.colId.VisibleIndex = 20;
+            this.colId.VisibleIndex = 19;
             // 
             // flyoutPanel1
             // 
@@ -631,7 +628,7 @@ namespace PHRMS.Modules {
             this.buttonHide.Size = new System.Drawing.Size(28, 523);
             this.buttonHide.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.buttonHide.Text = " ";
-            this.buttonHide.TextSize = new System.Drawing.Size(148, 20);
+            this.buttonHide.TextSize = new System.Drawing.Size(146, 20);
             this.buttonHide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.simpleLabelItem1_MouseDown);
             // 
             // simpleLabelItem2
@@ -649,8 +646,8 @@ namespace PHRMS.Modules {
             this.simpleLabelItem2.Name = "simpleLabelItem2";
             this.simpleLabelItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(4, 2, 10, 10);
             this.simpleLabelItem2.Size = new System.Drawing.Size(868, 45);
-            this.simpleLabelItem2.Text = "EMPLOYÉS <color=47, 81, 165>Status";
-            this.simpleLabelItem2.TextSize = new System.Drawing.Size(148, 25);
+            this.simpleLabelItem2.Text = "EMPLOYÉS <color=47, 81, 165>Statut";
+            this.simpleLabelItem2.TextSize = new System.Drawing.Size(146, 25);
             // 
             // layoutControlItem1
             // 
@@ -734,7 +731,7 @@ namespace PHRMS.Modules {
             this.emptySpaceItem1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(221, 285);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(215, 285);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // printEmployeeProfileItem
@@ -744,10 +741,10 @@ namespace PHRMS.Modules {
             this.printEmployeeProfileItem.Location = new System.Drawing.Point(0, 0);
             this.printEmployeeProfileItem.Name = "printEmployeeProfileItem";
             this.printEmployeeProfileItem.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
-            this.printEmployeeProfileItem.Size = new System.Drawing.Size(201, 85);
-            this.printEmployeeProfileItem.Text = "Employee Profile";
+            this.printEmployeeProfileItem.Size = new System.Drawing.Size(195, 85);
+            this.printEmployeeProfileItem.Text = "Profile d\'employé";
             this.printEmployeeProfileItem.TextLocation = DevExpress.Utils.Locations.Right;
-            this.printEmployeeProfileItem.TextSize = new System.Drawing.Size(131, 20);
+            this.printEmployeeProfileItem.TextSize = new System.Drawing.Size(125, 20);
             this.printEmployeeProfileItem.Click += new System.EventHandler(this.printEmployeeProfileItem_Click);
             // 
             // printEmployeeDirectoryItem
@@ -757,10 +754,10 @@ namespace PHRMS.Modules {
             this.printEmployeeDirectoryItem.Location = new System.Drawing.Point(0, 85);
             this.printEmployeeDirectoryItem.Name = "printEmployeeDirectoryItem";
             this.printEmployeeDirectoryItem.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
-            this.printEmployeeDirectoryItem.Size = new System.Drawing.Size(201, 85);
-            this.printEmployeeDirectoryItem.Text = "Employee Directory";
+            this.printEmployeeDirectoryItem.Size = new System.Drawing.Size(195, 85);
+            this.printEmployeeDirectoryItem.Text = "Répertoire";
             this.printEmployeeDirectoryItem.TextLocation = DevExpress.Utils.Locations.Right;
-            this.printEmployeeDirectoryItem.TextSize = new System.Drawing.Size(131, 20);
+            this.printEmployeeDirectoryItem.TextSize = new System.Drawing.Size(125, 20);
             this.printEmployeeDirectoryItem.Click += new System.EventHandler(this.printEmployeeDirectoryItem_Click);
             // 
             // printEmployeeListItem
@@ -770,10 +767,10 @@ namespace PHRMS.Modules {
             this.printEmployeeListItem.Location = new System.Drawing.Point(0, 170);
             this.printEmployeeListItem.Name = "printEmployeeListItem";
             this.printEmployeeListItem.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
-            this.printEmployeeListItem.Size = new System.Drawing.Size(201, 85);
-            this.printEmployeeListItem.Text = "Employee List";
+            this.printEmployeeListItem.Size = new System.Drawing.Size(195, 85);
+            this.printEmployeeListItem.Text = "Liste des employés";
             this.printEmployeeListItem.TextLocation = DevExpress.Utils.Locations.Right;
-            this.printEmployeeListItem.TextSize = new System.Drawing.Size(131, 20);
+            this.printEmployeeListItem.TextSize = new System.Drawing.Size(125, 20);
             this.printEmployeeListItem.Click += new System.EventHandler(this.printEmployeeListItem_Click);
             // 
             // emptySpaceItem1
@@ -782,7 +779,7 @@ namespace PHRMS.Modules {
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 255);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(201, 10);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(195, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // Employés

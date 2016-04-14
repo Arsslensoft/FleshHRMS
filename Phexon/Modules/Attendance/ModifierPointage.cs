@@ -31,7 +31,7 @@ namespace PHRMS.Modules {
         protected override void OnParentViewModelAttached() {
             base.OnParentViewModelAttached();
             if(ViewModel.IsNew()) {
-                InitNew(AbsenceOwner,AbsenceCreator);
+                InitNew(AbsenceOwner,MainViewModel.CurrentEmployee);
             }
         }
         void ViewModel_EntityChanged(object sender, EventArgs e) {
@@ -70,14 +70,13 @@ namespace PHRMS.Modules {
         void InitLookupEditors() {
             imageComboBoxEdit1.Properties.Items.AddEnum<PHRMS.Data.AttendanceType>();
             assignedToLookUpEdit.Properties.DataSource = ViewModel.GetEmployees().ToList();
-             lookUpEdit1.Properties.DataSource = ViewModel.GetEmployees().ToList();
         }
         void UpdateEditors(Attendance note) {
             if(note == null) return;
             noteBindingSource.DataSource = note;
         }
         public static Employee AbsenceOwner { get; set; }
-        public static Employee AbsenceCreator { get; set; }
+ 
     }
  
 }

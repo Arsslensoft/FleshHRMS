@@ -69,16 +69,21 @@ namespace PHRMS.Modules {
             Edit(ViewModel.SelectedEntity);
         }
            void NewButtonClick() {
-               if (MainViewModel.CurrentEmployee.Role != EmployeeRole.Employee)
+           
             ViewModel.New();
-               else DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
         }
       
         void Edit(Attendance task) {
 
-            if (ViewModel.CanEdit(task) && MainViewModel.CurrentEmployee.Role >= EmployeeRole.Agent)
-                ViewModel.Edit(task);
-            else if (MainViewModel.CurrentEmployee.Role < EmployeeRole.Agent )
+            if (ViewModel.CanEdit(task) && MainViewModel.CurrentEmployee.Role >= EmployeeRole.Agent )
+            {
+                if (MainViewModel.CurrentEmployee.Role == EmployeeRole.Agent && MainViewModel.CurrentEmployee.Id != task.CreatedById)
+                      DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                else
+                    ViewModel.Edit(task);
+                  
+            }
+            else if (MainViewModel.CurrentEmployee.Role < EmployeeRole.Agent)
                 DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
         }
         void collapseButton_Click(object sender, EventArgs e) {

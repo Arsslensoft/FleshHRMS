@@ -14,6 +14,7 @@ using PHRMS.Data;
 namespace PHRMS
 {
     internal static class Program {
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -49,7 +50,8 @@ namespace PHRMS
                 WindowsFormsSettings.TouchScaleFactor = touchScaleFactor;
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MainForm());
+                MainForm = new MainForm();
+                Application.Run(MainForm);
             }
         }
         public static Icon AppIcon {

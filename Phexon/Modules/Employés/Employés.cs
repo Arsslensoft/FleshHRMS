@@ -133,12 +133,11 @@ namespace PHRMS.Modules {
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Ascendant", Name = "1", Image = ImageHelper.GetImageFromToolbarResource("SortAZ"), mouseEventHandler = (s, e) => { SortEmployees(true); } });
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Descendant", Name = "2", Image = ImageHelper.GetImageFromToolbarResource("SortZA"), mouseEventHandler = (s, e) => { SortEmployees(false); } });
             listBI.Add(new ButtonInfo());
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Nouvel employé", Name = "2", Image = ImageHelper.GetImageFromToolbarResource("New"), mouseEventHandler = newMouseClick });
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Edit", Name = "4", Image = ImageHelper.GetImageFromToolbarResource("Edit"), mouseEventHandler = editMouseClick });
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Nouveau employé", Name = "2", Image = ImageHelper.GetImageFromToolbarResource("New"), mouseEventHandler = newMouseClick });
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Modifier", Name = "4", Image = ImageHelper.GetImageFromToolbarResource("Edit"), mouseEventHandler = editMouseClick });
             listBI.Add(new ButtonInfo());
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Rapports", Name = "6", Image = ImageHelper.GetImageFromToolbarResource("Reports"), PopupMenuContent = layoutControl2 });
             listBI.Add(new ButtonInfo());
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Publipostage", Name = "7", Image = ImageHelper.GetImageFromToolbarResource("MailMerge"), mouseEventHandler = mailMergeClick });
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Congés", Name = "8", Image = ImageHelper.GetImageFromToolbarResource("Task"), mouseEventHandler = taskMouseClick });
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Absences", Name = "10", Image = ImageHelper.GetImageFromToolbarResource("Note"), mouseEventHandler = notesMouseClick });
             BottomPanel.InitializeButtons(listBI);
@@ -161,10 +160,7 @@ namespace PHRMS.Modules {
                 NotesViewModel.New();
             }
         }
-        void mailMergeClick(object sender, EventArgs e) {
-            prevFocusedRow = GetSelectedIndex();
-            GotoModule(ModuleType.PublipostageEmployé, GetSelectedEmployee());
-        }
+ 
         void UpdateSelectedEntity(int focusedRowHandle) {
             ViewModel.SelectedEntity = tileView1.DataController.GetRow(tileView1.DataController.GetControllerRowHandle(focusedRowHandle)) as Employee;
         }

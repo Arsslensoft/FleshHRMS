@@ -26,21 +26,21 @@ namespace PHRMS.Preview {
         private void InitializeComponent() {
             this.layoutControl = new DevExpress.XtraLayout.LayoutControl();
             this.btnExport = new DevExpress.XtraEditors.DropDownButton();
+            this.settingsPanel = new PHRMS.SettingPanel();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.simpleLabelItem1 = new DevExpress.XtraLayout.SimpleLabelItem();
+            this.layoutControlItemSettings = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleLabelItem2 = new DevExpress.XtraLayout.SimpleLabelItem();
-            this.settingsPanel = new PHRMS.SettingPanel();
-            this.layoutControlItemSettings = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).BeginInit();
             this.layoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemSettings)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl
@@ -68,6 +68,13 @@ namespace PHRMS.Preview {
             this.btnExport.Text = "Export";
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
+            // settingsPanel
+            // 
+            this.settingsPanel.Location = new System.Drawing.Point(40, 215);
+            this.settingsPanel.Name = "settingsPanel";
+            this.settingsPanel.Size = new System.Drawing.Size(299, 328);
+            this.settingsPanel.TabIndex = 4;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.CustomizationFormText = "Root";
@@ -82,7 +89,7 @@ namespace PHRMS.Preview {
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(40, 0, 0, 40);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(386, 583);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(381, 583);
             // 
             // simpleLabelItem1
             // 
@@ -93,15 +100,29 @@ namespace PHRMS.Preview {
             this.simpleLabelItem1.Location = new System.Drawing.Point(0, 0);
             this.simpleLabelItem1.Name = "simpleLabelItem1";
             this.simpleLabelItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 24);
-            this.simpleLabelItem1.Size = new System.Drawing.Size(304, 89);
-            this.simpleLabelItem1.Text = "Export";
-            this.simpleLabelItem1.TextSize = new System.Drawing.Size(182, 65);
+            this.simpleLabelItem1.Size = new System.Drawing.Size(299, 89);
+            this.simpleLabelItem1.Text = "Exporter";
+            this.simpleLabelItem1.TextSize = new System.Drawing.Size(177, 65);
+            // 
+            // layoutControlItemSettings
+            // 
+            this.layoutControlItemSettings.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.layoutControlItemSettings.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItemSettings.Control = this.settingsPanel;
+            this.layoutControlItemSettings.CustomizationFormText = "Settings";
+            this.layoutControlItemSettings.Location = new System.Drawing.Point(0, 164);
+            this.layoutControlItemSettings.Name = "layoutControlItem4";
+            this.layoutControlItemSettings.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 16, 0);
+            this.layoutControlItemSettings.Size = new System.Drawing.Size(299, 379);
+            this.layoutControlItemSettings.Text = "Options";
+            this.layoutControlItemSettings.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItemSettings.TextSize = new System.Drawing.Size(177, 32);
             // 
             // simpleSeparator1
             // 
             this.simpleSeparator1.AllowHotTrack = false;
             this.simpleSeparator1.CustomizationFormText = "simpleSeparator1";
-            this.simpleSeparator1.Location = new System.Drawing.Point(304, 0);
+            this.simpleSeparator1.Location = new System.Drawing.Point(299, 0);
             this.simpleSeparator1.Name = "simpleSeparator1";
             this.simpleSeparator1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.simpleSeparator1.Size = new System.Drawing.Size(42, 543);
@@ -114,7 +135,7 @@ namespace PHRMS.Preview {
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 89);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlItem1.Size = new System.Drawing.Size(110, 100);
+            this.layoutControlItem1.Size = new System.Drawing.Size(110, 75);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -128,31 +149,9 @@ namespace PHRMS.Preview {
             this.simpleLabelItem2.Location = new System.Drawing.Point(110, 89);
             this.simpleLabelItem2.Name = "simpleLabelItem2";
             this.simpleLabelItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(12, 0, 0, 0);
-            this.simpleLabelItem2.Size = new System.Drawing.Size(194, 100);
-            this.simpleLabelItem2.Text = "The DevExpress Reporting<br>platform allows you to<br>export any report to<br>PDF" +
-    ", XLS, RTF and countless<br>image file formats.";
-            this.simpleLabelItem2.TextSize = new System.Drawing.Size(182, 100);
-            // 
-            // settingsPanel
-            // 
-            this.settingsPanel.Location = new System.Drawing.Point(40, 240);
-            this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(304, 303);
-            this.settingsPanel.TabIndex = 4;
-            // 
-            // layoutControlItemSettings
-            // 
-            this.layoutControlItemSettings.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.layoutControlItemSettings.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItemSettings.Control = this.settingsPanel;
-            this.layoutControlItemSettings.CustomizationFormText = "Settings";
-            this.layoutControlItemSettings.Location = new System.Drawing.Point(0, 189);
-            this.layoutControlItemSettings.Name = "layoutControlItem4";
-            this.layoutControlItemSettings.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 16, 0);
-            this.layoutControlItemSettings.Size = new System.Drawing.Size(304, 354);
-            this.layoutControlItemSettings.Text = "Settings";
-            this.layoutControlItemSettings.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItemSettings.TextSize = new System.Drawing.Size(182, 32);
+            this.simpleLabelItem2.Size = new System.Drawing.Size(189, 75);
+            this.simpleLabelItem2.Text = "Exporter le documents<br> en PDF, XLS, RTF ";
+            this.simpleLabelItem2.TextSize = new System.Drawing.Size(177, 40);
             // 
             // ReportExportSettingsControl
             // 
@@ -163,10 +162,10 @@ namespace PHRMS.Preview {
             this.layoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemSettings)).EndInit();
             this.ResumeLayout(false);
 
         }

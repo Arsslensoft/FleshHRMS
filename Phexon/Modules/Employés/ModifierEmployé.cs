@@ -80,8 +80,8 @@ namespace PHRMS.Modules {
         }
         void InitializeCustomDrawRows() {
             notesGridView.ButtonsColumn = noteColSubject;
-            notesGridView.ButtonsPanel.Buttons.Add(new EditorButton(ButtonPredefines.Glyph) { Caption = "Edit" });
-            notesGridView.ButtonsPanel.Buttons.Add(new EditorButton(ButtonPredefines.Glyph) { Caption = "Delete" });
+            notesGridView.ButtonsPanel.Buttons.Add(new EditorButton(ButtonPredefines.Glyph) { Caption = "Modifier" });
+            notesGridView.ButtonsPanel.Buttons.Add(new EditorButton(ButtonPredefines.Glyph) { Caption = "Supprimer" });
             notesGridView.ButtonsPanel.Buttons[0].Click += (s, e) =>
             {
                 DoEditNote(((EditorButton)s).Tag as Absence);
@@ -95,7 +95,7 @@ namespace PHRMS.Modules {
             notesGridView.Appearance.SelectedRow.Assign(notesGridView.Appearance.FocusedCell);
 
             tasksGridView.ButtonsColumn = colComplete;
-            tasksGridView.ButtonsPanel.Buttons.Add(new EditorButton(ButtonPredefines.Glyph) { Caption = "Edit", Width = 66 });
+            tasksGridView.ButtonsPanel.Buttons.Add(new EditorButton(ButtonPredefines.Glyph) { Caption = "Modifier", Width = 66 });
             tasksGridView.ButtonsPanel.Buttons[0].Click += (s, e) =>
             {
                 DoEditTask(((EditorButton)s).Tag as Leave);
@@ -167,19 +167,9 @@ namespace PHRMS.Modules {
             listBI.Add(new ButtonInfo());
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Rapports", Name = "6", Image = ImageHelper.GetImageFromToolbarResource("Reports"), mouseEventHandler = (s, e) => { ReportsButtonClick(); } });
             listBI.Add(new ButtonInfo());
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Publipostage", Name = "7", Image = ImageHelper.GetImageFromToolbarResource("MailMerge"), mouseEventHandler = (s, e) => { MailMergeClick(); } });
+       
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Congés", Name = "8", Image = ImageHelper.GetImageFromToolbarResource("Task"), mouseEventHandler = (s, e) => { TaskButtonClick(); } });
-            listBI.Add(new ButtonInfo()
-            {
-                Type = typeof(SimpleButton),
-                Text = "Réunion",
-                Name = "9",
-                Image = ImageHelper.GetImageFromToolbarResource("Meeting"),
-                mouseEventHandler = (s, e) =>
-                {
-                    XtraMessageBox.Show(string.Format("Planifier une réunion avec {0}?", ViewModel.Entity.FullName), string.Empty, MessageBoxButtons.YesNoCancel);
-                }
-            });
+   
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Absence", Name = "10", Image = ImageHelper.GetImageFromToolbarResource("Note"), mouseEventHandler = (s, e) => { NoteButtonClick(); } });
             BottomPanel.InitializeButtons(listBI, false);
         }
@@ -191,9 +181,7 @@ namespace PHRMS.Modules {
             ModifierCongés.NewTaskOwner = ViewModel.Entity;
             ViewModel.EmployeeAssignedTasksLookUp.New();
         }
-        void MailMergeClick() {
-            GotoModule(ModuleType.PublipostageEmployé, ViewModel.Entity);
-        }
+      
         public void CloseSubModule() {
      
             openedSubModule.Parent = null;
@@ -276,28 +264,8 @@ namespace PHRMS.Modules {
 
         private void schedulerStorage1_AppointmentInserting(object sender, DevExpress.XtraScheduler.PersistentObjectCancelEventArgs e)
         {
-            Appointment apt = (Appointment)e.Object;
-       Shift sh= new List<Shift>(ViewModel.EmployeeShiftsLookUp.Entities.ToList().Where(x => x.Id == (long)apt.Id))[0];
-     switch(sh.Recurrence){
-         case ReccuranceType.Daily:
-             
-apt.RecurrenceInfo.Type = RecurrenceType.Daily;
-apt.RecurrenceInfo.Start = apt.Start;
-apt.RecurrenceInfo.Periodicity = 1;
-apt.RecurrenceInfo.WeekDays = (WeekDays)(int)sh.Start.DayOfWeek;
-apt.RecurrenceInfo.Range = RecurrenceRange.NoEndDate;
-             break;
-         case ReccuranceType.DailyExceptWeekend:
-apt.RecurrenceInfo.Type = RecurrenceType.Daily;
-apt.RecurrenceInfo.Start = apt.Start;
-apt.RecurrenceInfo.Periodicity = 1;
-apt.RecurrenceInfo.WeekDays = WeekDays.WorkDays;
-apt.RecurrenceInfo.Range = RecurrenceRange.NoEndDate;
-             break;
-         
-
-
-     }
+       
+    
 
         }
 

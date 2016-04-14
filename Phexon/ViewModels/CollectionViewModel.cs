@@ -107,7 +107,7 @@ namespace PHRMS.ViewModels {
         /// </summary>
         /// <param name="entity">An entity to edit.</param>
         public virtual void Delete(TEntity entity) {
-            if(MessageBoxService.Show(string.Format(CommonResources.Confirmation_Delete, typeof(TEntity).Name), CommonResources.Confirmation_Caption, MessageBoxButton.YesNo) != MessageBoxResult.Yes)
+            if(MessageBoxService.Show(string.Format(CommonResources.Confirmation_Delete, "entité"), CommonResources.Confirmation_Caption, MessageBoxButton.YesNo) != MessageBoxResult.Yes)
                 return;
             try {
                 Entities.Remove(entity);

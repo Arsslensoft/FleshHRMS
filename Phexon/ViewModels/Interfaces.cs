@@ -11,7 +11,6 @@ namespace PHRMS {
         EmployeeView,
         ModifierEmployé,
         ImprimerEmployé,
-        PublipostageEmployé,
         Employés,
 
      

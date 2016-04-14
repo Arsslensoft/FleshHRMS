@@ -29,7 +29,7 @@
         protected virtual bool CheckSave() {
             if(!Validate()) return false;
             if(IViewModel.CanSave()) {
-                var res = XtraMessageBox.Show(this, "Do you want to save changes?", "HybridApp", System.Windows.Forms.MessageBoxButtons.YesNoCancel, System.Windows.Forms.MessageBoxIcon.Warning);
+                var res = XtraMessageBox.Show(this, "Voulez-vous enregistrer vos changements?", "Phexon", System.Windows.Forms.MessageBoxButtons.YesNoCancel, System.Windows.Forms.MessageBoxIcon.Warning);
                 if(res == System.Windows.Forms.DialogResult.Cancel) return false;
                 if(res == System.Windows.Forms.DialogResult.No) {
                     Cancel();
@@ -47,7 +47,7 @@
             try {
                 IViewModel.Save();
             } catch (Exception e) {
-                XtraMessageBox.Show(e.Message, "Error during save", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                XtraMessageBox.Show(e.Message, "Erreur d'enregistrement", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
                 return false;
             }
             Return();

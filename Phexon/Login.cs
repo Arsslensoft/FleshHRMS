@@ -17,7 +17,7 @@ namespace PHRMS
     {
         public MainViewModel ViewModel{get;set;}
         public EmployeeCollectionViewModel EmployeesViewModel { get; set; }
-    
+
         public Login(MainViewModel vm)
         {
             InitializeComponent();
@@ -26,6 +26,8 @@ namespace PHRMS
             EmployeesViewModel = vm.TryGetModuleViewModel<EmployeeCollectionViewModel>(ModuleType.Employés);
             lookUpEdit1.Properties.DataSource = EmployeesViewModel.Entities.ToList();
             bindingSource1.DataSource = new LoginInfo();
+        
+            
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -36,6 +38,7 @@ namespace PHRMS
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             Process.GetCurrentProcess().Kill();
+       
         }
         bool cancel_exit = true;
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -44,22 +47,28 @@ namespace PHRMS
             {
                 LoginInfo li = bindingSource1.Current as LoginInfo;
                 if (li == null)
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Informations incorrectes", "Invalid login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Informations incorrectes", "Login Invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
                     if (li.User.GetSha256FromString(textEdit1.Text) == li.User.PasswordHash)
                     {
-                   MainViewModel.CurrentEmployee = li.User;
-                        cancel_exit = false;
-                        this.Close();
+                        if (li.User.Role == EmployeeRole.Employee)
+                            DevExpress.XtraEditors.XtraMessageBox.Show("Accès refusé", "Contrôle d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else
+                        {
+                            MainViewModel.CurrentEmployee = li.User;
+                            cancel_exit = false;
+                    
+                            this.Close();
+                        }
                     }
-                    else DevExpress.XtraEditors.XtraMessageBox.Show("Informations incorrectes", "Invalid login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    else DevExpress.XtraEditors.XtraMessageBox.Show("Informations incorrectes", "Login Invalide", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }
             catch (Exception ex)
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show(ex.Message, "Login error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DevExpress.XtraEditors.XtraMessageBox.Show(ex.Message, "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

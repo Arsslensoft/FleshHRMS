@@ -110,14 +110,15 @@ namespace PHRMS.Modules
             // 
             // calendarDocument
             // 
-            this.calendarDocument.Caption = "Calendar";
+            this.calendarDocument.Caption = "Calendrier";
             this.calendarDocument.ColumnIndex = 1;
             this.calendarDocument.ControlName = "Calendar";
             this.calendarDocument.ControlTypeName = "PHRMS.Widgets.Calendar";
+            this.calendarDocument.Height = 200;
             // 
             // dateTimeDocument
             // 
-            this.dateTimeDocument.Caption = "Date & Time";
+            this.dateTimeDocument.Caption = "Date & Temps";
             this.dateTimeDocument.ColumnIndex = 1;
             this.dateTimeDocument.ControlName = "Clock";
             this.dateTimeDocument.ControlTypeName = "PHRMS.Widgets.Clock";
@@ -165,7 +166,7 @@ namespace PHRMS.Modules
             // 
             // stackGroup1
             // 
-            this.stackGroup1.Caption = "Timeline";
+            this.stackGroup1.Caption = "Informations Système";
             this.stackGroup1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Widget.Document[] {
                 holDocument,
             this.weatherDocument,
@@ -174,12 +175,12 @@ namespace PHRMS.Modules
             // 
             // stackGroup3
             // 
-            this.stackGroup3.Caption = "Work";
+            this.stackGroup3.Caption = "Travail";
             this.stackGroup3.Length.UnitValue = 0D;
             // 
             // stackGroup2
             // 
-            this.stackGroup2.Caption = "Organizer";
+            this.stackGroup2.Caption = "Organisation";
             this.stackGroup2.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Widget.Document[] {
             this.dateTimeDocument,
             this.calendarDocument,

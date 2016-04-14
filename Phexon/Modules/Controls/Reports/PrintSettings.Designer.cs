@@ -34,6 +34,7 @@ namespace PHRMS {
         /// </summary>
         private void InitializeComponent() {
             this.layoutControl = new DevExpress.XtraLayout.LayoutControl();
+            this.settingsPanel = new PHRMS.SettingPanel();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnOptions = new DevExpress.XtraEditors.SimpleButton();
             this.cbPrinters = new DevExpress.XtraEditors.ImageComboBoxEdit();
@@ -44,10 +45,9 @@ namespace PHRMS {
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.simpleLabelItem1 = new DevExpress.XtraLayout.SimpleLabelItem();
             this.simpleLabelItem2 = new DevExpress.XtraLayout.SimpleLabelItem();
+            this.layoutControlItemSettings = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.settingsPanel = new PHRMS.SettingPanel();
-            this.layoutControlItemSettings = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).BeginInit();
             this.layoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbPrinters.Properties)).BeginInit();
@@ -58,9 +58,9 @@ namespace PHRMS {
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemSettings)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl
@@ -77,6 +77,13 @@ namespace PHRMS {
             this.layoutControl.Size = new System.Drawing.Size(394, 553);
             this.layoutControl.TabIndex = 0;
             // 
+            // settingsPanel
+            // 
+            this.settingsPanel.Location = new System.Drawing.Point(40, 328);
+            this.settingsPanel.Name = "settingsPanel";
+            this.settingsPanel.Size = new System.Drawing.Size(312, 185);
+            this.settingsPanel.TabIndex = 4;
+            // 
             // btnPrint
             // 
             this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
@@ -88,7 +95,7 @@ namespace PHRMS {
             this.btnPrint.Size = new System.Drawing.Size(75, 75);
             this.btnPrint.StyleController = this.layoutControl;
             this.btnPrint.TabIndex = 1;
-            this.btnPrint.Text = "Print";
+            this.btnPrint.Text = "Imprimer";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnOptions
@@ -97,10 +104,10 @@ namespace PHRMS {
             this.btnOptions.MaximumSize = new System.Drawing.Size(0, 40);
             this.btnOptions.MinimumSize = new System.Drawing.Size(0, 40);
             this.btnOptions.Name = "btnOptions";
-            this.btnOptions.Size = new System.Drawing.Size(144, 40);
+            this.btnOptions.Size = new System.Drawing.Size(187, 40);
             this.btnOptions.StyleController = this.layoutControl;
             this.btnOptions.TabIndex = 3;
-            this.btnOptions.Text = "Print Options";
+            this.btnOptions.Text = "Options d\'impression";
             this.btnOptions.Click += new System.EventHandler(this.btnOptions_Click);
             // 
             // cbPrinters
@@ -139,7 +146,7 @@ namespace PHRMS {
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 71);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlItem1.Size = new System.Drawing.Size(77, 75);
+            this.layoutControlItem1.Size = new System.Drawing.Size(108, 75);
             this.layoutControlItem1.Text = "Print";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
@@ -154,9 +161,10 @@ namespace PHRMS {
             this.Printer.Name = "Printer";
             this.Printer.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 16, 8);
             this.Printer.Size = new System.Drawing.Size(312, 96);
+            this.Printer.Text = "Imprimante";
             this.Printer.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.Printer.TextLocation = DevExpress.Utils.Locations.Top;
-            this.Printer.TextSize = new System.Drawing.Size(57, 25);
+            this.Printer.TextSize = new System.Drawing.Size(97, 25);
             this.Printer.TextToControlDistance = 5;
             // 
             // layoutControlItem3
@@ -166,7 +174,7 @@ namespace PHRMS {
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 242);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlItem3.Size = new System.Drawing.Size(144, 42);
+            this.layoutControlItem3.Size = new System.Drawing.Size(187, 42);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -174,9 +182,9 @@ namespace PHRMS {
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(144, 242);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(187, 242);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(168, 42);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(125, 42);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // simpleLabelItem1
@@ -189,8 +197,8 @@ namespace PHRMS {
             this.simpleLabelItem1.Name = "simpleLabelItem1";
             this.simpleLabelItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 20, 20);
             this.simpleLabelItem1.Size = new System.Drawing.Size(312, 71);
-            this.simpleLabelItem1.Text = "Print";
-            this.simpleLabelItem1.TextSize = new System.Drawing.Size(157, 31);
+            this.simpleLabelItem1.Text = "Impression";
+            this.simpleLabelItem1.TextSize = new System.Drawing.Size(187, 31);
             // 
             // simpleLabelItem2
             // 
@@ -199,12 +207,26 @@ namespace PHRMS {
             this.simpleLabelItem2.AppearanceItemCaption.Options.UseTextOptions = true;
             this.simpleLabelItem2.AppearanceItemCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.simpleLabelItem2.CustomizationFormText = "Specify how you want<br>the report to be printed";
-            this.simpleLabelItem2.Location = new System.Drawing.Point(77, 71);
+            this.simpleLabelItem2.Location = new System.Drawing.Point(108, 71);
             this.simpleLabelItem2.Name = "simpleLabelItem2";
             this.simpleLabelItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(12, 0, 0, 0);
-            this.simpleLabelItem2.Size = new System.Drawing.Size(235, 75);
-            this.simpleLabelItem2.Text = "Specify how you want<br>the report to be printed";
-            this.simpleLabelItem2.TextSize = new System.Drawing.Size(157, 40);
+            this.simpleLabelItem2.Size = new System.Drawing.Size(204, 75);
+            this.simpleLabelItem2.Text = "Spécifier comment<br>le rapport doit être imprimè";
+            this.simpleLabelItem2.TextSize = new System.Drawing.Size(187, 40);
+            // 
+            // layoutControlItemSettings
+            // 
+            this.layoutControlItemSettings.AppearanceItemCaption.FontSizeDelta = 3;
+            this.layoutControlItemSettings.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItemSettings.Control = this.settingsPanel;
+            this.layoutControlItemSettings.CustomizationFormText = "Settings";
+            this.layoutControlItemSettings.Location = new System.Drawing.Point(0, 284);
+            this.layoutControlItemSettings.Name = "layoutControlItem4";
+            this.layoutControlItemSettings.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 16, 0);
+            this.layoutControlItemSettings.Size = new System.Drawing.Size(312, 229);
+            this.layoutControlItemSettings.Text = "Options";
+            this.layoutControlItemSettings.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItemSettings.TextSize = new System.Drawing.Size(187, 25);
             // 
             // simpleSeparator1
             // 
@@ -229,27 +251,6 @@ namespace PHRMS {
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(114, 32);
             // 
-            // settingsPanel
-            // 
-            this.settingsPanel.Location = new System.Drawing.Point(40, 328);
-            this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(312, 185);
-            this.settingsPanel.TabIndex = 4;
-            // 
-            // layoutControlItemSettings
-            // 
-            this.layoutControlItemSettings.AppearanceItemCaption.FontSizeDelta = 3;
-            this.layoutControlItemSettings.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItemSettings.Control = this.settingsPanel;
-            this.layoutControlItemSettings.CustomizationFormText = "Settings";
-            this.layoutControlItemSettings.Location = new System.Drawing.Point(0, 284);
-            this.layoutControlItemSettings.Name = "layoutControlItem4";
-            this.layoutControlItemSettings.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 16, 0);
-            this.layoutControlItemSettings.Size = new System.Drawing.Size(312, 229);
-            this.layoutControlItemSettings.Text = "Settings";
-            this.layoutControlItemSettings.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItemSettings.TextSize = new System.Drawing.Size(157, 25);
-            // 
             // ReportPrintSettingsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -267,9 +268,9 @@ namespace PHRMS {
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemSettings)).EndInit();
             this.ResumeLayout(false);
 
         }

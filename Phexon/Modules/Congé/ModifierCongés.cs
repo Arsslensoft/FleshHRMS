@@ -56,6 +56,10 @@ namespace PHRMS.Modules {
         void InitNew(Employee employee) {
             ViewModel.Entity.StartDate = DateTime.Now;
             ViewModel.Entity.DueDate = DateTime.Now + new TimeSpan(48, 0, 0);
+            // Owner
+            ViewModel.Entity.AssignedEmployee = ViewModel.FindEmployeeId(MainViewModel.CurrentEmployee);
+            ViewModel.Entity.AssignedEmployeeId = MainViewModel.CurrentEmployee.Id;
+          
             if(employee != null) {
                 ViewModel.Entity.Owner = ViewModel.FindEmployeeId(employee);
                 ViewModel.Entity.OwnerId = employee.Id;
@@ -72,7 +76,7 @@ namespace PHRMS.Modules {
         }
         void InitLookupEditors() {
             var employeesLookup = ViewModel.GetEmployees().ToList();
-            ownerLookUpEdit.Properties.DataSource = employeesLookup;
+          
             assignedToLookUpEdit.Properties.DataSource = employeesLookup;
         
         }
@@ -90,12 +94,10 @@ namespace PHRMS.Modules {
         void UpdateEditors(Leave task) {
             if(task == null) return;
             taskBindingSource.DataSource = task;
-            cbReminderDate.Enabled = cbReminderTime.Enabled = cbReminder.Checked;
+      
         }
       
-        void cbReminder_CheckedChanged(object sender, EventArgs e) {
-            cbReminderDate.Enabled = cbReminderTime.Enabled = cbReminder.Checked;
-        }
+      
         public static Employee NewTaskOwner { get; set; }
     }
 }

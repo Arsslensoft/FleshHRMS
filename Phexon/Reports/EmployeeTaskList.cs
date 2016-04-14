@@ -193,7 +193,7 @@ namespace PHRMS {
             this.xrTableCell15.StylePriority.UseFont = false;
             this.xrTableCell15.StylePriority.UseForeColor = false;
             this.xrTableCell15.StylePriority.UsePadding = false;
-            this.xrTableCell15.Text = "DUE DATE";
+            this.xrTableCell15.Text = "DATE DE RETOUR";
             this.xrTableCell15.Weight = 0.60771602766636823D;
             // 
             // xrTableCell17
@@ -202,7 +202,7 @@ namespace PHRMS {
             this.xrTableCell17.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 0, 0, 0, 100F);
             this.xrTableCell17.StylePriority.UseForeColor = false;
             this.xrTableCell17.StylePriority.UsePadding = false;
-            this.xrTableCell17.Text = "ASSIGNED TO";
+            this.xrTableCell17.Text = "CRÉE PAR";
             this.xrTableCell17.Weight = 0.62980608396886717D;
             // 
             // xrTableCell18
@@ -210,7 +210,7 @@ namespace PHRMS {
             this.xrTableCell18.Name = "xrTableCell18";
             this.xrTableCell18.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 0, 0, 0, 100F);
             this.xrTableCell18.StylePriority.UsePadding = false;
-            this.xrTableCell18.Text = "OWNER";
+            this.xrTableCell18.Text = "EMPLOYÉ";
             this.xrTableCell18.Weight = 0.58008992577285823D;
             // 
             // xrTableCell22
@@ -218,7 +218,7 @@ namespace PHRMS {
             this.xrTableCell22.Name = "xrTableCell22";
             this.xrTableCell22.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 0, 0, 0, 100F);
             this.xrTableCell22.StylePriority.UsePadding = false;
-            this.xrTableCell22.Text = "PERCENT COMPLETE";
+            this.xrTableCell22.Text = "PROGRESSION";
             this.xrTableCell22.Weight = 0.70420532486194742D;
             // 
             // xrTableCell24
@@ -227,7 +227,7 @@ namespace PHRMS {
             this.xrTableCell24.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 4, 0, 0, 100F);
             this.xrTableCell24.StylePriority.UsePadding = false;
             this.xrTableCell24.StylePriority.UseTextAlignment = false;
-            this.xrTableCell24.Text = "PRIORITY";
+            this.xrTableCell24.Text = "PRIORITÉ";
             this.xrTableCell24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrTableCell24.Weight = 0.47818263772995884D;
             // 
@@ -353,7 +353,7 @@ namespace PHRMS {
             this.xrTableCell14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
             this.xrTableCell14.Name = "xrTableCell14";
             this.xrTableCell14.StylePriority.UseForeColor = false;
-            this.xrTableCell14.Text = "START DATE";
+            this.xrTableCell14.Text = "DATE DÉBUT";
             this.xrTableCell14.Weight = 3D;
             // 
             // xrTableRow5

@@ -16,12 +16,13 @@ using DevExpress.Utils.Taskbar;
 
 namespace PHRMS {
     public partial class MainForm : XtraForm, IMainModule, ISwipeGestureClient {
+
         MainViewModel viewModel;
         bool allowFlyoutPanel = true;
         bool allowTransition = true;
         public MainForm() {
             TaskbarHelper.InitDemoJumpList(TaskbarAssistant.Default, this);
-            Program.MainForm = this;
+      
             Icon = Program.AppIcon;
             ShowSplashScreen();
             InitializeComponent();
@@ -30,6 +31,13 @@ namespace PHRMS {
             
             DevExpress.Utils.About.UAlgo.Default.DoEventObject(DevExpress.Utils.About.UAlgo.kDemo, DevExpress.Utils.About.UAlgo.pWinForms, this);
         }
+      
+        internal void ShowSplashForLogin()
+        {
+            if (this.InvokeRequired)
+                this.Invoke(new Invoker(delegate() { this.ShowSplashScreen(); }));
+            else this.Show();
+        }
 
         void ShowSplashScreen() {
           DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this,typeof( FleshSplashScreen),true,true,false);
@@ -37,27 +45,33 @@ namespace PHRMS {
         }
    
         void MainForm_Load(object sender, EventArgs e) {
-        
-            InitTileBar();
+      
+         
           
             mainTileBar.SelectedItem = dashboardTileBarItem;
+            InitTileBar();
+
+
             PHRMS.Modules.Dashboard.MainView = viewModel;
             viewModel.SelectModule(ModuleType.Dashboard);
-      
+        
       
 
         }
     
         void InitViewModel() {
             viewModel = ViewModelSource.Create(() => new MainViewModel(this));
-
+         
             Login lg = new Login(viewModel);
+             DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm();
             lg.ShowDialog();
+           DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this, typeof(FleshSplashScreen), true, true, false);
 
             PrefetchChildModules();
             viewModel.ModuleAdded += viewModel_ModuleAdded;
             viewModel.ModuleRemoved += viewModel_ModuleRemoved;
             viewModel.ModuleTransitionCompleted += viewModel_ModuleTransitionCompleted;
+       
         }
 
 
@@ -162,7 +176,8 @@ namespace PHRMS {
             XtraMessageBox.Show(source.FindForm(), "Add NewItem", "Waring", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         void navButtonClose_ElementClick(object sender, NavElementEventArgs e) {
-            Close();
+            Login lg = new Login(viewModel);
+            lg.ShowDialog();
         }
         public bool IsDocked(ModuleType type) { return true; }
         public void DockModule(ModuleType moduleType) { }
@@ -193,7 +208,8 @@ namespace PHRMS {
             }
         }
         void navButtonHelp_ElementClick(object sender, NavElementEventArgs e) {
-            DevExpress.Utils.About.AboutHelper.Show(DevExpress.Utils.About.ProductKind.DXperienceWin, new DevExpress.Utils.About.ProductStringInfo("Hybrid App", "WinForm Controls"));
+            AboutForm ab = new AboutForm();
+            ab.ShowDialog();
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
