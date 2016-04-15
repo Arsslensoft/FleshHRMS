@@ -57,12 +57,12 @@ namespace PHRMS.Modules {
             ViewModel.Entity.StartDate = DateTime.Now;
             ViewModel.Entity.DueDate = DateTime.Now + new TimeSpan(48, 0, 0);
             // Owner
-            ViewModel.Entity.AssignedEmployee = ViewModel.FindEmployeeId(MainViewModel.CurrentEmployee);
-            ViewModel.Entity.AssignedEmployeeId = MainViewModel.CurrentEmployee.Id;
+            ViewModel.Entity.Owner = MainViewModel.CurrentEmployee;
+            ViewModel.Entity.OwnerId = MainViewModel.CurrentEmployee.Id;
           
             if(employee != null) {
-                ViewModel.Entity.Owner = ViewModel.FindEmployeeId(employee);
-                ViewModel.Entity.OwnerId = employee.Id;
+                ViewModel.Entity.AssignedEmployee = ViewModel.FindEmployeeId(employee);
+                ViewModel.Entity.AssignedEmployeeId = employee.Id;
 
             }
 
