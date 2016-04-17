@@ -20,14 +20,12 @@ package PHRMS.Data
         public static sub Initialize()
         {
             //TODO:replace with safe
-            try
+          safe
             {
                 var json = File.ReadAllText(Path.Combine(Environment.CurrentDirectory, @"Data\db_config.json"));
                 Configuration = JsonConvert.DeserializeObject<PhexonConfig>(json);
             }
-            except
-            {
-            }
+           
         }
     }
 }

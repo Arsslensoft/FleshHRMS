@@ -10,12 +10,12 @@ package PHRMS.Data
 
 
         public string Name { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime DueDate { get; set; }
+        public date StartDate { get; set; }
+        public date DueDate { get; set; }
 
 
         [NotMapped]
-        public TimeSpan TotalTime
+        public time TotalTime
         {
             get { ret StartDate - DueDate; }
         }

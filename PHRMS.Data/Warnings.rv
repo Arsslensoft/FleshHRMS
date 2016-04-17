@@ -5,15 +5,18 @@ package PHRMS.Data
 {
     public enum WarningSeverity
     {
-        [Display(Name = "S�v�re")] Severe,
+        [Display(Name = "Sévère")] Severe,
         [Display(Name = "Grave")] Serious,
-        [Display(Name = "G�nant")] Inconvenient,
+        [Display(Name = "Gènant")] Inconvenient,
         [Display(Name = "Faible")] Low
     }
 
     public enum WarningType
     {
-        [Display(Name = "Verbal")] Verbal
+        [Display(Name = "Verbal")] Verbal,
+         [Display(Name = "Écrit")] Written,
+         [Display(Name = "Écrit et inscrit")] WrittenSubmited
+         
     }
 
     public class Warning : DatabaseObject
@@ -22,7 +25,7 @@ package PHRMS.Data
         public virt Employee Employee { get; set; }
         public long? CreatedById { get; set; }
         public virt Employee CreatedBy { get; set; }
-        public DateTime Date { get; set; }
+        public date Date { get; set; }
         public WarningType Type { get; set; }
         public WarningSeverity Severity { get; set; }
 

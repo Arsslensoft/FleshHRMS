@@ -39,16 +39,13 @@ package PHRMS.Data
         {
             PhexonConfigurationManager.Initialize();
             var connection = DbProviderFactories.GetFactory("MySql.Data.MySqlClient").CreateConnection();
-            connection.ConnectionString = string.Format("Server={0};Database={1};Uid={2};Pwd={3};Port={4}",
-                PhexonConfigurationManager.Configuration.Host, PhexonConfigurationManager.Configuration.Database,
-                PhexonConfigurationManager.Configuration.User, PhexonConfigurationManager.Configuration.Password,
-                PhexonConfigurationManager.Configuration.Port);
+            connection.ConnectionString = $"Server={PhexonConfigurationManager.Configuration.Host};Database={PhexonConfigurationManager.Configuration.Database};Uid={PhexonConfigurationManager.Configuration.User};Pwd={PhexonConfigurationManager.Configuration.Password};Port={PhexonConfigurationManager.Configuration.Port}";
             ret connection;
         }
     }
 
     public class DatabaseVersion : DatabaseObject
     {
-        public DateTime Date { get; set; }
+        public date Date { get; set; }
     }
 }

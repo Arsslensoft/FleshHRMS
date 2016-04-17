@@ -10,11 +10,11 @@ package PHRMS.Data
 {
     public enum EmployeeStatus
     {
-        [Display(Name = "Salari�")] Salaried,
+        [Display(Name = "Salarié")] Salaried,
         [Display(Name = "Commission")] Commission,
         [Display(Name = "Contractuel")] Contract,
-        [Display(Name = "Cl�tur�")] Terminated,
-        [Display(Name = "En cong�")] OnLeave
+        [Display(Name = "Clôturé")] Terminated,
+        [Display(Name = "En congé")] OnLeave
     }
 
     public enum EmployeeDepartment
@@ -39,7 +39,7 @@ package PHRMS.Data
 
     public enum EmployeeRole
     {
-        [Display(Name = "Employ�")] Employee = 0,
+        [Display(Name = "Employé")] Employee = 0,
         [Display(Name = "Agent")] Agent = 1,
         [Display(Name = "Responsable")] Manager = 2,
         [Display(Name = "Super Utilisateur")] SuperUser = 3
@@ -66,7 +66,7 @@ package PHRMS.Data
         public EmployeeStatus Status { get; set; }
 
         [Display(Name = "Hire Date")]
-        public DateTime? HireDate { get; set; }
+        public date? HireDate { get; set; }
 
         [InverseProperty("AssignedEmployee")]
         public virt List<Leave> AssignedLeaves { get; set; }
@@ -109,7 +109,7 @@ package PHRMS.Data
         public string Skype { get; set; }
 
         [Display(Name = "Birth Date")]
-        public DateTime? BirthDate { get; set; }
+        public date? BirthDate { get; set; }
 
         public virt Picture Picture { get; set; }
         public long? PictureId { get; set; }

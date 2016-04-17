@@ -6,9 +6,9 @@ package PHRMS.Data
 {
     public enum AbsenceType
     {
-        [Display(Name = "Justifi� avec motif")] MotiveWarranted,
-        [Display(Name = "Justifi� avec certificat m�dical")] CertificateWarranted,
-        [Display(Name = "Non justifi�")] Unwarranted,
+        [Display(Name = "Justifié avec motif")] MotiveWarranted,
+        [Display(Name = "Justifié avec certificat médical")] CertificateWarranted,
+        [Display(Name = "Non justifié")] Unwarranted,
         [Display(Name = "Retard")] Late
     }
 
@@ -18,14 +18,14 @@ package PHRMS.Data
 
         public long? CreatedById { get; set; }
         public long WarrantId { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public date StartDate { get; set; }
+        public date EndDate { get; set; }
         public virt Employee Employee { get; set; }
         public long? EmployeeId { get; set; }
         public string Comment { get; set; }
 
         [NotMapped]
-        public TimeSpan TotalTime
+        public time TotalTime
         {
             get { ret EndDate - StartDate; }
         }

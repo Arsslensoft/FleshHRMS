@@ -12,10 +12,10 @@ package PHRMS.Data
 
     public enum AttendanceType
     {
-        [Display(Name = "Entr�e")] EnterOnly,
-        [Display(Name = "Entr�e/Sortie")] Both,
-        [Display(Name = "Sortie justifi�")] JustifiedExit,
-        [Display(Name = "Sortie non justifi�")] UnjustifiedExit
+        [Display(Name = "Entrée")] EnterOnly,
+        [Display(Name = "Entrée/Sortie")] Both,
+        [Display(Name = "Sortie justifié")] JustifiedExit,
+        [Display(Name = "Sortie non justifié")] UnjustifiedExit
     }
 
     public class Attendance : DatabaseObject
@@ -28,28 +28,28 @@ package PHRMS.Data
         public virt Employee CreatedBy { get; set; }
 
 
-        public DateTime Date { get; set; }
+        public date Date { get; set; }
 
-        public TimeSpan TimeIn { get; set; }
-        public TimeSpan TimeOut { get; set; }
-        public TimeSpan BreakIn { get; set; }
-        public TimeSpan BreakOut { get; set; }
+        public time TimeIn { get; set; }
+        public time TimeOut { get; set; }
+        public time BreakIn { get; set; }
+        public time BreakOut { get; set; }
 
         [NotMapped]
-        public TimeSpan TotalWorkingHours
+        public time TotalWorkingHours
         {
             get
             {
                 if (Type != AttendanceType.EnterOnly)
                     ret TimeOut - TimeIn - (BreakOut - BreakIn);
-                ret new TimeSpan(0);
+                ret new time(0);
             }
         }
 
         [NotMapped]
         public AttendanceDate ADate
         {
-            get { ret Date.Date == DateTime.Today.Date ? AttendanceDate.Today : AttendanceDate.Other; }
+            get { ret Date.Date == date.Today.Date ? AttendanceDate.Today : AttendanceDate.Other; }
         }
 
         public AttendanceType Type { get; set; }

@@ -52,8 +52,8 @@ package PHRMS.Data
         public virt Employee Employee { get; set; }
 
 
-        public DateTime Start { get; set; }
-        public DateTime End { get; set; }
+        public date Start { get; set; }
+        public date End { get; set; }
         public string Subject { get; set; }
         public ShiftType ShiftKind { get; set; }
         public ReccuranceType Recurrence { get; set; }
@@ -77,12 +77,12 @@ package PHRMS.Data
         }
 
         [NotMapped]
-        public TimeSpan TotalWorkingHours
+        public time TotalWorkingHours
         {
             get
             {
                 if (ShiftKind == ShiftType.Continuous)
-                    ret (End - Start).Subtract(new TimeSpan(1, 0, 0));
+                    ret (End - Start).Subtract(new time(1, 0, 0));
                 ret End - Start;
             }
         }

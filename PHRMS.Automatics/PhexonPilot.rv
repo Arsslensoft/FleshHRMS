@@ -10,15 +10,15 @@ package PHRMS.Automatics
 {
     public class PhexonPilot
     {
-        public static DateTime IndeterminateDate = DateTime.Parse("1/1/2015 00:00:00");
+        public static date IndeterminateDate = "1/1/2015 00:00:00"d;
 
 
 
         private System.Timers.Timer serverTimer;
         public PHRMS.Data.PhexonDb DatabaseManager { get; set; }
-        public TimeSpan NightCheckTime { get; set; }
-        public TimeSpan DailyCheckTime { get; set; }
-        public TimeSpan ResetTime { get; set; }
+        public time NightCheckTime { get; set; }
+        public time DailyCheckTime { get; set; }
+        public time ResetTime { get; set; }
         public bool IsRuning
         {
             get
@@ -27,7 +27,7 @@ package PHRMS.Automatics
             }
         }
 
-        public PhexonPilot(TimeSpan daily, TimeSpan night,TimeSpan reset)
+        public PhexonPilot(time daily, time night,time reset)
         { 
             DatabaseManager = new Data.PhexonDb();
             DailyCheckTime = daily;
@@ -111,7 +111,7 @@ package PHRMS.Automatics
             {
                 if (abs[i].EndDate == IndeterminateDate && emp.Id == abs[i].EmployeeId)
                 {
-                    abs[i].EndDate = DateTime.Now;
+                    abs[i].EndDate = date.Now;
                     // substracts from credit
                     int days = (int)abs[i].TotalTime.TotalDays;
                     if (days > emp.LeaveCredit)
@@ -241,9 +241,9 @@ package PHRMS.Automatics
             {
                 List<Shift> todays_shift = a.Employee.Shifts.Where(x => x.Start.Date == DateTime.Now.Date).ToList();
                 Shift sh = GetAppropriateShift(todays_shift);
-                if (sh == null) // TODO:replace with assert sh == null : "Shift was not found for current employee";
+               if (sh == null) // TODO:replace with assert sh == null : "Shift was not found for current employee";
                     throw new Exception("Shift was not found for current employee");
-
+			
                 if (a.TimeIn > sh.Start.TimeOfDay) // late
                 {
                     if ((a.TimeIn - sh.Start.TimeOfDay) > new TimeSpan(0, 30, 0))
