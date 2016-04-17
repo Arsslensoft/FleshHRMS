@@ -101,7 +101,7 @@ namespace PHRMS.Modules
                 ViewModel.EmployeesViewModel = TryGetModuleViewModel<EmployeeCollectionViewModel>(ModuleType.Employés);
                 ViewModel.LeavesViewModel = TryGetModuleViewModel<LeaveCollectionViewModel>(ModuleType.Congés);
                 ViewModel.NotificationsViewModel = TryGetModuleViewModel<NotificationCollectionViewModel>(ModuleType.Notifications);
-                ViewModel.SchedulesViewModel = TryGetModuleViewModel<ScheduleCollectionViewModel>(ModuleType.Shifts);
+                ViewModel.ShiftsesViewModel = TryGetModuleViewModel<ShiftsCollectionViewModel>(ModuleType.Shifts);
                 ViewModel.WarningsViewModel = TryGetModuleViewModel<WarningsCollectionViewModel>(ModuleType.Avertissements);
                 init = true;
             }

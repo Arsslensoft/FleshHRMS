@@ -12,7 +12,7 @@ using DevExpress.XtraReports.UI;
 namespace PHRMS.Modules {
     public partial class ImprimerCongé : BaseModuleControl {
         public ImprimerCongé()
-            : base(CreateViewModel<TaskPrintView>) {
+            : base(CreateViewModel<LeavePrintView>) {
             InitializeComponent();
             ViewModel.ParameterChanged += ViewModel_ParameterChanged;
         }
@@ -50,9 +50,9 @@ namespace PHRMS.Modules {
 
             BottomPanel.InitializeButtons(listBI, false);
         }
-        public TaskPrintView ViewModel {
+        public LeavePrintView ViewModel {
             get {
-                return GetViewModel<TaskPrintView>();
+                return GetViewModel<LeavePrintView>();
             }
         }
         private void DoPrint() {
@@ -67,7 +67,7 @@ namespace PHRMS.Modules {
     }
 
 
-    public class TaskPrintView : LeaveCollectionViewModel {
+    public class LeavePrintView : LeaveCollectionViewModel {
         internal object GetParameter() {
             return Parameter;
         }

@@ -217,6 +217,12 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Holidays\ImprimerFérier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Holidays\ImprimerFérier.Designer.cs">
+      <DependentUpon>ImprimerFérier.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\CollectionViewModel.cs" />
     <Compile Include="ViewModels\CollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\DocumentContentViewModelBase.cs" />
@@ -470,8 +476,8 @@
     <Compile Include="ViewModels\Notifications\NotificationCollectionViewModel.partial.cs" />
     <Compile Include="ViewModels\Notifications\NotificationViewModel.cs" />
     <Compile Include="ViewModels\Notifications\NotificationViewModel.partial.cs" />
-    <Compile Include="ViewModels\Schedule\ScheduleCollectionViewModel.cs" />
-    <Compile Include="ViewModels\Schedule\ScheduleViewModel.cs" />
+    <Compile Include="ViewModels\Schedule\ShiftsCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Schedule\ShiftsViewModel.cs" />
     <Compile Include="ViewModels\Schedule\ScheduleViewModel.partial.cs" />
     <Compile Include="ViewModels\EmployeeReportType.cs" />
     <Compile Include="ViewModels\Congés\LeaveCollectionViewModel.cs" />
@@ -630,6 +636,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Absence\ModifierAbsence.resx">
       <DependentUpon>ModifierAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Holidays\ImprimerFérier.resx">
+      <DependentUpon>ImprimerFérier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Holidays\ModifierFérier.resx">
       <DependentUpon>ModifierFérier.cs</DependentUpon>

@@ -35,8 +35,8 @@ namespace PHRMS.Widgets
         public HolidayWidget()
         {
             InitializeComponent();
-     
-    
+            Dashboard.holidaysGridControl = tasksGridControl;
+
         }
 
         void DoEditHoliday(Holiday task)
@@ -46,6 +46,7 @@ namespace PHRMS.Widgets
         }
         private void tasksGridView_RowClick(object sender, RowClickEventArgs e)
         {
+            BoardView.HolidaysViewModel.SelectedEntity = tasksGridView.GetFocusedRow() as Holiday;
             if (e.Clicks > 1 && e.RowHandle >= 0)
                 DoEditHoliday(tasksGridView.GetFocusedRow() as Holiday);
             

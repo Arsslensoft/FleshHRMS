@@ -4,7 +4,7 @@
     using PHRMS.Data;
     using System.Linq;
 
-    partial class ScheduleViewModel : IBaseViewModel
+    partial class ShiftsViewModel : IBaseViewModel
     {
         public new bool IsNew() { return base.IsNew(); }
         public IQueryable<Employee> GetEmployees() {

@@ -34,6 +34,7 @@ namespace PHRMS {
 
         ModifierPlaning,
         ModifierFérier,
+        ImprimerFérier,
 
         Statistiques,
         Notifications,

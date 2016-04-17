@@ -37,8 +37,13 @@ namespace PHRMS
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
+
+            ExitProcess();
+        }
+
+        public void ExitProcess()
+        {
             Process.GetCurrentProcess().Kill();
-       
         }
         bool cancel_exit = true;
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -76,10 +81,14 @@ namespace PHRMS
         {
             if (cancel_exit)
             {
-                if(DevExpress.XtraEditors.XtraMessageBox.Show("The application requires login to proceed. \r\nDo you want to login?", "Authentification required", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
-                            e.Cancel = true;
+                if (
+                    DevExpress.XtraEditors.XtraMessageBox.Show(
+                        "The application requires login to proceed. \r\nDo you want to login?",
+                        "Authentification required", MessageBoxButtons.YesNo, MessageBoxIcon.Information) ==
+                    System.Windows.Forms.DialogResult.Yes)
+                    e.Cancel = true;
                 else
-                    Process.GetCurrentProcess().Kill();
+                    ExitProcess();
             }
         }
 

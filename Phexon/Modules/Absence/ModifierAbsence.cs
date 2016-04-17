@@ -83,7 +83,7 @@ namespace PHRMS.Modules {
     public class Shifts : BaseModuleControl
     {
         public Shifts()
-            : base(CreateViewModel<ScheduleCollectionViewModel>)
+            : base(CreateViewModel<ShiftsCollectionViewModel>)
         {
         }
         protected override void OnInitServices(DevExpress.Mvvm.IServiceContainer serviceContainer)

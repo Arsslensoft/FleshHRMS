@@ -15,7 +15,7 @@ using System.Runtime.Serialization;
         public WarningsCollectionViewModel WarningsViewModel { get; set; }
         public AttendancesCollectionViewModel AttendancesViewModel { get; set; }
         public EmployeeCollectionViewModel EmployeesViewModel { get; set; }
-        public ScheduleCollectionViewModel SchedulesViewModel { get; set; }
+        public ShiftsCollectionViewModel ShiftsesViewModel { get; set; }
         public NotificationCollectionViewModel NotificationsViewModel { get; set; }
         public HolidayCollectionViewModel HolidaysViewModel { get; set; }
 
@@ -108,7 +108,7 @@ using System.Runtime.Serialization;
         public List<Tuple<Shift, List<Attendance>, List<Absence>, List<Leave>>> GetEmployeeWorkTime()
         {
             List<Tuple<Shift, List<Attendance>, List<Absence>, List<Leave>>> tuple = new List<Tuple<Shift, List<Attendance>, List<Absence>, List<Leave>>>();
-            foreach (Shift s in SchedulesViewModel.Entities)
+            foreach (Shift s in ShiftsesViewModel.Entities)
             {
                 List<Attendance> attendances = new List<Attendance>();
                 foreach (Attendance a in AttendancesViewModel.Entities.Where(x => x.EmployeeId == s.EmployeeId && x.Date.DayOfWeek == s.Start.DayOfWeek))

@@ -287,7 +287,8 @@
             // 
             this.statusImageList.ImageSize = new System.Drawing.Size(24, 24);
             this.statusImageList.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("statusImageList.ImageStream")));
-            this.statusImageList.Images.SetKeyName(0, "NotStarted.png");
+            this.statusImageList.InsertGalleryImage("switchtimescalesto_32x32.png", "grayscaleimages/scheduling/switchtimescalesto_32x32.png", DevExpress.Images.ImageResourceCache.Default.GetImage("grayscaleimages/scheduling/switchtimescalesto_32x32.png"), 0);
+            this.statusImageList.Images.SetKeyName(0, "switchtimescalesto_32x32.png");
             this.statusImageList.Images.SetKeyName(1, "InProgress.png");
             this.statusImageList.InsertImage(global::PHRMS.Properties.Resources.Clear, "Clear", typeof(global::PHRMS.Properties.Resources), 2);
             this.statusImageList.Images.SetKeyName(2, "Clear");

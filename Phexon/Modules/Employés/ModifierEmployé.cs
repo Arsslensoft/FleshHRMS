@@ -57,10 +57,10 @@ namespace PHRMS.Modules {
             get { return TryGetModuleViewModel<AbsencesCollectionViewModel>(ref notesViewModel, ModuleType.Absences); }
         }
 
-        ScheduleCollectionViewModel shiftsViewModel;
-        public ScheduleCollectionViewModel ShiftsViewModel
+        ShiftsCollectionViewModel shiftsViewModel;
+        public ShiftsCollectionViewModel ShiftsViewModel
         {
-            get { return TryGetModuleViewModel<ScheduleCollectionViewModel>(ref shiftsViewModel, ModuleType.Shifts); }
+            get { return TryGetModuleViewModel<ShiftsCollectionViewModel>(ref shiftsViewModel, ModuleType.Shifts); }
         }
         protected override void UpdateViewModel() {
             ViewModel.ValidationErrors = errorProvider.HasErrors;

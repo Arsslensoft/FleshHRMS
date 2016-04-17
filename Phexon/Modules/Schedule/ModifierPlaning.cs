@@ -9,7 +9,7 @@ using DevExpress.Mvvm;
 namespace PHRMS.Modules {
     public partial class ModifierPlaning : BaseModuleControl {
         public ModifierPlaning()
-            : base(CreateViewModel<ScheduleViewModel>) {
+            : base(CreateViewModel<ShiftsViewModel>) {
             InitializeComponent();
             ViewModel.EntityChanged += ViewModel_EntityChanged;
             InitLookupEditors();
@@ -20,9 +20,9 @@ namespace PHRMS.Modules {
             ViewModel.EntityChanged -= ViewModel_EntityChanged;
             base.OnDisposing();
         }
-        public ScheduleViewModel ViewModel
+        public ShiftsViewModel ViewModel
         {
-            get { return GetViewModel<ScheduleViewModel>(); }
+            get { return GetViewModel<ShiftsViewModel>(); }
         }
         protected override void UpdateViewModel() {
             ViewModel.ValidationErrors = errorProvider.HasErrors;

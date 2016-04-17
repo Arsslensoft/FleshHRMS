@@ -11,15 +11,16 @@ using DevExpress.XtraBars.Docking2010.Views;
 using DevExpress.XtraBars.Docking2010.Views.Widget;
 using PHRMS.Widgets;
 
+using DevExpress.XtraGrid;
+
 
 namespace PHRMS.Modules
 {
   
     public partial class Dashboard : BaseModuleControl
     {
-    
+        static internal GridControl holidaysGridControl;
         static public MainViewModel MainView = null;
-        Random random = new Random();
   
         public Dashboard()
             : base(CreateViewModel<BoardViewModel>)
@@ -108,7 +109,7 @@ namespace PHRMS.Modules
                 ViewModel.EmployeesViewModel = TryGetModuleViewModel<EmployeeCollectionViewModel>(ModuleType.Employés);
                 ViewModel.LeavesViewModel = TryGetModuleViewModel<LeaveCollectionViewModel>(ModuleType.Congés);
                 ViewModel.NotificationsViewModel = TryGetModuleViewModel<NotificationCollectionViewModel>(ModuleType.Notifications);
-                ViewModel.SchedulesViewModel = TryGetModuleViewModel<ScheduleCollectionViewModel>(ModuleType.Shifts);
+                ViewModel.ShiftsesViewModel = TryGetModuleViewModel<ShiftsCollectionViewModel>(ModuleType.Shifts);
                 ViewModel.WarningsViewModel = TryGetModuleViewModel<WarningsCollectionViewModel>(ModuleType.Avertissements);
                 
                 ViewModel.HolidaysViewModel = TryGetModuleViewModel<HolidayCollectionViewModel>(ModuleType.Holidays);
@@ -131,9 +132,29 @@ namespace PHRMS.Modules
             var listBI = new List<ButtonInfo>();
             if (MainViewModel.CurrentEmployee.Role > PHRMS.Data.EmployeeRole.Agent)
             listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Ajouter un jour férié", Name = "10", Image = ImageHelper.GetImageFromToolbarResource("Note"), mouseEventHandler = holidayMouseClick });
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Modifier un jour férié", Name = "2", Image = ImageHelper.GetImageFromToolbarResource("Edit"), mouseEventHandler = (s, e) => { EditButtonClick(); } });
+
+            listBI.Add(new ButtonInfo());
+            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Imprimer les jours fériés", Name = "4", Image = ImageHelper.GetImageFromToolbarResource("Print"), mouseEventHandler = (s, e) => { PrintButtonClick(); } });
             BottomPanel.InitializeButtons(listBI,false);
        
      
+        }
+        void PrintButtonClick()
+        {
+            MainViewModel main = GetParentViewModel<MainViewModel>();
+            main.SelectModule(ModuleType.ImprimerFérier, (x) =>
+            {
+                ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, main, holidaysGridControl);
+                ((BaseModuleControl)main.SelectedModule).Refresh();
+            });
+        }
+
+
+        void EditButtonClick()
+        {
+            if (ViewModel.HolidaysViewModel.CanEdit(ViewModel.HolidaysViewModel.SelectedEntity))
+                ViewModel.HolidaysViewModel.Edit(ViewModel.HolidaysViewModel.SelectedEntity);
         }
         void holidayMouseClick(object sender, EventArgs e)
         {
