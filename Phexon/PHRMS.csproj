@@ -896,8 +896,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PHRMS.Data\PHRMS.Data.csproj">
-      <Project>{5f39ce01-75ed-4db4-9456-b0a2b3fa33c0}</Project>
+    <ProjectReference Include="..\PHRMS.Data\PHRMS.Data.rvproj">
+      <Project>{0c92b4e6-ab03-403c-af7e-64fc3c18a0d9}</Project>
       <Name>PHRMS.Data</Name>
     </ProjectReference>
   </ItemGroup>

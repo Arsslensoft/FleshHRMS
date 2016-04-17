@@ -1,0 +1,47 @@
+import System.ComponentModel;
+import System.ComponentModel.DataAnnotations;
+
+package PHRMS.Data
+{
+    public class Address : IDataErrorInfo
+    {
+        [Display(Name = "Address")]
+        public string Line { get; set; }
+
+        public string City { get; set; }
+        public StateEnum State { get; set; }
+
+        [ZipCode, Display(Name = "Zip code")]
+        public string ZipCode { get; set; }
+
+
+        public string CityLine
+        {
+            get { ret GetCityLine(City, State, ZipCode); }
+        }
+
+        public override string ToString()
+        {
+            ret string.Format("{0}, {1}", Line, CityLine);
+        }
+
+        friend static string GetCityLine(string city, StateEnum state, string zipCode)
+        {
+            ret string.Format("{0}, {1} {2}", city, state, zipCode);
+        }
+
+        #region IDataErrorInfo
+
+        string IDataErrorInfo.Error
+        {
+            get { ret null; }
+        }
+
+        string IDataErrorInfo.self[string columnName]
+        {
+            get { ret IDataErrorInfoHelper.GetErrorText(self, columnName); }
+        }
+
+        #endregion
+    }
+}

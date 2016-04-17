@@ -1,6 +1,0 @@
-E:\Research\FHRMS\Core\obj\Debug\Core.rvprojResolveAssemblyReference.cache
-E:\Research\FHRMS\Core\bin\Debug\Core.exe.config
-E:\Research\FHRMS\Core\bin\Debug\Core.exe
-E:\Research\FHRMS\Core\bin\Debug\Core.pdb
-E:\Research\FHRMS\Core\obj\Debug\Core.exe
-E:\Research\FHRMS\Core\obj\Debug\Core.pdb

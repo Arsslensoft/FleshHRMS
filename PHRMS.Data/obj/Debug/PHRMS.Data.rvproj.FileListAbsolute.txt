@@ -1,0 +1,12 @@
+E:\Research\FHRMS\PHRMS.Data.ConvertedToRava\obj\Debug\PHRMS.Data.rvprojResolveAssemblyReference.cache
+E:\Research\FHRMS\PHRMS.Data.ConvertedToRava\obj\Debug\PHRMS.Data.CommonResources.resources
+E:\Research\FHRMS\PHRMS.Data.ConvertedToRava\obj\Debug\PHRMS.Data.rvproj.GenerateResource.Cache
+E:\Research\FHRMS\Bin\PHRMS.Data.dll
+E:\Research\FHRMS\Bin\PHRMS.Data.pdb
+E:\Research\FHRMS\PHRMS.Data.ConvertedToRava\obj\Debug\PHRMS.Data.dll
+E:\Research\FHRMS\PHRMS.Data.ConvertedToRava\obj\Debug\PHRMS.Data.pdb
+E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.rvprojResolveAssemblyReference.cache
+E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.CommonResources.resources
+E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.rvproj.GenerateResource.Cache
+E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.dll
+E:\Research\FHRMS\PHRMS.Data\obj\Debug\PHRMS.Data.pdb

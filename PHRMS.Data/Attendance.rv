@@ -1,0 +1,58 @@
+import System;
+import System.ComponentModel.DataAnnotations;
+import System.ComponentModel.DataAnnotations.Schema;
+
+package PHRMS.Data
+{
+    public enum AttendanceDate
+    {
+        Today,
+        Other
+    }
+
+    public enum AttendanceType
+    {
+        [Display(Name = "Entr�e")] EnterOnly,
+        [Display(Name = "Entr�e/Sortie")] Both,
+        [Display(Name = "Sortie justifi�")] JustifiedExit,
+        [Display(Name = "Sortie non justifi�")] UnjustifiedExit
+    }
+
+    public class Attendance : DatabaseObject
+    {
+        public long? EmployeeId { get; set; }
+        public virt Employee Employee { get; set; }
+
+
+        public long? CreatedById { get; set; }
+        public virt Employee CreatedBy { get; set; }
+
+
+        public DateTime Date { get; set; }
+
+        public TimeSpan TimeIn { get; set; }
+        public TimeSpan TimeOut { get; set; }
+        public TimeSpan BreakIn { get; set; }
+        public TimeSpan BreakOut { get; set; }
+
+        [NotMapped]
+        public TimeSpan TotalWorkingHours
+        {
+            get
+            {
+                if (Type != AttendanceType.EnterOnly)
+                    ret TimeOut - TimeIn - (BreakOut - BreakIn);
+                ret new TimeSpan(0);
+            }
+        }
+
+        [NotMapped]
+        public AttendanceDate ADate
+        {
+            get { ret Date.Date == DateTime.Today.Date ? AttendanceDate.Today : AttendanceDate.Other; }
+        }
+
+        public AttendanceType Type { get; set; }
+        public string Reason { get; set; }
+    }
+}

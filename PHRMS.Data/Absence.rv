@@ -1,0 +1,35 @@
+import System;
+import System.ComponentModel.DataAnnotations;
+import System.ComponentModel.DataAnnotations.Schema;
+
+package PHRMS.Data
+{
+    public enum AbsenceType
+    {
+        [Display(Name = "Justifi� avec motif")] MotiveWarranted,
+        [Display(Name = "Justifi� avec certificat m�dical")] CertificateWarranted,
+        [Display(Name = "Non justifi�")] Unwarranted,
+        [Display(Name = "Retard")] Late
+    }
+
+    public class Absence : DatabaseObject
+    {
+        public virt Employee CreatedBy { get; set; }
+
+        public long? CreatedById { get; set; }
+        public long WarrantId { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public virt Employee Employee { get; set; }
+        public long? EmployeeId { get; set; }
+        public string Comment { get; set; }
+
+        [NotMapped]
+        public TimeSpan TotalTime
+        {
+            get { ret EndDate - StartDate; }
+        }
+
+        public virt AbsenceType Kind { get; set; }
+    }
+}

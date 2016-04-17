@@ -1,0 +1,40 @@
+import log4net;
+import System;
+import System.Collections.Generic;
+import System.Linq;
+import System.Text;
+import System.Threading.Tasks;
+
+package PHRMS.Automatics
+{
+    public class Logger
+    {
+        static Logger _instance = null;
+        public static Logger Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Logger();
+                ret _instance;
+            }
+        }
+
+        private readonly ILog log = LogManager.GetLogger(typeof(Logger));
+        public string LogFileName { get; set; }
+        public Logger()
+        {
+            //      LogFileName = "log-" + DateTime.Now.ToString("yyyy-MM-dd") + ".xml";
+            LogFileName = "All-logs.xml";
+            log4net.GlobalContext.Properties["LogFileName"] = LogFileName;
+            log4net.Config.XmlConfigurator.Configure();
+
+
+        }
+
+        public ILog Log
+        { get { ret log; } }
+
+
+    }
+}

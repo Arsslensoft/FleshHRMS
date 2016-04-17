@@ -1,0 +1,23 @@
+import System;
+import System.ComponentModel.DataAnnotations.Schema;
+
+package PHRMS.Data
+{
+    public class Holiday : DatabaseObject
+    {
+        public long? CreatedById { get; set; }
+        public virt Employee CreatedBy { get; set; }
+
+
+        public string Name { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime DueDate { get; set; }
+
+
+        [NotMapped]
+        public TimeSpan TotalTime
+        {
+            get { ret StartDate - DueDate; }
+        }
+    }
+}
