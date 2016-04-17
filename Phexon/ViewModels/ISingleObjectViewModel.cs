@@ -1,29 +1,20 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Linq.Expressions;
-using DevExpress.Mvvm;
-using DevExpress.Mvvm.POCO;
-using DevExpress.Mvvm.DataAnnotations;
-using PHRMS.Utils;
-using PHRMS.Data;
-
-namespace PHRMS.ViewModels {
+﻿namespace PHRMS.ViewModels
+{
     /// <summary>
-    /// The base interface for view models representing a single entity.
+    ///     The base interface for view models representing a single entity.
     /// </summary>
     /// <typeparam name="TEntity">An entity type.</typeparam>
     /// <typeparam name="TPrimaryKey">An entity primary key type.</typeparam>
-    public interface ISingleObjectViewModel<TEntity, TPrimaryKey> {
-
+    public interface ISingleObjectViewModel<TEntity, TPrimaryKey>
+    {
         /// <summary>
-        /// The entity represented by a view model.
+        ///     The entity represented by a view model.
         /// </summary>
         /// <returns></returns>
         TEntity Entity { get; }
 
         /// <summary>
-        /// The entity primary key value.
+        ///     The entity primary key value.
         /// </summary>
         /// <returns></returns>
         TPrimaryKey PrimaryKey { get; }

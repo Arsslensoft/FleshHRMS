@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using DevExpress.XtraEditors;
+using PHRMS.Data;
 
-namespace PHRMS.Modules.Customers {
-    public partial class StateUC : XtraUserControl {
-        public StateUC() {
+namespace PHRMS.Modules.Customers
+{
+    public partial class StateUC : XtraUserControl
+    {
+        public StateUC()
+        {
             InitializeComponent();
-            stateLookUpEdit.Properties.DataSource = Enum.GetValues(typeof(PHRMS.Data.StateEnum));
+            stateLookUpEdit.Properties.DataSource = Enum.GetValues(typeof(StateEnum));
             stateLookUpEdit.Properties.ShowHeader = false;
         }
     }

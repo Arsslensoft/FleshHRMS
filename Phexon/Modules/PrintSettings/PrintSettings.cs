@@ -1,17 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraEditors;
-using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 
-namespace PHRMS.Modules {
-    public partial class PrintSettings : XtraUserControl, ISupportNavigation {
-        public PrintSettings() {
+namespace PHRMS.Modules
+{
+    public partial class PrintSettings : XtraUserControl, ISupportNavigation
+    {
+        public PrintSettings()
+        {
             InitializeComponent();
         }
-        public virtual void OnNavigatedFrom(INavigationArgs args) {
+
+        public virtual void OnNavigatedFrom(INavigationArgs args)
+        {
         }
-        public virtual void OnNavigatedTo(INavigationArgs args) {
+
+        public virtual void OnNavigatedTo(INavigationArgs args)
+        {
         }
     }
 }

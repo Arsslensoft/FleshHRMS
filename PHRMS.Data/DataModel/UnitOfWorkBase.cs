@@ -1,25 +1,26 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 
-namespace PHRMS.Data {
+namespace PHRMS.Data
+{
     /// <summary>
-    /// The base class for unit of works that provides the storage for repositories. 
+    ///     The base class for unit of works that provides the storage for repositories.
     /// </summary>
-    public class UnitOfWorkBase {
-
-        readonly Dictionary<Type, object> repositories = new Dictionary<Type, object>();
+    public class UnitOfWorkBase
+    {
+        private readonly Dictionary<Type, object> repositories = new Dictionary<Type, object>();
 
         protected TRepository GetRepositoryCore<TRepository, TEntity>(Func<TRepository> createRepositoryFunc)
             where TRepository : IReadOnlyRepository<TEntity>
-            where TEntity : class {
+            where TEntity : class
+        {
             object result = null;
-            if(!repositories.TryGetValue(typeof(TEntity), out result)) {
+            if (!repositories.TryGetValue(typeof(TEntity), out result))
+            {
                 result = createRepositoryFunc();
                 repositories[typeof(TEntity)] = result;
             }
-            return (TRepository)result;
+            return (TRepository) result;
         }
     }
 }

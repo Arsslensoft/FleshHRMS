@@ -1,19 +1,21 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Reflection;
 
-namespace PHRMS.Data {
-    public static class IDataErrorInfoHelper {
-        public static string GetErrorText(object owner, string propertyName) {
-            string[] path = propertyName.Split('.');
-            if(path.Length > 1)
+namespace PHRMS.Data
+{
+    public static class IDataErrorInfoHelper
+    {
+        public static string GetErrorText(object owner, string propertyName)
+        {
+            var path = propertyName.Split('.');
+            if (path.Length > 1)
                 return GetErrorText(owner, path);
-            PropertyInfo propertyInfo = owner.GetType().GetProperty(propertyName);
+            var propertyInfo = owner.GetType().GetProperty(propertyName);
             if (propertyInfo == null) return null;
-            object propertyValue = propertyInfo.GetValue(owner, null);
-            ValidationContext validationContext = new ValidationContext(owner, null, null) { MemberName = propertyName };
-            string[] errors = propertyInfo
+            var propertyValue = propertyInfo.GetValue(owner, null);
+            var validationContext = new ValidationContext(owner, null, null) {MemberName = propertyName};
+            var errors = propertyInfo
                 .GetCustomAttributes(false)
                 .OfType<ValidationAttribute>()
                 .Select(x => x.GetValidationResult(propertyValue, validationContext))
@@ -23,14 +25,16 @@ namespace PHRMS.Data {
                 .ToArray();
             return string.Join(" ", errors);
         }
-        static string GetErrorText(object owner, string[] path) {
-            string nestedPropertyName = string.Join(".", path.Skip(1));
-            string propertyName = path[0];
-            PropertyInfo propertyInfo = owner.GetType().GetProperty(propertyName);
-            if(propertyInfo == null)
+
+        private static string GetErrorText(object owner, string[] path)
+        {
+            var nestedPropertyName = string.Join(".", path.Skip(1));
+            var propertyName = path[0];
+            var propertyInfo = owner.GetType().GetProperty(propertyName);
+            if (propertyInfo == null)
                 return null;
-            object propertyValue = propertyInfo.GetValue(owner, null);
-            IDataErrorInfo nestedDataErrorInfo = propertyValue as IDataErrorInfo;
+            var propertyValue = propertyInfo.GetValue(owner, null);
+            var nestedDataErrorInfo = propertyValue as IDataErrorInfo;
             return nestedDataErrorInfo == null ? string.Empty : nestedDataErrorInfo[nestedPropertyName];
         }
     }

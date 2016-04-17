@@ -1,7 +1,10 @@
-﻿using DevExpress.Utils.Menu;
+﻿using System.IO;
+using DevExpress.Utils.Menu;
 
-namespace PHRMS {
-    public enum ModuleType {
+namespace PHRMS
+{
+    public enum ModuleType
+    {
         Unknown,
         CustomersPeek,
         CustomersFilterPane,
@@ -13,13 +16,12 @@ namespace PHRMS {
         ImprimerEmployé,
         Employés,
 
-     
 
         Congés,
         ModifierCongés,
         ImprimerCongé,
 
-      
+
         Absences,
         ModifierAbsence,
         ImprimerAbsence,
@@ -40,20 +42,27 @@ namespace PHRMS {
         Notifications,
         Shifts,
         Holidays
+    }
 
-    }
     public interface IMainModule : IPeekModulesHost,
-    ISupportModuleLayout, ISupportTransitions, IDXMenuManagerProvider {
+        ISupportModuleLayout, ISupportTransitions, IDXMenuManagerProvider
+    {
     }
-    public interface ISupportTransitions {
+
+    public interface ISupportTransitions
+    {
         void StartTransition(bool effective);
         void EndTransition(bool effective);
     }
-    public interface ISupportModuleLayout {
-        void SaveLayoutToStream(System.IO.MemoryStream ms);
-        void RestoreLayoutFromStream(System.IO.MemoryStream ms);
+
+    public interface ISupportModuleLayout
+    {
+        void SaveLayoutToStream(MemoryStream ms);
+        void RestoreLayoutFromStream(MemoryStream ms);
     }
-    public interface IPeekModulesHost {
+
+    public interface IPeekModulesHost
+    {
         bool IsDocked(ModuleType type);
         void DockModule(ModuleType moduleType);
         void ShowPeek(ModuleType moduleType);

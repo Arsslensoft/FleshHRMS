@@ -1,19 +1,26 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace PHRMS.Widgets{
-    public partial class Clock : UserControl {
-        Timer timer = new Timer();
-        public Clock() {
+namespace PHRMS.Widgets
+{
+    public partial class Clock : UserControl
+    {
+        private readonly Timer timer = new Timer();
+
+        public Clock()
+        {
             InitializeComponent();
             timer.Interval = 1000;
             timer.Tick += OnTick;
             timer.Start();
             OnTick(null, null);
         }
-        void OnTick(object sender, EventArgs e) {
-            System.DateTime currentDate = System.DateTime.Now;
-            labelControl1.Text = "<b>" + string.Format("{0:T}", currentDate) + "</b><br><size=10>" + currentDate.ToString("D");
+
+        private void OnTick(object sender, EventArgs e)
+        {
+            var currentDate = DateTime.Now;
+            labelControl1.Text = "<b>" + string.Format("{0:T}", currentDate) + "</b><br><size=10>" +
+                                 currentDate.ToString("D");
         }
     }
 }

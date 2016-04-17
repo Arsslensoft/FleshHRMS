@@ -1,7 +1,7 @@
-﻿namespace PHRMS.ViewModels {
-    using PHRMS.ViewModels;
-
+﻿namespace PHRMS.ViewModels
+{
     public class EmployeeMailMergeViewModel :
-    MailMergeViewModelBase<EmployeeMailTemplate> {
+        MailMergeViewModelBase<EmployeeMailTemplate>
+    {
     }
 }

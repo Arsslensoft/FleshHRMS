@@ -1,21 +1,29 @@
-﻿namespace PHRMS.ViewModels {
-    using System;
-    using PHRMS.ViewModels;
-    using PHRMS.Data;
-    using System.Linq;
+﻿using System;
+using System.Linq;
+using PHRMS.Data;
 
-    partial class EmployeeViewModel : IBaseViewModel {
-        protected override string GetTitle() {
+namespace PHRMS.ViewModels
+{
+    partial class EmployeeViewModel : IBaseViewModel
+    {
+        protected override string GetTitle()
+        {
             return Entity.FullName;
         }
-        public IQueryable<Employee> GetEmployyes() {
-            return  UnitOfWork.Employees.GetEntities();
+
+        public IQueryable<Employee> GetEmployyes()
+        {
+            return UnitOfWork.Employees.GetEntities();
         }
+
         public event EventHandler EntityChanged;
-        protected override void OnEntityChanged() {
+
+        protected override void OnEntityChanged()
+        {
             base.OnEntityChanged();
-            EventHandler handler = EntityChanged;
-            if (handler != null) {
+            var handler = EntityChanged;
+            if (handler != null)
+            {
                 handler(this, EventArgs.Empty);
             }
         }

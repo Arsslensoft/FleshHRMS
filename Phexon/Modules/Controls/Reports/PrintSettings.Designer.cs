@@ -34,7 +34,7 @@ namespace PHRMS {
         /// </summary>
         private void InitializeComponent() {
             this.layoutControl = new DevExpress.XtraLayout.LayoutControl();
-            this.settingsPanel = new PHRMS.SettingPanel();
+            this.SettingsPanel = new PHRMS.SettingPanel();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnOptions = new DevExpress.XtraEditors.SimpleButton();
             this.cbPrinters = new DevExpress.XtraEditors.ImageComboBoxEdit();
@@ -66,7 +66,7 @@ namespace PHRMS {
             // layoutControl
             // 
             this.layoutControl.AllowCustomization = false;
-            this.layoutControl.Controls.Add(this.settingsPanel);
+            this.layoutControl.Controls.Add(this.SettingsPanel);
             this.layoutControl.Controls.Add(this.btnPrint);
             this.layoutControl.Controls.Add(this.btnOptions);
             this.layoutControl.Controls.Add(this.cbPrinters);
@@ -79,10 +79,10 @@ namespace PHRMS {
             // 
             // settingsPanel
             // 
-            this.settingsPanel.Location = new System.Drawing.Point(40, 328);
-            this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(312, 185);
-            this.settingsPanel.TabIndex = 4;
+            this.SettingsPanel.Location = new System.Drawing.Point(40, 328);
+            this.SettingsPanel.Name = "SettingsPanel";
+            this.SettingsPanel.Size = new System.Drawing.Size(312, 185);
+            this.SettingsPanel.TabIndex = 4;
             // 
             // btnPrint
             // 
@@ -218,7 +218,7 @@ namespace PHRMS {
             // 
             this.layoutControlItemSettings.AppearanceItemCaption.FontSizeDelta = 3;
             this.layoutControlItemSettings.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItemSettings.Control = this.settingsPanel;
+            this.layoutControlItemSettings.Control = this.SettingsPanel;
             this.layoutControlItemSettings.CustomizationFormText = "Settings";
             this.layoutControlItemSettings.Location = new System.Drawing.Point(0, 284);
             this.layoutControlItemSettings.Name = "layoutControlItem4";
@@ -291,6 +291,5 @@ namespace PHRMS {
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItemSettings;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
-        private SettingPanel settingsPanel;
     }
 }

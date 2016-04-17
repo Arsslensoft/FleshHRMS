@@ -1,10 +1,14 @@
-﻿namespace PHRMS.Modules {
-    using DevExpress.XtraBars.Ribbon;
+﻿using DevExpress.XtraBars.Ribbon;
 
-    public interface IRibbonModule {
+namespace PHRMS.Modules
+{
+    public interface IRibbonModule
+    {
         RibbonControl Ribbon { get; }
     }
-    public interface ISupportViewModel {
+
+    public interface ISupportViewModel
+    {
         object ViewModel { get; }
         void ParentViewModelAttached();
     }

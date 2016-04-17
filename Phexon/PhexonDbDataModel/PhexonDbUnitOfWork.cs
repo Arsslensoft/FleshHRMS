@@ -1,33 +1,27 @@
-﻿using System;
-using System.Linq;
-using System.Data;
-using System.Data.Entity;
-using System.Linq.Expressions;
-using System.Collections.Generic;
-using PHRMS.Utils;
-using PHRMS.Data;
-using PHRMS.ViewModels;
-
-namespace PHRMS.Data {
+﻿namespace PHRMS.Data
+{
     /// <summary>
-    /// A PhexonDbUnitOfWork instance that represents the run-time implementation of the IPhexonDbUnitOfWork interface.
+    ///     A PhexonDbUnitOfWork instance that represents the run-time implementation of the IPhexonDbUnitOfWork interface.
     /// </summary>
-    public class PhexonDbUnitOfWork : DbUnitOfWork<PhexonDb>, IPhexonDbUnitOfWork {
-
+    public class PhexonDbUnitOfWork : DbUnitOfWork<PhexonDb>, IPhexonDbUnitOfWork
+    {
         /// <summary>
-        /// Initializes a new instance of the PhexonDbUnitOfWork class.
+        ///     Initializes a new instance of the PhexonDbUnitOfWork class.
         /// </summary>
         /// <param name="context">An underlying DbContext.</param>
         public PhexonDbUnitOfWork(PhexonDb context)
-            : base(context) {
+            : base(context)
+        {
         }
 
-     
-        IRepository<Employee, long> IPhexonDbUnitOfWork.Employees {
+
+        IRepository<Employee, long> IPhexonDbUnitOfWork.Employees
+        {
             get { return GetRepository(x => x.Set<Employee>(), x => x.Id); }
         }
 
-        IRepository<Leave, long> IPhexonDbUnitOfWork.Tasks {
+        IRepository<Leave, long> IPhexonDbUnitOfWork.Tasks
+        {
             get { return GetRepository(x => x.Set<Leave>(), x => x.Id); }
         }
 
@@ -36,14 +30,19 @@ namespace PHRMS.Data {
         {
             get { return GetRepository(x => x.Set<Warning>(), x => x.Id); }
         }
-        IRepository<Absence, long> IPhexonDbUnitOfWork.Evaluations {
+
+        IRepository<Absence, long> IPhexonDbUnitOfWork.Evaluations
+        {
             get { return GetRepository(x => x.Set<Absence>(), x => x.Id); }
         }
+
         IRepository<Attendance, long> IPhexonDbUnitOfWork.Attendances
         {
             get { return GetRepository(x => x.Set<Attendance>(), x => x.Id); }
         }
-        IRepository<Picture, long> IPhexonDbUnitOfWork.Pictures {
+
+        IRepository<Picture, long> IPhexonDbUnitOfWork.Pictures
+        {
             get { return GetRepository(x => x.Set<Picture>(), x => x.Id); }
         }
 
@@ -56,11 +55,10 @@ namespace PHRMS.Data {
         {
             get { return GetRepository(x => x.Set<Shift>(), x => x.Id); }
         }
+
         IRepository<Holiday, long> IPhexonDbUnitOfWork.Holidays
         {
             get { return GetRepository(x => x.Set<Holiday>(), x => x.Id); }
         }
-
-
     }
 }

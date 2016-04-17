@@ -1,123 +1,178 @@
 ﻿using System;
 using System.Collections.Generic;
-using PHRMS.Data;
-using PHRMS.Helpers;
-using PHRMS.ViewModels;
+using System.Windows.Forms;
+using DevExpress.Mvvm;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
-using PHRMS.Utils;
-using DevExpress.Mvvm;
+using DevExpress.XtraLayout.Utils;
+using PHRMS.Data;
+using PHRMS.Helpers;
+using PHRMS.ViewModels;
 
-namespace PHRMS.Modules {
-    public partial class Avertissements : BaseModuleControl {
+namespace PHRMS.Modules
+{
+    public partial class Avertissements : BaseModuleControl
+    {
         public Avertissements()
-            : base(CreateViewModel<WarningsCollectionViewModel>) {
+            : base(CreateViewModel<WarningsCollectionViewModel>)
+        {
             InitializeComponent();
             UpdateData();
-            ((ITileControl)tileControl1).Properties.LargeItemWidth = 200;
+            ((ITileControl) tileControl1).Properties.LargeItemWidth = 200;
             tileControl1.UseParentAutoScaleFactor = false;
         }
-        protected override void OnInitServices( DevExpress.Mvvm.IServiceContainer serviceContainer) {
-            base.OnInitServices(serviceContainer);
-            serviceContainer.RegisterService(new FlyoutDetailFormDocumentManagerService(ModuleType.ModifierAvertissement));
-        }
-        void UpdateData() {
-            tasksGridControl.SetItemsSource(ViewModel.Entities);
-            TileItemsUpdateElementText();
-        }
-        void TileItemsUpdateElementText() {
-            if(ViewModel.Entities != null) {
-                tileItemAll.Text = ViewModel.AllCount.ToString();
-                tileItemLow.Text = ViewModel.LowCount.ToString();
-                tileItemInconvenient.Text = ViewModel.InconvenientCount.ToString();
-  
-                tileItemSevere.Text = ViewModel.SevereCount.ToString();
-                tileItemSerious.Text = ViewModel.SeriousCount.ToString();
-            
-            }
-        }
-      
+
         public WarningsCollectionViewModel ViewModel
         {
             get { return GetViewModel<WarningsCollectionViewModel>(); }
         }
-        protected internal override void OnTransitionCompleted() {
+
+        protected override void OnInitServices(IServiceContainer serviceContainer)
+        {
+            base.OnInitServices(serviceContainer);
+            serviceContainer.RegisterService(new FlyoutDetailFormDocumentManagerService(ModuleType.ModifierAvertissement));
+        }
+
+        private void UpdateData()
+        {
+            tasksGridControl.SetItemsSource(ViewModel.Entities);
+            TileItemsUpdateElementText();
+        }
+
+        private void TileItemsUpdateElementText()
+        {
+            if (ViewModel.Entities != null)
+            {
+                tileItemAll.Text = ViewModel.AllCount.ToString();
+                tileItemLow.Text = ViewModel.LowCount.ToString();
+                tileItemInconvenient.Text = ViewModel.InconvenientCount.ToString();
+
+                tileItemSevere.Text = ViewModel.SevereCount.ToString();
+                tileItemSerious.Text = ViewModel.SeriousCount.ToString();
+            }
+        }
+
+        protected internal override void OnTransitionCompleted()
+        {
             base.OnTransitionCompleted();
             InitializeButtonPanel();
         }
-        void InitializeButtonPanel() {
-            List<ButtonInfo> listBI = new List<ButtonInfo>();
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Nouvelle avertissement", Name = "1", Image = ImageHelper.GetImageFromToolbarResource("New"), mouseEventHandler = (s, e) => { NewButtonClick(); } });
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Modifier", Name = "2", Image = ImageHelper.GetImageFromToolbarResource("Edit"), mouseEventHandler = (s, e) => { EditButtonClick(); } });
-          
+
+        private void InitializeButtonPanel()
+        {
+            var listBI = new List<ButtonInfo>();
+            listBI.Add(new ButtonInfo
+            {
+                Type = typeof(SimpleButton),
+                Text = "Nouvelle avertissement",
+                Name = "1",
+                Image = ImageHelper.GetImageFromToolbarResource("New"),
+                mouseEventHandler = (s, e) => { NewButtonClick(); }
+            });
+            listBI.Add(new ButtonInfo
+            {
+                Type = typeof(SimpleButton),
+                Text = "Modifier",
+                Name = "2",
+                Image = ImageHelper.GetImageFromToolbarResource("Edit"),
+                mouseEventHandler = (s, e) => { EditButtonClick(); }
+            });
+
             listBI.Add(new ButtonInfo());
-            listBI.Add(new ButtonInfo() { Type = typeof(SimpleButton), Text = "Imprimer", Name = "4", Image = ImageHelper.GetImageFromToolbarResource("Print"), mouseEventHandler = (s, e) => { PrintButtonClick(); } });
+            listBI.Add(new ButtonInfo
+            {
+                Type = typeof(SimpleButton),
+                Text = "Imprimer",
+                Name = "4",
+                Image = ImageHelper.GetImageFromToolbarResource("Print"),
+                mouseEventHandler = (s, e) => { PrintButtonClick(); }
+            });
             BottomPanel.InitializeButtons(listBI, false);
         }
-        void PrintButtonClick() {
-            MainViewModel main = GetParentViewModel<MainViewModel>();
-            main.SelectModule(ModuleType.ImprimerAvertissements, (x) =>
+
+        private void PrintButtonClick()
+        {
+            var main = GetParentViewModel<MainViewModel>();
+            main.SelectModule(ModuleType.ImprimerAvertissements, x =>
             {
                 ViewModelHelper.EnsureModuleViewModel(main.SelectedModule, main, tasksGridControl);
-                ((BaseModuleControl)main.SelectedModule).Refresh();
+                ((BaseModuleControl) main.SelectedModule).Refresh();
             });
         }
-      
-        void NewButtonClick() {
-     
+
+        private void NewButtonClick()
+        {
             ViewModel.New();
-         
         }
-        void EditButtonClick() {
+
+        private void EditButtonClick()
+        {
             Edit(ViewModel.SelectedEntity);
         }
-        void Edit(Warning task) {
+
+        private void Edit(Warning task)
+        {
             if (ViewModel.CanEdit(task) && MainViewModel.CurrentEmployee.Role >= EmployeeRole.Agent)
             {
-                if (MainViewModel.CurrentEmployee.Role == EmployeeRole.Agent && MainViewModel.CurrentEmployee.Id != task.CreatedById)
-                    DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                if (MainViewModel.CurrentEmployee.Role == EmployeeRole.Agent &&
+                    MainViewModel.CurrentEmployee.Id != task.CreatedById)
+                    XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 else
                     ViewModel.Edit(task);
-
             }
             else if (MainViewModel.CurrentEmployee.Role < EmployeeRole.Agent)
-                DevExpress.XtraEditors.XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        void collapseButton_Click(object sender, EventArgs e) {
-            if(tileControlLCI.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Always) {
-                ItemsHideHelper.Hide(new object[] { tileControlLCI }, buttonHide);
+
+        private void collapseButton_Click(object sender, EventArgs e)
+        {
+            if (tileControlLCI.Visibility == LayoutVisibility.Always)
+            {
+                ItemsHideHelper.Hide(new object[] {tileControlLCI}, buttonHide);
                 return;
             }
-            if(tileControlLCI.Visibility == DevExpress.XtraLayout.Utils.LayoutVisibility.Never) {
-                ItemsHideHelper.Expand(new object[] { tileControlLCI }, buttonHide);
-                return;
+            if (tileControlLCI.Visibility == LayoutVisibility.Never)
+            {
+                ItemsHideHelper.Expand(new object[] {tileControlLCI}, buttonHide);
             }
         }
-        void TileClickFilter(string filter, TileItem tileItem) {
+
+        private void TileClickFilter(string filter, TileItem tileItem)
+        {
             tasksGridView.ActiveFilter.Clear();
-            string fieldName = GetFieldName(filter);
+            var fieldName = GetFieldName(filter);
             tasksGridView.ActiveFilter.Add(tasksGridView.Columns[fieldName], new ColumnFilterInfo(filter));
             tileItem.Text = tasksGridView.DataRowCount.ToString();
         }
-        static string GetFieldName(string filter) {
-            if (filter.StartsWith("ADate")) 
+
+        private static string GetFieldName(string filter)
+        {
+            if (filter.StartsWith("ADate"))
                 return "ADate";
-            else return "Type";
+            return "Type";
         }
-        void tileItem_ItemClick(object sender, TileItemEventArgs e) {
-            string filter = e.Item.Tag as string;
+
+        private void tileItem_ItemClick(object sender, TileItemEventArgs e)
+        {
+            var filter = e.Item.Tag as string;
             TileClickFilter(filter, e.Item);
         }
-        void tasksGridView_FocusedRowObjectChanged(object sender, FocusedRowObjectChangedEventArgs e) {
+
+        private void tasksGridView_FocusedRowObjectChanged(object sender, FocusedRowObjectChangedEventArgs e)
+        {
             ViewModel.SelectedEntity = e.Row as Warning;
         }
-        void tasksGridView_RowClick(object sender, RowClickEventArgs e) {
-            if(e.Clicks > 1 && e.RowHandle >= 0)
+
+        private void tasksGridView_RowClick(object sender, RowClickEventArgs e)
+        {
+            if (e.Clicks > 1 && e.RowHandle >= 0)
                 Edit(GetTask(e.RowHandle));
         }
-        Warning GetTask(int rowHandle)
+
+        private Warning GetTask(int rowHandle)
         {
             return tasksGridView.GetRow(rowHandle) as Warning;
         }

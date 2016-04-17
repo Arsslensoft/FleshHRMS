@@ -2,7 +2,7 @@ using System;
 using System.Reflection;
 using System.Resources;
 using System.Runtime.InteropServices;
-using System.Security;
+
 [assembly: AssemblyTitle("PHRMS.Data.Data")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]

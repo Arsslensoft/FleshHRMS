@@ -1,35 +1,47 @@
-﻿using DevExpress.Skins;
-using DevExpress.XtraEditors;
-using System;
+﻿using System;
 using System.Drawing;
+using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+using DevExpress.XtraEditors;
 
-public class LabelTabController {
-    private object[] list;
+public class LabelTabController
+{
     private object editValue;
-    public event EventHandler EditValueChanged;
-    public LabelTabController(object eValue, params object[] list) {
+    private readonly object[] list;
+
+    public LabelTabController(object eValue, params object[] list)
+    {
         this.list = list;
         EditValue = eValue;
-        foreach (LabelControl lb in list) {
-            lb.Click += (s, e) => EditValue = ((LabelControl)s).Tag;
+        foreach (LabelControl lb in list)
+        {
+            lb.Click += (s, e) => EditValue = ((LabelControl) s).Tag;
         }
     }
-    public object EditValue {
-        get {
-            return editValue;
-        }
-        set {
+
+    public object EditValue
+    {
+        get { return editValue; }
+        set
+        {
             editValue = value;
-            if (EditValueChanged != null) {
+            if (EditValueChanged != null)
+            {
                 EditValueChanged(EditValue, EventArgs.Empty);
             }
-            foreach (LabelControl lc in list) {
-                if (EditValue.Equals(lc.Tag)) {
-                    lc.Appearance.ForeColor = CommonColors.GetQuestionColor(DevExpress.LookAndFeel.UserLookAndFeel.Default);
-                } else {
+            foreach (LabelControl lc in list)
+            {
+                if (EditValue.Equals(lc.Tag))
+                {
+                    lc.Appearance.ForeColor = CommonColors.GetQuestionColor(UserLookAndFeel.Default);
+                }
+                else
+                {
                     lc.Appearance.ForeColor = Color.Empty;
                 }
             }
         }
     }
+
+    public event EventHandler EditValueChanged;
 }

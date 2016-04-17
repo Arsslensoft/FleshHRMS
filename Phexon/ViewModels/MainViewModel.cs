@@ -1,122 +1,176 @@
-﻿namespace PHRMS.ViewModels {
-    using System;
-    using PHRMS.Services;
-    using DevExpress.Mvvm;
+﻿using System;
+using DevExpress.Mvvm;
+using DevExpress.Mvvm.DataAnnotations;
 using PHRMS.Data;
+using PHRMS.Modules;
+using PHRMS.Services;
+using ModuleResourceProvider = PHRMS.Services.Win.ModuleResourceProvider;
 
+namespace PHRMS.ViewModels
+{
     public delegate void ModuleInitializeMethod(object module);
-    public class MainViewModel : DevExpress.Mvvm.ViewModelBase {
 
-        public static Employee CurrentEmployee
+    public class MainViewModel : ViewModelBase
+    {
+        static MainViewModel()
         {
-            get;
-            set;
-        }
-        static MainViewModel() {
-            DevExpress.Mvvm.ServiceContainer.Default.RegisterService(new Services.Win.ModuleResourceProvider());
-            DevExpress.Mvvm.ServiceContainer.Default.RegisterService(new Services.MessageBoxService());
-            DevExpress.Mvvm.ServiceContainer.Default.RegisterService(new Services.ModuleTypesResolver());
+            DevExpress.Mvvm.ServiceContainer.Default.RegisterService(new ModuleResourceProvider());
+            DevExpress.Mvvm.ServiceContainer.Default.RegisterService(new MessageBoxService());
+            DevExpress.Mvvm.ServiceContainer.Default.RegisterService(new ModuleTypesResolver());
             DevExpress.Mvvm.ServiceContainer.Default.RegisterService(new Services.ModuleResourceProvider());
         }
-        public MainViewModel(IMainModule mainModule) {
+
+        public MainViewModel(IMainModule mainModule)
+        {
             RegisterServices(mainModule);
         }
-        private void RegisterServices(IMainModule mainModule) {
+
+        public static Employee CurrentEmployee { get; set; }
+
+        public ModuleType SelectedModuleType { get; private set; }
+
+        public virtual object SelectedModule { get; set; }
+
+        private void RegisterServices(IMainModule mainModule)
+        {
             var mainModuleType = mainModule.GetType();
-            ServiceContainer.RegisterService(new Services.ModuleActivator(
+            ServiceContainer.RegisterService(new ModuleActivator(
                 mainModuleType.Assembly, mainModuleType.Namespace + ".Modules"));
-            ServiceContainer.RegisterService(new Services.ReportActivator(
+            ServiceContainer.RegisterService(new ReportActivator(
                 mainModuleType.Assembly, "PHRMS"));
-            ServiceContainer.RegisterService(new Services.ModuleLocator(ServiceContainer));
-            ServiceContainer.RegisterService(new Services.ReportLocator(ServiceContainer));
-            ServiceContainer.RegisterService(new Services.TransitionService(mainModule));
-            ServiceContainer.RegisterService(new Services.PeekModulesHostingService(mainModule));
-            ServiceContainer.RegisterService(new Services.WorkspaceService(mainModule));
+            ServiceContainer.RegisterService(new ModuleLocator(ServiceContainer));
+            ServiceContainer.RegisterService(new ReportLocator(ServiceContainer));
+            ServiceContainer.RegisterService(new TransitionService(mainModule));
+            ServiceContainer.RegisterService(new PeekModulesHostingService(mainModule));
+            ServiceContainer.RegisterService(new WorkspaceService(mainModule));
         }
-        ModuleType selectedModuleType;
-        public ModuleType SelectedModuleType { get { return selectedModuleType; } }
-        public void SetSelectedModuleType(ModuleType moduleType, ModuleInitializeMethod initialize) {
-            if(SelectedModuleType == moduleType) return;
+
+        public void SetSelectedModuleType(ModuleType moduleType, ModuleInitializeMethod initialize)
+        {
+            if (SelectedModuleType == moduleType) return;
             var old = SelectedModuleType;
-            this.selectedModuleType = moduleType;
+            SelectedModuleType = moduleType;
             OnSelectedModuleTypeChanged(old, initialize);
         }
-        public virtual object SelectedModule { get;
-            set; }
-        public bool CanSelectModule(ModuleType moduleType) {
+
+        public bool CanSelectModule(ModuleType moduleType)
+        {
             return SelectedModuleType != moduleType;
         }
-        public void SelectModule(ModuleType moduleType) { SelectModule(moduleType, null); }
-        public void SelectModule(ModuleType moduleType, ModuleInitializeMethod initialize) {
+
+        public void SelectModule(ModuleType moduleType)
+        {
+            SelectModule(moduleType, null);
+        }
+
+        public void SelectModule(ModuleType moduleType, ModuleInitializeMethod initialize)
+        {
             SetSelectedModuleType(moduleType, initialize);
         }
-        public bool CanDockPeekModule(ModuleType moduleType) {
+
+        public bool CanDockPeekModule(ModuleType moduleType)
+        {
             var peekModuleType = GetPeekModuleType(moduleType);
             return !GetService<IPeekModulesHostingService>().IsDocked(peekModuleType);
         }
-        [DevExpress.Mvvm.DataAnnotations.Command]
-        public void DockPeekModule(ModuleType moduleType) {
+
+        [Command]
+        public void DockPeekModule(ModuleType moduleType)
+        {
             var peekModuleType = GetPeekModuleType(moduleType);
             GetService<IPeekModulesHostingService>().DockModule(peekModuleType);
         }
-        public bool CanShowPeekModule(ModuleType moduleType) {
+
+        public bool CanShowPeekModule(ModuleType moduleType)
+        {
             var peekModuleType = GetPeekModuleType(moduleType);
             return !GetService<IPeekModulesHostingService>().IsDocked(peekModuleType);
         }
-        [DevExpress.Mvvm.DataAnnotations.Command]
-        public void ShowPeekModule(ModuleType moduleType) {
+
+        [Command]
+        public void ShowPeekModule(ModuleType moduleType)
+        {
             var peekModuleType = GetPeekModuleType(moduleType);
             GetService<IPeekModulesHostingService>().ShowModule(peekModuleType);
         }
-        public object GetModule(ModuleType type) {
-            return GetService<Services.IModuleLocator>().GetModule(type);
+
+        public object GetModule(ModuleType type)
+        {
+            return GetService<IModuleLocator>().GetModule(type);
         }
-        public object GetModule(ModuleType type, object viewModel) {
-            return GetService<Services.IModuleLocator>().GetModule(type, viewModel);
+
+        public object GetModule(ModuleType type, object viewModel)
+        {
+            return GetService<IModuleLocator>().GetModule(type, viewModel);
         }
-        public string GetModuleName(ModuleType type) {
-            return GetService<Services.IModuleTypesResolver>().GetName(type);
+
+        public string GetModuleName(ModuleType type)
+        {
+            return GetService<IModuleTypesResolver>().GetName(type);
         }
-        public System.Guid GetModuleID(ModuleType type) {
-            return GetService<Services.IModuleTypesResolver>().GetId(type);
+
+        public Guid GetModuleID(ModuleType type)
+        {
+            return GetService<IModuleTypesResolver>().GetId(type);
         }
-        public string GetModuleCaption(ModuleType type) {
-            return GetService<Services.IModuleResourceProvider>().GetCaption(type);
+
+        public string GetModuleCaption(ModuleType type)
+        {
+            return GetService<IModuleResourceProvider>().GetCaption(type);
         }
-        public object GetModuleImage(ModuleType type) {
-            return GetService<Services.IModuleResourceProvider>().GetModuleImage(type);
+
+        public object GetModuleImage(ModuleType type)
+        {
+            return GetService<IModuleResourceProvider>().GetModuleImage(type);
         }
-        public ModuleType GetPeekModuleType(ModuleType type) {
-            return GetService<Services.IModuleTypesResolver>().GetPeekModuleType(type);
+
+        public ModuleType GetPeekModuleType(ModuleType type)
+        {
+            return GetService<IModuleTypesResolver>().GetPeekModuleType(type);
         }
-        protected virtual void OnSelectedModuleTypeChanged(ModuleType oldType, ModuleInitializeMethod newModuleInitialize) {
-            var transitionService = GetService<Services.ITransitionService>();
-            using (transitionService.EnterTransition((SelectedModuleType != ModuleType.Unknown) && (oldType != ModuleType.Unknown))) {
-                var workspaceService = GetService<Services.IWorkspaceService>();
+
+        protected virtual void OnSelectedModuleTypeChanged(ModuleType oldType,
+            ModuleInitializeMethod newModuleInitialize)
+        {
+            var transitionService = GetService<ITransitionService>();
+            using (
+                transitionService.EnterTransition((SelectedModuleType != ModuleType.Unknown) &&
+                                                  (oldType != ModuleType.Unknown)))
+            {
+                var workspaceService = GetService<IWorkspaceService>();
                 var resolver = GetService<IModuleTypesResolver>();
-                if (oldType != ModuleType.Unknown) {
+                if (oldType != ModuleType.Unknown)
+                {
                     workspaceService.SaveWorkspace(resolver.GetName(oldType));
-                } else {
+                }
+                else
+                {
                     workspaceService.SetupDefaultWorkspace();
                 }
                 SelectedModule = GetModule(SelectedModuleType);
-                if (SelectedModuleType != ModuleType.Unknown) {
+                if (SelectedModuleType != ModuleType.Unknown)
+                {
                     workspaceService.RestoreWorkspace(resolver.GetName(SelectedModuleType));
                 }
-                if(SelectedModule != null && newModuleInitialize != null) newModuleInitialize(SelectedModule);
+                if (SelectedModule != null && newModuleInitialize != null) newModuleInitialize(SelectedModule);
             }
-            if(ModuleTransitionCompleted != null) ModuleTransitionCompleted(SelectedModule, EventArgs.Empty);
-
+            if (ModuleTransitionCompleted != null) ModuleTransitionCompleted(SelectedModule, EventArgs.Empty);
         }
-        protected virtual void OnSelectedModuleChanged(object oldModule) {
-            if (oldModule != null) {
-                if (ModuleRemoved != null) {
+
+        protected virtual void OnSelectedModuleChanged(object oldModule)
+        {
+            if (oldModule != null)
+            {
+                if (ModuleRemoved != null)
+                {
                     ModuleRemoved(oldModule, EventArgs.Empty);
                 }
             }
-            if (SelectedModule != null) {
+            if (SelectedModule != null)
+            {
                 ViewModelHelper.EnsureModuleViewModel(SelectedModule, this);
-                if (ModuleAdded != null) {
+                if (ModuleAdded != null)
+                {
                     ModuleAdded(SelectedModule, EventArgs.Empty);
                 }
             }
@@ -126,16 +180,16 @@ using PHRMS.Data;
         {
             TViewModel moduleViewModel = null;
 
-            var module = GetService<Services.IModuleLocator>().GetModule(moduleType);
+            var module = GetService<IModuleLocator>().GetModule(moduleType);
             if (module != null)
             {
-         
-                moduleViewModel = ((PHRMS.Modules.ISupportViewModel)module).ViewModel as TViewModel;
+                moduleViewModel = ((ISupportViewModel) module).ViewModel as TViewModel;
                 ViewModelHelper.EnsureViewModel(moduleViewModel, this);
             }
 
             return moduleViewModel;
         }
+
         public event EventHandler ModuleAdded;
         public event EventHandler ModuleRemoved;
         public event EventHandler ModuleTransitionCompleted;

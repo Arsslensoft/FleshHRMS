@@ -444,7 +444,8 @@
         <Properties>
           <CornerRadius Value="0" ValueType="System.Int32" />
         </Properties>
-        <Color SolidImageCenterGradientMode="Vertical" BackColor="WhiteSmoke" SolidImageCenterColor="White" SolidImageCenterColor2="White" />
+        <Color SolidImageCenterGradientMode="Vertical" BackColor="WhiteSmoke" SolidImageCenterColor="White"
+               SolidImageCenterColor2="White" />
       </ToolTipWindow>
     </Elements>
   </Skin2>
@@ -474,7 +475,8 @@
     <Elements>
       <CalendarNavigationButton>
         <ContentMargins Bottom="2" Top="2" Left="3" Right="3" />
-        <Glyph Stretch="NoResize" ImageCount="8" Layout="Vertical" ImageName="editors\calendarnavigationbutton_glyph.png" />
+        <Glyph Stretch="NoResize" ImageCount="8" Layout="Vertical"
+               ImageName="editors\calendarnavigationbutton_glyph.png" />
         <Properties>
           <AllowTouch Value="True" ValueType="System.Boolean" />
           <DisabledText Value="$DisabledText" ValueType="System.Drawing.Color" />
@@ -625,7 +627,8 @@
         <Image ImageCount="1" Layout="Vertical" Stretch="Stretch" ImageName="editors\rangecontrolleftthumb.png">
           <SizingMargins Bottom="1" Top="1" Left="1" Right="1" />
         </Image>
-        <Glyph Stretch="NoResize" ImageCount="1" Layout="Horizontal" ImageName="editors\rangecontrolleftthumb_glyph.png" />
+        <Glyph Stretch="NoResize" ImageCount="1" Layout="Horizontal"
+               ImageName="editors\rangecontrolleftthumb_glyph.png" />
         <Properties>
           <AllowTouch Value="True" ValueType="System.Boolean" />
         </Properties>
@@ -636,7 +639,8 @@
         <Image ImageCount="1" Layout="Vertical" Stretch="Stretch" ImageName="editors\rangecontrolrightthumb.png">
           <SizingMargins Bottom="2" Top="2" Left="2" Right="2" />
         </Image>
-        <Glyph Stretch="NoResize" ImageCount="1" Layout="Horizontal" ImageName="editors\rangecontrolrightthumb_glyph.png" />
+        <Glyph Stretch="NoResize" ImageCount="1" Layout="Horizontal"
+               ImageName="editors\rangecontrolrightthumb_glyph.png" />
         <Properties>
           <AllowTouch Value="True" ValueType="System.Boolean" />
         </Properties>
@@ -1195,7 +1199,8 @@
       </LayoutViewCardCaption>
       <LayoutViewCardCaptionHideSelection>
         <ContentMargins Bottom="6" Top="6" Left="10" Right="10" />
-        <Image ImageCount="2" Layout="Vertical" Stretch="Stretch" ImageName="grid\layoutviewcardcaptionhideselection.png">
+        <Image ImageCount="2" Layout="Vertical" Stretch="Stretch"
+               ImageName="grid\layoutviewcardcaptionhideselection.png">
           <SizingMargins Top="4" Left="4" Right="4" />
         </Image>
         <Properties>
@@ -2052,7 +2057,8 @@
       </AppointmentSameDayContent>
       <AppointmentSameDayLeftBorder>
         <ContentMargins Bottom="3" Top="3" Left="5" Right="5" />
-        <Image ImageCount="2" Layout="Vertical" Stretch="Stretch" ImageName="scheduler\appointmentsamedayleftborder.png">
+        <Image ImageCount="2" Layout="Vertical" Stretch="Stretch"
+               ImageName="scheduler\appointmentsamedayleftborder.png">
           <SizingMargins Bottom="1" Top="1" Left="1" />
         </Image>
         <Properties>
@@ -2077,7 +2083,8 @@
       </AppointmentSameDayNoRightBorder>
       <AppointmentSameDayRightBorder>
         <ContentMargins Bottom="3" Top="3" Left="5" Right="5" />
-        <Image ImageCount="2" Layout="Vertical" Stretch="Stretch" ImageName="scheduler\appointmentsamedayrightborder.png">
+        <Image ImageCount="2" Layout="Vertical" Stretch="Stretch"
+               ImageName="scheduler\appointmentsamedayrightborder.png">
           <SizingMargins Bottom="1" Top="1" Right="1" />
         </Image>
         <Properties>
@@ -2309,7 +2316,8 @@
         <Color BackColor="$Control" />
       </CollapsedGroupClient>
       <CollapsedGroupClientWithBorder>
-        <Image ImageCount="3" Layout="Vertical" Stretch="Stretch" ImageName="navpane\collapsedgroupclientwithborder.png" />
+        <Image ImageCount="3" Layout="Vertical" Stretch="Stretch"
+               ImageName="navpane\collapsedgroupclientwithborder.png" />
         <Color BackColor="$Control" />
       </CollapsedGroupClientWithBorder>
       <ExpandButton>
@@ -2406,7 +2414,8 @@
         <Image ImageCount="3" Layout="Vertical" Stretch="Stretch" ImageName="navpane\overflowpanelexpanditem.png">
           <SizingMargins Bottom="3" Top="4" Left="4" Right="3" />
         </Image>
-        <Glyph Stretch="NoResize" ImageCount="4" Layout="Vertical" ImageName="navpane\overflowpanelexpanditem_glyph.png" />
+        <Glyph Stretch="NoResize" ImageCount="4" Layout="Vertical"
+               ImageName="navpane\overflowpanelexpanditem_glyph.png" />
         <Properties>
           <AllowTouch Value="True" ValueType="System.Boolean" />
         </Properties>
@@ -3211,7 +3220,8 @@
         <Size MinSize="Width=2,Height=1" />
       </FormFrameBottom>
       <FormFrameBottomWithoutStatusBar>
-        <Image ImageCount="2" Layout="Vertical" Stretch="Stretch" ImageName="ribbon\formframebottomwithoutstatusbar.png">
+        <Image ImageCount="2" Layout="Vertical" Stretch="Stretch"
+               ImageName="ribbon\formframebottomwithoutstatusbar.png">
           <SizingMargins Bottom="1" Top="1" Left="1" Right="1" />
         </Image>
         <Size MinSize="Width=2,Height=5" />
@@ -3296,7 +3306,8 @@
         <Image ImageCount="1" Layout="Vertical" Stretch="Stretch" ImageName="ribbon\gallerybuttondropdowntouch.png">
           <SizingMargins Bottom="3" Top="3" Right="7" />
         </Image>
-        <Glyph Stretch="NoResize" ImageCount="4" Layout="Vertical" ImageName="ribbon\gallerybuttondropdowntouch_glyph.png" />
+        <Glyph Stretch="NoResize" ImageCount="4" Layout="Vertical"
+               ImageName="ribbon\gallerybuttondropdowntouch_glyph.png" />
         <Properties>
           <AllowTouch Value="True" ValueType="System.Boolean" />
         </Properties>
@@ -3496,7 +3507,8 @@
         <Color ForeColor="$ControlText" />
       </QuickToolbarBelowBackground>
       <QuickToolbarButtonGlyph>
-        <Glyph Stretch="NoResize" ImageCount="1" Layout="Horizontal" ImageName="ribbon\quicktoolbarbuttonglyph_glyph.png" />
+        <Glyph Stretch="NoResize" ImageCount="1" Layout="Horizontal"
+               ImageName="ribbon\quicktoolbarbuttonglyph_glyph.png" />
         <Size MinSize="Width=12,Height=12" />
       </QuickToolbarButtonGlyph>
       <QuickToolbarDropDown>
@@ -3914,7 +3926,8 @@
         <Color ForeColor="$ControlText" />
       </Card>
       <DashboardDragHintGlyph>
-        <Glyph Stretch="NoResize" ImageCount="1" Layout="Vertical" ImageName="dashboard\dashboarddraghintglyph_glyph.png" />
+        <Glyph Stretch="NoResize" ImageCount="1" Layout="Vertical"
+               ImageName="dashboard\dashboarddraghintglyph_glyph.png" />
         <Offset Kind="Default" Offset="X=5,Y=5" />
       </DashboardDragHintGlyph>
       <DashboardItemBackground>
@@ -3999,7 +4012,8 @@
         <Image ImageCount="3" Layout="Vertical" Stretch="Stretch" ImageName="dashboard\dragitemoptionsbutton.png">
           <SizingMargins Left="1" />
         </Image>
-        <Glyph Stretch="NoResize" ImageCount="3" Layout="Vertical" ImageName="dashboard\dragitemoptionsbutton_glyph.png" />
+        <Glyph Stretch="NoResize" ImageCount="3" Layout="Vertical"
+               ImageName="dashboard\dragitemoptionsbutton_glyph.png" />
       </DragItemOptionsButton>
     </Elements>
   </Skin19>
@@ -4110,7 +4124,8 @@
           <SizingMargins Bottom="52" Top="2" Left="69" Right="9" />
         </Image>
         <Properties>
-          <HighlightingEffectiveArea Value="(Left=5, Top=2, Right=5, Bottom=44)" ValueType="DevExpress.Skins.SkinPaddingEdges" />
+          <HighlightingEffectiveArea Value="(Left=5, Top=2, Right=5, Bottom=44)"
+                                     ValueType="DevExpress.Skins.SkinPaddingEdges" />
           <PointerHeight Value="0" ValueType="System.Int32" />
           <PointerX Value="33" ValueType="System.Int32" />
           <PointerY Value="5" ValueType="System.Int32" />
@@ -4162,5 +4177,5 @@
       </Shape>
     </Elements>
   </Skin23>
-  <Skin24 SkinProduct="NavigationPane" SkinName="HybridApp"/>
+  <Skin24 SkinProduct="NavigationPane" SkinName="HybridApp" />
 </Skins>

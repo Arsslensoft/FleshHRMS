@@ -1,124 +1,195 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using DevExpress.Mvvm.POCO;
-using PHRMS.ViewModels;
-using DevExpress.XtraEditors;
-using DevExpress.XtraBars.Navigation;
-using System.Drawing;
-using DevExpress.Utils.Gesture;
-using DevExpress.Utils.TouchHelpers;
+using DevExpress.Utils.About;
 using DevExpress.Utils.Animation;
-using DevExpress.XtraBars.Docking2010.Customization;
+using DevExpress.Utils.Gesture;
 using DevExpress.Utils.Menu;
-using DevExpress.Utils.Taskbar.Core;
 using DevExpress.Utils.Taskbar;
+using DevExpress.Utils.Taskbar.Core;
+using DevExpress.Utils.TouchHelpers;
+using DevExpress.XtraBars.Docking2010.Customization;
+using DevExpress.XtraBars.Navigation;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraSplashScreen;
+using PHRMS.Modules;
+using PHRMS.ViewModels;
 
-namespace PHRMS {
-    public partial class MainForm : XtraForm, IMainModule, ISwipeGestureClient {
+namespace PHRMS
+{
+    public partial class MainForm : XtraForm, IMainModule, ISwipeGestureClient
+    {
+        private bool allowFlyoutPanel = true;
+        private bool allowTransition = true;
+        private bool transitionEffective;
 
-        MainViewModel viewModel;
-        bool allowFlyoutPanel = true;
-        bool allowTransition = true;
-        public MainForm() {
+        private MainViewModel viewModel;
+
+        public MainForm()
+        {
             TaskbarHelper.InitDemoJumpList(TaskbarAssistant.Default, this);
-      
+
             Icon = Program.AppIcon;
             ShowSplashScreen();
             InitializeComponent();
             PrepareUI();
             InitViewModel();
-            
-            DevExpress.Utils.About.UAlgo.Default.DoEventObject(DevExpress.Utils.About.UAlgo.kDemo, DevExpress.Utils.About.UAlgo.pWinForms, this);
-        }
-      
-        internal void ShowSplashForLogin()
-        {
-            if (this.InvokeRequired)
-                this.Invoke(new Invoker(delegate() { this.ShowSplashScreen(); }));
-            else this.Show();
+
+            UAlgo.Default.DoEventObject(UAlgo.kDemo, UAlgo.pWinForms, this);
         }
 
-        void ShowSplashScreen() {
-          DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this,typeof( FleshSplashScreen),true,true,false);
-             
+        public void StartTransition(bool effective)
+        {
+            transitionEffective = effective;
+            if (!allowTransition) return;
+            if (effective) transitionManager1.StartTransition(modulesContainer);
         }
-   
-        void MainForm_Load(object sender, EventArgs e) {
-      
-         
-          
+
+        public void EndTransition(bool effective)
+        {
+            if (!effective || !allowTransition)
+            {
+                transitionManager1_AfterTransitionEnds(null, EventArgs.Empty);
+                return;
+            }
+            transitionManager1.EndTransition();
+        }
+
+        public bool IsDocked(ModuleType type)
+        {
+            return true;
+        }
+
+        public void DockModule(ModuleType moduleType)
+        {
+        }
+
+        public void ShowPeek(ModuleType moduleType)
+        {
+        }
+
+        public void SaveLayoutToStream(MemoryStream ms)
+        {
+        }
+
+        public void RestoreLayoutFromStream(MemoryStream ms)
+        {
+        }
+
+        public IDXMenuManager MenuManager
+        {
+            get { return barManager1; }
+        }
+
+        public void OnSwipe(SwipeEventArgs args)
+        {
+            if (args.IsBottomEdge && allowFlyoutPanel)
+            {
+                flyoutPanel1.ShowPopup();
+            }
+        }
+
+        internal void ShowSplashForLogin()
+        {
+            if (InvokeRequired)
+                Invoke(new Invoker(delegate { ShowSplashScreen(); }));
+            else Show();
+        }
+
+        private void ShowSplashScreen()
+        {
+            SplashScreenManager.ShowForm(this, typeof(FleshSplashScreen), true, true, false);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
             mainTileBar.SelectedItem = dashboardTileBarItem;
             InitTileBar();
 
 
-            PHRMS.Modules.Dashboard.MainView = viewModel;
+            Dashboard.MainView = viewModel;
             viewModel.SelectModule(ModuleType.Dashboard);
-        
-      
-
         }
-    
-        void InitViewModel() {
+
+        private void InitViewModel()
+        {
             viewModel = ViewModelSource.Create(() => new MainViewModel(this));
-         
-            Login lg = new Login(viewModel);
-             DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm();
+
+            var lg = new Login(viewModel);
+            SplashScreenManager.CloseForm();
             lg.ShowDialog();
-           DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this, typeof(FleshSplashScreen), true, true, false);
+            SplashScreenManager.ShowForm(this, typeof(FleshSplashScreen), true, true, false);
 
             PrefetchChildModules();
             viewModel.ModuleAdded += viewModel_ModuleAdded;
             viewModel.ModuleRemoved += viewModel_ModuleRemoved;
             viewModel.ModuleTransitionCompleted += viewModel_ModuleTransitionCompleted;
-       
         }
 
 
-        private void PrefetchChildModules() {
-            if(System.Diagnostics.Debugger.IsAttached) return;
-       
+        private void PrefetchChildModules()
+        {
+            if (Debugger.IsAttached) return;
+
             viewModel.GetModule(ModuleType.Congés);
-          
         }
-        void viewModel_ModuleAdded(object sender, EventArgs e) {
+
+        private void viewModel_ModuleAdded(object sender, EventArgs e)
+        {
             var moduleControl = sender as Control;
             moduleControl.Dock = DockStyle.Fill;
             moduleControl.Size = modulesContainer.ClientSize;
             moduleControl.Parent = modulesContainer;
         }
-        void viewModel_ModuleRemoved(object sender, EventArgs e) {
+
+        private void viewModel_ModuleRemoved(object sender, EventArgs e)
+        {
             var moduleControl = sender as Control;
             moduleControl.Parent = null;
         }
-        void transitionManager1_BeforeTransitionStarts(ITransition transition, System.ComponentModel.CancelEventArgs e) {
+
+        private void transitionManager1_BeforeTransitionStarts(ITransition transition, CancelEventArgs e)
+        {
             bottomPanelBase1.Enabled = true;
         }
-        void transitionManager1_AfterTransitionEnds(ITransition transition, System.EventArgs e) {
-            if(!IsHandleCreated) return;
-            var method = new MethodInvoker(() => {
+
+        private void transitionManager1_AfterTransitionEnds(ITransition transition, EventArgs e)
+        {
+            if (!IsHandleCreated) return;
+            var method = new MethodInvoker(() =>
+            {
                 bottomPanelBase1.Enabled = true;
-                var moduleControl = viewModel.SelectedModule as PHRMS.Modules.BaseModuleControl;
-                if(moduleControl != null) moduleControl.OnTransitionCompleted();
+                var moduleControl = viewModel.SelectedModule as BaseModuleControl;
+                if (moduleControl != null) moduleControl.OnTransitionCompleted();
             });
-            if(InvokeRequired) BeginInvoke(method);
+            if (InvokeRequired) BeginInvoke(method);
             else method();
         }
 
-        void viewModel_ModuleTransitionCompleted(object sender, EventArgs e) {
-       
+        private void viewModel_ModuleTransitionCompleted(object sender, EventArgs e)
+        {
         }
-        void ChangeToSlideAnimation() {
+
+        private void ChangeToSlideAnimation()
+        {
             transitionManager1.Transitions.Clear();
-            DevExpress.Utils.Animation.SlideTransition slide = new SlideTransition();
+            var slide = new SlideTransition();
             slide.Parameters.FrameInterval = 5000;
-            Transition transition = new Transition();
+            var transition = new Transition();
             transition.TransitionType = slide;
             transition.Control = modulesContainer;
             transitionManager1.Transitions.Add(transition);
         }
-        void PrepareUI() {
-            if(Program.IsTablet) {
+
+        private void PrepareUI()
+        {
+            if (Program.IsTablet)
+            {
                 ChangeToSlideAnimation();
                 TouchKeyboardSupport.EnableTouchKeyboard = true;
                 SetupAsTablet();
@@ -127,24 +198,33 @@ namespace PHRMS {
             SetupHeightWidth();
             DisableBottomPanelSwipe();
         }
-        void SetupHeightWidth() {
-            if(Screen.PrimaryScreen.WorkingArea.Height > 970) {
+
+        private void SetupHeightWidth()
+        {
+            if (Screen.PrimaryScreen.WorkingArea.Height > 970)
+            {
                 ClientSize = new Size(ClientSize.Width, 945);
             }
         }
-        void DisableBottomPanelSwipe() {
+
+        private void DisableBottomPanelSwipe()
+        {
             bottomPanelBase1.Dock = DockStyle.Bottom;
             bottomPanelBase1.Parent = this;
             bottomPanelBase1.SendToBack();
             allowFlyoutPanel = false;
         }
-        void SetupAsTablet() {
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+
+        private void SetupAsTablet()
+        {
+            FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             DisableBottomPanelSwipe();
-            WindowsFormsSettings.PopupMenuStyle = DevExpress.XtraEditors.Controls.PopupMenuStyle.RadialMenu;
+            WindowsFormsSettings.PopupMenuStyle = PopupMenuStyle.RadialMenu;
         }
-        void InitTileBar() {
+
+        private void InitTileBar()
+        {
             dashboardTileBarItem.Tag = ModuleType.Dashboard;
 
             employeesTileBarItem.Tag = ModuleType.Employés;
@@ -154,75 +234,62 @@ namespace PHRMS {
             warningsTileBarItem.Tag = ModuleType.Avertissements;
             statsTileBarItem.Tag = ModuleType.Statistiques;
         }
-        bool transitionEffective = false;
-        public void StartTransition(bool effective) {
-            this.transitionEffective = effective;
-            if(!allowTransition) return;
-            if(effective) transitionManager1.StartTransition(modulesContainer);
+
+        public static void ShowNewItemMessage(Control source)
+        {
+            XtraMessageBox.Show(source.FindForm(), "Add NewItem", "Waring", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
-        public void EndTransition(bool effective) {
-            if(!effective || !allowTransition) {
-                transitionManager1_AfterTransitionEnds(null, EventArgs.Empty);
-                return;
-            }
-            transitionManager1.EndTransition();
-        }
-        public void OnSwipe(SwipeEventArgs args) {
-            if(args.IsBottomEdge && allowFlyoutPanel) {
-                flyoutPanel1.ShowPopup();
-            }
-        }
-        public static void ShowNewItemMessage(Control source) {
-            XtraMessageBox.Show(source.FindForm(), "Add NewItem", "Waring", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-        void navButtonClose_ElementClick(object sender, NavElementEventArgs e) {
-            Login lg = new Login(viewModel);
+
+        private void navButtonClose_ElementClick(object sender, NavElementEventArgs e)
+        {
+            var lg = new Login(viewModel);
             lg.ShowDialog();
         }
-        public bool IsDocked(ModuleType type) { return true; }
-        public void DockModule(ModuleType moduleType) { }
-        public void ShowPeek(ModuleType moduleType) { }
-        public void SaveLayoutToStream(MemoryStream ms) { }
-        public void RestoreLayoutFromStream(MemoryStream ms) { }
-        public IDXMenuManager MenuManager { get { return barManager1; } }
 
-        private void productTileBar_ItemClick(object sender, TileItemEventArgs e) {
+        private void productTileBar_ItemClick(object sender, TileItemEventArgs e)
+        {
             mainTileBar.HideDropDownWindow();
         }
 
-        private void customTileBar_ItemClick(object sender, TileItemEventArgs e) {
+        private void customTileBar_ItemClick(object sender, TileItemEventArgs e)
+        {
             mainTileBar.HideDropDownWindow();
         }
 
-        private void mainTileBar_SelectedItemChanged(object sender, TileItemEventArgs e) {
-            if(e.Item.Tag is ModuleType) {
-                viewModel.SelectModule((ModuleType)e.Item.Tag);
+        private void mainTileBar_SelectedItemChanged(object sender, TileItemEventArgs e)
+        {
+            if (e.Item.Tag is ModuleType)
+            {
+                viewModel.SelectModule((ModuleType) e.Item.Tag);
             }
         }
 
-        private void navButtonSettings_ElementClick(object sender, NavElementEventArgs e) {
-            Modules.SettingsUC settingsUC = new Modules.SettingsUC(allowTransition);
-            DialogResult result = FlyoutDialog.Show(this, settingsUC);
-            if(result == System.Windows.Forms.DialogResult.OK) {
+        private void navButtonSettings_ElementClick(object sender, NavElementEventArgs e)
+        {
+            var settingsUC = new SettingsUC(allowTransition);
+            var result = FlyoutDialog.Show(this, settingsUC);
+            if (result == DialogResult.OK)
+            {
                 allowTransition = settingsUC.checkEdit1.Checked;
             }
         }
-        void navButtonHelp_ElementClick(object sender, NavElementEventArgs e) {
-            AboutForm ab = new AboutForm();
+
+        private void navButtonHelp_ElementClick(object sender, NavElementEventArgs e)
+        {
+            var ab = new AboutForm();
             ab.ShowDialog();
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            this.Show();
+            Show();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-              //  this.Hide();
-                //e.Cancel = true;
+            //  this.Hide();
+            //e.Cancel = true;
         }
-
-  
     }
 }

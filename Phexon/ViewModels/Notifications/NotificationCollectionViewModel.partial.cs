@@ -1,12 +1,8 @@
-﻿using PHRMS.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using PHRMS.Data;
 
-using DevExpress.Mvvm;
-
-namespace PHRMS.ViewModels {
+namespace PHRMS.ViewModels
+{
     partial class NotificationCollectionViewModel
     {
         //public List<SalesInfo> GetSales() {
@@ -115,26 +111,37 @@ namespace PHRMS.ViewModels {
         //    MessageBoxService.ShowMessage("To ensure data integrity, the Sales module doesn't allow records to be deleted. Record deletion is supported by the Employés module.", "Delete Sale", MessageButton.OK);
         //}
     }
-    public class CostInfo {
-        public List<CostProductInfo> ListProductInfo { get; set; }
-        public CostInfo() {
+
+    public class CostInfo
+    {
+        public CostInfo()
+        {
             ListProductInfo = new List<CostProductInfo>();
         }
+
+        public List<CostProductInfo> ListProductInfo { get; set; }
     }
 
-    public class CostProductInfo {
+    public class CostProductInfo
+    {
         public string Name { get; set; }
         public decimal Value { get; set; }
     }
-    public class SalesInfo {
+
+    public class SalesInfo
+    {
+        public SalesInfo()
+        {
+            ListProductInfo = new List<SalesProductInfo>();
+        }
+
         public string Caption { get; set; }
         public List<SalesProductInfo> ListProductInfo { get; set; }
         public DateTime time { get; set; }
-        public SalesInfo() {
-            ListProductInfo = new List<SalesProductInfo>();
-        }
     }
-    public class SalesProductInfo {
+
+    public class SalesProductInfo
+    {
         public string Name { get; set; }
         public decimal Value { get; set; }
     }

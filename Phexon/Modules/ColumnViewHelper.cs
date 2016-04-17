@@ -1,55 +1,67 @@
-﻿namespace PHRMS {
-    using System.Drawing;
-    using DevExpress.XtraGrid.Views.Base;
-    using PHRMS.ViewModels;
-    using PHRMS.Data;
+﻿using System.Drawing;
+using DevExpress.Utils.Menu;
+using DevExpress.XtraGrid.Views.Base;
+using PHRMS.Data;
+using PHRMS.ViewModels;
 
+namespace PHRMS
+{
     internal class ColumnViewHelper<TEntity, TID, TUnitOfWork>
-        where TEntity: class
+        where TEntity : class
         where TUnitOfWork : class, IUnitOfWork
+    {
+        private readonly ColumnView view;
+        private readonly CollectionViewModel<TEntity, TID, TUnitOfWork> viewModel;
+
+        public ColumnViewHelper(ColumnView view, CollectionViewModel<TEntity, TID, TUnitOfWork> viewModel)
         {
-            private CollectionViewModel<TEntity, TID, TUnitOfWork> viewModel;
-            private ColumnView view;
-            public ColumnViewHelper(ColumnView view, CollectionViewModel<TEntity, TID, TUnitOfWork> viewModel) {
-                this.view = view;
-                this.viewModel = viewModel;
-            }
-            public bool ShowEntityMeny(Point pt, int rowHandle) {
-                var entity = view.GetRow(rowHandle) as TEntity;
-                if (entity != null) {
-                    var rowMenu = CreateEntityMenu(entity);
-                    DevExpress.Utils.Menu.MenuManagerHelper.ShowMenu(rowMenu, view.GridControl.LookAndFeel,
+            this.view = view;
+            this.viewModel = viewModel;
+        }
+
+        public bool ShowEntityMeny(Point pt, int rowHandle)
+        {
+            var entity = view.GetRow(rowHandle) as TEntity;
+            if (entity != null)
+            {
+                var rowMenu = CreateEntityMenu(entity);
+                MenuManagerHelper.ShowMenu(rowMenu, view.GridControl.LookAndFeel,
                     view.GridControl.MenuManager, view.GridControl, pt);
-                    return true;
-                }
-                return false;
+                return true;
             }
-            public bool EditEntity(int rowHandle) {
-                var entity = view.GetRow(rowHandle) as TEntity;
-                if (entity != null && viewModel.CanEdit(entity)) {
-                    viewModel.Edit(entity);
-                    return true;
-                }
-                return false;
+            return false;
+        }
+
+        public bool EditEntity(int rowHandle)
+        {
+            var entity = view.GetRow(rowHandle) as TEntity;
+            if (entity != null && viewModel.CanEdit(entity))
+            {
+                viewModel.Edit(entity);
+                return true;
             }
-            protected  DevExpress.Utils.Menu.DXPopupMenu CreateEntityMenu(TEntity entity) {
-                var rowMenu = new DevExpress.Utils.Menu.DXPopupMenu();
-                var newItem = new DevExpress.Utils.Menu.DXMenuItem();
-                newItem.Caption = "New";
-                newItem.BindCommand(() => viewModel.New(), viewModel);
+            return false;
+        }
 
-                var editItem = new DevExpress.Utils.Menu.DXMenuItem();
-                editItem.Caption = "Edit...";
-                editItem.BindCommand((ee) => viewModel.Edit(ee), viewModel, () => entity);
+        protected DXPopupMenu CreateEntityMenu(TEntity entity)
+        {
+            var rowMenu = new DXPopupMenu();
+            var newItem = new DXMenuItem();
+            newItem.Caption = "New";
+            newItem.BindCommand(() => viewModel.New(), viewModel);
 
-                var deleteItem = new DevExpress.Utils.Menu.DXMenuItem();
-                deleteItem.Caption = "Delete";
-                deleteItem.BindCommand((ee) => viewModel.Delete(ee), viewModel, () => entity);
+            var editItem = new DXMenuItem();
+            editItem.Caption = "Edit...";
+            editItem.BindCommand(ee => viewModel.Edit(ee), viewModel, () => entity);
 
-                rowMenu.Items.Add(newItem);
-                rowMenu.Items.Add(editItem);
-                rowMenu.Items.Add(deleteItem);
-                return rowMenu;
-            }
+            var deleteItem = new DXMenuItem();
+            deleteItem.Caption = "Delete";
+            deleteItem.BindCommand(ee => viewModel.Delete(ee), viewModel, () => entity);
+
+            rowMenu.Items.Add(newItem);
+            rowMenu.Items.Add(editItem);
+            rowMenu.Items.Add(deleteItem);
+            return rowMenu;
         }
     }
+}

@@ -26,7 +26,7 @@ namespace PHRMS.Preview {
         private void InitializeComponent() {
             this.layoutControl = new DevExpress.XtraLayout.LayoutControl();
             this.btnExport = new DevExpress.XtraEditors.DropDownButton();
-            this.settingsPanel = new PHRMS.SettingPanel();
+            this.SettingsPanel = new PHRMS.SettingPanel();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.simpleLabelItem1 = new DevExpress.XtraLayout.SimpleLabelItem();
             this.layoutControlItemSettings = new DevExpress.XtraLayout.LayoutControlItem();
@@ -47,7 +47,7 @@ namespace PHRMS.Preview {
             // 
             this.layoutControl.AllowCustomization = false;
             this.layoutControl.Controls.Add(this.btnExport);
-            this.layoutControl.Controls.Add(this.settingsPanel);
+            this.layoutControl.Controls.Add(this.SettingsPanel);
             this.layoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl.Location = new System.Drawing.Point(0, 0);
             this.layoutControl.Name = "layoutControl";
@@ -70,10 +70,10 @@ namespace PHRMS.Preview {
             // 
             // settingsPanel
             // 
-            this.settingsPanel.Location = new System.Drawing.Point(40, 215);
-            this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(299, 328);
-            this.settingsPanel.TabIndex = 4;
+            this.SettingsPanel.Location = new System.Drawing.Point(40, 215);
+            this.SettingsPanel.Name = "SettingsPanel";
+            this.SettingsPanel.Size = new System.Drawing.Size(299, 328);
+            this.SettingsPanel.TabIndex = 4;
             // 
             // layoutControlGroup1
             // 
@@ -108,7 +108,7 @@ namespace PHRMS.Preview {
             // 
             this.layoutControlItemSettings.AppearanceItemCaption.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.layoutControlItemSettings.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItemSettings.Control = this.settingsPanel;
+            this.layoutControlItemSettings.Control = this.SettingsPanel;
             this.layoutControlItemSettings.CustomizationFormText = "Settings";
             this.layoutControlItemSettings.Location = new System.Drawing.Point(0, 164);
             this.layoutControlItemSettings.Name = "layoutControlItem4";
@@ -173,7 +173,6 @@ namespace PHRMS.Preview {
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl;
-        private SettingPanel settingsPanel;
         private DevExpress.XtraEditors.DropDownButton btnExport;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;

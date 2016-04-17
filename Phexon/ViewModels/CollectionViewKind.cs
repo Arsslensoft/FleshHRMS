@@ -1,5 +1,7 @@
-﻿namespace PHRMS.ViewModels {
-    public enum CollectionViewKind {
+﻿namespace PHRMS.ViewModels
+{
+    public enum CollectionViewKind
+    {
         ListView,
         CardView,
         Carousel

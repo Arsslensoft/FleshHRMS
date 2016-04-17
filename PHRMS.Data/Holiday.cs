@@ -1,16 +1,10 @@
-﻿using PHRMS.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Drawing;
-using System.Runtime.Serialization;
+
 namespace PHRMS.Data
 {
     public class Holiday : DatabaseObject
     {
-
         public long? CreatedById { get; set; }
         public virtual Employee CreatedBy { get; set; }
 
@@ -19,19 +13,11 @@ namespace PHRMS.Data
         public DateTime StartDate { get; set; }
         public DateTime DueDate { get; set; }
 
-        
-     
+
         [NotMapped]
         public TimeSpan TotalTime
         {
-            get
-            {
-
-                return StartDate - DueDate;
-            }
+            get { return StartDate - DueDate; }
         }
-
-
-
     }
 }

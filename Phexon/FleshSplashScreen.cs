@@ -1,32 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
+using DevExpress.XtraSplashForm;
 
 namespace PHRMS
 {
-    delegate void Invoker();
-    public partial class FleshSplashScreen : DevExpress.XtraSplashForm.SplashFormBase
+    internal delegate void Invoker();
+
+    public partial class FleshSplashScreen : SplashFormBase
     {
         public FleshSplashScreen()
         {
             InitializeComponent();
-         
         }
-    
+
 
         private void labelControl2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void labelControl1_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

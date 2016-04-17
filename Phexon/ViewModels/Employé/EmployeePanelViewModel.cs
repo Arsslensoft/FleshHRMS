@@ -1,3 +1,3 @@
-﻿namespace PHRMS.ViewModels {
-    using System;
+﻿namespace PHRMS.ViewModels
+{
 }

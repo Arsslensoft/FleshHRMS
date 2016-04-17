@@ -1,18 +1,26 @@
-using DevExpress.Internal;
 using System;
 using System.Data.Common;
 using System.Data.Entity;
-using System.IO;
 
-namespace PHRMS.Data {
-    public class PhexonDb : DbContext {
-        public PhexonDb() : base(CreateConnection(), true) { }
-        public PhexonDb(string connectionString) : base(connectionString) { }
-        public PhexonDb(DbConnection connection) : base(connection, true) { }
-
-        static PhexonDb() {
-       
+namespace PHRMS.Data
+{
+    public class PhexonDb : DbContext
+    {
+        static PhexonDb()
+        {
             Database.SetInitializer<PhexonDb>(null);
+        }
+
+        public PhexonDb() : base(CreateConnection(), true)
+        {
+        }
+
+        public PhexonDb(string connectionString) : base(connectionString)
+        {
+        }
+
+        public PhexonDb(DbConnection connection) : base(connection, true)
+        {
         }
 
         public DbSet<Employee> Employees { get; set; }
@@ -27,16 +35,20 @@ namespace PHRMS.Data {
         public DbSet<DatabaseVersion> Version { get; set; }
 
 
-
-
-        static DbConnection CreateConnection() {
-      
+        private static DbConnection CreateConnection()
+        {
+            PhexonConfigurationManager.Initialize();
             var connection = DbProviderFactories.GetFactory("MySql.Data.MySqlClient").CreateConnection();
-            connection.ConnectionString = "Server=localhost;Database=fhrms;Uid=root;Pwd=;";
+            connection.ConnectionString = string.Format("Server={0};Database={1};Uid={2};Pwd={3};Port={4}",
+                PhexonConfigurationManager.Configuration.Host, PhexonConfigurationManager.Configuration.Database,
+                PhexonConfigurationManager.Configuration.User, PhexonConfigurationManager.Configuration.Password,
+                PhexonConfigurationManager.Configuration.Port);
             return connection;
         }
     }
-    public class DatabaseVersion : DatabaseObject {
+
+    public class DatabaseVersion : DatabaseObject
+    {
         public DateTime Date { get; set; }
     }
 }

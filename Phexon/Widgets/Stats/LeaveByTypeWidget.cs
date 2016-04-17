@@ -1,48 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
+using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
-using System.Text;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
-using PHRMS.ViewModels;
-using PHRMS.Modules;
+using DevExpress.Utils;
 using DevExpress.XtraCharts;
-using System.Reflection;
+using PHRMS.Data;
+using PHRMS.ViewModels;
 
 namespace PHRMS.Widgets
 {
     public partial class LeaveByTypeWidget : UserControl, IDashboardWidget
     {
+        public LeaveByTypeWidget()
+        {
+            InitializeComponent();
+
+            //SalesPerformanceDataGenerator.Current.UpdateDataSource += OnUpdateDataSource;
+        }
+
+        public void LoadDashboard(BoardViewModel value)
+        {
+            Controls.Add(GetLeavesByTypeChartControl(value));
+        }
+
         public static T GetAttribute<T>(Enum enumValue) where T : Attribute
         {
             T attribute;
 
-            MemberInfo memberInfo = enumValue.GetType().GetMember(enumValue.ToString())
-                                            .FirstOrDefault();
+            var memberInfo = enumValue.GetType().GetMember(enumValue.ToString())
+                .FirstOrDefault();
 
             if (memberInfo != null)
             {
-                attribute = (T)memberInfo.GetCustomAttributes(typeof(T), false).FirstOrDefault();
+                attribute = (T) memberInfo.GetCustomAttributes(typeof(T), false).FirstOrDefault();
                 return attribute;
             }
             return null;
         }
-    
-  
+
+
         public ChartControl GetLeavesByTypeChartControl(BoardViewModel value)
         {
             var data = CacheStats(value);
-            System.ComponentModel.DataAnnotations.DisplayAttribute dispatt = null;
+            DisplayAttribute dispatt = null;
             // Create an empty chart.
-            ChartControl pieChart = new ChartControl();
+            var pieChart = new ChartControl();
             // Create a pie series.
-            Series series1 = new Series("Congés par types", ViewType.Pie);
+            var series1 = new Series("Congés par types", ViewType.Pie);
             foreach (var at in data)
             {
                 dispatt = null;
-                series1.Points.Add(new SeriesPoint((dispatt = GetAttribute<System.ComponentModel.DataAnnotations.DisplayAttribute>(at.Type)) != null ? dispatt.Name : at.Type.ToString(), at.Percentage * 100));
+                series1.Points.Add(
+                    new SeriesPoint(
+                        (dispatt = GetAttribute<DisplayAttribute>(at.Type)) != null ? dispatt.Name : at.Type.ToString(),
+                        at.Percentage*100));
             }
 
             // Add the series to the chart.
@@ -52,13 +66,13 @@ namespace PHRMS.Widgets
             series1.Label.TextPattern = "{A}: {VP:p0}";
 
             // Adjust the position of series labels. 
-            ((PieSeriesLabel)series1.Label).Position = PieSeriesLabelPosition.TwoColumns;
+            ((PieSeriesLabel) series1.Label).Position = PieSeriesLabelPosition.TwoColumns;
 
             // Detect overlapping of series labels.
-            ((PieSeriesLabel)series1.Label).ResolveOverlappingMode = ResolveOverlappingMode.Default;
+            ((PieSeriesLabel) series1.Label).ResolveOverlappingMode = ResolveOverlappingMode.Default;
 
             // Access the view-type-specific options of the series.
-            PieSeriesView myView = (PieSeriesView)series1.View;
+            var myView = (PieSeriesView) series1.View;
 
             // Show a title for the series.
             myView.Titles.Add(new SeriesTitle());
@@ -67,28 +81,28 @@ namespace PHRMS.Widgets
             myView.HeightToWidthRatio = 0.75;
 
             // Hide the legend (if necessary).
-            pieChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            pieChart.Legend.Visibility = DefaultBoolean.False;
 
             // Add the chart to the form.
             pieChart.Dock = DockStyle.Fill;
 
             return pieChart;
         }
-        IEnumerable<PercentageStats<Data.LeaveType>> CacheStats(BoardViewModel bv)
-        {
-            IEnumerable<PercentageStats<Data.LeaveType>> result = null;
-            string filename = Application.StartupPath + "\\Data\\leaveTPstats.dat";
-            if (System.IO.File.Exists(filename))
-            {
 
-                if (DateTime.Now.Subtract(new System.IO.FileInfo(filename).LastWriteTime).TotalDays >= 1)
+        private IEnumerable<PercentageStats<LeaveType>> CacheStats(BoardViewModel bv)
+        {
+            IEnumerable<PercentageStats<LeaveType>> result = null;
+            var filename = Application.StartupPath + "\\Data\\leaveTPstats.dat";
+            if (File.Exists(filename))
+            {
+                if (DateTime.Now.Subtract(new FileInfo(filename).LastWriteTime).TotalDays >= 1)
                 {
                     result = bv.LeavesByType;
 
-                    System.IO.File.Delete(filename);
+                    File.Delete(filename);
 
-                    System.IO.Stream stream = System.IO.File.Open(filename, System.IO.FileMode.Create);
-                    System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                    Stream stream = File.Open(filename, FileMode.Create);
+                    var bformatter = new BinaryFormatter();
 
 
                     bformatter.Serialize(stream, result);
@@ -96,56 +110,41 @@ namespace PHRMS.Widgets
                 }
                 else // deserialize
                 {
+                    Stream stream = File.Open(filename, FileMode.Open);
+                    var bformatter = new BinaryFormatter();
 
-                    System.IO.Stream stream = System.IO.File.Open(filename, System.IO.FileMode.Open);
-                    System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-
-                    result = (IEnumerable<PercentageStats<Data.LeaveType>>)bformatter.Deserialize(stream);
+                    result = (IEnumerable<PercentageStats<LeaveType>>) bformatter.Deserialize(stream);
                     stream.Close();
-
                 }
             }
             else
             {
                 result = bv.LeavesByType;
 
-                System.IO.Stream stream = System.IO.File.Open(filename, System.IO.FileMode.Create);
-                System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                Stream stream = File.Open(filename, FileMode.Create);
+                var bformatter = new BinaryFormatter();
 
 
                 bformatter.Serialize(stream, result);
                 stream.Close();
-
             }
 
             return result;
         }
 
-        public  void LoadDashboard(BoardViewModel value)
+        protected override void Dispose(bool disposing)
         {
-            this.Controls.Add(GetLeavesByTypeChartControl(value));
-        }
-
-
-        public LeaveByTypeWidget()
-        {
-            InitializeComponent();
-           
-            //SalesPerformanceDataGenerator.Current.UpdateDataSource += OnUpdateDataSource;
-
-        }
-        protected override void Dispose(bool disposing) {
-            
             //SalesPerformanceDataGenerator.Current.UpdateDataSource -= OnUpdateDataSource;
-            if(disposing && (components != null)) {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
         }
 
-        void OnUpdateDataSource(object sender, EventArgs e) {
-           // monthlySalesItemBindingSource.DataSource = SalesPerformanceDataGenerator.Current.MonthlySales;
+        private void OnUpdateDataSource(object sender, EventArgs e)
+        {
+            // monthlySalesItemBindingSource.DataSource = SalesPerformanceDataGenerator.Current.MonthlySales;
         }
     }
- 
 }

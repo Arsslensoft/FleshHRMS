@@ -1,0 +1,7 @@
+{
+"Host":"localhost",
+"User":"root",
+"Password":"",
+"Port":3306,
+"Database":"fhrms"
+}

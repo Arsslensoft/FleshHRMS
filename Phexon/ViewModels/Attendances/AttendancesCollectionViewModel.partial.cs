@@ -1,22 +1,30 @@
 ﻿using System.Linq;
 using PHRMS.Data;
-using PHRMS.ViewModels;
 
-namespace PHRMS.ViewModels {
+namespace PHRMS.ViewModels
+{
     partial class AttendancesCollectionViewModel
     {
-        public int AllCount {
+        public int AllCount
+        {
             get { return GetAllCount(); }
         }
-        public int TodaysCount {
+
+        public int TodaysCount
+        {
             get { return GetTodaysCount(); }
         }
-        public int JustifiedExitCount {
+
+        public int JustifiedExitCount
+        {
             get { return GetJustifiedExitCount(); }
         }
-        public int ExitCount {
+
+        public int ExitCount
+        {
             get { return GetExitCount(); }
         }
+
         public int BothCount
         {
             get { return GetBothCount(); }
@@ -27,31 +35,34 @@ namespace PHRMS.ViewModels {
             get { return GetEnterCount(); }
         }
 
-        int GetTodaysCount()
+        private int GetTodaysCount()
         {
             return Entities.Where(e => e.ADate == AttendanceDate.Today).Count();
         }
-        int GetJustifiedExitCount()
+
+        private int GetJustifiedExitCount()
         {
             return Entities.Where(e => e.Type == AttendanceType.JustifiedExit).Count();
         }
-        int GetExitCount()
+
+        private int GetExitCount()
         {
             return Entities.Where(e => e.Type == AttendanceType.UnjustifiedExit).Count();
         }
-        int GetBothCount()
+
+        private int GetBothCount()
         {
             return Entities.Where(e => e.Type == AttendanceType.Both).Count();
         }
-        int GetEnterCount()
+
+        private int GetEnterCount()
         {
             return Entities.Where(e => e.Type == AttendanceType.EnterOnly).Count();
         }
 
-        int GetAllCount() {
+        private int GetAllCount()
+        {
             return Entities.Count();
         }
-     
-
     }
 }

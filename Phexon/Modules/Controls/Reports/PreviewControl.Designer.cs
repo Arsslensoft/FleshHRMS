@@ -25,7 +25,7 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportPreviewControl));
-            this.documentViewer = new DevExpress.XtraPrinting.Preview.DocumentViewer();
+            this.DocumentViewer = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.documentViewerBarManager1 = new DevExpress.XtraPrinting.Preview.DocumentViewerBarManager(this.components);
             this.printPreviewBarItem18 = new DevExpress.XtraPrinting.Preview.PrintPreviewBarItem();
             this.printPreviewStaticItem1 = new DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem();
@@ -49,17 +49,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemZoomTrackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.printPreviewRepositoryItemComboBox1)).BeginInit();
             this.SuspendLayout();
-            this.documentViewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.documentViewer.IsMetric = false;
-            this.documentViewer.Location = new System.Drawing.Point(0, 0);
-            this.documentViewer.Name = "documentViewer";
-            this.documentViewer.Size = new System.Drawing.Size(1045, 584);
-            this.documentViewer.TabIndex = 0;
+            this.DocumentViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocumentViewer.IsMetric = false;
+            this.DocumentViewer.Location = new System.Drawing.Point(0, 0);
+            this.DocumentViewer.Name = "DocumentViewer";
+            this.DocumentViewer.Size = new System.Drawing.Size(1045, 584);
+            this.DocumentViewer.TabIndex = 0;
             this.documentViewerBarManager1.DockControls.Add(this.barDockControlTop);
             this.documentViewerBarManager1.DockControls.Add(this.barDockControlBottom);
             this.documentViewerBarManager1.DockControls.Add(this.barDockControlLeft);
             this.documentViewerBarManager1.DockControls.Add(this.barDockControlRight);
-            this.documentViewerBarManager1.DocumentViewer = this.documentViewer;
+            this.documentViewerBarManager1.DocumentViewer = this.DocumentViewer;
             this.documentViewerBarManager1.Form = this;
             this.documentViewerBarManager1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("documentViewerBarManager1.ImageStream")));
             this.documentViewerBarManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
@@ -190,7 +190,7 @@
             this.printPreviewRepositoryItemComboBox1.Name = "printPreviewRepositoryItemComboBox1";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.documentViewer);
+            this.Controls.Add(this.DocumentViewer);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -207,7 +207,6 @@
 
         #endregion
 
-        private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer;
         private DevExpress.XtraPrinting.Preview.DocumentViewerBarManager documentViewerBarManager1;
         private DevExpress.XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItem18;
         private DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem printPreviewStaticItem1;

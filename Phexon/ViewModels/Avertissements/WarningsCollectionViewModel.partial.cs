@@ -1,49 +1,59 @@
 ﻿using System.Linq;
 using PHRMS.Data;
-using PHRMS.ViewModels;
 
-namespace PHRMS.ViewModels {
+namespace PHRMS.ViewModels
+{
     partial class WarningsCollectionViewModel
     {
-        public int AllCount {
+        public int AllCount
+        {
             get { return GetAllCount(); }
         }
-        public int SevereCount {
+
+        public int SevereCount
+        {
             get { return GetSevereCount(); }
         }
-        public int SeriousCount {
+
+        public int SeriousCount
+        {
             get { return GetSeriousCount(); }
         }
-        public int InconvenientCount {
+
+        public int InconvenientCount
+        {
             get { return GetInconvenientCount(); }
         }
+
         public int LowCount
         {
             get { return GetLowCount(); }
         }
 
 
-        int GetSevereCount()
+        private int GetSevereCount()
         {
             return Entities.Where(e => e.Severity == WarningSeverity.Severe).Count();
         }
-        int GetSeriousCount()
+
+        private int GetSeriousCount()
         {
             return Entities.Where(e => e.Severity == WarningSeverity.Serious).Count();
         }
-        int GetInconvenientCount()
+
+        private int GetInconvenientCount()
         {
             return Entities.Where(e => e.Severity == WarningSeverity.Inconvenient).Count();
         }
-        int GetLowCount()
+
+        private int GetLowCount()
         {
             return Entities.Where(e => e.Severity == WarningSeverity.Low).Count();
         }
-      
-        int GetAllCount() {
+
+        private int GetAllCount()
+        {
             return Entities.Count();
         }
-     
-
     }
 }

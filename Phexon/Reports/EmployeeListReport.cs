@@ -1,38 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.ComponentModel;
+using System.Drawing;
+using DevExpress.Utils;
+using DevExpress.XtraPrinting;
+using DevExpress.XtraReports.UI;
 
-namespace PHRMS {
-    internal class EmployeeList : DevExpress.XtraReports.UI.XtraReport {
-        private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
-        private DevExpress.XtraReports.UI.DetailBand detailBand1;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
-        private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
-        public EmployeeList() {
-        }
+namespace PHRMS
+{
+    internal class EmployeeList : XtraReport
+    {
+        private BottomMarginBand bottomMarginBand1;
+        private DetailBand detailBand1;
+        private TopMarginBand topMarginBand1;
+        private XRLabel xrLabel1;
 
-        private void InitializeComponent() {
-            this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
-            this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
-            this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
-            this.topMarginBand1.Name = "topMarginBand1";
-            this.detailBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel1 });
-            this.detailBand1.Name = "detailBand1";
-            this.bottomMarginBand1.Name = "bottomMarginBand1";
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(36.45833F, 22.91667F);
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(354.1667F, 56.25F);
-            this.xrLabel1.Text = "xrLabel1";
-            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
-            this.topMarginBand1,
-            this.detailBand1,
-            this.bottomMarginBand1 });
-            this.Version = "14.1";
-            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        private void InitializeComponent()
+        {
+            topMarginBand1 = new TopMarginBand();
+            detailBand1 = new DetailBand();
+            bottomMarginBand1 = new BottomMarginBand();
+            xrLabel1 = new XRLabel();
+            ((ISupportInitialize) this).BeginInit();
+            topMarginBand1.Name = "topMarginBand1";
+            detailBand1.Controls.AddRange(new XRControl[]
+            {
+                xrLabel1
+            });
+            detailBand1.Name = "detailBand1";
+            bottomMarginBand1.Name = "bottomMarginBand1";
+            xrLabel1.LocationFloat = new PointFloat(36.45833F, 22.91667F);
+            xrLabel1.Name = "xrLabel1";
+            xrLabel1.Padding = new PaddingInfo(2, 2, 0, 0, 96F);
+            xrLabel1.SizeF = new SizeF(354.1667F, 56.25F);
+            xrLabel1.Text = "xrLabel1";
+            Bands.AddRange(new Band[]
+            {
+                topMarginBand1,
+                detailBand1,
+                bottomMarginBand1
+            });
+            Version = "14.1";
+            ((ISupportInitialize) this).EndInit();
         }
     }
 }

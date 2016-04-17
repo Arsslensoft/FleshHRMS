@@ -1,52 +1,78 @@
 ﻿using System.Linq;
 using PHRMS.Data;
-using PHRMS.ViewModels;
 
-namespace PHRMS.ViewModels {
-    partial class LeaveCollectionViewModel {
-        public int AllCount {
+namespace PHRMS.ViewModels
+{
+    partial class LeaveCollectionViewModel
+    {
+        public int AllCount
+        {
             get { return GetAllCount(); }
         }
-        public int OnGoingCount {
+
+        public int OnGoingCount
+        {
             get { return GetOnGoingCount(); }
         }
-        public int PendingCount {
+
+        public int PendingCount
+        {
             get { return GetPendingCount(); }
         }
-        public int RefusedCount {
+
+        public int RefusedCount
+        {
             get { return GetRefusedCount(); }
         }
-        public int CompletedCount {
+
+        public int CompletedCount
+        {
             get { return GetCompletedCount(); }
         }
-        public int UrgentCount {
+
+        public int UrgentCount
+        {
             get { return GetUrgentCount(); }
         }
-        public int HighPriorityCount {
+
+        public int HighPriorityCount
+        {
             get { return GetHighPriorityCount(); }
         }
-        int GetHighPriorityCount() {
+
+        private int GetHighPriorityCount()
+        {
             return Entities.Where(e => e.Priority == LeavePriority.High).Count();
         }
-        int GetUrgentCount() {
+
+        private int GetUrgentCount()
+        {
             return Entities.Where(e => e.Priority == LeavePriority.Urgent).Count();
         }
-     
-        int GetCompletedCount() {
+
+        private int GetCompletedCount()
+        {
             return Entities.Where(e => e.Status == LeaveStatus.Completed).Count();
         }
-        int GetPendingCount() {
+
+        private int GetPendingCount()
+        {
             return Entities.Where(e => e.Status == LeaveStatus.Pending).Count();
         }
-        int GetRefusedCount() {
+
+        private int GetRefusedCount()
+        {
             return Entities.Where(e => e.Status == LeaveStatus.Refused).Count();
         }
-        int GetAllCount() {
+
+        private int GetAllCount()
+        {
             return Entities.Count();
         }
-        int GetOnGoingCount() {
+
+        private int GetOnGoingCount()
+        {
             return Entities.Where(e => e.Status == LeaveStatus.OnGoing).Count();
         }
-
     }
 }

@@ -1,37 +1,116 @@
-﻿namespace PHRMS.Modules {
-    using System;
-    using System.Linq.Expressions;
-    using PHRMS.ViewModels;
-    using DevExpress.XtraBars.Navigation;
-    using DevExpress.XtraEditors;
+﻿using System;
+using System.Linq.Expressions;
+using System.Windows.Forms;
+using DevExpress.Mvvm;
+using DevExpress.Mvvm.POCO;
+using DevExpress.XtraBars.Navigation;
+using DevExpress.XtraEditors;
+using PHRMS.Services;
+using PHRMS.ViewModels;
 
+namespace PHRMS.Modules
+{
     public class BaseModuleControl : XtraUserControl, ISupportViewModel
     {
-        BaseModuleControl() { }
+        private int updateQueued;
         private object viewModelCore;
-        protected BaseModuleControl(Func<object> viewModelnjector) {
-            BindingContext = new System.Windows.Forms.BindingContext();
+
+        private BaseModuleControl()
+        {
+        }
+
+        protected BaseModuleControl(Func<object> viewModelnjector)
+        {
+            BindingContext = new BindingContext();
             viewModelCore = viewModelnjector();
             InitServices();
-         
         }
-        IBaseViewModel IViewModel {
-            get { return (IBaseViewModel)viewModelCore; }
+
+        private IBaseViewModel IViewModel
+        {
+            get { return (IBaseViewModel) viewModelCore; }
         }
-        protected virtual void Return() {
+
+        public BottomPanelBase BottomPanel
+        {
+            get
+            {
+                if (Parent == null || Parent.Parent == null)
+                {
+                    return null;
+                }
+                var mainForm = Parent.Parent as MainForm;
+                if (mainForm != null)
+                {
+                    return mainForm.bottomPanelBase1;
+                }
+                mainForm = Parent.Parent.Parent as MainForm;
+                if (mainForm != null)
+                {
+                    return mainForm.bottomPanelBase1;
+                }
+                return null;
+            }
         }
-        protected virtual void Cancel() {
-            try {
+
+        public TileBar MainTileBar
+        {
+            get
+            {
+                if (Parent == null || Parent.Parent == null)
+                {
+                    return null;
+                }
+                var mainForm = Parent.Parent as MainForm;
+                if (mainForm != null)
+                {
+                    return mainForm.mainTileBar;
+                }
+                mainForm = Parent.Parent.Parent as MainForm;
+                if (mainForm != null)
+                {
+                    return mainForm.mainTileBar;
+                }
+                return null;
+            }
+        }
+
+        object ISupportViewModel.ViewModel
+        {
+            get { return viewModelCore; }
+        }
+
+        void ISupportViewModel.ParentViewModelAttached()
+        {
+            OnParentViewModelAttached();
+        }
+
+        protected virtual void Return()
+        {
+        }
+
+        protected virtual void Cancel()
+        {
+            try
+            {
                 IViewModel.Reset();
-            } catch { }
+            }
+            catch
+            {
+            }
             Return();
         }
-        protected virtual bool CheckSave() {
-            if(!Validate()) return false;
-            if(IViewModel.CanSave()) {
-                var res = XtraMessageBox.Show(this, "Voulez-vous enregistrer vos changements?", "Phexon", System.Windows.Forms.MessageBoxButtons.YesNoCancel, System.Windows.Forms.MessageBoxIcon.Warning);
-                if(res == System.Windows.Forms.DialogResult.Cancel) return false;
-                if(res == System.Windows.Forms.DialogResult.No) {
+
+        protected virtual bool CheckSave()
+        {
+            if (!Validate()) return false;
+            if (IViewModel.CanSave())
+            {
+                var res = XtraMessageBox.Show(this, "Voulez-vous enregistrer vos changements?", "Phexon",
+                    MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                if (res == DialogResult.Cancel) return false;
+                if (res == DialogResult.No)
+                {
                     Cancel();
                     return false;
                 }
@@ -40,46 +119,68 @@
             }
             return true;
         }
-        protected virtual bool Save() {
-            if(!Validate()) {
+
+        protected virtual bool Save()
+        {
+            if (!Validate())
+            {
                 return false;
             }
-            try {
+            try
+            {
                 IViewModel.Save();
-            } catch (Exception e) {
-                XtraMessageBox.Show(e.Message, "Erreur d'enregistrement", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+            }
+            catch (Exception e)
+            {
+                XtraMessageBox.Show(e.Message, "Erreur d'enregistrement", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             Return();
             return true;
         }
-        int updateQueued = 0;
-        protected void QueueViewModelUpdate() {
-            if(!IsHandleCreated || updateQueued < 0) return;
-            if(0 == updateQueued++)
-                BeginInvoke(new System.Windows.Forms.MethodInvoker(DoUpdateViewModel));
+
+        protected void QueueViewModelUpdate()
+        {
+            if (!IsHandleCreated || updateQueued < 0) return;
+            if (0 == updateQueued++)
+                BeginInvoke(new MethodInvoker(DoUpdateViewModel));
         }
-        void DoUpdateViewModel() {
+
+        private void DoUpdateViewModel()
+        {
             UpdateViewModel();
             updateQueued = 0;
         }
-        protected virtual void UpdateViewModel() { }
-        void InitServices() {
+
+        protected virtual void UpdateViewModel()
+        {
+        }
+
+        private void InitServices()
+        {
             var serviceContainer = GetServiceContainer();
-            if(serviceContainer != null)
+            if (serviceContainer != null)
                 OnInitServices(serviceContainer);
         }
+
         protected static TViewModel CreateViewModel<TViewModel>()
-            where TViewModel : class, new() {
-            return DevExpress.Mvvm.POCO.ViewModelSource.Create<TViewModel>();
+            where TViewModel : class, new()
+        {
+            return ViewModelSource.Create<TViewModel>();
         }
+
         protected static TViewModel CreateViewModel<TViewModel>(Expression<Func<TViewModel>> constructorExpression)
-            where TViewModel : class, new() {
-            return DevExpress.Mvvm.POCO.ViewModelSource.Create<TViewModel>(constructorExpression);
+            where TViewModel : class, new()
+        {
+            return ViewModelSource.Create(constructorExpression);
         }
-        protected override void Dispose(bool disposing) {
-            if(disposing) {
-                if(viewModelCore != null) {
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (viewModelCore != null)
+                {
                     updateQueued = -1;
                     ReleaseModule();
                     OnDisposing();
@@ -88,113 +189,106 @@
             }
             base.Dispose(disposing);
         }
-        void ReleaseModule() {
-            var locator = GetService<Services.IModuleLocator>();
-            if(locator != null) {
+
+        private void ReleaseModule()
+        {
+            var locator = GetService<IModuleLocator>();
+            if (locator != null)
+            {
                 locator.ReleaseModule(this);
             }
         }
+
         protected void ReleaseModuleReports<TEnum>()
-            where TEnum : struct {
-            var locator = GetService<Services.IReportLocator>();
-            if(locator != null) {
-                foreach(TEnum key in Enum.GetValues(typeof(TEnum))) {
+            where TEnum : struct
+        {
+            var locator = GetService<IReportLocator>();
+            if (locator != null)
+            {
+                foreach (TEnum key in Enum.GetValues(typeof(TEnum)))
+                {
                     locator.ReleaseReport(key);
                 }
             }
         }
-        protected virtual void OnInitServices(DevExpress.Mvvm.IServiceContainer serviceContainer) { }
-        protected virtual void OnDisposing() { }
-        protected TViewModel GetViewModel<TViewModel>() {
-            return (TViewModel)viewModelCore;
+
+        protected virtual void OnInitServices(IServiceContainer serviceContainer)
+        {
         }
-        protected TViewModel GetParentViewModel<TViewModel>() where TViewModel : class {
-            object temp = ((DevExpress.Mvvm.ISupportParentViewModel)viewModelCore).ParentViewModel;
-            return temp is TViewModel ? (TViewModel)temp : null;
+
+        protected virtual void OnDisposing()
+        {
         }
-        protected TViewModel TryGetModuleViewModel<TViewModel>(ref TViewModel moduleViewModel, ModuleType moduleType) where TViewModel : class {
-            if(moduleViewModel == null) {
-                var module = GetService<Services.IModuleLocator>().GetModule(moduleType);
-                if(module != null) {
-                    object mainViewModel = ((DevExpress.Mvvm.ISupportParentViewModel)viewModelCore).ParentViewModel;
-                    moduleViewModel = ((ISupportViewModel)module).ViewModel as TViewModel;
+
+        protected TViewModel GetViewModel<TViewModel>()
+        {
+            return (TViewModel) viewModelCore;
+        }
+
+        protected TViewModel GetParentViewModel<TViewModel>() where TViewModel : class
+        {
+            var temp = ((ISupportParentViewModel) viewModelCore).ParentViewModel;
+            return temp is TViewModel ? (TViewModel) temp : null;
+        }
+
+        protected TViewModel TryGetModuleViewModel<TViewModel>(ref TViewModel moduleViewModel, ModuleType moduleType)
+            where TViewModel : class
+        {
+            if (moduleViewModel == null)
+            {
+                var module = GetService<IModuleLocator>().GetModule(moduleType);
+                if (module != null)
+                {
+                    var mainViewModel = ((ISupportParentViewModel) viewModelCore).ParentViewModel;
+                    moduleViewModel = ((ISupportViewModel) module).ViewModel as TViewModel;
                     ViewModelHelper.EnsureViewModel(moduleViewModel, mainViewModel);
                 }
             }
             return moduleViewModel;
         }
+
         protected TViewModel TryGetModuleViewModel<TViewModel>(ModuleType moduleType) where TViewModel : class
         {
             TViewModel moduleViewModel = null;
-         
-                var module = GetService<Services.IModuleLocator>().GetModule(moduleType);
-                if (module != null)
-                {
-                    object mainViewModel = ((DevExpress.Mvvm.ISupportParentViewModel)viewModelCore).ParentViewModel;
-                    moduleViewModel = ((ISupportViewModel)module).ViewModel as TViewModel;
-                    ViewModelHelper.EnsureViewModel(moduleViewModel, mainViewModel);
-                }
-            
+
+            var module = GetService<IModuleLocator>().GetModule(moduleType);
+            if (module != null)
+            {
+                var mainViewModel = ((ISupportParentViewModel) viewModelCore).ParentViewModel;
+                moduleViewModel = ((ISupportViewModel) module).ViewModel as TViewModel;
+                ViewModelHelper.EnsureViewModel(moduleViewModel, mainViewModel);
+            }
+
             return moduleViewModel;
         }
-        protected TService GetService<TService>() where TService : class {
+
+        protected TService GetService<TService>() where TService : class
+        {
             var serviceContainer = GetServiceContainer();
-            return (serviceContainer != null) ? serviceContainer.GetService<TService>() : null;
+            return serviceContainer != null ? serviceContainer.GetService<TService>() : null;
         }
-        DevExpress.Mvvm.IServiceContainer GetServiceContainer() {
-            if(!(viewModelCore is DevExpress.Mvvm.ISupportServices))
-                return null;
-            return ((DevExpress.Mvvm.ISupportServices)viewModelCore).ServiceContainer;
-        }
-        object ISupportViewModel.ViewModel {
-            get { return viewModelCore; }
-        }
-        void ISupportViewModel.ParentViewModelAttached() {
-            OnParentViewModelAttached();
-        }
-        protected virtual void OnParentViewModelAttached() { }
-        public BottomPanelBase BottomPanel {
-            get {
-                if(Parent == null || Parent.Parent == null) {
-                    return null;
-                }
-                var mainForm = Parent.Parent as MainForm;
-                if(mainForm != null) {
-                    return mainForm.bottomPanelBase1;
-                }
-                mainForm = Parent.Parent.Parent as MainForm;
-                if(mainForm != null) {
-                    return mainForm.bottomPanelBase1;
-                }
-                return null;
-            }
-        }
-     
-        public TileBar MainTileBar {
-            get {
-                if(Parent == null || Parent.Parent == null) {
-                    return null;
-                }
-                var mainForm = Parent.Parent as MainForm;
-                if(mainForm != null) {
-                    return mainForm.mainTileBar;
-                }
-                mainForm = Parent.Parent.Parent as MainForm;
-                if(mainForm != null) {
-                    return mainForm.mainTileBar;
-                }
-                return null;
-            }
-        }
-       
-        protected internal virtual void OnTransitionCompleted() { }
 
+        private IServiceContainer GetServiceContainer()
+        {
+            if (!(viewModelCore is ISupportServices))
+                return null;
+            return ((ISupportServices) viewModelCore).ServiceContainer;
+        }
 
-   
+        protected virtual void OnParentViewModelAttached()
+        {
+        }
+
+        protected internal virtual void OnTransitionCompleted()
+        {
+        }
     }
 }
-namespace PHRMS.ViewModels {
-    public interface IBaseViewModel {
+
+namespace PHRMS.ViewModels
+{
+    public interface IBaseViewModel
+    {
         bool Save();
         bool CanSave();
         void Reset();

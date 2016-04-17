@@ -1,12 +1,14 @@
-﻿using System.Windows.Forms;
+﻿using DevExpress.XtraLayout;
+using PHRMS.Data;
 
-namespace PHRMS.Widgets{
-    public partial class NotificationItem : DevExpress.XtraLayout.LayoutControl {
-
-        public NotificationItem(PHRMS.Data.Notification notif)
+namespace PHRMS.Widgets
+{
+    public partial class NotificationItem : LayoutControl
+    {
+        public NotificationItem(Notification notif)
         {
             InitializeComponent();
-            notificationdate.Text = notif.Date.ToLongDateString() + " "+ notif.Date.ToLongTimeString();
+            notificationdate.Text = notif.Date.ToLongDateString() + " " + notif.Date.ToLongTimeString();
             notificationinfo.Text = notif.Message;
         }
     }
