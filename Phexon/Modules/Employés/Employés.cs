@@ -98,11 +98,11 @@ namespace PHRMS.Modules
         private void TileItemsUpdateElementText()
         {
             tileItemAll.Text = ViewModel.AllCount.ToString();
-            tileItemCommission.Text = ViewModel.CommissionCount.ToString();
+            tileItemAgents.Text = ViewModel.AgentsCount.ToString();
             tileItemOnLeave.Text = ViewModel.OnLeaveCount.ToString();
-            tileItemContract.Text = ViewModel.ProbationCount.ToString();
-            tileItemSalaried.Text = ViewModel.SalairedCount.ToString();
-            tileItemTerminated.Text = ViewModel.TerminatedCount.ToString();
+            tileItemManagers.Text = ViewModel.ManagersCount.ToString();
+            tileItemEmployés.Text = ViewModel.EmployeesCount.ToString();
+            tileItemWorking.Text = ViewModel.WorkingCount.ToString();
         }
 
         private void searchControl_AllowSearchColumn(object sender, QueryIsSearchColumnEventArgs e)
@@ -375,14 +375,15 @@ namespace PHRMS.Modules
             if (currentFilter == filter) return;
             currentFilter = filter;
             EmployeeStatus es;
-            if (!Enum.TryParse(filter, out es))
-            {
-                currentFilter = null;
-            }
+            EmployeeRole er;
+            if (!Enum.TryParse(filter, out es) && !Enum.TryParse(filter, out er))
+                         currentFilter = null;
+            
             if (currentFilter == null)
                 tileView1.ActiveFilter.Clear();
-            else
+            else if(!Enum.TryParse(filter, out er))
                 tileView1.ActiveFilterCriteria = CriteriaOperator.Parse("Status = ?", es);
+            else tileView1.ActiveFilterCriteria = CriteriaOperator.Parse("Role = ?", er);
             item.Text = tileView1.DataRowCount.ToString();
         }
 

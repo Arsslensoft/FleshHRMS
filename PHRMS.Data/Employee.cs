@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Drawing;
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -10,21 +11,18 @@ namespace PHRMS.Data
 {
     public enum EmployeeStatus
     {
-        [Display(Name = "Salarié")] Salaried,
-        [Display(Name = "Commission")] Commission,
-        [Display(Name = "Contractuel")] Contract,
-        [Display(Name = "Clôturé")] Terminated,
+        [Display(Name = "En travail")] Working,
         [Display(Name = "En congé")] OnLeave
     }
 
     public enum EmployeeDepartment
     {
-        [Display(Name = "Sales")] Sales = 1,
+        [Display(Name = "Commercial")] Sales = 1,
         [Display(Name = "Support")] Support,
-        [Display(Name = "Shipping")] Shipping,
-        [Display(Name = "Engineering")] Engineering,
-        [Display(Name = "Human Resources")] HumanResources,
-        [Display(Name = "Management")] Management,
+        [Display(Name = "Livraison")] Shipping,
+        [Display(Name = "Ingénierie")] Engineering,
+        [Display(Name = "Ressources humaines")] HumanResources,
+        [Display(Name = "Gestion")] Management,
         [Display(Name = "IT")] IT
     }
 
@@ -106,8 +104,6 @@ namespace PHRMS.Data
         [Required, EmailAddress]
         public string Email { get; set; }
 
-        public string Skype { get; set; }
-
         [Display(Name = "Birth Date")]
         public DateTime? BirthDate { get; set; }
 
@@ -121,11 +117,44 @@ namespace PHRMS.Data
         [NotMapped]
         public string Password
         {
-            get { return ""; }
-            set { PasswordHash = GetSha256FromString(value); }
+            get { return Decrypt(PasswordHash); }
+            set { PasswordHash = Encrypt(value); }
         }
 
-
+        public string Encrypt(string originalString)
+        {
+            if (String.IsNullOrEmpty(originalString))
+            {
+                throw new ArgumentNullException
+                       ("The string which needs to be encrypted can not be null.");
+            }
+            DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
+            MemoryStream memoryStream = new MemoryStream();
+            CryptoStream cryptoStream = new CryptoStream(memoryStream,
+                cryptoProvider.CreateEncryptor(bytes, bytes), CryptoStreamMode.Write);
+            StreamWriter writer = new StreamWriter(cryptoStream);
+            writer.Write(originalString);
+            writer.Flush();
+            cryptoStream.FlushFinalBlock();
+            writer.Flush();
+            return Convert.ToBase64String(memoryStream.GetBuffer(), 0, (int)memoryStream.Length);
+        }
+        byte[] bytes = ASCIIEncoding.ASCII.GetBytes("SJKL8D9F");
+        public string Decrypt(string cryptedString)
+        {
+            if (String.IsNullOrEmpty(cryptedString))
+            {
+                throw new ArgumentNullException
+                   ("The string which needs to be decrypted can not be null.");
+            }
+            DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
+            MemoryStream memoryStream = new MemoryStream
+                    (Convert.FromBase64String(cryptedString));
+            CryptoStream cryptoStream = new CryptoStream(memoryStream,
+                cryptoProvider.CreateDecryptor(bytes, bytes), CryptoStreamMode.Read);
+            StreamReader reader = new StreamReader(cryptoStream);
+            return reader.ReadToEnd();
+        }
         [Required]
         public EmployeeRole Role { get; set; }
 
@@ -138,8 +167,7 @@ namespace PHRMS.Data
         [Required]
         public int LateCredit { get; set; }
 
-        [Required]
-        public double Salary { get; set; }
+    
 
         [NotMapped]
         public Image Photo

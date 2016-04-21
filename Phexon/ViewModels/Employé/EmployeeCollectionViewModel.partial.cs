@@ -15,24 +15,24 @@ namespace PHRMS.ViewModels
             get { return GetAllCount(); }
         }
 
-        public int SalairedCount
+        public int EmployeesCount
         {
-            get { return GetSalairedCount(); }
+            get { return GetEmployeesCount(); }
         }
 
-        public int CommissionCount
+        public int AgentsCount
         {
-            get { return GetCommissionCount(); }
+            get { return GetAgentsCount(); }
         }
 
-        public int ProbationCount
+        public int ManagersCount
         {
-            get { return GetProbationCount(); }
+            get { return GetManagersCount(); }
         }
 
-        public int TerminatedCount
+        public int WorkingCount
         {
-            get { return GetTerminatedCount(); }
+            get { return GetWorkingCount(); }
         }
 
         public int OnLeaveCount
@@ -59,24 +59,24 @@ namespace PHRMS.ViewModels
             return Entities.Where(e => e.Status == EmployeeStatus.OnLeave).Count();
         }
 
-        private int GetTerminatedCount()
+        private int GetWorkingCount()
         {
-            return Entities.Where(e => e.Status == EmployeeStatus.Terminated).Count();
+            return Entities.Where(e => e.Status == EmployeeStatus.Working).Count();
         }
 
-        private int GetProbationCount()
+        private int GetManagersCount()
         {
-            return Entities.Where(e => e.Status == EmployeeStatus.Contract).Count();
+            return Entities.Where(e => e.Role == EmployeeRole.Manager).Count();
         }
 
-        private int GetCommissionCount()
+        private int GetAgentsCount()
         {
-            return Entities.Where(e => e.Status == EmployeeStatus.Commission).Count();
+            return Entities.Where(e => e.Role == EmployeeRole.Agent).Count();
         }
 
-        private int GetSalairedCount()
+        private int GetEmployeesCount()
         {
-            return Entities.Where(e => e.Status == EmployeeStatus.Salaried).Count();
+            return Entities.Where(e => e.Role == EmployeeRole.Employee).Count();
         }
 
         private int GetAllCount()

@@ -49,7 +49,7 @@ namespace PHRMS
                         MessageBoxIcon.Warning);
                 else
                 {
-                    if (li.User.GetSha256FromString(textEdit1.Text) == li.User.PasswordHash)
+                    if (textEdit1.Text == li.User.Password)
                     {
                         if (li.User.Role == EmployeeRole.Employee)
                             XtraMessageBox.Show("Accès refusé", "Contrôle d'accès", MessageBoxButtons.OK,

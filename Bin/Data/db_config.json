@@ -1,7 +1,7 @@
 {
-"Host":"localhost",
-"User":"root",
-"Password":"",
+"Host":"192.168.137.169",
+"User":"phexon",
+"Password":"123456",
 "Port":3306,
 "Database":"fhrms"
 }

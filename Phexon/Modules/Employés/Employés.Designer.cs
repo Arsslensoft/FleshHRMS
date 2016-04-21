@@ -57,10 +57,10 @@ namespace PHRMS.Modules {
             this.filterTileControl = new DevExpress.XtraEditors.TileControl();
             this.tileGroup2 = new DevExpress.XtraEditors.TileGroup();
             this.tileItemAll = new DevExpress.XtraEditors.TileItem();
-            this.tileItemSalaried = new DevExpress.XtraEditors.TileItem();
-            this.tileItemCommission = new DevExpress.XtraEditors.TileItem();
-            this.tileItemContract = new DevExpress.XtraEditors.TileItem();
-            this.tileItemTerminated = new DevExpress.XtraEditors.TileItem();
+            this.tileItemEmployés = new DevExpress.XtraEditors.TileItem();
+            this.tileItemAgents = new DevExpress.XtraEditors.TileItem();
+            this.tileItemManagers = new DevExpress.XtraEditors.TileItem();
+            this.tileItemWorking = new DevExpress.XtraEditors.TileItem();
             this.tileItemOnLeave = new DevExpress.XtraEditors.TileItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -204,10 +204,10 @@ namespace PHRMS.Modules {
             // tileGroup2
             // 
             this.tileGroup2.Items.Add(this.tileItemAll);
-            this.tileGroup2.Items.Add(this.tileItemSalaried);
-            this.tileGroup2.Items.Add(this.tileItemCommission);
-            this.tileGroup2.Items.Add(this.tileItemContract);
-            this.tileGroup2.Items.Add(this.tileItemTerminated);
+            this.tileGroup2.Items.Add(this.tileItemEmployés);
+            this.tileGroup2.Items.Add(this.tileItemAgents);
+            this.tileGroup2.Items.Add(this.tileItemManagers);
+            this.tileGroup2.Items.Add(this.tileItemWorking);
             this.tileGroup2.Items.Add(this.tileItemOnLeave);
             this.tileGroup2.Name = "tileGroup2";
             this.tileGroup2.Text = null;
@@ -235,7 +235,7 @@ namespace PHRMS.Modules {
             this.tileItemAll.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemAll.Name = "tileItemAll";
             // 
-            // tileItemSalaried
+            // tileItemEmployés
             // 
             tileItemElement3.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement3.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
@@ -250,16 +250,16 @@ namespace PHRMS.Modules {
             tileItemElement3.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement4.Image")));
             tileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement4.Text = "Salarié";
+            tileItemElement4.Text = "Employés";
             tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
-            this.tileItemSalaried.Elements.Add(tileItemElement3);
-            this.tileItemSalaried.Elements.Add(tileItemElement4);
-            this.tileItemSalaried.Id = 1;
-            this.tileItemSalaried.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
-            this.tileItemSalaried.Name = "tileItemSalaried";
-            this.tileItemSalaried.Tag = "Salaried";
+            this.tileItemEmployés.Elements.Add(tileItemElement3);
+            this.tileItemEmployés.Elements.Add(tileItemElement4);
+            this.tileItemEmployés.Id = 1;
+            this.tileItemEmployés.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileItemEmployés.Name = "tileItemEmployés";
+            this.tileItemEmployés.Tag = "Employee";
             // 
-            // tileItemCommission
+            // tileItemAgents
             // 
             tileItemElement5.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement5.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
@@ -274,16 +274,16 @@ namespace PHRMS.Modules {
             tileItemElement5.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
             tileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement6.Text = "Commission";
+            tileItemElement6.Text = "Agents";
             tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
-            this.tileItemCommission.Elements.Add(tileItemElement5);
-            this.tileItemCommission.Elements.Add(tileItemElement6);
-            this.tileItemCommission.Id = 2;
-            this.tileItemCommission.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
-            this.tileItemCommission.Name = "tileItemCommission";
-            this.tileItemCommission.Tag = "Commission";
+            this.tileItemAgents.Elements.Add(tileItemElement5);
+            this.tileItemAgents.Elements.Add(tileItemElement6);
+            this.tileItemAgents.Id = 2;
+            this.tileItemAgents.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileItemAgents.Name = "tileItemAgents";
+            this.tileItemAgents.Tag = "Agent";
             // 
-            // tileItemContract
+            // tileItemManagers
             // 
             tileItemElement7.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement7.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
@@ -298,16 +298,16 @@ namespace PHRMS.Modules {
             tileItemElement7.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
             tileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement8.Text = "Contractuel";
+            tileItemElement8.Text = "Responsables";
             tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
-            this.tileItemContract.Elements.Add(tileItemElement7);
-            this.tileItemContract.Elements.Add(tileItemElement8);
-            this.tileItemContract.Id = 3;
-            this.tileItemContract.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
-            this.tileItemContract.Name = "tileItemContract";
-            this.tileItemContract.Tag = "Contract";
+            this.tileItemManagers.Elements.Add(tileItemElement7);
+            this.tileItemManagers.Elements.Add(tileItemElement8);
+            this.tileItemManagers.Id = 3;
+            this.tileItemManagers.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileItemManagers.Name = "tileItemManagers";
+            this.tileItemManagers.Tag = "Manager";
             // 
-            // tileItemTerminated
+            // tileItemWorking
             // 
             tileItemElement9.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement9.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
@@ -322,14 +322,14 @@ namespace PHRMS.Modules {
             tileItemElement9.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement10.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement10.Image")));
             tileItemElement10.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement10.Text = "Clôturé";
+            tileItemElement10.Text = "En travail";
             tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
-            this.tileItemTerminated.Elements.Add(tileItemElement9);
-            this.tileItemTerminated.Elements.Add(tileItemElement10);
-            this.tileItemTerminated.Id = 4;
-            this.tileItemTerminated.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
-            this.tileItemTerminated.Name = "tileItemTerminated";
-            this.tileItemTerminated.Tag = "Terminated";
+            this.tileItemWorking.Elements.Add(tileItemElement9);
+            this.tileItemWorking.Elements.Add(tileItemElement10);
+            this.tileItemWorking.Id = 4;
+            this.tileItemWorking.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileItemWorking.Name = "tileItemWorking";
+            this.tileItemWorking.Tag = "Working";
             // 
             // tileItemOnLeave
             // 
@@ -823,10 +823,10 @@ namespace PHRMS.Modules {
         private DevExpress.XtraEditors.TileControl filterTileControl;
         private DevExpress.XtraEditors.TileGroup tileGroup2;
         private DevExpress.XtraEditors.TileItem tileItemAll;
-        private DevExpress.XtraEditors.TileItem tileItemSalaried;
-        private DevExpress.XtraEditors.TileItem tileItemCommission;
-        private DevExpress.XtraEditors.TileItem tileItemContract;
-        private DevExpress.XtraEditors.TileItem tileItemTerminated;
+        private DevExpress.XtraEditors.TileItem tileItemEmployés;
+        private DevExpress.XtraEditors.TileItem tileItemAgents;
+        private DevExpress.XtraEditors.TileItem tileItemManagers;
+        private DevExpress.XtraEditors.TileItem tileItemWorking;
         private DevExpress.XtraEditors.TileItem tileItemOnLeave;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
