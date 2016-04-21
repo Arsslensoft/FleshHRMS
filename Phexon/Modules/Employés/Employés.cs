@@ -328,8 +328,7 @@ namespace PHRMS.Modules
 
         private void ShowEditEmployee(Employee employee)
         {
-            if (MainViewModel.CurrentEmployee.Role > EmployeeRole.Agent)
-            {
+ 
                 var main = GetParentViewModel<MainViewModel>();
                 main.SelectModule(ModuleType.ModifierEmployé, x =>
                 {
@@ -344,9 +343,7 @@ namespace PHRMS.Modules
                     }
                     ((ModifierEmployé) main.SelectedModule).Refresh();
                 });
-            }
-            else if (MainViewModel.CurrentEmployee.Role <= EmployeeRole.Agent)
-                XtraMessageBox.Show(" Accès refusé ", " Contrôle d'accès ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+           
         }
 
         private void deleteMouseClick(object sender, EventArgs e)

@@ -38,6 +38,8 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
             this.priorityImageList = new DevExpress.Utils.ImageCollection(this.components);
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.notesGridControl = new DevExpress.XtraGrid.GridControl();
@@ -58,6 +60,7 @@
             this.tileItemCM = new DevExpress.XtraEditors.TileItem();
             this.tileItemDeferred = new DevExpress.XtraEditors.TileItem();
             this.tileItemLT = new DevExpress.XtraEditors.TileItem();
+            this.tileItemOP = new DevExpress.XtraEditors.TileItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tileControlLCI = new DevExpress.XtraLayout.LayoutControlItem();
             this.tasksSLI = new DevExpress.XtraLayout.SimpleLabelItem();
@@ -263,7 +266,7 @@
             this.tileControl1.ItemSize = 80;
             this.tileControl1.Location = new System.Drawing.Point(42, 47);
             this.tileControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.tileControl1.MaxId = 7;
+            this.tileControl1.MaxId = 8;
             this.tileControl1.Name = "tileControl1";
             this.tileControl1.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.tileControl1.Padding = new System.Windows.Forms.Padding(0);
@@ -279,6 +282,7 @@
             this.tileGroup2.Items.Add(this.tileItemCM);
             this.tileGroup2.Items.Add(this.tileItemDeferred);
             this.tileGroup2.Items.Add(this.tileItemLT);
+            this.tileGroup2.Items.Add(this.tileItemOP);
             this.tileGroup2.Name = "tileGroup2";
             this.tileGroup2.Text = null;
             // 
@@ -406,6 +410,31 @@
             this.tileItemLT.Name = "tileItemLT";
             this.tileItemLT.Tag = "Kind == \'Late\'";
             this.tileItemLT.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem_ItemClick);
+            // 
+            // tileItemOP
+            // 
+            tileItemElement11.Appearance.Normal.FontSizeDelta = 128;
+            tileItemElement11.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            tileItemElement11.Appearance.Normal.Options.UseFont = true;
+            tileItemElement11.Appearance.Normal.Options.UseForeColor = true;
+            tileItemElement11.Appearance.Selected.FontSizeDelta = 128;
+            tileItemElement11.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
+            tileItemElement11.Appearance.Selected.Options.UseFont = true;
+            tileItemElement11.Appearance.Selected.Options.UseForeColor = true;
+            tileItemElement11.Text = "9";
+            tileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement11.TextLocation = new System.Drawing.Point(-2, -12);
+            tileItemElement12.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement12.Image")));
+            tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement12.Text = "Ouverte";
+            tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
+            this.tileItemOP.Elements.Add(tileItemElement11);
+            this.tileItemOP.Elements.Add(tileItemElement12);
+            this.tileItemOP.Id = 2;
+            this.tileItemOP.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileItemOP.Name = "tileItemOP";
+            this.tileItemOP.Tag = "Kind == \'Open\'";
+            this.tileItemOP.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItem_ItemClick);
             // 
             // layoutControlGroup1
             // 
@@ -613,6 +642,7 @@
         private DevExpress.XtraEditors.TileItem tileItemDeferred;
         private DevExpress.XtraEditors.TileItem tileItemCM;
         private DevExpress.XtraEditors.TileItem tileItemLT;
+        private DevExpress.XtraEditors.TileItem tileItemOP;
         private DevExpress.XtraLayout.LayoutControlItem tileControlLCI;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;

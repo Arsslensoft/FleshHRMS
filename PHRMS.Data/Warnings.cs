@@ -13,7 +13,13 @@ namespace PHRMS.Data
 
     public enum WarningType
     {
-        [Display(Name = "Verbal")] Verbal
+        [Display(Name = "Verbal")] Verbal,
+        [Display(Name = "Blâme")]
+        Blame,
+        [Display(Name = "Écrit")]
+        Written,
+        [Display(Name = "Écrit & inscrit")]
+        WrittenRegistred
     }
 
     public class Warning : DatabaseObject

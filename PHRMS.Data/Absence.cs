@@ -9,7 +9,9 @@ namespace PHRMS.Data
         [Display(Name = "Justifié avec motif")] MotiveWarranted,
         [Display(Name = "Justifié avec certificat médical")] CertificateWarranted,
         [Display(Name = "Non justifié")] Unwarranted,
-        [Display(Name = "Retard")] Late
+        [Display(Name = "Retard")] Late,
+        [Display(Name = "Ouverte")]
+        Open
     }
 
     public class Absence : DatabaseObject

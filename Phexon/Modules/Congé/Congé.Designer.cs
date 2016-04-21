@@ -150,7 +150,7 @@
             // 
             // OwnedBy
             // 
-            this.OwnedBy.Caption = "Responsable";
+            this.OwnedBy.Caption = "Crée par";
             this.OwnedBy.FieldName = "Owner.FullName";
             this.OwnedBy.Name = "OwnedBy";
             this.OwnedBy.Visible = true;

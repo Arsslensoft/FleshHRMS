@@ -18,7 +18,7 @@ namespace PHRMS
             bindingSource1.DataSource = typeof(LoginInfo);
             ViewModel = vm;
             EmployeesViewModel = vm.TryGetModuleViewModel<EmployeeCollectionViewModel>(ModuleType.Employés);
-            lookUpEdit1.Properties.DataSource = EmployeesViewModel.Entities.ToList();
+            lookUpEdit1.Properties.DataSource = EmployeesViewModel.Entities.Where(x => x.Role >= EmployeeRole.Agent).ToList();
             bindingSource1.DataSource = new LoginInfo();
         }
 

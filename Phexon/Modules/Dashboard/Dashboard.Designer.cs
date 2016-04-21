@@ -114,7 +114,7 @@ namespace PHRMS.Modules
             this.calendarDocument.ColumnIndex = 1;
             this.calendarDocument.ControlName = "Calendar";
             this.calendarDocument.ControlTypeName = "PHRMS.Widgets.Calendar";
-            this.calendarDocument.Height = 200;
+            this.calendarDocument.Height = 300;
             // 
             // dateTimeDocument
             // 
