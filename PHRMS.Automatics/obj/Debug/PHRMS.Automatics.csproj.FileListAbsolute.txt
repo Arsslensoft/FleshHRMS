@@ -1,0 +1,11 @@
+E:\Research\FHRMS\PHRMS.Automatics\bin\Debug\PHRMS.Automatics.dll
+E:\Research\FHRMS\PHRMS.Automatics\bin\Debug\PHRMS.Automatics.pdb
+E:\Research\FHRMS\PHRMS.Automatics\bin\Debug\EntityFramework.dll
+E:\Research\FHRMS\PHRMS.Automatics\bin\Debug\log4net.dll
+E:\Research\FHRMS\PHRMS.Automatics\bin\Debug\PHRMS.Data.dll
+E:\Research\FHRMS\PHRMS.Automatics\bin\Debug\Newtonsoft.Json.dll
+E:\Research\FHRMS\PHRMS.Automatics\bin\Debug\PHRMS.Data.pdb
+E:\Research\FHRMS\PHRMS.Automatics\bin\Debug\Newtonsoft.Json.xml
+E:\Research\FHRMS\PHRMS.Automatics\obj\Debug\PHRMS.Automatics.csprojResolveAssemblyReference.cache
+E:\Research\FHRMS\PHRMS.Automatics\obj\Debug\PHRMS.Automatics.dll
+E:\Research\FHRMS\PHRMS.Automatics\obj\Debug\PHRMS.Automatics.pdb

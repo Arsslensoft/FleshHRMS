@@ -1,0 +1,19 @@
+using System;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.InteropServices;
+
+[assembly: AssemblyTitle("PHRMS.Data.Data")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany(AssemblyInfo.AssemblyCompany)]
+[assembly: AssemblyProduct("PHRMS.Data.Data")]
+[assembly: AssemblyCopyright(AssemblyInfo.AssemblyCopyright)]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+[assembly: CLSCompliant(true)]
+[assembly: ComVisible(false)]
+[assembly: NeutralResourcesLanguage("en-US")]
+[assembly: SatelliteContractVersion(AssemblyInfo.SatelliteContractVersion)]
+[assembly: AssemblyVersion(AssemblyInfo.Version)]
+[assembly: AssemblyFileVersion(AssemblyInfo.FileVersion)]

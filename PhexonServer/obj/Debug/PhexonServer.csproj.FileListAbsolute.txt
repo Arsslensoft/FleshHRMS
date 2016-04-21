@@ -1,0 +1,15 @@
+E:\Research\FHRMS\PhexonServer\bin\Debug\PhexonServer.exe.config
+E:\Research\FHRMS\PhexonServer\bin\Debug\PhexonServer.exe
+E:\Research\FHRMS\PhexonServer\bin\Debug\PhexonServer.pdb
+E:\Research\FHRMS\PhexonServer\bin\Debug\EntityFramework.dll
+E:\Research\FHRMS\PhexonServer\bin\Debug\FHRMS.Automatics.dll
+E:\Research\FHRMS\PhexonServer\bin\Debug\log4net.dll
+E:\Research\FHRMS\PhexonServer\bin\Debug\FHRMS.Data.dll
+E:\Research\FHRMS\PhexonServer\bin\Debug\FHRMS.Automatics.pdb
+E:\Research\FHRMS\PhexonServer\bin\Debug\FHRMS.Data.pdb
+E:\Research\FHRMS\Bin\PhexonServer.exe.config
+E:\Research\FHRMS\Bin\PhexonServer.exe
+E:\Research\FHRMS\Bin\PhexonServer.pdb
+E:\Research\FHRMS\PhexonServer\obj\Debug\PhexonServer.csprojResolveAssemblyReference.cache
+E:\Research\FHRMS\PhexonServer\obj\Debug\PhexonServer.exe
+E:\Research\FHRMS\PhexonServer\obj\Debug\PhexonServer.pdb

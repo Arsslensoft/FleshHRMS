@@ -1,6 +1,0 @@
-E:\Research\FHRMS\PhexonServer\obj\Debug\PhexonServer.rvprojResolveAssemblyReference.cache
-E:\Research\FHRMS\Bin\PhexonServer.exe.config
-E:\Research\FHRMS\Bin\PhexonServer.exe
-E:\Research\FHRMS\Bin\PhexonServer.pdb
-E:\Research\FHRMS\PhexonServer\obj\Debug\PhexonServer.exe
-E:\Research\FHRMS\PhexonServer\obj\Debug\PhexonServer.pdb

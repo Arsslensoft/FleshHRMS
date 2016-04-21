@@ -92,6 +92,7 @@ E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.Employés.resources
 E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.ModifierEmployé.resources
 E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.ImprimerEmployé.resources
 E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.ModifierAbsence.resources
+E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.ImprimerFérier.resources
 E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.ModifierFérier.resources
 E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.PrintSettings.resources
 E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.ModifierPlaning.resources
@@ -126,4 +127,3 @@ E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.csproj.GenerateResource.Cache
 E:\Research\FHRMS\Phexon\obj\Debug\Phexon.exe.licenses
 E:\Research\FHRMS\Phexon\obj\Debug\Phexon.exe
 E:\Research\FHRMS\Phexon\obj\Debug\Phexon.pdb
-E:\Research\FHRMS\Phexon\obj\Debug\PHRMS.Modules.ImprimerFérier.resources
