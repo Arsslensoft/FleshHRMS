@@ -1,0 +1,6 @@
+E:\Research\FHRMS\Bin\PhexonService.exe.config
+E:\Research\FHRMS\Bin\PhexonService.exe
+E:\Research\FHRMS\Bin\PhexonService.pdb
+E:\Research\FHRMS\PhexonServer\obj\Debug\PhexonService.csprojResolveAssemblyReference.cache
+E:\Research\FHRMS\PhexonServer\obj\Debug\PhexonService.exe
+E:\Research\FHRMS\PhexonServer\obj\Debug\PhexonService.pdb

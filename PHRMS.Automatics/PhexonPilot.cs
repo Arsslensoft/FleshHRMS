@@ -34,7 +34,6 @@ namespace PHRMS.Automatics
             NightCheckTime = night;
             ResetTime = reset;
         }
-
         public bool Between(DateTime x, DateTime start, DateTime end)
         {
             if (end == IndeterminateDate || (x.Date >= start.Date && x.Date <= end.Date)) // indeterminate date or between 2 dates
@@ -246,8 +245,8 @@ namespace PHRMS.Automatics
 
                 if (a.TimeIn > sh.Start.TimeOfDay) // late
                 {
-                    if ((a.TimeIn - sh.Start.TimeOfDay) > new TimeSpan(0, 30, 0))
-                        MarkAsAbsent(a.Employee); // absent after 30 mins
+                    if ((a.TimeIn - sh.Start.TimeOfDay) > new TimeSpan(2, 0, 0))
+                        MarkAsAbsent(a.Employee); // absent after 2 hours
                     else
                         MarkAsLate(a.Employee, DateTime.Parse(a.Date.ToShortDateString() + " " + a.TimeIn.ToString("mm:hh:ss"))); // late
                 }
@@ -287,8 +286,8 @@ namespace PHRMS.Automatics
                         Shift sh = GetAppropriateShift(todays_shift);
                         if (at.TimeOut < sh.End.TimeOfDay) // too early
                         {
-                            if ((sh.End.TimeOfDay - at.TimeOut) > new TimeSpan(0, 30, 0))
-                                MarkAsAbsent(at.Employee); // absent before 30 mins
+                            if ((sh.End.TimeOfDay - at.TimeOut) > new TimeSpan(2, 0, 0))
+                                MarkAsAbsent(at.Employee); // absent before 2 hours
 
                         }
                     }
@@ -322,6 +321,7 @@ namespace PHRMS.Automatics
 
         }
 
+   
        
         private void SetTimer()
         {

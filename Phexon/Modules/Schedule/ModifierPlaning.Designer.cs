@@ -28,6 +28,8 @@
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.noteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layout = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.breakendedit = new DevExpress.XtraEditors.TimeSpanEdit();
+            this.breakstartedit = new DevExpress.XtraEditors.TimeSpanEdit();
             this.imageComboBoxEdit4 = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.imageComboBoxEdit3 = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.imageComboBoxEdit2 = new DevExpress.XtraEditors.ImageComboBoxEdit();
@@ -57,11 +59,15 @@
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout)).BeginInit();
             this.layout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.breakendedit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakstartedit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit2.Properties)).BeginInit();
@@ -89,6 +95,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,6 +112,8 @@
             // 
             this.layout.AllowCustomization = false;
             this.layout.BackColor = System.Drawing.Color.White;
+            this.layout.Controls.Add(this.breakendedit);
+            this.layout.Controls.Add(this.breakstartedit);
             this.layout.Controls.Add(this.imageComboBoxEdit4);
             this.layout.Controls.Add(this.imageComboBoxEdit3);
             this.layout.Controls.Add(this.imageComboBoxEdit2);
@@ -121,51 +131,77 @@
             this.layout.Name = "layout";
             this.layout.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(450, 194, 650, 760);
             this.layout.Root = this.layoutControlGroup1;
-            this.layout.Size = new System.Drawing.Size(916, 490);
+            this.layout.Size = new System.Drawing.Size(916, 534);
             this.layout.TabIndex = 0;
             this.layout.Text = "layoutControl1";
+            // 
+            // breakendedit
+            // 
+            this.breakendedit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "BreakEnd", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.breakendedit.EditValue = System.TimeSpan.Parse("00:00:00");
+            this.breakendedit.Location = new System.Drawing.Point(565, 133);
+            this.breakendedit.Name = "breakendedit";
+            this.breakendedit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.breakendedit.Properties.Mask.EditMask = "HH:mm:ss";
+            this.breakendedit.Size = new System.Drawing.Size(339, 42);
+            this.breakendedit.StyleController = this.layout;
+            this.breakendedit.TabIndex = 26;
+            // 
+            // breakstartedit
+            // 
+            this.breakstartedit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "BreakStart", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.breakstartedit.EditValue = System.TimeSpan.Parse("00:00:00");
+            this.breakstartedit.Location = new System.Drawing.Point(118, 133);
+            this.breakstartedit.Name = "breakstartedit";
+            this.breakstartedit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.breakstartedit.Properties.Mask.EditMask = "HH:mm:ss";
+            this.breakstartedit.Size = new System.Drawing.Size(337, 42);
+            this.breakstartedit.StyleController = this.layout;
+            this.breakstartedit.TabIndex = 25;
             // 
             // imageComboBoxEdit4
             // 
             this.imageComboBoxEdit4.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "LabelEnum", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.imageComboBoxEdit4.Location = new System.Drawing.Point(117, 363);
+            this.imageComboBoxEdit4.Location = new System.Drawing.Point(118, 409);
             this.imageComboBoxEdit4.Name = "imageComboBoxEdit4";
             this.imageComboBoxEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.imageComboBoxEdit4.Size = new System.Drawing.Size(787, 42);
+            this.imageComboBoxEdit4.Size = new System.Drawing.Size(786, 42);
             this.imageComboBoxEdit4.StyleController = this.layout;
             this.imageComboBoxEdit4.TabIndex = 24;
             // 
             // imageComboBoxEdit3
             // 
             this.imageComboBoxEdit3.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "StatusEnum", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.imageComboBoxEdit3.Location = new System.Drawing.Point(117, 317);
+            this.imageComboBoxEdit3.Location = new System.Drawing.Point(118, 363);
             this.imageComboBoxEdit3.Name = "imageComboBoxEdit3";
             this.imageComboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.imageComboBoxEdit3.Size = new System.Drawing.Size(787, 42);
+            this.imageComboBoxEdit3.Size = new System.Drawing.Size(786, 42);
             this.imageComboBoxEdit3.StyleController = this.layout;
             this.imageComboBoxEdit3.TabIndex = 23;
             // 
             // imageComboBoxEdit2
             // 
             this.imageComboBoxEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "Recurrence", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.imageComboBoxEdit2.Location = new System.Drawing.Point(117, 225);
+            this.imageComboBoxEdit2.Location = new System.Drawing.Point(118, 271);
             this.imageComboBoxEdit2.Name = "imageComboBoxEdit2";
             this.imageComboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.imageComboBoxEdit2.Size = new System.Drawing.Size(787, 42);
+            this.imageComboBoxEdit2.Size = new System.Drawing.Size(786, 42);
             this.imageComboBoxEdit2.StyleController = this.layout;
             this.imageComboBoxEdit2.TabIndex = 22;
             // 
             // imageComboBoxEdit1
             // 
             this.imageComboBoxEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "ShiftKind", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.imageComboBoxEdit1.Location = new System.Drawing.Point(117, 179);
+            this.imageComboBoxEdit1.Location = new System.Drawing.Point(118, 225);
             this.imageComboBoxEdit1.Name = "imageComboBoxEdit1";
             this.imageComboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.imageComboBoxEdit1.Size = new System.Drawing.Size(787, 42);
+            this.imageComboBoxEdit1.Size = new System.Drawing.Size(786, 42);
             this.imageComboBoxEdit1.StyleController = this.layout;
             this.imageComboBoxEdit1.TabIndex = 21;
             // 
@@ -173,7 +209,7 @@
             // 
             this.dateEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "End", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(117, 87);
+            this.dateEdit2.Location = new System.Drawing.Point(118, 87);
             this.dateEdit2.Name = "dateEdit2";
             this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -187,7 +223,7 @@
             this.dateEdit2.Properties.Mask.EditMask = "g";
             this.dateEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.dateEdit2.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit2.Size = new System.Drawing.Size(787, 42);
+            this.dateEdit2.Size = new System.Drawing.Size(786, 42);
             this.dateEdit2.StyleController = this.layout;
             this.dateEdit2.TabIndex = 7;
             // 
@@ -216,7 +252,7 @@
             // cancelSimpleButton
             // 
             this.cancelSimpleButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelSimpleButton.Location = new System.Drawing.Point(803, 433);
+            this.cancelSimpleButton.Location = new System.Drawing.Point(803, 479);
             this.cancelSimpleButton.MaximumSize = new System.Drawing.Size(101, 35);
             this.cancelSimpleButton.MinimumSize = new System.Drawing.Size(101, 35);
             this.cancelSimpleButton.Name = "cancelSimpleButton";
@@ -228,7 +264,7 @@
             // saveSimpleButton
             // 
             this.saveSimpleButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.saveSimpleButton.Location = new System.Drawing.Point(698, 433);
+            this.saveSimpleButton.Location = new System.Drawing.Point(698, 479);
             this.saveSimpleButton.MaximumSize = new System.Drawing.Size(101, 35);
             this.saveSimpleButton.MinimumSize = new System.Drawing.Size(101, 35);
             this.saveSimpleButton.Name = "saveSimpleButton";
@@ -241,7 +277,7 @@
             // 
             this.dateEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "Start", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(117, 41);
+            this.dateEdit1.Location = new System.Drawing.Point(118, 41);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -255,7 +291,7 @@
             this.dateEdit1.Properties.Mask.EditMask = "g";
             this.dateEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.dateEdit1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit1.Size = new System.Drawing.Size(705, 42);
+            this.dateEdit1.Size = new System.Drawing.Size(704, 42);
             this.dateEdit1.StyleController = this.layout;
             this.dateEdit1.TabIndex = 7;
             // 
@@ -263,7 +299,7 @@
             // 
             this.assignedToLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "Employee", true));
             this.assignedToLookUpEdit.EditValue = "<Null>";
-            this.assignedToLookUpEdit.Location = new System.Drawing.Point(117, 133);
+            this.assignedToLookUpEdit.Location = new System.Drawing.Point(118, 179);
             this.assignedToLookUpEdit.Name = "assignedToLookUpEdit";
             this.assignedToLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -274,18 +310,18 @@
             this.assignedToLookUpEdit.Properties.NullValuePrompt = "None";
             this.assignedToLookUpEdit.Properties.NullValuePromptShowForEmptyValue = true;
             this.assignedToLookUpEdit.Properties.ShowHeader = false;
-            this.assignedToLookUpEdit.Size = new System.Drawing.Size(787, 42);
+            this.assignedToLookUpEdit.Size = new System.Drawing.Size(786, 42);
             this.assignedToLookUpEdit.StyleController = this.layout;
             this.assignedToLookUpEdit.TabIndex = 5;
             // 
             // memoEdit2
             // 
             this.memoEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.noteBindingSource, "Subject", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.memoEdit2.Location = new System.Drawing.Point(117, 271);
+            this.memoEdit2.Location = new System.Drawing.Point(118, 317);
             this.memoEdit2.Name = "memoEdit2";
             this.memoEdit2.Properties.NullValuePrompt = "Enter Comment";
             this.memoEdit2.Properties.NullValuePromptShowForEmptyValue = true;
-            this.memoEdit2.Size = new System.Drawing.Size(787, 42);
+            this.memoEdit2.Size = new System.Drawing.Size(786, 42);
             this.memoEdit2.StyleController = this.layout;
             this.memoEdit2.TabIndex = 12;
             // 
@@ -312,30 +348,32 @@
             this.layoutControlItem6,
             this.layoutControlItem16,
             this.layoutControlItem7,
-            this.layoutControlItem8});
+            this.layoutControlItem8,
+            this.layoutControlItem9,
+            this.layoutControlItem11});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 25;
-            this.layoutControlGroup1.Size = new System.Drawing.Size(916, 490);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(916, 534);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 421);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 467);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(686, 49);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(686, 47);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.saveSimpleButton;
             this.layoutControlItem15.CustomizationFormText = "layoutControlItem15";
-            this.layoutControlItem15.Location = new System.Drawing.Point(686, 421);
+            this.layoutControlItem15.Location = new System.Drawing.Point(686, 467);
             this.layoutControlItem15.Name = "layoutControlItem15";
             this.layoutControlItem15.OptionsPrint.AllowPrint = false;
-            this.layoutControlItem15.Size = new System.Drawing.Size(105, 49);
+            this.layoutControlItem15.Size = new System.Drawing.Size(105, 47);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
             // 
@@ -367,11 +405,11 @@
             this.layoutControlItem10.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem10.Control = this.memoEdit2;
             this.layoutControlItem10.CustomizationFormText = "SUBJECT";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 259);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 305);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(896, 46);
             this.layoutControlItem10.Text = "SUJET";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(80, 17);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(81, 17);
             // 
             // layoutControlItem5
             // 
@@ -383,13 +421,13 @@
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(814, 46);
             this.layoutControlItem5.Text = "DATE DÉBUT";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(80, 17);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(81, 17);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 397);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 443);
             this.emptySpaceItem1.MaxSize = new System.Drawing.Size(0, 24);
             this.emptySpaceItem1.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
@@ -427,11 +465,11 @@
             this.layoutControlItem2.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem2.Control = this.assignedToLookUpEdit;
             this.layoutControlItem2.CustomizationFormText = "ASSIGNED TO";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 121);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 167);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(896, 46);
             this.layoutControlItem2.Text = "EMPLOYÉ";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(80, 17);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(81, 17);
             // 
             // layoutControlItem1
             // 
@@ -442,7 +480,7 @@
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(896, 46);
             this.layoutControlItem1.Text = "DATE FIN";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(80, 17);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(81, 17);
             // 
             // layoutControlItem4
             // 
@@ -450,31 +488,31 @@
             this.layoutControlItem4.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem4.Control = this.imageComboBoxEdit1;
             this.layoutControlItem4.CustomizationFormText = "TYPE SÉANCE";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 167);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 213);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(896, 46);
             this.layoutControlItem4.Text = "TYPE SÉANCE";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(80, 17);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(81, 17);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.layoutControlItem6.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem6.Control = this.imageComboBoxEdit2;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 213);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 259);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(896, 46);
             this.layoutControlItem6.Text = "RECCURENCE";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(80, 17);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(81, 17);
             // 
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.cancelSimpleButton;
             this.layoutControlItem16.CustomizationFormText = "layoutControlItem16";
-            this.layoutControlItem16.Location = new System.Drawing.Point(791, 421);
+            this.layoutControlItem16.Location = new System.Drawing.Point(791, 467);
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.OptionsPrint.AllowPrint = false;
-            this.layoutControlItem16.Size = new System.Drawing.Size(105, 49);
+            this.layoutControlItem16.Size = new System.Drawing.Size(105, 47);
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextVisible = false;
             // 
@@ -483,22 +521,44 @@
             this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.layoutControlItem7.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem7.Control = this.imageComboBoxEdit3;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 305);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 351);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(896, 46);
             this.layoutControlItem7.Text = "STATUT";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(80, 17);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(81, 17);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.layoutControlItem8.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem8.Control = this.imageComboBoxEdit4;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 351);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 397);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(896, 46);
             this.layoutControlItem8.Text = "LABEL";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(80, 17);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(81, 17);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.layoutControlItem9.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem9.Control = this.breakstartedit;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 121);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(447, 46);
+            this.layoutControlItem9.Text = "DÉBUT PAUSE";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(81, 17);
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.layoutControlItem11.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem11.Control = this.breakendedit;
+            this.layoutControlItem11.Location = new System.Drawing.Point(447, 121);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(449, 46);
+            this.layoutControlItem11.Text = "FIN PAUSE";
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(81, 17);
             // 
             // layoutControlItem3
             // 
@@ -515,11 +575,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layout);
             this.Name = "ModifierPlaning";
-            this.Size = new System.Drawing.Size(916, 490);
+            this.Size = new System.Drawing.Size(916, 534);
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout)).EndInit();
             this.layout.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.breakendedit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakstartedit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit2.Properties)).EndInit();
@@ -547,6 +609,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
@@ -587,5 +651,9 @@
         private DevExpress.XtraEditors.ImageComboBoxEdit imageComboBoxEdit3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraEditors.TimeSpanEdit breakendedit;
+        private DevExpress.XtraEditors.TimeSpanEdit breakstartedit;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
     }
 }

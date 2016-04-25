@@ -160,13 +160,21 @@ namespace PHRMS.ViewModels
             if (a.Type == AttendanceType.UnjustifiedExit || a.Type == AttendanceType.EnterOnly) // absence
                 return new WorkTime(s.EmployeeId.Value, a.Date.Date, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero,
                     s.TotalWorkingHours, TimeSpan.Zero);
+
             if (a.Type == AttendanceType.JustifiedExit) // leave
                 return new WorkTime(s.EmployeeId.Value, a.Date.Date, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero,
                     TimeSpan.Zero, s.TotalWorkingHours);
-            var late = (a.TimeIn > s.Start.TimeOfDay ? a.TimeIn - s.Start.TimeOfDay : TimeSpan.Zero) +
-                       (a.TimeOut < s.End.TimeOfDay ? s.End.TimeOfDay - a.TimeOut : TimeSpan.Zero);
-            var overtime = (a.TimeIn < s.Start.TimeOfDay ? s.Start.TimeOfDay - a.TimeIn : TimeSpan.Zero) +
-                           (a.TimeOut > s.End.TimeOfDay ? a.TimeOut - s.End.TimeOfDay : TimeSpan.Zero);
+
+            var breaktime = a.TotalBreakTime;
+            
+            var late = (a.TotalWorkingHours < s.TotalWorkingHours ? s.TotalWorkingHours - a.TotalWorkingHours : TimeSpan.Zero);
+            var overtime = (a.TotalWorkingHours > s.TotalWorkingHours ? a.TotalWorkingHours - s.TotalWorkingHours : TimeSpan.Zero);
+            // include breaks
+            if (s.ShiftKind == ShiftType.Continuous)
+            {
+                late += (a.TotalBreakTime > s.TotalBreakTime) ? a.TotalBreakTime - s.TotalBreakTime : TimeSpan.Zero;
+                overtime += (a.TotalBreakTime < s.TotalBreakTime)?s.TotalBreakTime - a.TotalBreakTime : TimeSpan.Zero;
+            }
             return new WorkTime(s.EmployeeId.Value, a.Date.Date, a.TotalWorkingHours - late - overtime, late, overtime,
                 TimeSpan.Zero, TimeSpan.Zero);
         }
@@ -322,15 +330,15 @@ namespace PHRMS.ViewModels
     [Serializable] //Set this attribute to all the classes that want to serialize
     public class WorkTime : IEquatable<WorkTime>
     {
-        public WorkTime(long eid, DateTime d, TimeSpan a, TimeSpan b, TimeSpan c, TimeSpan e, TimeSpan f)
+        public WorkTime(long eid, DateTime d, TimeSpan working, TimeSpan late, TimeSpan over, TimeSpan absent, TimeSpan leave)
         {
             EmployeeId = eid;
             Date = d;
-            TotalWorkingTime = a;
-            TotalLateTime = b;
-            TotalOverTime = c;
-            TotalAbsentTime = e;
-            TotalLeaveTime = f;
+            TotalWorkingTime = working;
+            TotalLateTime = late;
+            TotalOverTime = over;
+            TotalAbsentTime = absent;
+            TotalLeaveTime = leave;
         }
 
         public long EmployeeId { get; set; }

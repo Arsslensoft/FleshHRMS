@@ -130,7 +130,7 @@
             this.timeSpanEdit4.Name = "timeSpanEdit4";
             this.timeSpanEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit4.Properties.Mask.EditMask = "dd.HH:mm:ss";
+            this.timeSpanEdit4.Properties.Mask.EditMask = "HH:mm:ss";
             this.timeSpanEdit4.Size = new System.Drawing.Size(289, 42);
             this.timeSpanEdit4.StyleController = this.layout;
             this.timeSpanEdit4.TabIndex = 25;
@@ -143,7 +143,7 @@
             this.timeSpanEdit3.Name = "timeSpanEdit3";
             this.timeSpanEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit3.Properties.Mask.EditMask = "dd.HH:mm:ss";
+            this.timeSpanEdit3.Properties.Mask.EditMask = "HH:mm:ss";
             this.timeSpanEdit3.Size = new System.Drawing.Size(289, 42);
             this.timeSpanEdit3.StyleController = this.layout;
             this.timeSpanEdit3.TabIndex = 24;
@@ -156,7 +156,7 @@
             this.timeSpanEdit2.Name = "timeSpanEdit2";
             this.timeSpanEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit2.Properties.Mask.EditMask = "dd.HH:mm:ss";
+            this.timeSpanEdit2.Properties.Mask.EditMask = "HH:mm:ss";
             this.timeSpanEdit2.Size = new System.Drawing.Size(289, 42);
             this.timeSpanEdit2.StyleController = this.layout;
             this.timeSpanEdit2.TabIndex = 23;
@@ -169,7 +169,7 @@
             this.timeSpanEdit1.Name = "timeSpanEdit1";
             this.timeSpanEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit1.Properties.Mask.EditMask = "dd.HH:mm:ss";
+            this.timeSpanEdit1.Properties.Mask.EditMask = "HH:mm:ss";
             this.timeSpanEdit1.Size = new System.Drawing.Size(289, 42);
             this.timeSpanEdit1.StyleController = this.layout;
             this.timeSpanEdit1.TabIndex = 22;

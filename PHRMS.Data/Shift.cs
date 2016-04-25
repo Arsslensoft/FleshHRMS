@@ -60,7 +60,8 @@ namespace PHRMS.Data
 
         public int Label { get; set; }
         public int Status { get; set; }
-
+        public TimeSpan BreakStart { get; set; }
+        public TimeSpan BreakEnd { get; set; }
 
         [NotMapped]
         public LabelType LabelEnum
@@ -75,6 +76,16 @@ namespace PHRMS.Data
             get { return (StatusType) Status; }
             set { Status = (int) value; }
         }
+       
+        [NotMapped]
+        public TimeSpan TotalBreakTime
+        {
+            get
+            {
+
+                return BreakEnd - BreakStart;
+            }
+        }
 
         [NotMapped]
         public TimeSpan TotalWorkingHours
@@ -82,7 +93,7 @@ namespace PHRMS.Data
             get
             {
                 if (ShiftKind == ShiftType.Continuous)
-                    return (End - Start).Subtract(new TimeSpan(1, 0, 0));
+                    return (End - Start).Subtract(TotalBreakTime);
                 return End - Start;
             }
         }

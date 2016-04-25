@@ -897,7 +897,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PHRMS.Data\PHRMS.Data.csproj">
-      <Project>{5f39ce01-75ed-4db4-9456-b0a2b3fa33c0}</Project>
+      <Project>{e7129694-c8c7-4bb7-a7ab-c31d20200486}</Project>
       <Name>PHRMS.Data</Name>
     </ProjectReference>
   </ItemGroup>

@@ -15,14 +15,18 @@ namespace PHRMS.Data
         [Display(Name = "Entrée")] EnterOnly,
         [Display(Name = "Entrée/Sortie")] Both,
         [Display(Name = "Sortie justifié")] JustifiedExit,
-        [Display(Name = "Sortie non justifié")] UnjustifiedExit
+        [Display(Name = "Sortie non justifié")] UnjustifiedExit,
+        [Display(Name = "Rentrée de pause")]
+        BreakOut,
+        [Display(Name = "Sortie en pause")]
+        BreakIn
+
     }
 
     public class Attendance : DatabaseObject
     {
         public long? EmployeeId { get; set; }
         public virtual Employee Employee { get; set; }
-
 
         public long? CreatedById { get; set; }
         public virtual Employee CreatedBy { get; set; }
@@ -34,6 +38,17 @@ namespace PHRMS.Data
         public TimeSpan TimeOut { get; set; }
         public TimeSpan BreakIn { get; set; }
         public TimeSpan BreakOut { get; set; }
+
+        [NotMapped]
+        public TimeSpan TotalBreakTime
+        {
+            get
+            {
+                if (Type != AttendanceType.EnterOnly)
+                    return BreakOut - BreakIn;
+                return new TimeSpan(0);
+            }
+        }
 
         [NotMapped]
         public TimeSpan TotalWorkingHours

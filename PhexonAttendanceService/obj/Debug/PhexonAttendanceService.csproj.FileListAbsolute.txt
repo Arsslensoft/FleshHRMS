@@ -1,0 +1,6 @@
+E:\Research\FHRMS\Bin\PhexonAttendanceService.exe.config
+E:\Research\FHRMS\Bin\PhexonAttendanceService.exe
+E:\Research\FHRMS\Bin\PhexonAttendanceService.pdb
+E:\Research\FHRMS\PhexonAttendanceService\obj\Debug\PhexonAttendanceService.csprojResolveAssemblyReference.cache
+E:\Research\FHRMS\PhexonAttendanceService\obj\Debug\PhexonAttendanceService.exe
+E:\Research\FHRMS\PhexonAttendanceService\obj\Debug\PhexonAttendanceService.pdb
